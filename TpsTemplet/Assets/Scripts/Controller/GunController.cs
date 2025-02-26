@@ -27,6 +27,10 @@ public class GunController : MonoBehaviour
 
     void FixedUpdate()
     {
+        Vector3 dir = transform.position + muzzlePoint.transform.position;
+
+
+        Debug.DrawRay(muzzlePoint.transform.position, dir, Color.red);
         if (Input.GetMouseButtonDown(0)) // fire  ... 나중에 캐릭터 컨트롤러에서 여기를 오도록?
         {
             Shoot();

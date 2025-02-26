@@ -53,23 +53,6 @@ public class PlayerController2 : MonoBehaviour
         //animator.SetFloat("FactorX", moveX);
         //animator.SetFloat("FactorZ", moveZ);
 
-
-        // 이동 중이면 방향을 변경
-        //여기서 뒤로 가는 경우 방향을 변경하지 않도록 해줘야됨 ,&& Input.GetKeyDown(KeyCode.W) 
-        //if (isMoving )
-        //{
-        //    transform.forward = move;
-        //}
-
-        //누른 방향으로 회전2
-
-        //if (!(moveX == 0 && moveZ == 0)) {
-        //    //이동과 회전을 같이 처리
-        //    transform.position += move * speed * Time.deltaTime;
-        //    //회전하는 부분
-        //    transform.rotation = Quaternion.Lerp(transform.rotation,Quaternion.LookRotation(move),Time.deltaTime);
-        //}
-
         if (Input.GetMouseButton(1))
         {
             isAim = true;
@@ -92,11 +75,6 @@ public class PlayerController2 : MonoBehaviour
             moveDirection.y = 0; // 바닥에 닿으면 중력 초기화
         }
 
-        // 방향과 이동 처리 (구)
-        //moveDirection = move * moveSpeed;
-        //controller.Move(moveDirection * Time.deltaTime);
-
-
         // 입력 값을 카메라 기준으로 변환
         moveDirection = (cameraForward * moveZ + cameraRight * moveX).normalized;
         // 이동 처리
@@ -104,6 +82,7 @@ public class PlayerController2 : MonoBehaviour
 
         if (isAim)
         {
+            //AimController에서 처리 - 안되면 주석 풀것 2025- 02-26
             transform.rotation = Quaternion.LookRotation(cameraForward); // 정조준 방향 유지
         }
         else if (moveDirection != Vector3.zero)// 이동 중이면 이동 방향으로 캐릭터 회전
@@ -118,5 +97,11 @@ public class PlayerController2 : MonoBehaviour
 
 
     }
+
+    //public void SetCharacterRotation(Vector3 lookDirection)
+    //{
+    //    Quaternion newRotation = Quaternion.LookRotation(lookDirection);
+    //    transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 10f);
+    //}
 
 }
