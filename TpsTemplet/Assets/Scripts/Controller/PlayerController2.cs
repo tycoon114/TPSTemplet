@@ -69,11 +69,10 @@ public class PlayerController2 : MonoBehaviour
         if (!controller.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
-            Debug.Log("공중?>");
+
         }
         else
         {
-            Debug.Log("바닥");
             moveDirection.y = 0; // 바닥에 닿으면 중력 초기화
         }
 
