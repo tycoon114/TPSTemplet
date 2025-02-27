@@ -45,7 +45,6 @@ public class GunController : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
             isAim = true;
-            isAim = true;
         }
         else
         {
@@ -97,6 +96,7 @@ public class GunController : MonoBehaviour
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.linearVelocity = muzzlePoint.forward * bulletSpeed;
     }
+
 
 
 }

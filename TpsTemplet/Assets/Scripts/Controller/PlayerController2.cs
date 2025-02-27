@@ -52,7 +52,14 @@ public class PlayerController2 : MonoBehaviour
         //@TK(25.02.24)
         //animator.SetFloat("FactorX", moveX);
         //animator.SetFloat("FactorZ", moveZ);
-
+        if (Input.GetMouseButton(1))
+        {
+            isAim = true;
+        }
+        else
+        {
+            isAim = false;
+        }
 
 
         // 중력 적용
