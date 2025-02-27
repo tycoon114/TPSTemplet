@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private GameObject gameobject;
+
+    private void Start()
     {
-        
+        //gameobject.GetComponent
     }
 
-    // Update is called once per frame
     void Update()
     {
         
