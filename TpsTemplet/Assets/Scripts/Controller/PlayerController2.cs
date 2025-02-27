@@ -9,7 +9,7 @@ public class PlayerController2 : MonoBehaviour
     private CharacterController controller;
     private Animator animator;
     private Vector3 moveDirection;
-    bool isAim = false;
+    protected bool isAim = false;
 
 
     void Start()
@@ -53,16 +53,6 @@ public class PlayerController2 : MonoBehaviour
         //animator.SetFloat("FactorX", moveX);
         //animator.SetFloat("FactorZ", moveZ);
 
-        if (Input.GetMouseButton(1))
-        {
-            isAim = true;
-            animator.SetBool("isAim", isAim);
-        }
-        else
-        {
-            isAim = false;
-            animator.SetBool("isAim", isAim);
-        }
 
 
         // 중력 적용
