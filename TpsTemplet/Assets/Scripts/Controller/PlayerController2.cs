@@ -69,9 +69,11 @@ public class PlayerController2 : MonoBehaviour
         if (!controller.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
+            Debug.Log("공중?>");
         }
         else
         {
+            Debug.Log("바닥");
             moveDirection.y = 0; // 바닥에 닿으면 중력 초기화
         }
 
@@ -90,18 +92,6 @@ public class PlayerController2 : MonoBehaviour
             //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDirection), Time.deltaTime * 10f);
             transform.rotation = Quaternion.LookRotation(moveDirection);
         }
-
-        //// 카메라도 이동 방향을 따라 조금씩 회전
-        //Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-        //Camera.main.transform.rotation = Quaternion.Slerp(Camera.main.transform.rotation, targetRotation, Time.deltaTime * 2f);
-
-
     }
-
-    //public void SetCharacterRotation(Vector3 lookDirection)
-    //{
-    //    Quaternion newRotation = Quaternion.LookRotation(lookDirection);
-    //    transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 10f);
-    //}
 
 }
