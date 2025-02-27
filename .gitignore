@@ -4384,3 +4384,713 @@ TpsTemplet/Assets/Resources/Model/kazusa/Texture2D/Lightmap-0_comp_light.png
 TpsTemplet/Assets/Resources/Model/kazusa/Texture2D/Lightmap-0_comp_light.png.meta
 TpsTemplet/Assets/Resources/Model/kazusa/Texture2D/sb_kazusa_01.png
 TpsTemplet/Assets/Resources/Model/kazusa/Texture2D/sb_kazusa_01.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/Cafe_CH0141.fbx
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/Cafe_CH0141.fbx.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Body.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Body.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Body_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Body_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_DoughnutBox.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_DoughnutBox.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_DoughnutBox_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_DoughnutBox_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_EyeMouth.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_EyeMouth.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Face.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Face.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Face_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Face_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Hair.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Hair.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Hair_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Hair_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Hair_Spec.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Hair_Spec.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Halo.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Halo.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Weapon.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Weapon.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Weapon_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Cafe_CH0141/CH0141_Weapon_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141.fbx
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141.fbx.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Body.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Body.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Body_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Body_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_DoughnutBox.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_DoughnutBox.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_DoughnutBox_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_DoughnutBox_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_EyeMouth.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_EyeMouth.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Face.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Face.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Face_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Face_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Hair.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Hair.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Hair_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Hair_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Hair_Spec.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Hair_Spec.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Halo.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Halo.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Weapon.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Weapon.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Weapon_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141/CH0141_Weapon_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Exs_Cutin_Cam.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Exs_Cutin_Cam/CH0141_Exs_Cutin_Cam.fbx
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Exs_Cutin_Cam/CH0141_Exs_Cutin_Cam.fbx.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Body.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Body.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Body_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Body_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_DoughnutBox.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_DoughnutBox.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_DoughnutBox_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_DoughnutBox_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_EyeMouth.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_EyeMouth.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Face.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Face.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Face_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Face_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Hair.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Hair.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Hair_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Hair_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Hair_Spec.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Hair_Spec.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Mesh.fbx
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Mesh.fbx.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Weapon.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Weapon.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Weapon_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh \#1590/CH0141_Weapon_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Body.mat
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Body.mat.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Body.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Body.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Body_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Body_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_DoughnutBox.mat
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_DoughnutBox.mat.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_DoughnutBox.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_DoughnutBox.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_DoughnutBox_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_DoughnutBox_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Eyebrow.mat
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Eyebrow.mat.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_EyeMouth.mat
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_EyeMouth.mat.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_EyeMouth.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_EyeMouth.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Face.mat
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Face.mat.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Face.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Face.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Face_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Face_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Hair.mat
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Hair.mat.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Hair.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Hair.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Hair_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Hair_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Hair_Spec.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Hair_Spec.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Mesh.fbx
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Mesh.fbx.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Weapon.mat
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Weapon.mat.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Weapon.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Weapon.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Weapon_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/CH0141_Mesh/CH0141_Weapon_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Body.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Body.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Body_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Body_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_DoughnutBox.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_DoughnutBox.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_DoughnutBox_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_DoughnutBox_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_EyeMouth.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_EyeMouth.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Face.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Face.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Face_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Face_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Hair.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Hair.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Hair_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Hair_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Hair_Spec.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Hair_Spec.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Halo.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Halo.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Weapon.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Weapon.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Weapon_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/CH0141_Weapon_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/Echelon_CH0141.fbx
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Echelon_CH0141/Echelon_CH0141.fbx.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141.controller
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141.controller.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141Body.mat
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141Body.mat.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141do.mat
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141do.mat.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141Eye.mat
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141Eye.mat.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141face.mat
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141face.mat.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141gun.mat
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141gun.mat.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141hair.mat
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141hair.mat.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141halo.mat
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141halo.mat.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141Up.mask
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/141Up.mask.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/AimMotionTest.anim
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/AimMotionTest.anim.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Body.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Body.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Body_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Body_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_DoughnutBox.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_DoughnutBox.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_DoughnutBox_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_DoughnutBox_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_EyeMouth.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_EyeMouth.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Face.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Face.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Face_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Face_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Hair.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Hair.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Hair_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Hair_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Hair_Spec.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Hair_Spec.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Halo.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Halo.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Weapon.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Weapon.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Weapon_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/CH0141_Weapon_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/Strategy_CH0141.fbx
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/Strategy_CH0141.fbx.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/testanim.anim
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141 \#874/testanim.anim.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Body.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Body.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Body_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Body_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_DoughnutBox.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_DoughnutBox.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_DoughnutBox_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_DoughnutBox_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_EyeMouth.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_EyeMouth.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Face.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Face.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Face_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Face_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Hair.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Hair.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Hair_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Hair_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Hair_Spec.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Hair_Spec.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Halo.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Halo.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Weapon.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Weapon.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Weapon_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/CH0141_Weapon_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/Strategy_CH0141.fbx
+TpsTemplet/Assets/Resources/Model/141 1/Animator/Strategy_CH0141/Strategy_CH0141.fbx.meta
+TpsTemplet/Assets/Resources/Model/141 1/AudioClip.meta
+TpsTemplet/Assets/Resources/Model/141 1/AudioClip/SFX_CH0141_Cutin.wav
+TpsTemplet/Assets/Resources/Model/141 1/AudioClip/SFX_CH0141_Cutin.wav.meta
+TpsTemplet/Assets/Resources/Model/141 1/AudioClip/SFX_CH0141_Ex_0.wav
+TpsTemplet/Assets/Resources/Model/141 1/AudioClip/SFX_CH0141_Ex_0.wav.meta
+TpsTemplet/Assets/Resources/Model/141 1/AudioClip/SFX_CH0141_Ex_1.wav
+TpsTemplet/Assets/Resources/Model/141 1/AudioClip/SFX_CH0141_Ex_1.wav.meta
+TpsTemplet/Assets/Resources/Model/141 1/AudioClip/SFX_CH0141_Ex_2.wav
+TpsTemplet/Assets/Resources/Model/141 1/AudioClip/SFX_CH0141_Ex_2.wav.meta
+TpsTemplet/Assets/Resources/Model/141 1/Mesh.meta
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/CH0141_Body.obj
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/CH0141_Body.obj.meta
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/CH0141_Doughnut.obj
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/CH0141_Doughnut.obj.meta
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/CH0141_DoughnutBox.obj
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/CH0141_DoughnutBox.obj.meta
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/CH0141_Halo.obj
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/CH0141_Halo.obj.meta
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/CH0141_Weapon.obj
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/CH0141_Weapon.obj.meta
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/my_cafe_01_b_chair_01.obj
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/my_cafe_01_b_chair_01.obj.meta
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/my_cafe_01_b_table_02.obj
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/my_cafe_01_b_table_02.obj.meta
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/OL_CH0141_Body.obj
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/OL_CH0141_Body.obj.meta
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/OL_CH0141_Doughnut.obj
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/OL_CH0141_Doughnut.obj.meta
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/OL_CH0141_DoughnutBox.obj
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/OL_CH0141_DoughnutBox.obj.meta
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/OL_CH0141_Weapon.obj
+TpsTemplet/Assets/Resources/Model/141 1/Mesh/OL_CH0141_Weapon.obj.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Activation Track.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Activation Track.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ActivationPlayableAsset.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ActivationPlayableAsset.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Animation Track \#1353.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Animation Track \#1353.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Animation Track \#359.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Animation Track \#359.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Animation Track \#429.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Animation Track \#429.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Animation Track (1) \#1083.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Animation Track (1) \#1083.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Animation Track (1) \#599.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Animation Track (1) \#599.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Animation Track (1).json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Animation Track (1).json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Animation Track.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Animation Track.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AnimationPlayableAsset \#1102.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AnimationPlayableAsset \#1102.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AnimationPlayableAsset \#1287.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AnimationPlayableAsset \#1287.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AnimationPlayableAsset.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AnimationPlayableAsset.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer \#1927.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer \#1927.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer \#2092.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer \#2092.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer \#2179.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer \#2179.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer \#2225.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer \#2225.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer \#316.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer \#316.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer \#668.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer \#668.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer \#923.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer \#923.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/AudioPlayer.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/BG1.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/BG1.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/BG2+Emotion.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/BG2+Emotion.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Bite.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Bite.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Buff.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Buff.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CafeCharacter.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CafeCharacter.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Cam_Focus.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Cam_Focus.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_EX1.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_EX1.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_EX1_Cutin.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_EX1_Cutin.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Idle_01.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Idle_01.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Look_01_M.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Look_01_M.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-LookEnd_01_A.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-LookEnd_01_A.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-LookEnd_01_M.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-LookEnd_01_M.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Pat_01_A.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Pat_01_A.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Pat_01_M.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Pat_01_M.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-PatEnd_01_A.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-PatEnd_01_A.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-PatEnd_01_M.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-PatEnd_01_M.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Start_Idle_01.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Start_Idle_01.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_01_A.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_01_A.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_01_M.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_01_M.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_02_A.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_02_A.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_02_M.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_02_M.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_03_A.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_03_A.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_03_M.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_03_M.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_04_A.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_04_A.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_04_M.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_04_M.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_05_A.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_05_A.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_05_M.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home-Talk_05_M.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home_Atlas.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home_Atlas.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home_SkeletonData.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_home_SkeletonData.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_Public.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_Public.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-00.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-00.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-01.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-01.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-02.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-02.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-03.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-03.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-04.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-04.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-05.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-05.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-06.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-06.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-07.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-07.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-08.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-08.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-09.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-09.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-10.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-10.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-99.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-99.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-Eye_Close_01.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-Eye_Close_01.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-Idle_01.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr-Idle_01.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr_Atlas.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr_Atlas.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr_SkeletonData.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_spr_SkeletonData.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_Timeline.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CH0141_Timeline.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Chair.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Chair.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterAnimationEventReceiver \#1208.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterAnimationEventReceiver \#1208.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterAnimationEventReceiver \#1274.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterAnimationEventReceiver \#1274.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterAnimationEventReceiver \#780.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterAnimationEventReceiver \#780.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterAnimationEventReceiver.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterAnimationEventReceiver.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterEchelon.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterEchelon.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterLight \#1031.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterLight \#1031.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterLight \#413.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterLight \#413.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterLight \#78.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterLight \#78.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterLight.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterLight.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterPrefabInfo.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterPrefabInfo.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterVisual.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/CharacterVisual.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ChromaticAberration.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ChromaticAberration.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ColorAdjustments.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ColorAdjustments.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Control Track \#609.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Control Track \#609.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Control Track (1).json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Control Track (1).json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Control Track.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Control Track.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1046.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1046.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1093.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1093.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1226.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1226.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1252.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1252.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1288.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1288.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1300.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1300.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1322.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1322.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1334.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1334.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#145.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#145.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1778.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1778.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1803.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#1803.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#190.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#190.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#564.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#564.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#631.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#631.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#684.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#684.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#72.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#72.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#831.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#831.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#863.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#863.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#970.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset \#970.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset(Clone)(Clone) \#1301.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset(Clone)(Clone) \#1301.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset(Clone)(Clone) \#642.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset(Clone)(Clone) \#642.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset(Clone)(Clone).json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset(Clone)(Clone).json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ControlPlayableAsset.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone \#1128.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone \#1128.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone \#1172.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone \#1172.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone \#1253.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone \#1253.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone \#422.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone \#422.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone \#425.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone \#425.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone \#494.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone \#494.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone \#558.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone \#558.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicBone.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicCharacter \#1087.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicCharacter \#1087.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicCharacter \#820.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicCharacter \#820.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicCharacter.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/DynamicCharacter.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Emotion_2.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Emotion_2.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Emotion_Dounutbox.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Emotion_Dounutbox.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Emotion_Foot_L.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Emotion_Foot_L.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Emotion_Foot_R.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Emotion_Foot_R.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/EntityAudioController \#1183.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/EntityAudioController \#1183.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/EntityAudioController \#1230.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/EntityAudioController \#1230.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/EntityAudioController \#614.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/EntityAudioController \#614.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/EntityAudioController.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/EntityAudioController.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/FxFollower \#237.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/FxFollower \#237.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/FxFollower \#837.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/FxFollower \#837.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/FxFollower \#920.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/FxFollower \#920.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/FxFollower.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/FxFollower.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/LiftGammaGain.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/LiftGammaGain.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/LobbySpine_SnapShot.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/LobbySpine_SnapShot.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Markers \#1206.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Markers \#1206.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Markers \#1797.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Markers \#1797.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Markers \#436.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Markers \#436.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Markers.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Markers.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxAimIK \#1009.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxAimIK \#1009.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxAimIK \#1056.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxAimIK \#1056.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxAimIK \#40.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxAimIK \#40.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxAimIK.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxAimIK.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MXButton.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MXButton.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxLookIK \#1174.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxLookIK \#1174.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxLookIK \#509.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxLookIK \#509.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxLookIK \#687.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxLookIK \#687.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxLookIK.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/MxLookIK.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/NormalAttackVisual.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/NormalAttackVisual.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Override 0.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Override 0.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/PaniniProjection.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/PaniniProjection.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Playable Track.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Playable Track.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/PPPV_Lobby_CH0141.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/PPPV_Lobby_CH0141.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/PPPV_Lobby_CH0141_C.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/PPPV_Lobby_CH0141_C.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/SFX 1 \#949.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/SFX 1 \#949.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/SFX 1.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/SFX 1.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/SFX 2.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/SFX 2.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/SFX Controller.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/SFX Controller.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Smoke.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Smoke.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Spine Animation State Track.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Spine Animation State Track.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/SpineAnimationStateClip \#1792.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/SpineAnimationStateClip \#1792.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/SpineAnimationStateClip.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/SpineAnimationStateClip.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Table.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Table.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone) \#1779.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone) \#1779.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone) \#1811.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone) \#1811.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone) \#1817.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone) \#1817.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioMixerSnapshotsController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioMixerSnapshotsController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioMixerSnapshotsController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineAudioMixerSnapshotsController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimelineEnvironment.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimelineEnvironment.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineEXSkillCutinSFXController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineEXSkillCutinSFXController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineExSkillVoiceController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineExSkillVoiceController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineExSkillVoiceController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineExSkillVoiceController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineUILobbyController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone) \#1787.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineUILobbyController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone) \#1787.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineUILobbyController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/TimeLineUILobbyController(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone).json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ToonBalloon.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ToonBalloon.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ToonBalloon_2.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/ToonBalloon_2.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/UniversalAdditionalCameraData \#1297.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/UniversalAdditionalCameraData \#1297.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/UniversalAdditionalCameraData \#613.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/UniversalAdditionalCameraData \#613.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/UniversalAdditionalCameraData \#975.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/UniversalAdditionalCameraData \#975.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/UniversalAdditionalCameraData.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/UniversalAdditionalCameraData.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Voc Ex Cutin.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Voc Ex Cutin.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Voc Ex.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/Voc Ex.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/VoicePlayer \#1201.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/VoicePlayer \#1201.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/VoicePlayer \#1212.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/VoicePlayer \#1212.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/VoicePlayer \#346.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/VoicePlayer \#346.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/VoicePlayer.json
+TpsTemplet/Assets/Resources/Model/141 1/MonoBehaviour/VoicePlayer.json.meta
+TpsTemplet/Assets/Resources/Model/141 1/TextAsset.meta
+TpsTemplet/Assets/Resources/Model/141 1/TextAsset/CH0141_home.atlas.asset
+TpsTemplet/Assets/Resources/Model/141 1/TextAsset/CH0141_home.atlas.asset.meta
+TpsTemplet/Assets/Resources/Model/141 1/TextAsset/CH0141_home.skel.asset
+TpsTemplet/Assets/Resources/Model/141 1/TextAsset/CH0141_home.skel.asset.meta
+TpsTemplet/Assets/Resources/Model/141 1/TextAsset/CH0141_spr.atlas.asset
+TpsTemplet/Assets/Resources/Model/141 1/TextAsset/CH0141_spr.atlas.asset.meta
+TpsTemplet/Assets/Resources/Model/141 1/TextAsset/CH0141_spr.skel.asset
+TpsTemplet/Assets/Resources/Model/141 1/TextAsset/CH0141_spr.skel.asset.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Body.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Body.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Body_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Body_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_DoughnutBox.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_DoughnutBox.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_DoughnutBox_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_DoughnutBox_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Exs_Cutin_table.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Exs_Cutin_table.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_EyeMouth.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_EyeMouth.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Face.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Face.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Face_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Face_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Hair.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Hair.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Hair_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Hair_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Hair_Spec.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Hair_Spec.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Halo.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Halo.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_home.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_home.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_home_2.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_home_2.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_spr.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_spr.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Weapon.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Weapon.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Weapon_Mask.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/CH0141_Weapon_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_CH0141_Emoticon_01.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_CH0141_Emoticon_01.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_Circle_Glow_01b.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_Circle_Glow_01b.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_Doughnut_Bite_01.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_Doughnut_Bite_01.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_Emoticon_Balloon_01.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_Emoticon_Balloon_01.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_Eye_Motion_12.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_Eye_Motion_12.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_Eye_Motion_13.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_Eye_Motion_13.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_Pattern_28.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_Pattern_28.png.meta
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_Pattern_29.png
+TpsTemplet/Assets/Resources/Model/141 1/Texture2D/FX_TEX_Pattern_29.png.meta
