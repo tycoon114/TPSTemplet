@@ -6166,3 +6166,876 @@ TpsTemplet/Assets/JMO Assets/Welcome Screen/CFXR_WelcomeScreen.uxml
 TpsTemplet/Assets/JMO Assets/Welcome Screen/CFXR_WelcomeScreen.uxml.meta
 TpsTemplet/Assets/JMO Assets/Welcome Screen/CFXR_WelcomeScreen_Background.png
 TpsTemplet/Assets/JMO Assets/Welcome Screen/CFXR_WelcomeScreen_Background.png.meta
+TpsTemplet/Assets/JMO Assets/Cartoon FX Easy Editor.meta
+TpsTemplet/Assets/JMO Assets/Cartoon FX Easy Editor/CartoonFX Easy Editor Readme.txt
+TpsTemplet/Assets/JMO Assets/Cartoon FX Easy Editor/CartoonFX Easy Editor Readme.txt.meta
+TpsTemplet/Assets/JMO Assets/Cartoon FX Easy Editor/Editor.meta
+TpsTemplet/Assets/JMO Assets/Cartoon FX Easy Editor/Editor/CFXEasyEditor.cs
+TpsTemplet/Assets/JMO Assets/Cartoon FX Easy Editor/Editor/CFXEasyEditor.cs.meta
+TpsTemplet/Assets/JMO Assets/WarFX.meta
+TpsTemplet/Assets/JMO Assets/WarFX/\!WarFX Readme.txt
+TpsTemplet/Assets/JMO Assets/WarFX/\!WarFX Readme.txt.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile).meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Lit.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Lit/WFXMR_BImpact Concrete + Hole Lit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Lit/WFXMR_BImpact Concrete + Hole Lit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Lit/WFXMR_BImpact Concrete NoCollision + Hole Lit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Lit/WFXMR_BImpact Concrete NoCollision + Hole Lit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Lit/WFXMR_BImpact Metal + Hole Lit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Lit/WFXMR_BImpact Metal + Hole Lit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Lit/WFXMR_BImpact Wood + Hole Lit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Lit/WFXMR_BImpact Wood + Hole Lit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Lit/WFXMR_BImpact Wood NoCollision + Hole Lit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Lit/WFXMR_BImpact Wood NoCollision + Hole Lit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Unlit.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Unlit/WFXMR_BImpact Concrete + Hole Unlit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Unlit/WFXMR_BImpact Concrete + Hole Unlit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Unlit/WFXMR_BImpact Concrete NoCollision + Hole Unlit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Unlit/WFXMR_BImpact Concrete NoCollision + Hole Unlit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Unlit/WFXMR_BImpact Metal + Hole Unlit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Unlit/WFXMR_BImpact Metal + Hole Unlit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Unlit/WFXMR_BImpact Wood + Hole Unlit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Unlit/WFXMR_BImpact Wood + Hole Unlit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Unlit/WFXMR_BImpact Wood NoCollision + Hole Unlit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/Unlit/WFXMR_BImpact Wood NoCollision + Hole Unlit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/WFXMR_BImpact Dirt + Hole.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/WFXMR_BImpact Dirt + Hole.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/WFXMR_BImpact Sand + Hole.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/WFXMR_BImpact Sand + Hole.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/WFXMR_BImpact SoftBody + Hole.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/+ Bullet Hole/WFXMR_BImpact SoftBody + Hole.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact Concrete NoCollision.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact Concrete NoCollision.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact Concrete.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact Concrete.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact Dirt.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact Dirt.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact Metal.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact Metal.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact Sand.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact Sand.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact SoftBody.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact SoftBody.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact Wood NoCollision.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact Wood NoCollision.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact Wood.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Bullet Impacts/WFXMR_BImpact Wood.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_Explosion LandMine.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_Explosion LandMine.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_Explosion Simple.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_Explosion Simple.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_Explosion Small.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_Explosion Small.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_Explosion StarSmoke.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_Explosion StarSmoke.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_Explosion.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_Explosion.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmoke Big Alt.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmoke Big Alt.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmoke Big.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmoke Big.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmoke Small.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmoke Small.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmoke.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmoke.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmokeGround Big Alt.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmokeGround Big Alt.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmokeGround Big.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmokeGround Big.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmokeGround Small.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmokeGround Small.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmokeGround.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_ExplosiveSmokeGround.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_Nuke.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Explosions/WFXMR_Nuke.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Black Smoke.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Black Smoke/WFXMR_Fire Natural (Black Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Black Smoke/WFXMR_Fire Natural (Black Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Black Smoke/WFXMR_Fire Natural Broad (Black Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Black Smoke/WFXMR_Fire Natural Broad (Black Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Black Smoke/WFXMR_Fire Natural Circle (Black Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Black Smoke/WFXMR_Fire Natural Circle (Black Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Black Smoke/WFXMR_Fire SmallFlame (Black Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Black Smoke/WFXMR_Fire SmallFlame (Black Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Black Smoke/WFXMR_GazFire (Black Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Black Smoke/WFXMR_GazFire (Black Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Black Smoke/WFXMR_GazFireBig (Black Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Black Smoke/WFXMR_GazFireBig (Black Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Gray Smoke.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Gray Smoke/WFXMR_Fire Natural (Gray Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Gray Smoke/WFXMR_Fire Natural (Gray Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Gray Smoke/WFXMR_Fire Natural Broad (Gray Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Gray Smoke/WFXMR_Fire Natural Broad (Gray Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Gray Smoke/WFXMR_Fire Natural Circle (Gray Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Gray Smoke/WFXMR_Fire Natural Circle (Gray Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Gray Smoke/WFXMR_Fire SmallFlame (Gray Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Gray Smoke/WFXMR_Fire SmallFlame (Gray Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Gray Smoke/WFXMR_GazFire (Gray Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Gray Smoke/WFXMR_GazFire (Gray Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Gray Smoke/WFXMR_GazFireBig (Gray Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/Gray Smoke/WFXMR_GazFireBig (Gray Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/No Smoke.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/No Smoke/WFXMR_Fire Natural (No Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/No Smoke/WFXMR_Fire Natural (No Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/No Smoke/WFXMR_Fire Natural Broad (No Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/No Smoke/WFXMR_Fire Natural Broad (No Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/No Smoke/WFXMR_Fire Natural Circle (No Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/No Smoke/WFXMR_Fire Natural Circle (No Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/No Smoke/WFXMR_Fire SmallFlame (No Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/No Smoke/WFXMR_Fire SmallFlame (No Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/No Smoke/WFXMR_GazFire (No Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/No Smoke/WFXMR_GazFire (No Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/No Smoke/WFXMR_GazFireBig (No Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/No Smoke/WFXMR_GazFireBig (No Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_FlameThrower Big Alt Looped.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_FlameThrower Big Alt Looped.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_FlameThrower Big Alt.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_FlameThrower Big Alt.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_FlameThrower Big Looped.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_FlameThrower Big Looped.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_FlameThrower Big.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_FlameThrower Big.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_FlameThrower Looped.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_FlameThrower Looped.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_FlameThrower.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_FlameThrower.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_GazFireBig (Blue).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_GazFireBig (Blue).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_GazFireBig (Green).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_GazFireBig (Green).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_GazFireBig (Purple).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Fire/WFXMR_GazFireBig (Purple).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/\!MuzzleFlash Differences.txt
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/\!MuzzleFlash Differences.txt.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/4Planes.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/4Planes/WFXMR_MF 4P RIFLE1.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/4Planes/WFXMR_MF 4P RIFLE1.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/4Planes/WFXMR_MF 4P RIFLE2.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/4Planes/WFXMR_MF 4P RIFLE2.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/4Planes/WFXMR_MF 4P RIFLE3.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/4Planes/WFXMR_MF 4P RIFLE3.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/FPS.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/FPS/WFXMR_MF FPS RIFLE1.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/FPS/WFXMR_MF FPS RIFLE1.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/FPS/WFXMR_MF FPS RIFLE2.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/FPS/WFXMR_MF FPS RIFLE2.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/FPS/WFXMR_MF FPS RIFLE3.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/FPS/WFXMR_MF FPS RIFLE3.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/Sprites.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/Sprites/WFXMR_MF Spr RIFLE1.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/Sprites/WFXMR_MF Spr RIFLE1.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/Sprites/WFXMR_MF Spr RIFLE2.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/Sprites/WFXMR_MF Spr RIFLE2.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/Sprites/WFXMR_MF Spr RIFLE3.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/MuzzleFlashes/Sprites/WFXMR_MF Spr RIFLE3.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade AlphaBlend Blue.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade AlphaBlend Blue.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade AlphaBlend Green.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade AlphaBlend Green.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade AlphaBlend Purple.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade AlphaBlend Purple.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade AlphaBlend Red.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade AlphaBlend Red.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade Blue.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade Blue.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade Green.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade Green.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade Red.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade Red.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade Yellow.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/Color Variants/WFXMR_SmokeGrenade Yellow.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/WFXMR_SmokeGrenade Additive.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/WFXMR_SmokeGrenade Additive.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/WFXMR_SmokeGrenade AlphaBlend Black.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/WFXMR_SmokeGrenade AlphaBlend Black.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/WFXMR_SmokeGrenade AlphaBlend Gray.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/WFXMR_SmokeGrenade AlphaBlend Gray.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/WFXMR_SmokeGrenade Black.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/WFXMR_SmokeGrenade Black.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/WFXMR_SmokeGrenade Gray.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/WFXMR_SmokeGrenade Gray.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/WFXMR_SmokeGrenade White.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects (Mobile)/Smoke/WFXMR_SmokeGrenade White.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Lit.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Lit/WFX_BImpact Concrete + Hole Lit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Lit/WFX_BImpact Concrete + Hole Lit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Lit/WFX_BImpact Concrete NoCollision + Hole Lit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Lit/WFX_BImpact Concrete NoCollision + Hole Lit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Lit/WFX_BImpact Metal + Hole Lit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Lit/WFX_BImpact Metal + Hole Lit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Lit/WFX_BImpact Wood + Hole Lit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Lit/WFX_BImpact Wood + Hole Lit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Lit/WFX_BImpact Wood NoCollision + Hole Lit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Lit/WFX_BImpact Wood NoCollision + Hole Lit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Unlit.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Unlit/WFX_BImpact Concrete + Hole Unlit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Unlit/WFX_BImpact Concrete + Hole Unlit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Unlit/WFX_BImpact Concrete NoCollision + Hole Unlit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Unlit/WFX_BImpact Concrete NoCollision + Hole Unlit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Unlit/WFX_BImpact Metal + Hole Unlit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Unlit/WFX_BImpact Metal + Hole Unlit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Unlit/WFX_BImpact Wood + Hole Unlit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Unlit/WFX_BImpact Wood + Hole Unlit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Unlit/WFX_BImpact Wood NoCollision + Hole Unlit.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/Unlit/WFX_BImpact Wood NoCollision + Hole Unlit.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/WFX_BImpact Dirt + Hole.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/WFX_BImpact Dirt + Hole.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/WFX_BImpact Sand + Hole.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/WFX_BImpact Sand + Hole.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/WFX_BImpact SoftBody + Hole.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/WFX_BImpact SoftBody + Hole.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Concrete NoCollision.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Concrete NoCollision.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Concrete.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Concrete.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Dirt.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Dirt.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Metal.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Metal.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Sand.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Sand.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact SoftBody.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact SoftBody.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Wood NoCollision.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Wood NoCollision.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Wood.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Wood.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion LandMine.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion LandMine.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion Simple.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion Simple.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion Small.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion Small.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion StarSmoke.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion StarSmoke.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmoke Big Alt.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmoke Big Alt.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmoke Big.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmoke Big.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmoke Small.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmoke Small.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmoke.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmoke.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmokeGround Big Alt.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmokeGround Big Alt.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmokeGround Big.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmokeGround Big.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmokeGround Small.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmokeGround Small.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmokeGround.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_ExplosiveSmokeGround.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Nuke.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Nuke.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Black Smoke.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Black Smoke/WFX_Fire Natural (Black Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Black Smoke/WFX_Fire Natural (Black Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Black Smoke/WFX_Fire Natural Broad (Black Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Black Smoke/WFX_Fire Natural Broad (Black Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Black Smoke/WFX_Fire Natural Circle (Black Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Black Smoke/WFX_Fire Natural Circle (Black Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Black Smoke/WFX_Fire SmallFlame (Black Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Black Smoke/WFX_Fire SmallFlame (Black Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Black Smoke/WFX_GazFire (Black Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Black Smoke/WFX_GazFire (Black Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Black Smoke/WFX_GazFireBig (Black Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Black Smoke/WFX_GazFireBig (Black Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Gray Smoke.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Gray Smoke/WFX_Fire Natural (Gray Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Gray Smoke/WFX_Fire Natural (Gray Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Gray Smoke/WFX_Fire Natural Broad (Gray Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Gray Smoke/WFX_Fire Natural Broad (Gray Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Gray Smoke/WFX_Fire Natural Circle (Gray Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Gray Smoke/WFX_Fire Natural Circle (Gray Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Gray Smoke/WFX_Fire SmallFlame (Gray Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Gray Smoke/WFX_Fire SmallFlame (Gray Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Gray Smoke/WFX_GazFire (Gray Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Gray Smoke/WFX_GazFire (Gray Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Gray Smoke/WFX_GazFireBig (Gray Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/Gray Smoke/WFX_GazFireBig (Gray Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/No Smoke.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/No Smoke/WFX_Fire Natural (No Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/No Smoke/WFX_Fire Natural (No Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/No Smoke/WFX_Fire Natural Broad (No Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/No Smoke/WFX_Fire Natural Broad (No Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/No Smoke/WFX_Fire Natural Circle (No Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/No Smoke/WFX_Fire Natural Circle (No Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/No Smoke/WFX_Fire SmallFlame (No Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/No Smoke/WFX_Fire SmallFlame (No Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/No Smoke/WFX_GazFire (No Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/No Smoke/WFX_GazFire (No Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/No Smoke/WFX_GazFireBig (No Smoke).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/No Smoke/WFX_GazFireBig (No Smoke).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower Big Alt Looped.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower Big Alt Looped.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower Big Alt.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower Big Alt.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower Big Looped.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower Big Looped.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower Big.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower Big.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower Looped.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower Looped.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_GazFireBig (Blue).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_GazFireBig (Blue).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_GazFireBig (Green).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_GazFireBig (Green).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_GazFireBig (Purple).prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Fire/WFX_GazFireBig (Purple).prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/\!MuzzleFlash Differences.txt
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/\!MuzzleFlash Differences.txt.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/4Planes.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/4Planes/WFX_MF 4P RIFLE1.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/4Planes/WFX_MF 4P RIFLE1.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/4Planes/WFX_MF 4P RIFLE2.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/4Planes/WFX_MF 4P RIFLE2.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/4Planes/WFX_MF 4P RIFLE3.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/4Planes/WFX_MF 4P RIFLE3.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/FPS.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/FPS/WFX_MF FPS RIFLE1.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/FPS/WFX_MF FPS RIFLE1.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/FPS/WFX_MF FPS RIFLE2.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/FPS/WFX_MF FPS RIFLE2.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/FPS/WFX_MF FPS RIFLE3.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/FPS/WFX_MF FPS RIFLE3.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/Sprites.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/Sprites/WFX_MF Spr RIFLE1.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/Sprites/WFX_MF Spr RIFLE1.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/Sprites/WFX_MF Spr RIFLE2.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/Sprites/WFX_MF Spr RIFLE2.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/Sprites/WFX_MF Spr RIFLE3.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/Sprites/WFX_MF Spr RIFLE3.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade AlphaBlend Blue.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade AlphaBlend Blue.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade AlphaBlend Green.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade AlphaBlend Green.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade AlphaBlend Purple.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade AlphaBlend Purple.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade AlphaBlend Red.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade AlphaBlend Red.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade Blue.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade Blue.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade Green.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade Green.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade Red.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade Red.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade Yellow.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/Color Variants/WFX_SmokeGrenade Yellow.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/WFX_SmokeGrenade Additive.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/WFX_SmokeGrenade Additive.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/WFX_SmokeGrenade AlphaBlend Black.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/WFX_SmokeGrenade AlphaBlend Black.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/WFX_SmokeGrenade AlphaBlend Gray.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/WFX_SmokeGrenade AlphaBlend Gray.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/WFX_SmokeGrenade Black.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/WFX_SmokeGrenade Black.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/WFX_SmokeGrenade Gray.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/WFX_SmokeGrenade Gray.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/WFX_SmokeGrenade White.prefab
+TpsTemplet/Assets/JMO Assets/WarFX/_Effects/Smoke/WFX_SmokeGrenade White.prefab.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/CFX_AutoStopLoopedEffect.cs
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/CFX_AutoStopLoopedEffect.cs.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/CFX_Demo_RandomDir.cs
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/CFX_Demo_RandomDir.cs.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/CFX_Demo_RotateCamera.cs
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/CFX_Demo_RotateCamera.cs.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/CFX_Demo_Translate.cs
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/CFX_Demo_Translate.cs.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo.cs
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo.cs.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_DeleteAfterDelay.cs
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_DeleteAfterDelay.cs.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M4.fbx
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M4.fbx.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Checker Wall.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Checker Wall.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Checker.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Checker.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Concrete Wall.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Concrete Wall.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Concrete.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Concrete.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_M4 Normal.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_M4 Normal.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_M4.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_M4.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Metal Wall.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Metal Wall.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Metal.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Metal.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Wood Wall.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Wood Wall.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Wood.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_M_Wood.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_New.cs
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_New.cs.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_RandomDir.cs
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_RandomDir.cs.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_Checker.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_Checker.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_Cobblestone Normal.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_Cobblestone Normal.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_Cobblestone.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_Cobblestone.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_M4 Normal.jpg
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_M4 Normal.jpg.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_M4.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_M4.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_Metal Normal.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_Metal Normal.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_Metal.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_Metal.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_Wood Normal.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_Wood Normal.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_Wood.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_T_Wood.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_Wall.cs
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/Assets/WFX_Demo_Wall.cs.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn Arrow R.png
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn Arrow R.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn Arrow.png
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn Arrow.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn Camera H.png
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn Camera H.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn Camera.png
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn Camera.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn Ground H.png
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn Ground H.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn Ground.png
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn Ground.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn SlowMo H.png
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn SlowMo H.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn SlowMo.png
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/CFX Demo Btn SlowMo.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/WFX Demo Logo.png
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/UI Canvas/WFX Demo Logo.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/WarFX Demo New.unity
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/WarFX Demo New.unity.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/WarFX Demo NewSettings.lighting
+TpsTemplet/Assets/JMO Assets/WarFX/Demo/WarFX Demo NewSettings.lighting.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Concrete Lighted.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Concrete Lighted.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Concrete.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Concrete.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Generic Dirt.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Generic Dirt.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Generic Sand.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Generic Sand.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Generic.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Generic.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Metal Lighted.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Metal Lighted.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Metal.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Metal.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Wood Lighted.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Wood Lighted.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Wood.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Bullet Holes/WFX_BulletHole Wood.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_ExplosionFlames Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_ExplosionFlames Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_FlameBig Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_FlameBig Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_FlameMine Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_FlameMine Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_FlameSmall 4F Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_FlameSmall 4F Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_FlameSmall Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_FlameSmall Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_FlameSmall ScrollAdd.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_FlameSmall ScrollAdd.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_FlameThrower Stream.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_FlameThrower Stream.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_NukeFlames ScrollAdd.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_NukeFlames ScrollAdd.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_StarFlames.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Flames/WFX_M_StarFlames.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Impacts.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Impacts/WFX_M_Impact Debris.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Impacts/WFX_M_Impact Debris.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Impacts/WFX_M_Impact Smoke.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Impacts/WFX_M_Impact Smoke.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Impacts/WFX_M_Impact WoodDebris.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Impacts/WFX_M_Impact WoodDebris.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Impacts/WFX_M_Sparks Metal.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Impacts/WFX_M_Sparks Metal.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Misc.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Misc/WFX_M_GlowCircle Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Misc/WFX_M_GlowCircle Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Misc/WFX_M_GlowPalet Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Misc/WFX_M_GlowPalet Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Misc/WFX_M_GroundGlow Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Misc/WFX_M_GroundGlow Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Misc/WFX_M_SmallDots Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Misc/WFX_M_SmallDots Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Misc/WFX_M_SmallDotsInv Mult.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Misc/WFX_M_SmallDotsInv Mult.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Misc/WFX_M_StretchPalet.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Misc/WFX_M_StretchPalet.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF FrontRear RIFLE1.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF FrontRear RIFLE1.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF FrontRear RIFLE2.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF FrontRear RIFLE2.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF FrontRear RIFLE3.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF FrontRear RIFLE3.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF Glow.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF Glow.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF Side RIFLE1.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF Side RIFLE1.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF Side RIFLE2.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF Side RIFLE2.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF Side RIFLE3.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF Side RIFLE3.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF Sparks RIFLE1.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF Sparks RIFLE1.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF Sparks RIFLE2.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF Sparks RIFLE2.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF Sparks RIFLE3.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/MuzzleFlashes/WFX_M_MF Sparks RIFLE3.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_ExplosiveSmoke.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_ExplosiveSmoke.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_Smoke SoftMult.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_Smoke SoftMult.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_Smoke.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_Smoke.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeGrenade AB.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeGrenade AB.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeGrenadeWhite.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeGrenadeWhite.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeNoise.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeNoise.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeScroll Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeScroll Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeScroll SoftMult Average.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeScroll SoftMult Average.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeScroll SoftMult.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeScroll SoftMult.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeSpikeStretched.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeSpikeStretched.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Bullet Holes.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Bullet Holes/WFX_T_BulletHoles Concrete.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Bullet Holes/WFX_T_BulletHoles Concrete.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Bullet Holes/WFX_T_BulletHoles Generic.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Bullet Holes/WFX_T_BulletHoles Generic.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Bullet Holes/WFX_T_BulletHoles Metal.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Bullet Holes/WFX_T_BulletHoles Metal.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Bullet Holes/WFX_T_BulletHoles Wood.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Bullet Holes/WFX_T_BulletHoles Wood.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_DoubleFlames A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_DoubleFlames A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_FlameMine A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_FlameMine A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_FlamesBig A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_FlamesBig A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_FlamesBig.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_FlamesBig.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_FlamesSmall 4frm.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_FlamesSmall 4frm.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_FlamesSmallLoopAlpha.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_FlamesSmallLoopAlpha.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_FlameThrower Stream.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_FlameThrower Stream.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_NukeFlames.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_NukeFlames.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_StarFlames A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Flames/WFX_T_StarFlames A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_Debris Generic.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_Debris Generic.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_Debris Wood.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_Debris Wood.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_GlowCircle A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_GlowCircle A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_GlowPalet A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_GlowPalet A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_GroundGlow A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_GroundGlow A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_SmallDots A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_SmallDots A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_SmallDots Inversed A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_SmallDots Inversed A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_Sparks Metal A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_Sparks Metal A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_StretchPalet A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Misc/WFX_T_StretchPalet A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF FrontRear RIFLE1 A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF FrontRear RIFLE1 A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF FrontRear RIFLE2 A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF FrontRear RIFLE2 A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF FrontRear RIFLE3 A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF FrontRear RIFLE3 A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF Side RIFLE1 A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF Side RIFLE1 A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF Side RIFLE2 A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF Side RIFLE2 A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF Side RIFLE3 A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF Side RIFLE3 A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF Sparks RIFLE1 A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF Sparks RIFLE1 A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF Sparks RIFLE2 A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF Sparks RIFLE2 A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF Sparks RIFLE3 A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/MuzzleFlashes/WFX_T_MF Sparks RIFLE3 A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Smoke.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Smoke/WFX_T_SmokeLoopAlpha Average.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Smoke/WFX_T_SmokeLoopAlpha Average.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Smoke/WFX_T_SmokeLoopAlpha.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Smoke/WFX_T_SmokeLoopAlpha.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Smoke/WFX_T_SmokeNoise.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Smoke/WFX_T_SmokeNoise.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Smoke/WFX_T_SmokeSpikeStretched A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Desktop/Textures/Smoke/WFX_T_SmokeSpikeStretched A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Editor.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Editor/CFX_SpawnSystemEditor.cs
+TpsTemplet/Assets/JMO Assets/WarFX/Editor/CFX_SpawnSystemEditor.cs.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mesh.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mesh/CirclePlane12v.FBX
+TpsTemplet/Assets/JMO Assets/WarFX/Mesh/CirclePlane12v.FBX.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mesh/icosphere.fbx
+TpsTemplet/Assets/JMO Assets/WarFX/Mesh/icosphere.fbx.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mesh/Plane1x1.FBX
+TpsTemplet/Assets/JMO Assets/WarFX/Mesh/Plane1x1.FBX.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Concrete Lighted.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Concrete Lighted.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Concrete.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Concrete.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Generic Dirt.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Generic Dirt.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Generic Sand.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Generic Sand.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Generic.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Generic.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Metal Lighted.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Metal Lighted.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Metal.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Metal.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Wood Lighted.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Wood Lighted.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Wood.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Bullet Holes/WFXM_BulletHole Wood.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_ExplosionFlames Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_ExplosionFlames Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_FlameBig Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_FlameBig Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_FlameMine Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_FlameMine Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_FlameSmall 4F Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_FlameSmall 4F Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_FlameSmall Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_FlameSmall Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_FlameSmall ScrollAdd.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_FlameSmall ScrollAdd.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_FlameThrower Stream.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_FlameThrower Stream.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_NukeFlames ScrollAdd.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_NukeFlames ScrollAdd.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_StarFlames.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Flames/WFXM_M_StarFlames.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Impacts.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Impacts/WFXM_M_Impact Debris.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Impacts/WFXM_M_Impact Debris.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Impacts/WFXM_M_Impact Smoke.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Impacts/WFXM_M_Impact Smoke.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Impacts/WFXM_M_Impact WoodDebris.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Impacts/WFXM_M_Impact WoodDebris.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Impacts/WFXM_M_Sparks Metal.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Impacts/WFXM_M_Sparks Metal.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Misc.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Misc/WFXM_M_GlowCircle Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Misc/WFXM_M_GlowCircle Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Misc/WFXM_M_GlowPalet Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Misc/WFXM_M_GlowPalet Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Misc/WFXM_M_GroundGlow Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Misc/WFXM_M_GroundGlow Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Misc/WFXM_M_SmallDots Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Misc/WFXM_M_SmallDots Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Misc/WFXM_M_SmallDotsInv Mult.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Misc/WFXM_M_SmallDotsInv Mult.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Misc/WFXM_M_StretchPalet.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Misc/WFXM_M_StretchPalet.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF FrontRear RIFLE1.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF FrontRear RIFLE1.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF FrontRear RIFLE2.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF FrontRear RIFLE2.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF FrontRear RIFLE3.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF FrontRear RIFLE3.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF Glow.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF Glow.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF Side RIFLE1.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF Side RIFLE1.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF Side RIFLE2.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF Side RIFLE2.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF Side RIFLE3.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF Side RIFLE3.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF Sparks RIFLE1.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF Sparks RIFLE1.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF Sparks RIFLE2.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF Sparks RIFLE2.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF Sparks RIFLE3.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/MuzzleFlashes/WFXM_M_MF Sparks RIFLE3.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_ExplosiveSmoke.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_ExplosiveSmoke.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_Smoke SoftMult.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_Smoke SoftMult.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_Smoke.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_Smoke.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_SmokeGrenade AB.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_SmokeGrenade AB.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_SmokeGrenadeWhite.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_SmokeGrenadeWhite.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_SmokeNoise.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_SmokeNoise.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_SmokeScroll Add.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_SmokeScroll Add.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_SmokeScroll SoftMult Average.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_SmokeScroll SoftMult Average.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_SmokeScroll SoftMult.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_SmokeScroll SoftMult.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_SmokeSpikeStretched.mat
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Materials/Smoke/WFXM_M_SmokeSpikeStretched.mat.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Bullet Holes.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Bullet Holes/WFXM_T_BulletHoles Concrete.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Bullet Holes/WFXM_T_BulletHoles Concrete.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Bullet Holes/WFXM_T_BulletHoles Generic.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Bullet Holes/WFXM_T_BulletHoles Generic.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Bullet Holes/WFXM_T_BulletHoles Metal.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Bullet Holes/WFXM_T_BulletHoles Metal.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Bullet Holes/WFXM_T_BulletHoles Wood.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Bullet Holes/WFXM_T_BulletHoles Wood.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_DoubleFlames A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_DoubleFlames A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_FlameMine A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_FlameMine A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_FlamesBig A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_FlamesBig A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_FlamesBig.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_FlamesBig.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_FlamesSmall 4frm.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_FlamesSmall 4frm.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_FlamesSmallLoopAlpha.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_FlamesSmallLoopAlpha.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_FlameThrower Stream.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_FlameThrower Stream.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_NukeFlames.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_NukeFlames.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_StarFlames A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Flames/WFXM_T_StarFlames A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_Debris Generic.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_Debris Generic.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_Debris Wood.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_Debris Wood.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_GlowCircle A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_GlowCircle A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_GlowPalet A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_GlowPalet A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_GroundGlow A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_GroundGlow A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_SmallDots A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_SmallDots A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_SmallDots Inversed A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_SmallDots Inversed A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_Sparks Metal A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_Sparks Metal A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_StretchPalet A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Misc/WFXM_T_StretchPalet A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF FrontRear RIFLE1 A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF FrontRear RIFLE1 A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF FrontRear RIFLE2 A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF FrontRear RIFLE2 A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF FrontRear RIFLE3 A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF FrontRear RIFLE3 A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF Side RIFLE1 A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF Side RIFLE1 A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF Side RIFLE2 A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF Side RIFLE2 A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF Side RIFLE3 A8.png
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF Side RIFLE3 A8.png.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF Sparks RIFLE1 A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF Sparks RIFLE1 A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF Sparks RIFLE2 A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF Sparks RIFLE2 A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF Sparks RIFLE3 A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/MuzzleFlashes/WFXM_T_MF Sparks RIFLE3 A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Smoke.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Smoke/WFXM_T_SmokeLoopAlpha Average.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Smoke/WFXM_T_SmokeLoopAlpha Average.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Smoke/WFXM_T_SmokeLoopAlpha.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Smoke/WFXM_T_SmokeLoopAlpha.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Smoke/WFXM_T_SmokeNoise.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Smoke/WFXM_T_SmokeNoise.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Smoke/WFXM_T_SmokeSpikeStretched A8.tga
+TpsTemplet/Assets/JMO Assets/WarFX/Mobile/Textures/Smoke/WFXM_T_SmokeSpikeStretched A8.tga.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Scripts.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Scripts/CFX_AutoDestructShuriken.cs
+TpsTemplet/Assets/JMO Assets/WarFX/Scripts/CFX_AutoDestructShuriken.cs.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Scripts/CFX_LightIntensityFade.cs
+TpsTemplet/Assets/JMO Assets/WarFX/Scripts/CFX_LightIntensityFade.cs.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Scripts/WFX_BulletHoleDecal.cs
+TpsTemplet/Assets/JMO Assets/WarFX/Scripts/WFX_BulletHoleDecal.cs.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Scripts/WFX_LightFlicker.cs
+TpsTemplet/Assets/JMO Assets/WarFX/Scripts/WFX_LightFlicker.cs.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Add Scroll.shader
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Add Scroll.shader.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Alpha-Diffuse TintColor.shader
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Alpha-Diffuse TintColor.shader.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Alpha-Specular TintColor.shader
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Alpha-Specular TintColor.shader.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S AlphaBlend NoSoftParticles.shader
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S AlphaBlend NoSoftParticles.shader.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S AlphaBlend Scroll.shader
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S AlphaBlend Scroll.shader.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Multiply Soft Scroll.shader
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Multiply Soft Scroll.shader.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Multiply Soft.shader
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Multiply Soft.shader.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Particle Add A8.shader
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Particle Add A8.shader.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Particle AddSoft A8.shader
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Particle AddSoft A8.shader.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Particle Multiply A8.shader
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Particle Multiply A8.shader.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Smoke Scroll.shader
+TpsTemplet/Assets/JMO Assets/WarFX/Shaders/WFX_S Smoke Scroll.shader.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Spawn System.meta
+TpsTemplet/Assets/JMO Assets/WarFX/Spawn System/CFX_SpawnSystem.cs
+TpsTemplet/Assets/JMO Assets/WarFX/Spawn System/CFX_SpawnSystem.cs.meta
