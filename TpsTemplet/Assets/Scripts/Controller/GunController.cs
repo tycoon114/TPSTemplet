@@ -57,7 +57,7 @@ public class GunController : MonoBehaviour
     }
 
    
-    void FixedUpdate()
+    void Update()
     {
         Vector3 dir = transform.position + muzzlePoint.transform.position;
 
@@ -105,6 +105,7 @@ public class GunController : MonoBehaviour
             Shoot();
             yield return new WaitForSeconds(fireRate);
         }
+        yield return null;
     }
 
 
