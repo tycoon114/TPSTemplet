@@ -71,7 +71,7 @@ public class GunController : MonoBehaviour
         }
         animator.SetBool("isAim", isAim);
 
-        if (Input.GetMouseButtonDown(0) && isAim && currentAmmo!=0 && fireCoroutine == null) // fire  ... 나중에 캐릭터 컨트롤러에서 여기를 오도록?
+        if (Input.GetMouseButtonDown(0) && isAim && currentAmmo!=0 && fireCoroutine == null && !isReload) // fire  ... 나중에 캐릭터 컨트롤러에서 여기를 오도록?
         {
             fireCoroutine = StartCoroutine(AttackStart());
 
