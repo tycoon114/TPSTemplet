@@ -23,7 +23,7 @@ public class GunController : MonoBehaviour
     public float hitScanRadius = 0.05f; // 크로스헤어 내 랜덤 범위
     public float range = 100f; // 사격 거리
     public int maxAmmo = 50;        //최대 탄약수
-    public bool blotAction = false;  //볼트 액션이 아닌 경우 연사 가능하도록
+    public bool boltAction = false;  //볼트 액션이 아닌 경우 연사 가능하도록
  
 
     private bool isReload = false;      // 재장전
