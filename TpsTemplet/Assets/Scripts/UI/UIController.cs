@@ -6,7 +6,7 @@ public class UIController : MonoBehaviour
     public CanvasGroup Copyrights;
     public CanvasGroup Logo;
     public CanvasGroup Back;
-    public float fadeDuration = 2f;  // 페이드 지속 시간
+    public float fadeDuration = 4f;  // 페이드 지속 시간
 
     void Start()
     {

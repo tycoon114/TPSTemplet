@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 using System.Collections;
-using System.Security.Claims;
-using static UnityEngine.EventSystems.EventTrigger;
-using UnityEngine.UI;
+//using System.Security.Claims;
+//using static UnityEngine.EventSystems.EventTrigger;
+//using UnityEngine.UI;
 
 
 public class GunController : MonoBehaviour
