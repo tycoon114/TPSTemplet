@@ -12,6 +12,9 @@ public class PlayerController2 : MonoBehaviour
     protected bool isAim = false;
 
 
+
+
+
     void Start()
     {
         controller = GetComponent<CharacterController>();

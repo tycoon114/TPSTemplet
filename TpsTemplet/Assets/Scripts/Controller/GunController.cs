@@ -6,24 +6,29 @@ using System.Security.Claims;
 
 public class GunController : MonoBehaviour
 {
+    public static event Action<int, int> onAmmoChanged;  //gamePlayUi에서 탄약을 표시 하기 위함
 
     private Animator animator;
     public GameObject bulletPrefab; // 총알
     private Transform muzzlePoint; //총구위치
+    public ParticleSystem gunFire;
+
+
     public float bulletSpeed = 20f;  // 이후 캐릭터의 총기마다 속도를 바꾸고 이를  플레이어 컨트롤러에서 받아오돌고 할것 -DB
     public float reloadTime = 2f;   // 재장전 시간
-    public int MaxAmmo = 10;
+    public int maxAmmo = 10;
 
     private bool isReload = false;
     private bool isShoot = false;
     private bool isAim = false;
-    private int currentAmmo;
+    protected int currentAmmo;
 
 
 
     void Start()
     {
-        currentAmmo = MaxAmmo;
+        currentAmmo = maxAmmo;
+        onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
         animator = GetComponent<Animator>();
         //자식 오브젝트에서 총구인 fire_01찾기
         Transform[] allChildren = GetComponentsInChildren<Transform>();
@@ -68,8 +73,6 @@ public class GunController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R) || currentAmmo ==0)
         {
-            //&&조건으로 총알이 없는 경우도 실행하도록 추가 필요
-
             StartCoroutine(Reload());
         }
 
@@ -84,7 +87,8 @@ public class GunController : MonoBehaviour
         yield return new WaitForSeconds(reloadTime);
         isReload = false;
         animator.SetBool("isReload", isReload);
-        currentAmmo = MaxAmmo;
+        currentAmmo = maxAmmo;
+        onAmmoChanged?.Invoke(currentAmmo, maxAmmo);
     }
 
     void Shoot()
@@ -95,6 +99,8 @@ public class GunController : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, muzzlePoint.position, muzzlePoint.rotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.linearVelocity = muzzlePoint.forward * bulletSpeed;
+
+        onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
     }
 
 

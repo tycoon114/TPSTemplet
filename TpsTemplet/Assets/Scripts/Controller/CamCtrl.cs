@@ -87,6 +87,10 @@ public class CamCtrl : MonoBehaviour
         //카메라 위치 계산을 위해 x, y, z좌표와 반지름 r값을 넘겨준다.
         sphericalCoordinates = new SphericalCoordinates(targetCamPos, Mathf.Abs(targetCamPos.z));
         transform.position = sphericalCoordinates.toCartesian + PlayerTr.position;
+
+        Cursor.lockState = CursorLockMode.Locked; // 마우스 잠금
+        Cursor.visible = false;
+
     }
 
     void Update()
