@@ -11,7 +11,7 @@ public class GunController : MonoBehaviour
     private Animator animator;
     public GameObject bulletPrefab; // 총알
     private Transform muzzlePoint; //총구위치
-    public ParticleSystem gunFire;
+    public GameObject gunFire;
 
 
     public float bulletSpeed = 20f;  // 이후 캐릭터의 총기마다 속도를 바꾸고 이를  플레이어 컨트롤러에서 받아오돌고 할것 -DB
@@ -93,6 +93,13 @@ public class GunController : MonoBehaviour
 
     void Shoot()
     {
+        //총구 이펙트
+        if (gunFire != null)
+        {
+            Debug.Log("Muzzle Flash Playing...");
+            GameObject gunEffect = Instantiate(gunFire, muzzlePoint.position, Quaternion.identity);
+            Destroy(gunEffect, 0.5f);
+        }
         currentAmmo--;
         //isShoot = true;
         //animator.SetBool("isShoot",isShoot);
