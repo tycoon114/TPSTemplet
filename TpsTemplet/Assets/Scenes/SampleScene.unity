@@ -3490,7 +3490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4edcca392c180e4a9e231da49a8f094, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4edcca392c180e4a9e231da49a8f094, type: 3}
       propertyPath: m_LocalRotation.y
@@ -3665,7 +3665,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1911980616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4618,8 +4618,8 @@ SceneRoots:
   - {fileID: 1940362118}
   - {fileID: 859414898}
   - {fileID: 2128880083}
-  - {fileID: 1358120269}
   - {fileID: 1911980619}
   - {fileID: 959609647}
   - {fileID: 1191972734}
   - {fileID: 514496537}
+  - {fileID: 1358120269}
