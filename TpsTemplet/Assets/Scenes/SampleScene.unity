@@ -594,7 +594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamPos: {x: 0, y: 0.75, z: -4}
-  PlayerTr: {fileID: 220384670}
+  Player: {fileID: 220384670}
   sphericalCoordinates:
     minAzimuth_Deg: 0
     maxAzimuth_Deg: 0

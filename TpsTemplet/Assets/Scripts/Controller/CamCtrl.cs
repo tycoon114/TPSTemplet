@@ -27,7 +27,7 @@ public class SphericalCoordinates
     }
 
     //Azimuth range
-    public float minAzimuth_Deg = 30f;
+    public float minAzimuth_Deg = 0f;
     private float minAzimuth_Rad;
 
     public float maxAzimuth_Deg = 360f;
