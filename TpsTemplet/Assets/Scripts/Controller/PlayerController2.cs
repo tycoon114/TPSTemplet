@@ -20,13 +20,9 @@ public class PlayerController2 : MonoBehaviour
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
     }
+    //fixed는 물리 처리 할떄 사용
 
     void Update()
-    {
-
-    }
-
-    private void FixedUpdate()
     {
         // 입력 받기
         float moveX = Input.GetAxisRaw("Horizontal");
@@ -77,9 +73,10 @@ public class PlayerController2 : MonoBehaviour
         }
 
         // 입력 값을 카메라 기준으로 변환
-        moveDirection = (cameraForward * moveZ + cameraRight * moveX).normalized;
+        moveDirection = (cameraForward * moveZ + cameraRight * moveX);
         // 이동 처리
-        transform.position += moveDirection * moveSpeed * Time.deltaTime;
+        //transform.position += moveDirection * moveSpeed * Time.deltaTime;
+        controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
         if (isAim)
         {
