@@ -1,6 +1,4 @@
-using Unity.VisualScripting;
 using UnityEngine;
-//using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class PlayerController2 : MonoBehaviour
 {
@@ -10,9 +8,6 @@ public class PlayerController2 : MonoBehaviour
     private Animator animator;
     private Vector3 moveDirection;
     protected bool isAim = false;
-
-
-
 
 
     void Start()
@@ -25,11 +20,11 @@ public class PlayerController2 : MonoBehaviour
     void Update()
     {
         // 입력 받기
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveZ = Input.GetAxisRaw("Vertical");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
 
         // 이동 벡터 설정
-        Vector3 move = new Vector3(moveX, 0, moveZ).normalized;
+        Vector3 move = new Vector3(horizontal, 0, vertical).normalized;
 
         // 현재 카메라의 회전 값 가져오기
         Vector3 cameraForward = Camera.main.transform.forward;
@@ -60,12 +55,10 @@ public class PlayerController2 : MonoBehaviour
             isAim = false;
         }
 
-
         // 중력 적용
         if (!controller.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
-
         }
         else
         {
@@ -73,7 +66,7 @@ public class PlayerController2 : MonoBehaviour
         }
 
         // 입력 값을 카메라 기준으로 변환
-        moveDirection = (cameraForward * moveZ + cameraRight * moveX);
+        moveDirection = (cameraForward * vertical + cameraRight * horizontal);
         // 이동 처리
         //transform.position += moveDirection * moveSpeed * Time.deltaTime;
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
@@ -89,5 +82,4 @@ public class PlayerController2 : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(moveDirection);
         }
     }
-
 }

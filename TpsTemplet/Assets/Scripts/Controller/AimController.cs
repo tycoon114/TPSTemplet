@@ -15,8 +15,9 @@ public class AimController : MonoBehaviour
 
     void Start()
     {
-        if (!spineTransform) spineTransform = FindChildTransform(transform, "Bip001 Spine");
-        if (!weaponTransform) weaponTransform = FindChildTransform(transform, "Bip001_Weapon");
+        if (!spineTransform) spineTransform = FindChildTransform(transform, "Bip001 Spine");    //상체 위치
+        if (!weaponTransform) weaponTransform = FindChildTransform(transform, "Bip001_Weapon"); //무기 위치
+
         if (!muzzlePoint) muzzlePoint = FindChildTransform(transform, "fire_01"); // 총구 위치
         if (!mainCamera) mainCamera = Camera.main;
 
@@ -41,13 +42,13 @@ public class AimController : MonoBehaviour
     {
         Vector3 aimTarget = GetAimTarget();
 
-        // 🎯 스파인(상체) 회전
+        // 스파인(상체) 회전
         Vector3 spineDirection = aimTarget - spineTransform.position;
         Quaternion spineRotation = Quaternion.LookRotation(spineDirection);
         spineRotation = ClampRotation(spineRotation); // 🎯 최대 각도 제한 적용
         spineTransform.rotation = Quaternion.Slerp(spineTransform.rotation, spineRotation, Time.deltaTime * rotationSpeed);
 
-        // 🎯 무기 회전
+        //무기 회전
         Vector3 weaponDirection = aimTarget - weaponTransform.position;
         Quaternion weaponRotation = Quaternion.LookRotation(weaponDirection);
         weaponTransform.rotation = Quaternion.Slerp(weaponTransform.rotation, weaponRotation, Time.deltaTime * rotationSpeed);

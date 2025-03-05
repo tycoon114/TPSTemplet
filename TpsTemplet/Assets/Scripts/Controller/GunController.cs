@@ -1,10 +1,6 @@
 using System;
 using UnityEngine;
 using System.Collections;
-//using System.Security.Claims;
-//using static UnityEngine.EventSystems.EventTrigger;
-//using UnityEngine.UI;
-
 
 public class GunController : MonoBehaviour
 {
@@ -74,8 +70,6 @@ public class GunController : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && isAim && currentAmmo!=0 && fireCoroutine == null && !isReload) // fire  ... 나중에 캐릭터 컨트롤러에서 여기를 오도록?
         {
             fireCoroutine = StartCoroutine(AttackStart());
-
-
         }
         else if (Input.GetMouseButtonUp(0) && fireCoroutine != null) // 좌클릭 해제 시 사격 중지
         {
@@ -123,7 +117,7 @@ public class GunController : MonoBehaviour
 
     void Shoot()
     {
-        //총구 이펙트
+        //사격 이펙트
         if (gunFire != null)
         {
             GameObject gunEffect = Instantiate(gunFire, muzzlePoint.position, Quaternion.identity);
