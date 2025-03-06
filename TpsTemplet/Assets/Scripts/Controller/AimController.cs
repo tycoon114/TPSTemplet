@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+//조준을 다루던 컨트롤러, 현재는 사용하지 않음
 public class AimController : MonoBehaviour
 {
     public Transform spineTransform;  // 상체 (Bip001 Spine)

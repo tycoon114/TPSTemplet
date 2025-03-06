@@ -1,6 +1,10 @@
 using UnityEngine;
 
 [System.Serializable]
+
+
+//구면 좌표계를 활용한 카메라 제어
+// https://srdeveloper.tistory.com/7#google_vignette
 public class SphericalCoordinates
 {
     private float radius, azimuth, elevation;

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//컨트롤러 구버전
 public class PlayerController : MonoBehaviour
 {
 
