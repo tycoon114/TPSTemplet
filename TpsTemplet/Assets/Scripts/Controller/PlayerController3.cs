@@ -12,11 +12,10 @@ public class PlayerController3 : MonoBehaviour
 
     void Start()
     {
-        //자식 노드에서 가져오기, 캐릭터 선택을 고려하면 플레이어는 빈 오브젝트고 거기로 선택한 캐릭터를 자식으로 불러오는게 맞는거 같음 25.03.06
+        //자식 노드에서 가져오기, 캐릭터 선택을 고려하면 플레이어는 빈 오브젝트고 거기로 선택한 캐릭터를 자식으로 불러오는게 하기 25.03.06
         controller = GetComponentInChildren<CharacterController>();
         animator = GetComponentInChildren<Animator>();
     }
-    //fixed는 물리 처리 할떄 사용
 
     void Update()
     {
@@ -47,6 +46,8 @@ public class PlayerController3 : MonoBehaviour
         //@TK(25.02.24)
         //animator.SetFloat("FactorX", moveX);
         //animator.SetFloat("FactorZ", moveZ);
+
+        //조준시 이동 제어를 위해,우선 조준에 대한 코드는 GunController대신 여기서 처리
         if (Input.GetMouseButton(1))
         {
             isAim = true;
@@ -79,7 +80,6 @@ public class PlayerController3 : MonoBehaviour
         }
         else if (moveDirection != Vector3.zero)// 이동 중이면 이동 방향으로 캐릭터 회전
         {
-            //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDirection), Time.deltaTime * 10f);
             transform.rotation = Quaternion.LookRotation(moveDirection);
         }
     }

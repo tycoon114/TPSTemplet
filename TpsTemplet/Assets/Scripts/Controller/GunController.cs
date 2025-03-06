@@ -35,7 +35,7 @@ public class GunController : MonoBehaviour
     {
         currentAmmo = maxAmmo;
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
 
         mainCamera = Camera.main;
 
