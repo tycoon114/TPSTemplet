@@ -18,8 +18,8 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        //Cursor.lockState = CursorLockMode.Locked; // 마우스 잠금
-        //Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked; // 마우스 잠금
+        Cursor.visible = false;
     }
 
     void FixedUpdate()
