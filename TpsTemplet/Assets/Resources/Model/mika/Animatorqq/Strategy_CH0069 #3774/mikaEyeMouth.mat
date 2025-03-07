@@ -117,7 +117,7 @@ Material:
     - _IsFace: 1
     - _MainLightIgnoreCelShade: 0
     - _Metallic: 0
-    - _MouthIndex: 32
+    - _MouthIndex: 0
     - _OcclusionRemapEnd: 1
     - _OcclusionRemapStart: 0
     - _OcclusionStrength: 1

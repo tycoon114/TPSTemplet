@@ -788,8 +788,8 @@ MonoBehaviour:
   hitLayers:
     serializedVersion: 2
     m_Bits: 128
-  reload: {fileID: 8300000, guid: d977cf7c9beeb2840a18960542f0976d, type: 3}
-  shoot: {fileID: 8300000, guid: 680e2768eaea47e47a6c279059009409, type: 3}
+  reload: {fileID: 8300000, guid: 9700729f4644cf94193147d99fb53459, type: 3}
+  shoot: {fileID: 8300000, guid: d85e9e1672c96084f838b60cdfbe46e9, type: 3}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3420,7 +3420,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 0365508b031bc2844a423e0d83709265, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 6bdcc74ed3ac404438c0e030b92a8bd6, type: 2}
+      objectReference: {fileID: 9100000, guid: 64be2beb19eab884eaf9dc7de80c7f6c, type: 2}
     - target: {fileID: 5866666021909216657, guid: 0365508b031bc2844a423e0d83709265, type: 3}
       propertyPath: m_WarningMessage
       value: 
@@ -3477,7 +3477,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081872782}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddf9bdcfd05fb14c9240843f459f49f, type: 3}
   m_Name: 

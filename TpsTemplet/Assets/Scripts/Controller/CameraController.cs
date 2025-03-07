@@ -36,7 +36,7 @@ public class CameraController : MonoBehaviour
 
         yaw += Input.GetAxis("Mouse X") * sensitivity;
         pitch -= Input.GetAxis("Mouse Y") * sensitivity;
-        pitch = Mathf.Clamp(pitch, -30f, 60f); // 위아래 각도 제한
+        pitch = Mathf.Clamp(pitch, -30f, 60f);          // 위아래 각도 제한
 
         // 카메라 위치 및 회전 적용
         Quaternion rotation = Quaternion.Euler(pitch, yaw, 0);
