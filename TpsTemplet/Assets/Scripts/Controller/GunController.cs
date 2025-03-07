@@ -31,6 +31,13 @@ public class GunController : MonoBehaviour
 
     private Camera mainCamera;      // 히트 스캔 레이캐스트를 위한 메인카메라 값
 
+
+    private AudioSource audioSource;    //플리이에 오브젝트에 오디오소스 추가
+    public AudioClip reload;            //지금은 직접 넣지만 이후에 DB나 서버에서 받도록? 혹은 이름 찾아서
+    public AudioClip shoot;             // 마찬가지로 지금만 개발하기 편하게 퍼블릭 처리
+
+
+
     void Start()
     {
         currentAmmo = maxAmmo;

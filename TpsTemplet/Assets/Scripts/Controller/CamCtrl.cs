@@ -112,7 +112,7 @@ public class CamCtrl : MonoBehaviour
         //목표지점으로 카메라를 보게함
         transform.LookAt(lookPosition);
 
-
+        //레이케스트 충돌을 위함
         RaycastHit hit;
         Vector3 dir = transform.position - Player.transform.position;
         Debug.DrawRay(Player.transform.position, dir.normalized * dir.magnitude, Color.red);
