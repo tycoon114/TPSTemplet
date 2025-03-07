@@ -43,6 +43,7 @@ public class GunController : MonoBehaviour
         currentAmmo = maxAmmo;
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
         animator = GetComponentInChildren<Animator>();
+        audioSource = GetComponentInChildren<AudioSource>();
 
         mainCamera = Camera.main;
 
@@ -112,6 +113,7 @@ public class GunController : MonoBehaviour
 
     IEnumerator Reload()
     {
+        audioSource.PlayOneShot(reload);
         isReload = true;
         animator.SetBool("isReload", isReload);
 
@@ -124,6 +126,7 @@ public class GunController : MonoBehaviour
 
     void Shoot()
     {
+        audioSource.PlayOneShot(shoot);
         //사격 이펙트
         if (gunFire != null)
         {
