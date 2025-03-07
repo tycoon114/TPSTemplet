@@ -307,6 +307,8 @@ MonoBehaviour:
   hitLayers:
     serializedVersion: 2
     m_Bits: 128
+  reload: {fileID: 0}
+  shoot: {fileID: 0}
 --- !u!1 &274938066
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,6 +666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   gravity: 9.8
+  walk: {fileID: 0}
 --- !u!114 &389961059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -688,6 +691,8 @@ MonoBehaviour:
   hitLayers:
     serializedVersion: 2
     m_Bits: 128
+  reload: {fileID: 8300000, guid: d977cf7c9beeb2840a18960542f0976d, type: 3}
+  shoot: {fileID: 8300000, guid: 680e2768eaea47e47a6c279059009409, type: 3}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,7 +939,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473691560}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dddf9bdcfd05fb14c9240843f459f49f, type: 3}
   m_Name: 
@@ -2698,6 +2703,8 @@ MonoBehaviour:
   hitLayers:
     serializedVersion: 2
     m_Bits: 0
+  reload: {fileID: 0}
+  shoot: {fileID: 0}
 --- !u!114 &743856483
 MonoBehaviour:
   m_ObjectHideFlags: 0
