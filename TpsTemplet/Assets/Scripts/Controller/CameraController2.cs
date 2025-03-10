@@ -11,7 +11,7 @@ public class CameraController2 : MonoBehaviour
     public Transform Player;        //플레이어의 위치
     private Vector3 lookPosition;   //보는 위치?
     public Transform PlayerLookObj;  // 플레이어 옆 카메라가 향할 오브젝트
-
+    
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked; // 마우스 잠금
@@ -36,19 +36,14 @@ public class CameraController2 : MonoBehaviour
         pitch = Mathf.Clamp(pitch, -30f, 45f);
         Vector3 direction = PlayerLookObj.position + CameraOffset;
 
-        //부드럽게 움직이기
-        //transform.position = Vector3.SmoothDamp(transform.position, direction, ref mouseSensitivity, 0.3f);
-
-
         //플레이어 위치에서 조금더 오른쪽 위로 자리잡게 만든다.
         lookPosition = new Vector3(PlayerLookObj.position.x , PlayerLookObj.position.y + CameraOffset.y, PlayerLookObj.position.z);
-
-
-        //PlayerLookObj
         transform.position = PlayerLookObj.position + Quaternion.Euler(-pitch, yaw, 0) * CameraOffset;
 
+        //transform.rotation = Quaternion.Euler(pitch, yaw, 0);
+        Quaternion targetRotation = Quaternion.Euler(pitch, yaw, 0);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
 
-        transform.rotation = Quaternion.Euler(pitch, yaw, 0);
         transform.LookAt(lookPosition);
 
         //광선을 시각화 하기 위함

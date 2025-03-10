@@ -85,5 +85,40 @@ public class CameraController : MonoBehaviour
         //Debug.DrawRay(PlayerLookObj.transform.position, rayDirection.normalized * rayDirection.magnitude, Color.red);
 
 
+        //2025-03-10  22:02 - smoothDemp 사용
+        //float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        //float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+        //yaw += mouseX;
+        //pitch += mouseY;
+        ////위 아래 각도 제한
+        //pitch = Mathf.Clamp(pitch, -30f, 45f);
+        //Vector3 direction = PlayerLookObj.position + CameraOffset;
+
+        //float smoothPitch = Mathf.SmoothDampAngle(transform.rotation.eulerAngles.x, pitch, ref pitchVelocity, smoothTime);
+        //float smoothYaw = Mathf.SmoothDampAngle(transform.rotation.eulerAngles.y, yaw, ref yawVelocity, smoothTime);
+        //transform.rotation = Quaternion.Euler(smoothPitch, smoothYaw, 0);
+
+
+        ////플레이어 위치에서 조금더 오른쪽 위로 자리잡게 만든다.
+        ////lookPosition = new Vector3(PlayerLookObj.position.x , PlayerLookObj.position.y + CameraOffset.y, PlayerLookObj.position.z);
+        //transform.position = PlayerLookObj.position + Quaternion.Euler(-pitch, yaw, 0) * CameraOffset;
+        //lookPosition = new Vector3(PlayerLookObj.position.x, PlayerLookObj.position.y + CameraOffset.y, PlayerLookObj.position.z);
+        //transform.LookAt(lookPosition);
+
+
+        ////transform.rotation = Quaternion.Euler(pitch, yaw, 0);
+        //Quaternion targetRotation = Quaternion.Euler(pitch, yaw, 0);
+        ////transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+
+
+
+        ////transform.LookAt(lookPosition);
+
+        ////광선을 시각화 하기 위함
+        //Vector3 rayDirection = transform.position - PlayerLookObj.transform.position;
+        //Debug.DrawRay(PlayerLookObj.transform.position, rayDirection.normalized * rayDirection.magnitude, Color.red);
+
+
     }
 }

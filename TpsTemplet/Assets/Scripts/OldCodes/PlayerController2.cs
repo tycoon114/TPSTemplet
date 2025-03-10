@@ -12,8 +12,8 @@ public class PlayerController2 : MonoBehaviour
 
     void Start()
     {
-        controller = GetComponent<CharacterController>();
-        animator = GetComponent<Animator>();
+        //controller = GetComponent<CharacterController>();
+        //animator = GetComponent<Animator>();
     }
     //fixed는 물리 처리 할떄 사용
 
@@ -79,7 +79,12 @@ public class PlayerController2 : MonoBehaviour
         else if (moveDirection != Vector3.zero)// 이동 중이면 이동 방향으로 캐릭터 회전
         {
             //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDirection), Time.deltaTime * 10f);
-            transform.rotation = Quaternion.LookRotation(moveDirection);
+            //transform.rotation = Quaternion.LookRotation(moveDirection);
+            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+
+            // 회전 속도를 제한 (초당 300도 회전)
+            float rotationSpeed = 300f;
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
 }

@@ -603,8 +603,8 @@ MonoBehaviour:
   hitLayers:
     serializedVersion: 2
     m_Bits: 128
-  reload: {fileID: 8300000, guid: d977cf7c9beeb2840a18960542f0976d, type: 3}
-  shoot: {fileID: 8300000, guid: 680e2768eaea47e47a6c279059009409, type: 3}
+  reload: {fileID: 8300000, guid: 9700729f4644cf94193147d99fb53459, type: 3}
+  shoot: {fileID: 8300000, guid: d85e9e1672c96084f838b60cdfbe46e9, type: 3}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,6 +858,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   gravity: 9.8
+  controller: {fileID: 0}
+  animator: {fileID: 0}
+  moveDirection: {x: 0, y: 0, z: 0}
+  isAim: 0
 --- !u!1 &514496533
 GameObject:
   m_ObjectHideFlags: 0
@@ -2591,6 +2595,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   gravity: 9.81
+  controller: {fileID: 0}
+  animator: {fileID: 0}
+  moveDirection: {x: 0, y: 0, z: 0}
+  isAim: 0
 --- !u!114 &743856480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2636,6 +2644,9 @@ MonoBehaviour:
   speed: 5
   gravity: -9.81
   jumpSpeed: 3
+  controller: {fileID: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  anim: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -3206,6 +3217,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   gravity: 9.8
+  controller: {fileID: 0}
+  animator: {fileID: 0}
+  moveDirection: {x: 0, y: 0, z: 0}
+  isAim: 0
 --- !u!1 &1090852195
 GameObject:
   m_ObjectHideFlags: 0
@@ -4644,6 +4659,9 @@ MonoBehaviour:
   speed: 5
   gravity: -9.81
   jumpSpeed: 3
+  controller: {fileID: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  anim: {fileID: 0}
 --- !u!114 &1940362126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4658,6 +4676,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   gravity: 9.8
+  controller: {fileID: 0}
+  animator: {fileID: 0}
+  moveDirection: {x: 0, y: 0, z: 0}
+  isAim: 0
 --- !u!136 &1940362129
 CapsuleCollider:
   m_ObjectHideFlags: 0
