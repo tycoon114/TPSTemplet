@@ -688,7 +688,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8648255f66b50444d81914b45d4918fb, type: 3}
   m_Name: 
@@ -707,13 +707,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33e362a058eeb2e4b99012e05d95eccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CameraOffset: {x: 0, y: 0.75, z: -4}
-  mouseSensitivity: 100
+  mouseSensitivity: 50
   Player: {fileID: 220384670}
 --- !u!1 &389961055
 GameObject:
@@ -3418,6 +3418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mika
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0365508b031bc2844a423e0d83709265, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 0365508b031bc2844a423e0d83709265, type: 3}
       propertyPath: m_Controller
       value: 
@@ -3821,7 +3825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.7058824}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
