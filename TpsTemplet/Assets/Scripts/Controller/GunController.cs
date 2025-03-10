@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using System.Collections;
 
-public class GunController : MonoBehaviour
+public class GunController :  PlayerController3
 {
     public static event Action<int, int> onAmmoChanged;  //gamePlayUi에서 탄약을 표시 하기 위함
 

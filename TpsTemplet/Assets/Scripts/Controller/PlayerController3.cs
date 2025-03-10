@@ -8,7 +8,8 @@ public class PlayerController3 : MonoBehaviour
     private Animator animator;
     private Vector3 moveDirection;
     protected bool isAim = false;
-
+    protected int atkType;          //공격타입
+    protected int dfnType;          //방어 타입
 
     public AudioClip walk;
 

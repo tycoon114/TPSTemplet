@@ -32,11 +32,16 @@ public class CameraController2 : MonoBehaviour
         pitch += mouseY;
         //위 아래 각도 제한
         pitch = Mathf.Clamp(pitch, -30f, 45f);
+        Vector3 direction = Player.position + CameraOffset;
+
+        //부드럽게 움직이기
+        //transform.position = Vector3.SmoothDamp(transform.position, direction, ref mouseSensitivity, 0.3f);
+
 
         //플레이어 위치에서 조금더 오른쪽 위로 자리잡게 만든다.
         lookPosition = new Vector3(Player.position.x + 0.5f, Player.position.y + CameraOffset.y, Player.position.z);
         
-        Vector3 direction = Player.position + CameraOffset;
+        
 
         transform.position = Player.position  + Quaternion.Euler(-pitch, yaw, 0) * CameraOffset;
 
