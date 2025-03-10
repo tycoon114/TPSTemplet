@@ -10,6 +10,7 @@ public class CameraController2 : MonoBehaviour
 
     public Transform Player;        //플레이어의 위치
     private Vector3 lookPosition;   //보는 위치?
+    public Transform PlayerLookObj;  // 플레이어 옆 카메라가 향할 오브젝트
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class CameraController2 : MonoBehaviour
     //이는 카메라가 플레이어를 따라가는것과 카메라를 자유롭게 움직이는것 이 두개가 동시에 일어나기 때문\
     //카메라를 자유롭게 움직이는 것은 isAim이 false가 된 후에만 가능하도록 코드를 수정해볼 예장
     //이때 플레이어옆에 임의의 오프셋을 하나 두고 이것도 같이 회전하며 것을 바라보도록(다른 프로젝트 코드 참고)
+    //움직이는 동안은 카메라를 고정 시키는 방법도 해볼것 - 스트리노바 방식?
 
     //카메라는 LateUpdate를 사용 - 플레이어의 이동이 먼저 실행 되야되기 때문
     void LateUpdate()
@@ -32,24 +34,25 @@ public class CameraController2 : MonoBehaviour
         pitch += mouseY;
         //위 아래 각도 제한
         pitch = Mathf.Clamp(pitch, -30f, 45f);
-        Vector3 direction = Player.position + CameraOffset;
+        Vector3 direction = PlayerLookObj.position + CameraOffset;
 
         //부드럽게 움직이기
         //transform.position = Vector3.SmoothDamp(transform.position, direction, ref mouseSensitivity, 0.3f);
 
 
         //플레이어 위치에서 조금더 오른쪽 위로 자리잡게 만든다.
-        lookPosition = new Vector3(Player.position.x + 0.5f, Player.position.y + CameraOffset.y, Player.position.z);
-        
-        
+        lookPosition = new Vector3(PlayerLookObj.position.x , PlayerLookObj.position.y + CameraOffset.y, PlayerLookObj.position.z);
 
-        transform.position = Player.position  + Quaternion.Euler(-pitch, yaw, 0) * CameraOffset;
+
+        //PlayerLookObj
+        transform.position = PlayerLookObj.position + Quaternion.Euler(-pitch, yaw, 0) * CameraOffset;
+
 
         transform.rotation = Quaternion.Euler(pitch, yaw, 0);
         transform.LookAt(lookPosition);
 
         //광선을 시각화 하기 위함
-        Vector3 rayDirection = transform.position - Player.transform.position;
-        Debug.DrawRay(Player.transform.position, rayDirection.normalized * rayDirection.magnitude, Color.red);
+        Vector3 rayDirection = transform.position - PlayerLookObj.transform.position;
+        Debug.DrawRay(PlayerLookObj.transform.position, rayDirection.normalized * rayDirection.magnitude, Color.red);
     }
 }

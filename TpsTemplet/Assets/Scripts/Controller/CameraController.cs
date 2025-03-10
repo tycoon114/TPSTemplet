@@ -1,3 +1,4 @@
+using UnityEditor.Overlays;
 using UnityEngine;
 
 
@@ -46,6 +47,43 @@ public class CameraController : MonoBehaviour
         //// 우클릭 시 줌 (FOV 조절)
         //float targetFOV = Input.GetMouseButton(1) ? zoomFOV : normalFOV;
         //cam.fieldOfView = Mathf.MoveTowards(cam.fieldOfView, targetFOV, Time.deltaTime * 100f); // 더 빠르게 줌 적용
+
+
+        //2025 03 10 - 카메라2 코드 옮겨둠
+        //float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        //float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+        //yaw += mouseX;
+        //pitch += mouseY;
+        ////위 아래 각도 제한
+        //pitch = Mathf.Clamp(pitch, -30f, 45f);
+        ////Vector3 direction = Player.position + CameraOffset;
+        //Vector3 direction = PlayerLookObj.position + CameraOffset;
+
+        ////부드럽게 움직이기
+        ////transform.position = Vector3.SmoothDamp(transform.position, direction, ref mouseSensitivity, 0.3f);
+
+
+        ////플레이어 위치에서 조금더 오른쪽 위로 자리잡게 만든다.
+        ////lookPosition = new Vector3(Player.position.x + 0.5f, Player.position.y + CameraOffset.y, Player.position.z);
+        //lookPosition = new Vector3(PlayerLookObj.position.x, PlayerLookObj.position.y + CameraOffset.y, PlayerLookObj.position.z);
+
+
+        ////PlayerLookObj
+        ////transform.position = Player.position  + Quaternion.Euler(-pitch, yaw, 0) * CameraOffset;
+        //transform.position = PlayerLookObj.position + Quaternion.Euler(-pitch, yaw, 0) * CameraOffset;
+
+
+        //transform.rotation = Quaternion.Euler(pitch, yaw, 0);
+        //transform.LookAt(lookPosition);
+
+        ////광선을 시각화 하기 위함
+        ////Vector3 rayDirection = transform.position - Player.transform.position;
+        ////Debug.DrawRay(Player.transform.position, rayDirection.normalized * rayDirection.magnitude, Color.red);
+
+        //Vector3 rayDirection = transform.position - PlayerLookObj.transform.position;
+        //Debug.DrawRay(PlayerLookObj.transform.position, rayDirection.normalized * rayDirection.magnitude, Color.red);
+
 
     }
 }

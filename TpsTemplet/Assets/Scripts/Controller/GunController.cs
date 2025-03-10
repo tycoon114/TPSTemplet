@@ -113,6 +113,8 @@ public class GunController :  PlayerController3
 
     IEnumerator Reload()
     {
+        //일단은 소리가 겹치는 현상은 해결됬지만 위화감이 있음
+        audioSource.Stop();
         audioSource.PlayOneShot(reload);
         isReload = true;
         animator.SetBool("isReload", isReload);
