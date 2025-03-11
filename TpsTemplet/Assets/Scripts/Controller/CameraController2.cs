@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraController2 : MonoBehaviour
 {
-    public Vector3 CameraOffset = new Vector3(0, 0.5f, -4);   // 카메라 위치
+    public Vector3 CameraOffset = new Vector3(0, 0.5f, -4);   // 카메라 오프셋
     public float mouseSensitivity = 60.0f;             //감도 - 이후 옵션에서 조정 가능하게
 
     private float pitch = 0f;   // 위아래 회전
@@ -11,9 +11,12 @@ public class CameraController2 : MonoBehaviour
     public Transform Player;        //플레이어의 위치
     private Vector3 lookPosition;   //보는 위치?
     public Transform PlayerLookObj;  // 플레이어 옆 카메라가 향할 오브젝트
-    
+
+    private Vector3 targetCamPosition;    //카메라 위치값
+
     void Start()
     {
+
         Cursor.lockState = CursorLockMode.Locked; // 마우스 잠금
         Cursor.visible = false;                   //커서 안보이게
     }
@@ -36,18 +39,40 @@ public class CameraController2 : MonoBehaviour
         pitch = Mathf.Clamp(pitch, -30f, 45f);
         Vector3 direction = PlayerLookObj.position + CameraOffset;
 
-        //플레이어 위치에서 조금더 오른쪽 위로 자리잡게 만든다.
-        lookPosition = new Vector3(PlayerLookObj.position.x , PlayerLookObj.position.y + CameraOffset.y, PlayerLookObj.position.z);
+        //플레이어 위치에서 조금더 오른쪽 위로 자리잡게 만든다. - 카메라의 위치
+        lookPosition = new Vector3(PlayerLookObj.position.x, PlayerLookObj.position.y + CameraOffset.y, PlayerLookObj.position.z);
         transform.position = PlayerLookObj.position + Quaternion.Euler(-pitch, yaw, 0) * CameraOffset;
 
-        //transform.rotation = Quaternion.Euler(pitch, yaw, 0);
+
+
         Quaternion targetRotation = Quaternion.Euler(pitch, yaw, 0);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
-
         transform.LookAt(lookPosition);
 
-        //광선을 시각화 하기 위함
+        //카메라 벽 충돌
+        avoidObjects();
+    }
+
+    void avoidObjects()
+    {
+        RaycastHit hit;
         Vector3 rayDirection = transform.position - PlayerLookObj.transform.position;
+        //광선을 시각화 하기 위함
         Debug.DrawRay(PlayerLookObj.transform.position, rayDirection.normalized * rayDirection.magnitude, Color.red);
+
+        if (Physics.Raycast(PlayerLookObj.transform.position, rayDirection.normalized * rayDirection.magnitude, out hit, rayDirection.magnitude, LayerMask.GetMask("Wall")))
+        {
+            Debug.Log("Hit");
+            //일단 벽에 닿으면 가까이 가는 코드.... 추가적으로 더 다듬어 줘야됨
+            //transform.position = hit.point + hit.normal * 0.2f;
+        }
+        else
+        {
+
+        }
+
     }
 }
+
+
+
