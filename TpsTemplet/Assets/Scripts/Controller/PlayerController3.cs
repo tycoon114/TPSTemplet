@@ -11,6 +11,8 @@ public class PlayerController3 : MonoBehaviour
     protected int atkType;          //공격타입
     protected int dfnType;          //방어 타입
 
+    public int playerHP = 2500;     //플레이어 체력
+
     public AudioClip walk;
     public float animationSpeed = 3.0f; //애니메이션 재생 속도
     public string currentAnimation;
