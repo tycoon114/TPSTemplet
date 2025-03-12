@@ -64,7 +64,7 @@ public class CameraController2 : MonoBehaviour
         {
             Debug.Log("Hit");
             //일단 벽에 닿으면 가까이 가는 코드.... 추가적으로 더 다듬어 줘야됨
-            //transform.position = hit.point + hit.normal * 0.2f;
+            transform.position = hit.point + hit.normal * 0.2f;
         }
         else
         {
@@ -72,6 +72,9 @@ public class CameraController2 : MonoBehaviour
         }
 
     }
+
+
+
 }
 
 

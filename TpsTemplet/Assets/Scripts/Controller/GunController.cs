@@ -68,12 +68,15 @@ public class GunController :  PlayerController3
         if (Input.GetMouseButton(1))
         {
             isAim = true;
+            UpdateAimTarget();
+
         }
         else
         {
             isAim = false;
         }
         animator.SetBool("isAim", isAim);
+        //animator.SetLayerWeight(1, 1);
 
         if (Input.GetMouseButtonDown(0) && isAim && currentAmmo!=0 && fireCoroutine == null && !isReload) // fire  ... 나중에 캐릭터 컨트롤러에서 여기를 오도록?
         {
@@ -165,5 +168,13 @@ public class GunController :  PlayerController3
     }
 
 
-
+    public static void Test() {
+        Debug.Log("Test Gun");
+    
+    }
+        void UpdateAimTarget()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        target.position = ray.GetPoint(10.0f);
+    }
 }

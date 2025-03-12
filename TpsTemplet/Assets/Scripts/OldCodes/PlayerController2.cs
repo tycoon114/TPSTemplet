@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerController2 : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class PlayerController2 : MonoBehaviour
     private Animator animator;
     private Vector3 moveDirection;
     protected bool isAim = false;
-
+    public float animationSpeed = 3.0f; //애니메이션 재생 속도
 
     void Start()
     {
@@ -37,17 +38,27 @@ public class PlayerController2 : MonoBehaviour
         cameraRight.Normalize();
 
 
+        animator.speed = animationSpeed;
+
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);  // 1보다 크면 애니메이션이끝인 상태?
+        //if (stateInfo.IsName(currenAnimation) && stateInfo.normalizedTime >= 1.0f) {
+        //    currenAnimation = "isShoot";
+        //    animator.Play(currenAnimation);
+        //}
+
+
         // speed 값 즉각 반영 (키를 누르는 즉시 애니메이션 전환됨)
         float speed = move.magnitude;
 
         bool isMoving = move.magnitude > 0;
-        animator.SetBool("isMoving", isMoving);
+        //animator.SetBool("isMoving", isMoving);
 
         //@TK(25.02.24)
         //animator.SetFloat("FactorX", moveX);
         //animator.SetFloat("FactorZ", moveZ);
         if (Input.GetMouseButton(1))
         {
+            animator.SetLayerWeight(1, 1);
             isAim = true;
         }
         else
@@ -55,15 +66,25 @@ public class PlayerController2 : MonoBehaviour
             isAim = false;
         }
 
+
+
+
+
+
+
+
+
+
+
         // 중력 적용
-        if (!controller.isGrounded)
-        {
-            moveDirection.y -= gravity * Time.deltaTime;
-        }
-        else
-        {
-            moveDirection.y = 0; // 바닥에 닿으면 중력 초기화
-        }
+        //if (!controller.isGrounded)
+        //{
+        //    moveDirection.y -= gravity * Time.deltaTime;
+        //}
+        //else
+        //{
+        //    moveDirection.y = 0; // 바닥에 닿으면 중력 초기화
+        //}
 
         // 입력 값을 카메라 기준으로 변환
         moveDirection = (cameraForward * vertical + cameraRight * horizontal);

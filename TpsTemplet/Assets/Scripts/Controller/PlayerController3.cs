@@ -12,6 +12,10 @@ public class PlayerController3 : MonoBehaviour
     protected int dfnType;          //방어 타입
 
     public AudioClip walk;
+    public float animationSpeed = 3.0f; //애니메이션 재생 속도
+    public string currentAnimation;
+
+    public Transform target; // 상체가 꺽일 곳
 
     void Start()
     {
@@ -46,17 +50,25 @@ public class PlayerController3 : MonoBehaviour
         bool isMoving = move.magnitude > 0;
         animator.SetBool("isMoving", isMoving);
 
-        //@TK(25.02.24)
-        //animator.SetFloat("FactorX", moveX);
-        //animator.SetFloat("FactorZ", moveZ);
+        //animator.speed = animationSpeed;
+
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);  // 1보다 크면 애니메이션이끝인 상태?
+        if (stateInfo.IsName(currentAnimation) && stateInfo.normalizedTime >= 1.0f)
+        {
+            currentAnimation = "isShoot";
+            animator.Play(currentAnimation);
+        }
+
 
         //조준시 이동 제어를 위해,우선 조준에 대한 코드는 GunController대신 여기서 처리
         if (Input.GetMouseButton(1))
         {
+            animator.SetLayerWeight(1, 1);
             isAim = true;
         }
         else
         {
+            animator.SetLayerWeight(1, 0);
             isAim = false;
         }
 
@@ -83,6 +95,7 @@ public class PlayerController3 : MonoBehaviour
             //조준시에는 이동할 때 보다는 빨리 회전 2025-03-10 23:16
             Quaternion targetRotation = Quaternion.LookRotation(cameraForward);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 7f);
+            //UpdateAimTarget();
 
         }
         else if (moveDirection != Vector3.zero)// 이동 중이면 이동 방향으로 캐릭터 회전
@@ -92,4 +105,27 @@ public class PlayerController3 : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        //if (other.gameObject.CompareTag("Enemy"))
+        //{
+        //    animator.SetTrigger("isDeath");
+
+        //    GetComponentInChildren<CharacterController>().enabled = false;
+
+        //    other.gameObject.transform.position = Vector3.zero;
+        //    GetComponentInChildren<CharacterController>().enabled = true;
+        //    Debug.Log(other.gameObject.transform.position);
+        //}
+    }
+
+
+    //void UpdateAimTarget()
+    //{
+    //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    //    target.position = ray.GetPoint(10.0f);
+    //}
+
+
 }
