@@ -33,12 +33,15 @@ public class GamePlayUI : MonoBehaviour
     {
         GunController.onAmmoChanged += UpdateAmmoUI; // 이벤트 구독
         GunController.CrossHairSet += CrossHairSet;
+        PlayerManager.UpdateHPUI += UpdateHPUI; 
+
     }
 
     void OnDisable()
     {
         GunController.onAmmoChanged -= UpdateAmmoUI; // 이벤트 해제
         GunController.CrossHairSet -= CrossHairSet;
+        PlayerManager.UpdateHPUI -= UpdateHPUI;
 
     }
 
@@ -49,7 +52,7 @@ public class GamePlayUI : MonoBehaviour
 
     void UpdateHPUI(int currentHP, int maxHP)
     {
-
+        hpText.text = $"{currentHP} / {maxHP}";
     }
 
     public void CrossHairSet(bool isAim) {

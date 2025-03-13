@@ -13,8 +13,7 @@ public class PlayerController3 : MonoBehaviour
     protected int atkType;          //공격타입
     protected int dfnType;          //방어 타입
 
-    public int playerHP = 2500;     //플레이어 체력
-    public int currentHP;           //현재 플레이어의 체력
+
 
     public AudioClip walk;
     public float animationSpeed = 3.0f; //애니메이션 재생 속도
@@ -29,7 +28,6 @@ public class PlayerController3 : MonoBehaviour
         //자식 노드에서 가져오기, 캐릭터 선택을 고려하면 플레이어는 빈 오브젝트고 거기로 선택한 캐릭터를 자식으로 불러오는게 하기 25.03.06
         controller = GetComponentInChildren<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-        currentHP = playerHP;
 
     }
 
@@ -123,18 +121,18 @@ public class PlayerController3 : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            //animator.SetTrigger("isDeath");
-            currentHP -= 250;
+        //if (other.gameObject.CompareTag("Enemy"))
+        //{
+        //    //animator.SetTrigger("isDeath");
+        //    currentHP -= 250;
 
-            GetComponentInChildren<CharacterController>().enabled = false;
-            other.gameObject.transform.position = Vector3.zero;
-            GetComponentInChildren<CharacterController>().enabled = true;
-            Debug.Log(other.gameObject.transform.position);
-            Debug.Log(currentHP);
+        //    GetComponentInChildren<CharacterController>().enabled = false;
+        //    other.gameObject.transform.position = Vector3.zero;
+        //    GetComponentInChildren<CharacterController>().enabled = true;
+        //    Debug.Log(other.gameObject.transform.position);
+        //    Debug.Log(currentHP);
 
-        }
+        //}
     }
 
 

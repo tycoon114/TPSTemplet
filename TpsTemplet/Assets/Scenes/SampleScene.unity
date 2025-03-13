@@ -571,8 +571,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 98, y: 222}
-  m_SizeDelta: {x: 168.68988, y: 168.68988}
+  m_AnchoredPosition: {x: 139.99, y: 245}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &348497077
 CanvasRenderer:
@@ -746,8 +746,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   gravity: 9.8
-  playerHP: 2500
-  currentHP: 0
   walk: {fileID: 0}
   animationSpeed: 3
   currentAnimation: 
@@ -767,8 +765,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   gravity: 9.8
-  playerHP: 2500
-  currentHP: 0
   walk: {fileID: 0}
   animationSpeed: 3
   currentAnimation: 
@@ -1046,8 +1042,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   gravity: 9.8
-  playerHP: 2500
-  currentHP: 0
   walk: {fileID: 0}
   animationSpeed: 3
   currentAnimation: 
@@ -3050,8 +3044,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   gravity: 9.8
-  playerHP: 2500
-  currentHP: 0
   walk: {fileID: 0}
   animationSpeed: 3
   currentAnimation: 
@@ -3085,8 +3077,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   gravity: 9.8
-  playerHP: 2500
-  currentHP: 0
   walk: {fileID: 0}
   animationSpeed: 3
   currentAnimation: 
@@ -3639,7 +3629,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 748.44, y: -469.4002}
+  m_AnchoredPosition: {x: 748.44, y: -470}
   m_SizeDelta: {x: 423.11, y: 80.8004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1010285422
@@ -4811,8 +4801,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -862, y: -454}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -820.00726, y: -470}
+  m_SizeDelta: {x: 279.9855, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1169856382
 MonoBehaviour:
@@ -7529,6 +7519,19 @@ MonoBehaviour:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
     m_Visible: 1
+--- !u!114 &1815571907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815571896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0feef8b92fb1f429f2a7df6336228d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHP: 2500
 --- !u!1 &1826731237
 GameObject:
   m_ObjectHideFlags: 0
@@ -8749,6 +8752,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4136110124463721334, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1815571902}
+    - targetCorrespondingSourceObject: {fileID: 4136110124463721334, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1815571907}
   m_SourcePrefab: {fileID: 100100000, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
