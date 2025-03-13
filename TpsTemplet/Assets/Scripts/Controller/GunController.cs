@@ -72,7 +72,6 @@ public class GunController :  PlayerController3
         else
         {
             isAim = false;
-            Debug.Log(isAim);
             CrossHairSet?.Invoke(isAim);
 
         }

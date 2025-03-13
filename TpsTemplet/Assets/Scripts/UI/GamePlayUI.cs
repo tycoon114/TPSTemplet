@@ -14,9 +14,11 @@ public class GamePlayUI : MonoBehaviour
 
 
     private string selectedCharacterName;
+    
 
 
-     void Start()
+
+    void Start()
     {
         GameObject player = GameObject.Find("Player");
         if (player != null)
@@ -64,12 +66,32 @@ public class GamePlayUI : MonoBehaviour
     //플레이어 초상화
     void SetPlayerPortrait(string studentName)
     {
+        string portraitPath = "Image/portrait/Texture2D/Student_Portrait_" + studentName;
+        string weaponPortraitPath = "Image/weapon/Texture2D/Weapon_Icon_" + studentName;
         Debug.Log(studentName);
-    }
+        Sprite characterPortrait = Resources.Load<Sprite>(portraitPath);
+        Sprite weaponPortrait = Resources.Load<Sprite>(weaponPortraitPath);
 
-    //플레이어의 무기
-    void SetPlayerWeaponIcon()
-    {
+        if (characterPortrait != null)
+        {
+            portraitImage.sprite = characterPortrait;
+        }
+        else
+        {
+            Debug.LogWarning("초상화 이미지가 없습니다: " + studentName);
+            Debug.Log(portraitPath);
+        }
+
+
+        if (weaponPortraitPath != null)
+        {
+            weaponImage.sprite = weaponPortrait;
+        }
+        else
+        {
+            Debug.LogWarning("무기 이미지가 없습니다: " + studentName);
+        }
+
 
     }
 

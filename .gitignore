@@ -10124,3 +10124,524 @@ TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/sweeperwhite1.mat.meta
 TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/sweeperwhite1.mat
 TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/sweeperdarkblue.mat.meta
 TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/sweeperdarkblue.mat
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_LongEndDummy.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_LongEndDummy/RG_Sweeper_Decagram_Taser_LongEndDummy.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_LongEndDummy/RG_Sweeper_Decagram_Taser_LongEndDummy.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Mint.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Mint/RG_Sweeper_Decagram_Taser_Mint.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Mint/RG_Sweeper_Decagram_Taser_Mint.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Mint/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Mint/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Mint/Sweeper_Decagram_Taser_Mint.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Mint/Sweeper_Decagram_Taser_Mint.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Pink.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Pink/RG_Sweeper_Decagram_Taser_Pink.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Pink/RG_Sweeper_Decagram_Taser_Pink.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Pink/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Pink/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Pink/Sweeper_Decagram_Taser_Pink.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Pink/Sweeper_Decagram_Taser_Pink.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Yellow.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Yellow/RG_Sweeper_Decagram_Taser_Yellow.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Yellow/RG_Sweeper_Decagram_Taser_Yellow.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Yellow/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Yellow/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Yellow/Sweeper_Decagram_Taser_Yellow.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/RG_Sweeper_Decagram_Taser_Yellow/Sweeper_Decagram_Taser_Yellow.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Strategy_Sweeper_Unarmed_Taser_White.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Strategy_Sweeper_Unarmed_Taser_White/Strategy_Sweeper_Unarmed_Taser_White.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Strategy_Sweeper_Unarmed_Taser_White/Strategy_Sweeper_Unarmed_Taser_White.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Strategy_Sweeper_Unarmed_Taser_White/Sweeper_Unarmed_Taser_White.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Strategy_Sweeper_Unarmed_Taser_White/Sweeper_Unarmed_Taser_White.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Strategy_Sweeper_Unarmed_Taser_White/Sweeper_Unarmed_Taser_White_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Strategy_Sweeper_Unarmed_Taser_White/Sweeper_Unarmed_Taser_White_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Black.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Black/Sweeper_Decagram_Taser_Black.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Black/Sweeper_Decagram_Taser_Black.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Black/Sweeper_Decagram_Taser_Black.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Black/Sweeper_Decagram_Taser_Black.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Black/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Black/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Clour.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Clour/Sweeper_Decagram_Colour.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Clour/Sweeper_Decagram_Colour.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Clour/Sweeper_Decagram_Colour_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Clour/Sweeper_Decagram_Colour_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Clour/Sweeper_Decagram_Taser_Clour.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Clour/Sweeper_Decagram_Taser_Clour.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Mesh \#2876.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Mesh \#2876/Sweeper_Decagram_Taser_Mesh.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Mesh \#2876/Sweeper_Decagram_Taser_Mesh.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_White.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_White/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_White/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_White/Sweeper_Decagram_Taser_White.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_White/Sweeper_Decagram_Taser_White.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_White/Sweeper_Decagram_Taser_White.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_White/Sweeper_Decagram_Taser_White.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Yellow.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Yellow/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Yellow/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Yellow/Sweeper_Decagram_Taser_Yellow.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Yellow/Sweeper_Decagram_Taser_Yellow.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Yellow/Sweeper_Decagram_Taser_Yellow.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Decagram_Taser_Yellow/Sweeper_Decagram_Taser_Yellow.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Brown.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Brown/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Brown/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Brown/Sweeper_LightArmor_Taser_Brown.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Brown/Sweeper_LightArmor_Taser_Brown.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Brown/Sweeper_LightArmor_Taser_Brown.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Brown/Sweeper_LightArmor_Taser_Brown.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Brown_Mesh.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Brown_Mesh/Sweeper_LightArmor_Taser_Brown_Mesh.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Brown_Mesh/Sweeper_LightArmor_Taser_Brown_Mesh.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Green.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Green/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Green/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Green/Sweeper_LightArmor_Taser_Green.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Green/Sweeper_LightArmor_Taser_Green.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Green/Sweeper_LightArmor_Taser_Green.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Green/Sweeper_LightArmor_Taser_Green.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Green_Mesh.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Green_Mesh/Sweeper_LightArmor_Taser_Green_Mesh.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_Green_Mesh/Sweeper_LightArmor_Taser_Green_Mesh.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_White.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_White/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_White/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_White/Sweeper_LightAmor_Taser_White.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_White/Sweeper_LightAmor_Taser_White.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_White/Sweeper_LightArmor_Taser_White.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_LightArmor_Taser_White/Sweeper_LightArmor_Taser_White.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Blue.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Blue/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Blue/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Blue/Sweeper_Neon_Taser_Blue.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Blue/Sweeper_Neon_Taser_Blue.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Blue/Sweeper_Neon_Taser_Blue.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Blue/Sweeper_Neon_Taser_Blue.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Blue_Mesh.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Blue_Mesh/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Blue_Mesh/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Blue_Mesh/Sweeper_Neon_Taser_Blue.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Blue_Mesh/Sweeper_Neon_Taser_Blue.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Blue_Mesh/Sweeper_Neon_Taser_Blue_Mesh.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Blue_Mesh/Sweeper_Neon_Taser_Blue_Mesh.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Green.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Green/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Green/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Green/Sweeper_Neon_Taser_Green.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Green/Sweeper_Neon_Taser_Green.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Green/Sweeper_Neon_Taser_Green.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Green/Sweeper_Neon_Taser_Green.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Green_Mesh.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Green_Mesh/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Green_Mesh/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Green_Mesh/Sweeper_Neon_Taser_Green.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Green_Mesh/Sweeper_Neon_Taser_Green.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Green_Mesh/Sweeper_Neon_Taser_Green_Mesh.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Green_Mesh/Sweeper_Neon_Taser_Green_Mesh.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Red.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Red/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Red/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Red/Sweeper_Neon_Taser_Red.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Red/Sweeper_Neon_Taser_Red.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Red/Sweeper_Neon_Taser_Red.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Red/Sweeper_Neon_Taser_Red.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Red_Mesh.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Red_Mesh/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Red_Mesh/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Red_Mesh/Sweeper_Neon_Taser_Red.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Red_Mesh/Sweeper_Neon_Taser_Red.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Red_Mesh/Sweeper_Neon_Taser_Red_Mesh.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Red_Mesh/Sweeper_Neon_Taser_Red_Mesh.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Yellow.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Yellow/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Yellow/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Yellow/Sweeper_Neon_Taser_Yellow.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Yellow/Sweeper_Neon_Taser_Yellow.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Yellow/Sweeper_Neon_Taser_Yellow.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Yellow/Sweeper_Neon_Taser_Yellow.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Yellow_Mesh.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Yellow_Mesh/Sweeper_Decagram_Taser_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Yellow_Mesh/Sweeper_Decagram_Taser_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Yellow_Mesh/Sweeper_Neon_Taser_Yellow.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Yellow_Mesh/Sweeper_Neon_Taser_Yellow.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Yellow_Mesh/Sweeper_Neon_Taser_Yellow_Mesh.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Neon_Taser_Yellow_Mesh/Sweeper_Neon_Taser_Yellow_Mesh.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_Blue.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_Blue/Sweeper_Unarmed_Taser_Blue.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_Blue/Sweeper_Unarmed_Taser_Blue.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_Blue/Sweeper_Unarmed_Taser_Blue.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_Blue/Sweeper_Unarmed_Taser_Blue.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_Blue/Sweeper_Unarmed_Taser_Blue_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_Blue/Sweeper_Unarmed_Taser_Blue_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_Blue_Mesh \#3312.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_Blue_Mesh \#3312/Sweeper_Unarmed_Taser_Blue_Mesh.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_Blue_Mesh \#3312/Sweeper_Unarmed_Taser_Blue_Mesh.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_DarkBlue.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_DarkBlue/Sweeper_Unarmed_Taser_DarkBlue.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_DarkBlue/Sweeper_Unarmed_Taser_DarkBlue.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_DarkBlue/Sweeper_Unarmed_Taser_DarkBlue.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_DarkBlue/Sweeper_Unarmed_Taser_DarkBlue.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_DarkBlue/Sweeper_Unarmed_Taser_DarkBlue_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_DarkBlue/Sweeper_Unarmed_Taser_DarkBlue_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_DarkBlue_Mesh \#3343.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_DarkBlue_Mesh \#3343/Sweeper_Unarmed_Taser_DarkBlue_Mesh.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_DarkBlue_Mesh \#3343/Sweeper_Unarmed_Taser_DarkBlue_Mesh.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_White.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_White/Sweeper_Unarmed_Taser_White.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_White/Sweeper_Unarmed_Taser_White.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_White/Sweeper_Unarmed_Taser_White.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_White/Sweeper_Unarmed_Taser_White.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_White/Sweeper_Unarmed_Taser_White_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_White/Sweeper_Unarmed_Taser_White_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_White_Mesh \#25.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_White_Mesh \#25/Sweeper_Unarmed_Taser_White_Mesh.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_White_Mesh \#25/Sweeper_Unarmed_Taser_White_Mesh.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_Decagram_Colour_Body.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_Decagram_Colour_Body.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_Decagram_Taser_Body \#2886.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_Decagram_Taser_Body \#2886.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_LightArmor_Taser_Brown_Mesh.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_LightArmor_Taser_Brown_Mesh.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_LightArmor_Taser_Green_Mesh.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_LightArmor_Taser_Green_Mesh.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_Unarmed_Taser_Blue_Mesh \#3296.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_Unarmed_Taser_Blue_Mesh \#3296.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_Unarmed_Taser_DarkBlue_Mesh \#3355.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_Unarmed_Taser_DarkBlue_Mesh \#3355.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Terror_Sweeper_Unarmed_Taser_White \#35.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Terror_Sweeper_Unarmed_Taser_White \#35.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_BigBox_01.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_BigBox_01.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Box_01.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Box_01.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Decagram_Taser_Outline \#2778.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Decagram_Taser_Outline \#2778.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Decagram_Taser_Outline \#2846.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Decagram_Taser_Outline \#2846.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Decagram_Taser_Outline \#2866.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Decagram_Taser_Outline \#2866.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Decagram_Taser_Outline \#2918.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Decagram_Taser_Outline \#2918.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Decagram_Taser_Outline \#3049.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Decagram_Taser_Outline \#3049.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Decagram_Taser_Outline \#3069.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Decagram_Taser_Outline \#3069.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_KneeBox_01.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_KneeBox_01.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_LightArmor_Taser_Green_Outline \#3090.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_LightArmor_Taser_Green_Outline \#3090.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_LightArmor_Taser_Green_Outline.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_LightArmor_Taser_Green_Outline.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Neon_Taser \#3127.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Neon_Taser \#3127.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Neon_Taser \#3206.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Neon_Taser \#3206.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Neon_Taser \#3258.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Neon_Taser \#3258.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Neon_Taser_Green.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Neon_Taser_Green.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#3316.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#3316.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#3340.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#3340.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#3377.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#3377.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#325.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#325.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#371.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#371.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#395.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#395.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#478.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#478.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#526.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#526.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#568.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#568.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#613.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#613.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#654.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#654.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#691.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#691.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#767.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#767.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#788.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#788.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#851.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#851.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#904.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#904.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#977.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones \#977.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AnimationEventReceiverWithBones.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#127.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#127.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#178.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#178.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#213.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#213.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#245.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#245.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#318.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#318.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#347.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#347.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#399.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#399.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#441.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#441.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#510.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#510.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#555.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#555.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#604.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#604.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#668.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#668.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#703.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#703.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#772.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#772.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#782.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#782.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#868.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#868.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#877.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#877.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#923.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer \#923.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/AudioPlayer.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CameraConstraintArea.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CameraConstraintArea.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect \#2802.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect \#2802.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect \#2808.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect \#2808.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect \#2814.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect \#2814.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect \#2940.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect \#2940.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect \#2963.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect \#2963.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect \#2995.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect \#2995.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect \#52.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect \#52.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterMouthEventReceiver \#765.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterMouthEventReceiver \#765.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterMouthEventReceiver.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterMouthEventReceiver.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterPrefabInfo.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterPrefabInfo.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#307.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#307.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#336.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#336.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#408.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#408.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#466.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#466.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#524.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#524.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#552.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#552.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#590.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#590.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#664.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#664.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#704.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#704.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#771.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#771.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#819.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#819.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#835.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#835.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#882.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual \#882.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterVisual.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/DynamicCharacter.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/DynamicCharacter.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/EngageTimelineHandler.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/EngageTimelineHandler.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/GroundCamera.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/GroundCamera.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/MinigameNoteObject \#109.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/MinigameNoteObject \#109.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/MinigameNoteObject \#219.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/MinigameNoteObject \#219.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/MinigameNoteObject \#266.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/MinigameNoteObject \#266.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/MinigameNoteObject.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/MinigameNoteObject.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/NormalAttackVisual.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/NormalAttackVisual.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/RenderConfigLoader.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/RenderConfigLoader.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/RenderingAreaController.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/RenderingAreaController.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#316.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#316.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#367.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#367.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#418.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#418.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#463.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#463.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#512.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#512.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#567.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#567.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#615.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#615.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#857.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#857.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#906.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation \#906.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/SweeperFadeDeathShaderAnimation.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/UniversalAdditionalCameraData.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/UniversalAdditionalCameraData.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/VictoryTimelineHandler.json
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/VictoryTimelineHandler.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/FX_TEX_Dust_Step_01 \#73.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/FX_TEX_Dust_Step_01 \#73.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/FX_TEX_Hit_10 \#3433.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/FX_TEX_Hit_10 \#3433.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/FX_TEX_Ring_04a \#3434.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/FX_TEX_Ring_04a \#3434.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_BigBox_01.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_BigBox_01.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Box_01.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Box_01.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Colour.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Colour.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Colour_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Colour_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_Black \#2913.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_Black \#2913.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_Mask \#2916.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_Mask \#2916.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_Mask \#3156.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_Mask \#3156.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_Mint \#2915.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_Mint \#2915.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_Pink \#2914.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_Pink \#2914.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_White \#2910.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_White \#2910.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_Yellow \#2909.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_Yellow \#2909.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_KneeBox_01.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_KneeBox_01.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_LightAmor_Taser_White \#2911.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_LightAmor_Taser_White \#2911.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_LightArmor_Taser_Brown.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_LightArmor_Taser_Brown.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_LightArmor_Taser_Green.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_LightArmor_Taser_Green.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Neon_Taser_Blue.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Neon_Taser_Blue.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Neon_Taser_Green.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Neon_Taser_Green.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Neon_Taser_Red \#3239.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Neon_Taser_Red \#3239.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Neon_Taser_Yellow.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Neon_Taser_Yellow.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_Blue \#3336.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_Blue \#3336.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_Blue_Mask \#3338.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_Blue_Mask \#3338.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_DarkBlue \#3432.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_DarkBlue \#3432.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_DarkBlue_Mask \#3431.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_DarkBlue_Mask \#3431.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_White \#66.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_White \#66.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_White_Mask \#67.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_White_Mask \#67.png.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_11d.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_11d.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_11c.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_11c.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_11b.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_11b.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_11a.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_11a.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_11.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_11.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_10d.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_10d.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_10c.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_10c.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_10b.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_10b.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_10a.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_10a.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_10.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_10.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_09d.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_09d.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_09c.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_09c.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_09b.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_09b.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_09a.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_09a.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_09.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_09.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_08c.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_08c.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_08b.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_08b.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_08a.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_08a.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_07d.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_07d.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_07c.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_07c.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_07b.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_07b.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_07a.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_07a.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_06d.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_06d.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_06c.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_06c.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_06b.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_06b.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_06a.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_06a.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_05.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_05.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_04d.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_04d.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_04c.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_04c.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_04b.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_04b.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_04a.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_04a.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_04.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_04.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_03d.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_03d.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_03c.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_03c.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_03b.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_03b.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_03a.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_03a.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_02.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_02.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_02 \#1912.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_02 \#1912.wav
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_01.wav.meta
+TpsTemplet/Assets/Resources/Sounds/SE_FootStep_01.wav

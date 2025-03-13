@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
+using UnityEngine.Audio;
 
 public class PlayerController3 : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class PlayerController3 : MonoBehaviour
         controller = GetComponentInChildren<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         currentHP = playerHP;
-        
+
     }
 
     void Update()
@@ -112,20 +113,20 @@ public class PlayerController3 : MonoBehaviour
         }
         else if (moveDirection != Vector3.zero)// 이동 중이면 이동 방향으로 캐릭터 회전
         {
-            
+
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
             float rotationSpeed = 300f;
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
 
-    
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
             //animator.SetTrigger("isDeath");
-            currentHP -=250;
+            currentHP -= 250;
 
             GetComponentInChildren<CharacterController>().enabled = false;
             other.gameObject.transform.position = Vector3.zero;
@@ -141,6 +142,28 @@ public class PlayerController3 : MonoBehaviour
     //{
     //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
     //    target.position = ray.GetPoint(10.0f);
+    //}
+
+    //public void FootStepSoundOn()
+    //{
+
+
+    //}
+
+    //발소리 제어 임시 코드 - 레이캐스트
+    //public void FootStepSoundOn()
+    //{
+    //    if (Physics.Raycast(transform.position, transform.forward, out hit, 10.0f, itemLayer))
+    //    {
+    //        if (hit.ColliderHit.tag == "Wood")
+    //        {
+    //            audioSource.PlayOneShot(audioClipFire); //발소리재생
+    //        }
+    //        else if (hit.ColliderHit.tag == "Wood")
+    //        {
+    //            audioSource.PlayOneShot(audioClipFire); //발소리재생
+    //        }
+    //    }
     //}
 
 
