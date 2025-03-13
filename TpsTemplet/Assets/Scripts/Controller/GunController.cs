@@ -136,7 +136,7 @@ public class GunController :  PlayerController3
         //사격 이펙트
         if (gunFire != null)
         {
-            GameObject gunEffect = Instantiate(gunFire, muzzlePoint.position, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
+            GameObject gunEffect = Instantiate(gunFire, muzzlePoint.position + muzzlePoint.forward * 0.1f, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
             Destroy(gunEffect, 0.5f);
         }
 

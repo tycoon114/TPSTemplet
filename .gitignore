@@ -10068,3 +10068,59 @@ TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_Yello
 TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Decagram_Taser_Yellow.png.meta
 TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_LightAmor_Taser_White.png
 TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_LightAmor_Taser_White.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Neon_Taser_Red.png
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Neon_Taser.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_Blue_Mesh \#104/Sweeper_Unarmed_Taser_Blue_Mesh.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_DarkBlue_Mesh/Sweeper_Unarmed_Taser_DarkBlue_Mesh.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_White_Mesh/Sweeper_Unarmed_Taser_White_Mesh.fbx
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_Unarmed_Taser_Blue_Mesh \#88.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_Unarmed_Taser_DarkBlue_Mesh.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Terror_Sweeper_Unarmed_Taser_White.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Neon_Taser.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#0.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#108.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#132.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#169.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#18.obj
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#69.obj
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect.json
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/FX_TEX_Dust_Step_01.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/FX_TEX_Hit_10.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/FX_TEX_Ring_04a.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Neon_Taser_Red.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_Blue \#128.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_Blue_Mask \#130.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_DarkBlue.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_DarkBlue_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_White.png
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_White_Mask.png
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_Blue_Mesh \#104.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_Blue_Mesh \#104/Sweeper_Unarmed_Taser_Blue_Mesh.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_DarkBlue_Mesh.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_DarkBlue_Mesh/Sweeper_Unarmed_Taser_DarkBlue_Mesh.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_White_Mesh.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Animator/Sweeper_Unarmed_Taser_White_Mesh/Sweeper_Unarmed_Taser_White_Mesh.fbx.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_Unarmed_Taser_Blue_Mesh \#88.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Sweeper_Unarmed_Taser_DarkBlue_Mesh.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/OL_Terror_Sweeper_Unarmed_Taser_White.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#0.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#108.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#132.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#169.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#18.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Mesh/Sweeper_Unarmed_Taser_Blue_Outline \#69.obj.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour.meta
+TpsTemplet/Assets/Resources/Model/sweeper/MonoBehaviour/CharacterAnimationEventEffect.json.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/FX_TEX_Dust_Step_01.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/FX_TEX_Hit_10.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/FX_TEX_Ring_04a.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_Blue \#128.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_Blue_Mask \#130.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_DarkBlue.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_DarkBlue_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_White.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/Sweeper_Unarmed_Taser_White_Mask.png.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/sweeperwhite1.mat.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/sweeperwhite1.mat
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/sweeperdarkblue.mat.meta
+TpsTemplet/Assets/Resources/Model/sweeper/Texture2D/sweeperdarkblue.mat
