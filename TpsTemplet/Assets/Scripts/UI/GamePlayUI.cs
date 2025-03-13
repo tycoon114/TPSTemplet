@@ -6,7 +6,12 @@ public class GamePlayUI : MonoBehaviour
 {
 
     public TextMeshProUGUI ammoText;
+    public TextMeshProUGUI hpText;
     public Image portraitImage;
+    public Image weaponImage;
+
+    public GameObject crossHair;
+
 
     private string selectedCharacterName;
 
@@ -25,11 +30,14 @@ public class GamePlayUI : MonoBehaviour
     void OnEnable()
     {
         GunController.onAmmoChanged += UpdateAmmoUI; // 이벤트 구독
+        GunController.CrossHairSet += CrossHairSet;
     }
 
     void OnDisable()
     {
         GunController.onAmmoChanged -= UpdateAmmoUI; // 이벤트 해제
+        GunController.CrossHairSet -= CrossHairSet;
+
     }
 
     void UpdateAmmoUI(int currentAmmo, int maxAmmo)
@@ -40,7 +48,17 @@ public class GamePlayUI : MonoBehaviour
     void UpdateHPUI(int currentHP, int maxHP)
     {
 
+    }
 
+    public void CrossHairSet(bool isAim) {
+
+        if (isAim)
+        {
+            crossHair.SetActive(true);
+        }
+        else { 
+            crossHair.SetActive(false);
+        }
     }
 
     //플레이어 초상화

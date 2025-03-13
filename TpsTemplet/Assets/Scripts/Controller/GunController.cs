@@ -5,6 +5,7 @@ using System.Collections;
 public class GunController :  PlayerController3
 {
     public static event Action<int, int> onAmmoChanged;  //gamePlayUi에서 탄약을 표시 하기 위함
+    public static event Action<bool> CrossHairSet;  //gamePlayUi에서 탄약을 표시 하기 위함
 
     private Animator animator;
     private Transform muzzlePoint;      //총구위치
@@ -20,23 +21,19 @@ public class GunController :  PlayerController3
     public float range = 100f; // 사격 거리
     public int maxAmmo = 50;        //최대 탄약수
     public bool boltAction = false;  //볼트 액션이 아닌 경우 연사 가능하도록
- 
 
     private bool isReload = false;      // 재장전
     private bool isShoot = false;       //사격 애니메이션
     private bool isAim = false;         //조준 여부 확인
     private Coroutine fireCoroutine;    // 연사 제어를 위한 코루틴 - 코루틴을 중지 시키기 위함[중지 시키지 않으면 연사속도가 중첩될 수 있음]
 
-    public LayerMask hitLayers; // 맞출 수 있는 레이어
+    public LayerMask hitLayers;         // 맞출 수 있는 레이어
 
-    private Camera mainCamera;      // 히트 스캔 레이캐스트를 위한 메인카메라 값
-
+    private Camera mainCamera;          // 히트 스캔 레이캐스트를 위한 메인카메라 값
 
     private AudioSource audioSource;    //플리이에 오브젝트에 오디오소스 추가
     public AudioClip reload;            //지금은 직접 넣지만 이후에 DB나 서버에서 받도록? 혹은 이름 찾아서
     public AudioClip shoot;             // 마찬가지로 지금만 개발하기 편하게 퍼블릭 처리
-
-
 
     void Start()
     {
@@ -65,15 +62,19 @@ public class GunController :  PlayerController3
     {
         Vector3 dir = transform.position + muzzlePoint.transform.position;
 
+
         if (Input.GetMouseButton(1))
         {
             isAim = true;
-            UpdateAimTarget();
-
+            //UpdateAimTarget();
+            CrossHairSet?.Invoke(isAim);
         }
         else
         {
             isAim = false;
+            Debug.Log(isAim);
+            CrossHairSet?.Invoke(isAim);
+
         }
         animator.SetBool("isAim", isAim);
         //animator.SetLayerWeight(1, 1);
@@ -135,7 +136,7 @@ public class GunController :  PlayerController3
         //사격 이펙트
         if (gunFire != null)
         {
-            GameObject gunEffect = Instantiate(gunFire, muzzlePoint.position, Quaternion.identity);
+            GameObject gunEffect = Instantiate(gunFire, muzzlePoint.position, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
             Destroy(gunEffect, 0.5f);
         }
 
@@ -143,8 +144,11 @@ public class GunController :  PlayerController3
         Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * hitScanRadius;
         Vector3 screenPoint = new Vector3(Screen.width / 2 + randomOffset.x, Screen.height / 2 + randomOffset.y, 0);
         Ray ray = mainCamera.ScreenPointToRay(screenPoint);
+        //피격 판정이 있는 레이어
         if (Physics.Raycast(ray, out RaycastHit hit, range, hitLayers))
         {
+
+            Debug.DrawLine(ray.origin, hit.point, Color.red, 3.0f);
             // 벽(Wall)과 충돌한 경우 피격 이펙트 생성
             if (hit.collider.CompareTag("Wall"))
             {
@@ -157,9 +161,26 @@ public class GunController :  PlayerController3
             }
             else if (hit.collider.CompareTag("Player"))
             {
+                Debug.Log("플레이어 피격");
                 //추후 멀티 활성화 시 아군인지 적팀인지 구분 필요
             }
         }
+
+        //여러개 - 관통 타입만 이 방식으로 사용할 예정 if(type == ....);
+        //RaycastHit[] hits;
+        //Ray rays = new Ray();
+        //hits = Physics.RaycastAll(rays.origin, transform.forward, range, hitLayers);
+        //if (hits.Length > 0)
+        //{
+        //    for (int i = 0; i < hits.Length &; i++)
+        //    {
+        //        RaycastHit hitt = hits[i];
+
+        //        Debug.DrawLine(ray.origin, hit.point, Color.green, 3.0f);
+
+        //    }
+        //}
+
 
         currentAmmo--;
         //isShoot = true;
@@ -167,14 +188,9 @@ public class GunController :  PlayerController3
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
     }
 
-
-    public static void Test() {
-        Debug.Log("Test Gun");
-    
-    }
-        void UpdateAimTarget()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        target.position = ray.GetPoint(10.0f);
-    }
+    //    void UpdateAimTarget()
+    //{
+    //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    //    target.position = ray.GetPoint(10.0f);
+    //}
 }

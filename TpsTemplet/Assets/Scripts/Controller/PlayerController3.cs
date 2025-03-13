@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 
 public class PlayerController3 : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerController3 : MonoBehaviour
     protected int dfnType;          //방어 타입
 
     public int playerHP = 2500;     //플레이어 체력
+    public int currentHP;           //현재 플레이어의 체력
 
     public AudioClip walk;
     public float animationSpeed = 3.0f; //애니메이션 재생 속도
@@ -19,11 +21,15 @@ public class PlayerController3 : MonoBehaviour
 
     public Transform target; // 상체가 꺽일 곳
 
+
+    public MultiAimConstraint multiAimciConstraint;         //상체 뒤틀림 방지?
     void Start()
     {
         //자식 노드에서 가져오기, 캐릭터 선택을 고려하면 플레이어는 빈 오브젝트고 거기로 선택한 캐릭터를 자식으로 불러오는게 하기 25.03.06
         controller = GetComponentInChildren<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+        currentHP = playerHP;
+        
     }
 
     void Update()
@@ -65,11 +71,15 @@ public class PlayerController3 : MonoBehaviour
         //조준시 이동 제어를 위해,우선 조준에 대한 코드는 GunController대신 여기서 처리
         if (Input.GetMouseButton(1))
         {
+            //multiAimciConstraint.data.offset = new Vector3(-30, 0, 0);
             animator.SetLayerWeight(1, 1);
             isAim = true;
+
+
         }
         else
         {
+            //multiAimciConstraint.data.offset = new Vector3(0, 0, 0);
             animator.SetLayerWeight(1, 0);
             isAim = false;
         }
@@ -102,24 +112,28 @@ public class PlayerController3 : MonoBehaviour
         }
         else if (moveDirection != Vector3.zero)// 이동 중이면 이동 방향으로 캐릭터 회전
         {
+            
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
             float rotationSpeed = 300f;
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
 
+    
     public void OnTriggerEnter(Collider other)
     {
-        //if (other.gameObject.CompareTag("Enemy"))
-        //{
-        //    animator.SetTrigger("isDeath");
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            //animator.SetTrigger("isDeath");
+            currentHP -=250;
 
-        //    GetComponentInChildren<CharacterController>().enabled = false;
+            GetComponentInChildren<CharacterController>().enabled = false;
+            other.gameObject.transform.position = Vector3.zero;
+            GetComponentInChildren<CharacterController>().enabled = true;
+            Debug.Log(other.gameObject.transform.position);
+            Debug.Log(currentHP);
 
-        //    other.gameObject.transform.position = Vector3.zero;
-        //    GetComponentInChildren<CharacterController>().enabled = true;
-        //    Debug.Log(other.gameObject.transform.position);
-        //}
+        }
     }
 
 
