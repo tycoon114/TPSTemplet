@@ -70,6 +70,7 @@ public class GamePlayUI : MonoBehaviour
     void SetPlayerPortrait(string studentName)
     {
         string portraitPath = "Image/portrait/Texture2D/Student_Portrait_" + studentName;
+        //string portraitPath = "Image/portraitSkillsize/Texture2D/Skill_Portrait_" + studentName;
         string weaponPortraitPath = "Image/weapon/Texture2D/Weapon_Icon_" + studentName;
         Debug.Log(studentName);
         Sprite characterPortrait = Resources.Load<Sprite>(portraitPath);
