@@ -21,6 +21,7 @@ public class GunController :  PlayerController3
     public float range = 100f; // 사격 거리
     public int maxAmmo = 50;        //최대 탄약수
     public bool boltAction = false;  //볼트 액션이 아닌 경우 연사 가능하도록
+    public float damage = 30.0f;    //공격력 - 변수 이름 나중에 바꿀 예정
 
     private bool isReload = false;      // 재장전
     private bool isShoot = false;       //사격 애니메이션
@@ -156,6 +157,8 @@ public class GunController :  PlayerController3
             else if (hit.collider.CompareTag("Enemy"))
             {
                 //미니게임용 - AI 한테 적용할 레이어다
+                hit.collider.GetComponent<EnemyManger>().TakeDamage(damage);
+
                 Debug.Log("적을 맞춤");
             }
             else if (hit.collider.CompareTag("Player"))

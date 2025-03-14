@@ -1,3 +1,6 @@
+using System.Collections;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 //미니 게임용 적 관련 코드
@@ -8,13 +11,12 @@ using UnityEngine;
 public enum enemyState
 {
     idle,
-    move,
     attack,
     panic,
     death,
     evade,       //회피 - 애니메이션은 move 사용
     patroll,     //순찰 - move 사용
-    track       // 추적 - move 사용
+    chase       // 추적 - move 사용
 }
 
 public class EnemyManger : MonoBehaviour
@@ -27,69 +29,237 @@ public class EnemyManger : MonoBehaviour
     private float nextAttackTime = 0.0f;    //다음 공격 시간 관리
     public Transform[] patrolPoints;        //순찰 경로 지점들
     private int currentPoint = 0;       //현재 순찰 경로 지점 인덱스
-    private float targetRange = 3.5f;      // 추적 범위
+    private float trackingRange = 4.0f;      // 추적 범위
     private bool isAttack = false;          //공격 상태
     private float evadeRange = 5.0f;      //회피 범위
 
-    private float sweeperHP = 100.0f;    //현재는 스위퍼의 체력
+    private float enemyHP = 100.0f;    //현재는 스위퍼의 체력
     private float distanceToTarget;     //타겟과의 거리 계산 값
     private bool isWaiting = false;     //상태 전환 후 대기 상태 여부
     public float idleTime = 2.0f;       //각 상태 전환 후 대기 시간
 
+    private Animator animator;
 
-
-
-
-
+    private Coroutine stateRoutine;         //현재 실행중인 코루틴
 
     void Start()
     {
-
+        //상태 초기화
+        //currentState = enemyState.idle;
+        animator = GetComponent<Animator>();
+        ChangeState(currentState);
     }
 
     void Update()
     {
-        distanceToTarget = Vector3.Distance(transform.position, target.position);
-        if (distanceToTarget < targetRange && distanceToTarget > 0.5f)
+        if (target != null)
         {
+            distanceToTarget = Vector3.Distance(transform.position, target.position);
+        }
+
+    }
+
+
+
+    public void ChangeState(enemyState newState)
+    {
+        if (stateRoutine != null)
+        {
+            Debug.Log("현재 상태   " + stateRoutine + "   " + newState);
+            StopCoroutine(stateRoutine);
+        }
+        currentState = newState;    //바꿔줄 상태
+
+
+        //if문으로 할지 스위치할지 고민중
+        //if (currentState == enemyState.idle)
+        //{
+        //    stateRoutine = StartCoroutine(Idle());
+        //}
+
+
+        switch (currentState)
+        {
+            case enemyState.idle:
+                stateRoutine = StartCoroutine(Idle());
+                break;
+            case enemyState.patroll:
+                stateRoutine = StartCoroutine(Patroll());
+                break;
+            case enemyState.attack:
+                stateRoutine = StartCoroutine(Attack());
+                break;
+            case enemyState.evade:
+                stateRoutine = StartCoroutine(Evade());
+                break;
+            case enemyState.panic:
+                stateRoutine = StartCoroutine(Panic());
+                break;
+            case enemyState.death:
+                stateRoutine = StartCoroutine(Death());
+                break;
+            case enemyState.chase:
+                stateRoutine = StartCoroutine(Chase());
+                break;
+        }
+    }
+
+    private IEnumerator Idle()
+    {
+        Debug.Log(gameObject.name + "대기");
+        animator.Play("Idle");
+
+        while (currentState == enemyState.idle)
+        {
+            float distance = Vector3.Distance(transform.position, target.position);
+
+            if (distance < trackingRange)
+            {
+                ChangeState(enemyState.chase);
+            }
+            else if (distance < attackRange)
+            {
+                ChangeState(enemyState.attack);
+            }
+
+            yield return null;
+        }
+    }
+
+    private IEnumerator Chase()
+    {
+        Debug.Log(gameObject.name + "추적");
+
+        while (currentState == enemyState.chase)
+        {
+
+            float distance = Vector3.Distance(transform.position, target.position);
+
             Vector3 direction = (target.position - transform.position).normalized;
             transform.position += direction * moveSpeed * Time.deltaTime;
             transform.LookAt(target.position);
+            animator.SetBool("isMove", true);
 
+            if (distance < attackRange)
+            {
+                ChangeState(enemyState.attack);
+                yield break;
+            }
 
-            Debug.Log("거리  " + distanceToTarget);
+            if (distance > trackingRange * 1.5f)
+            {
+                ChangeState(enemyState.patroll);
+                yield break;
+            }
+            yield return null;
         }
+    }
 
-        else if (distanceToTarget < attackRange)
-        {
-            //Debug.Log("공격 범위");
-        }
-        else
+    private IEnumerator Patroll()
+    {
+        Debug.Log(gameObject.name + "순찰");
+
+        while (currentState == enemyState.patroll)
         {
             if (patrolPoints.Length > 0)
             {
-                Debug.Log("순찰중");
+                animator.SetBool("isMove", true);
+
                 Transform targetPoint = patrolPoints[currentPoint];
                 Vector3 direction = (targetPoint.position - transform.position).normalized;
+
                 transform.position += direction * moveSpeed * Time.deltaTime;
-                transform.LookAt(targetPoint.position);
-                if (Vector3.Distance(transform.position, targetPoint.position) < 3.0f)
+                transform.LookAt(targetPoint.transform);
+
+                if (Vector3.Distance(transform.position, targetPoint.position) < 0.3f)
                 {
                     currentPoint = (currentPoint + 1) % patrolPoints.Length;
                 }
 
+                float distance = Vector3.Distance(transform.position, target.position);
+                if (distance < trackingRange)
+                {
+                    ChangeState(enemyState.chase);
+                }
+                else if (distance < attackRange)
+                {
+                    ChangeState(enemyState.attack);
+                }
+                yield return null;
             }
         }
-
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private IEnumerator Attack()
     {
+        Debug.Log(gameObject.name + "공격");
+        animator.SetTrigger("attack");
+        transform.LookAt(target.position);
+        //지연 시간은 몹에 따라 추가 제거
+        yield return new WaitForSeconds(attackDelay);
+
+        float distance = Vector3.Distance(transform.position, target.position);
+        if (distance > attackRange)
+        {
+            //공격 범위를 벗어 났을 경우
+            ChangeState(enemyState.chase);
+        }
+        else
+        {
+            ChangeState(enemyState.attack);
+        }
+
 
     }
-
-    public void OnTriggerEnter(Collider other)
+    private IEnumerator Evade()
     {
+        Debug.Log(gameObject.name + "도망");
+        animator.SetBool("isMove", true);
 
+        Vector3 evadeDirection = (transform.position - target.position).normalized;
+        float evadeTime = 3.0f;
+        float timer = 0.0f;
+
+        //바라볼 대상이 없기 때문에 LookAt 사용 안함
+
+        //밑 두줄은 while 문안에 넣어서 돌려도 되긴함 - 상황에 따라 맞게 변경
+        Quaternion targetRotation = Quaternion.LookRotation(evadeDirection);
+        transform.rotation = targetRotation;
+
+        while (currentState == enemyState.evade && timer < evadeTime)
+        {
+            transform.position += evadeDirection * moveSpeed * Time.deltaTime;
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        ChangeState(enemyState.idle);
     }
+
+    private IEnumerator Panic()
+    {
+        Debug.Log(gameObject.name + "  혼란");
+
+        yield return null;
+    }
+    private IEnumerator Death()
+    {
+        Debug.Log(gameObject.name +  "  사망");
+        animator.SetTrigger("isDeath");
+
+        yield return new WaitForSeconds(2.0f);
+        gameObject.SetActive(false);    
+    }
+
+
+
+
+    public void TakeDamage(float damage) {
+        Debug.Log(gameObject.name + "  데미지 받음");
+
+        enemyHP -= damage;
+        if (enemyHP <= 0) {
+            ChangeState(enemyState.death);
+        }
+    }
+
 }
