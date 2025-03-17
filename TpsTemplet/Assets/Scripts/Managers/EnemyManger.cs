@@ -56,7 +56,6 @@ public class EnemyManger : MonoBehaviour
         {
             distanceToTarget = Vector3.Distance(transform.position, target.position);
         }
-
     }
 
 
