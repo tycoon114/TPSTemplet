@@ -8768,7 +8768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9752057164b7e774da09aa88abfaa7ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 5
+  currentState: 0
   target: {fileID: 220384670}
   attackRange: 1
   attackDelay: 2
