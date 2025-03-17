@@ -19,6 +19,7 @@ public class PlayerController3 : MonoBehaviour
     public float animationSpeed = 3.0f; //애니메이션 재생 속도
     public string currentAnimation;
 
+
     public Transform target; // 상체가 꺽일 곳
 
 
@@ -71,17 +72,17 @@ public class PlayerController3 : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
             //multiAimciConstraint.data.offset = new Vector3(-30, 0, 0);
-            animator.SetLayerWeight(1, 1);
+            //animator.SetLayerWeight(1, 1);
             isAim = true;
-
-
         }
         else
         {
             //multiAimciConstraint.data.offset = new Vector3(0, 0, 0);
-            animator.SetLayerWeight(1, 0);
+            //animator.SetLayerWeight(1, 0);
             isAim = false;
         }
+        //animator.SetBool("isAim", isAim);
+
 
         // 중력 적용
         if (!controller.isGrounded)
@@ -135,13 +136,6 @@ public class PlayerController3 : MonoBehaviour
         //}
     }
 
-
-    //void UpdateAimTarget()
-    //{
-    //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    //    target.position = ray.GetPoint(10.0f);
-    //}
-
     //public void FootStepSoundOn()
     //{
 
@@ -153,11 +147,11 @@ public class PlayerController3 : MonoBehaviour
     //{
     //    if (Physics.Raycast(transform.position, transform.forward, out hit, 10.0f, itemLayer))
     //    {
-    //        if (hit.ColliderHit.tag == "Wood")
+    //        if (hit.ColliderHit.tag == "Snow")
     //        {
     //            audioSource.PlayOneShot(audioClipFire); //발소리재생
     //        }
-    //        else if (hit.ColliderHit.tag == "Wood")
+    //        else if (hit.ColliderHit.tag == "Sand")
     //        {
     //            audioSource.PlayOneShot(audioClipFire); //발소리재생
     //        }

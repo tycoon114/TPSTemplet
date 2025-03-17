@@ -101,10 +101,7 @@ public class GunController :  PlayerController3
             }
             StartCoroutine(Reload());
         }
-
-
     }
-
     IEnumerator AttackStart() {
 
         while (Input.GetMouseButton(0)) {
@@ -113,8 +110,6 @@ public class GunController :  PlayerController3
         }
         yield return null;
     }
-
-
     IEnumerator Reload()
     {
         //일단은 소리가 겹치는 현상은 거의 해결됬지만 위화감이 있음
@@ -147,7 +142,6 @@ public class GunController :  PlayerController3
         //피격 판정이 있는 레이어
         if (Physics.Raycast(ray, out RaycastHit hit, range, hitLayers))
         {
-
             Debug.DrawLine(ray.origin, hit.point, Color.red, 3.0f);
             // 벽(Wall)과 충돌한 경우 피격 이펙트 생성
             if (hit.collider.CompareTag("Wall"))
@@ -177,12 +171,9 @@ public class GunController :  PlayerController3
         //    for (int i = 0; i < hits.Length &; i++)
         //    {
         //        RaycastHit hitt = hits[i];
-
         //        Debug.DrawLine(ray.origin, hit.point, Color.green, 3.0f);
-
         //    }
         //}
-
 
         currentAmmo--;
         //isShoot = true;
