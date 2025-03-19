@@ -6,10 +6,10 @@ using UnityEngine;
 //palyer 빈 오브젝트가 아닌 캐릭터 자체에 달아줄것 -> 콜라이더 접근을 위함
 public class PlayerManager : MonoBehaviour
 {
-    public static event Action<int, int> UpdateHPUI;  //gamePlayUi에서 탄약을 표시 하기 위함
+    public static event Action<float, float> UpdateHPUI;  //gamePlayUi에서 탄약을 표시 하기 위함
 
-    public int playerHP = 2500;     //플레이어 체력
-    private int currentHP;           //현재 플레이어의 체력
+    public float playerHP = 2500;     //플레이어 체력
+    private float currentHP;           //현재 플레이어의 체력
 
     void Start()
     {
@@ -23,4 +23,27 @@ public class PlayerManager : MonoBehaviour
         UpdateHPUI?.Invoke(currentHP, playerHP);
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //우선 임시로 태그로 달아두고, 이후에 총에 맞는거로 수정
+        //if (other.CompareTag("getHit")) {
+        //    //animator.setTrigger("Damage");
+        //    currentHP -= 30; // 임시로 30데미지
+
+        //}
+    }
+
+    public void TakeDamage(float damage)
+    {
+        Debug.Log(gameObject.name + "  데미지 받음");
+
+        currentHP -= damage;
+        if (currentHP <= 0)
+        {
+            //죽는 애니메이션 재생
+        }
+    }
+
+
 }

@@ -44,12 +44,12 @@ public class EnemyManger : MonoBehaviour
 
     private Coroutine stateRoutine;         //현재 실행중인 코루틴
 
-    private NavMeshAgent navAgent;
+    //private NavMeshAgent navAgent;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        navAgent = GetComponent<NavMeshAgent>();
+        //navAgent = GetComponent<NavMeshAgent>();
         ChangeState(currentState);
     }
 
@@ -133,9 +133,9 @@ public class EnemyManger : MonoBehaviour
             float distance = Vector3.Distance(transform.position, target.position);
 
             Vector3 direction = (target.position - transform.position).normalized;
-            navAgent.speed = moveSpeed;
-            navAgent.isStopped = false;
-            navAgent.destination = target.position; 
+            //navAgent.speed = moveSpeed;
+            //navAgent.isStopped = false;
+            //navAgent.destination = target.position; 
 
             //transform.position += direction * moveSpeed * Time.deltaTime;
             //transform.LookAt(target.position);
@@ -169,9 +169,9 @@ public class EnemyManger : MonoBehaviour
                 Transform targetPoint = patrolPoints[currentPoint];
                 Vector3 direction = (targetPoint.position - transform.position).normalized;
 
-                navAgent.speed = moveSpeed;
-                navAgent.isStopped = false;
-                navAgent.destination = target.position;
+                //navAgent.speed = moveSpeed;
+                //navAgent.isStopped = false;
+                //navAgent.destination = target.position;
 
                 //transform.position += direction * moveSpeed * Time.deltaTime;
                 //transform.LookAt(targetPoint.transform);
@@ -198,6 +198,12 @@ public class EnemyManger : MonoBehaviour
     private IEnumerator Attack()
     {
         Debug.Log(gameObject.name + "공격");
+
+
+        //navAgent.isStopped = true;
+        //navAgent.destination = target.position;
+
+
         animator.SetTrigger("attack");
         //transform.LookAt(target.position);
         //지연 시간은 몹에 따라 추가 제거

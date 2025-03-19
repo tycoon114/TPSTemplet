@@ -75,7 +75,6 @@ public class GunController : PlayerController3
         {
             isAim = false;
             CrossHairSet?.Invoke(isAim);
-
         }
         animator.SetBool("isAim", isAim);
         //animator.SetLayerWeight(1, 1);

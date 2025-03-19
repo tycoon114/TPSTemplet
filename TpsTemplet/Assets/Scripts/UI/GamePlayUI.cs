@@ -42,7 +42,7 @@ public class GamePlayUI : MonoBehaviour
         ammoText.text = $"{currentAmmo} / {maxAmmo}";
     }
 
-    void UpdateHPUI(int currentHP, int maxHP)
+    void UpdateHPUI(float currentHP, float maxHP)
     {
         hpText.text = $"{currentHP} / {maxHP}";
     }
