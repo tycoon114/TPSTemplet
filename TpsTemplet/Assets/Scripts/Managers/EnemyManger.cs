@@ -2,6 +2,8 @@ using System.Collections;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
+
 
 //미니 게임용 적 관련 코드
 //현재는 트리거 관련 테스트용 코드로 사용[죽으면 부활 지역으로 이동하는 이벤트] 2025- 03 - 12
@@ -42,11 +44,12 @@ public class EnemyManger : MonoBehaviour
 
     private Coroutine stateRoutine;         //현재 실행중인 코루틴
 
+    private NavMeshAgent navAgent;
+
     void Start()
     {
-        //상태 초기화
-        //currentState = enemyState.idle;
         animator = GetComponent<Animator>();
+        navAgent = GetComponent<NavMeshAgent>();
         ChangeState(currentState);
     }
 
@@ -57,9 +60,6 @@ public class EnemyManger : MonoBehaviour
             distanceToTarget = Vector3.Distance(transform.position, target.position);
         }
     }
-
-
-
     public void ChangeState(enemyState newState)
     {
         if (stateRoutine != null)
@@ -69,13 +69,11 @@ public class EnemyManger : MonoBehaviour
         }
         currentState = newState;    //바꿔줄 상태
 
-
         //if문으로 할지 스위치할지 고민중
         //if (currentState == enemyState.idle)
         //{
         //    stateRoutine = StartCoroutine(Idle());
         //}
-
 
         switch (currentState)
         {
