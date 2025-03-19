@@ -87,18 +87,19 @@ public class GunController : PlayerController3
         else if (Input.GetMouseButtonUp(0) && fireCoroutine != null) // 좌클릭 해제 시 사격 중지
         {
             isShoot = false;
-            //사격 애니메이션은 싱크가 맞지 않아 우선 비활성화
-            //animator.SetBool("isShoot", isShoot);
+            animator.SetBool("isShoot", isShoot);
             StopCoroutine(fireCoroutine);
             fireCoroutine = null;
         }
 
         if (Input.GetKeyDown(KeyCode.R) || currentAmmo == 0)
         {
+            isShoot = false;
+            animator.SetBool("isShoot", isShoot);
+
+            //탄창량이 0인것을 계속 확인해서 0일때 재장전 모션이 잘 안나옴
             if (fireCoroutine != null)
             {
-
-
                 StopCoroutine(fireCoroutine);
                 fireCoroutine = null;
             }
@@ -107,7 +108,6 @@ public class GunController : PlayerController3
     }
     IEnumerator AttackStart()
     {
-
         while (Input.GetMouseButton(0))
         {
             Shoot();
@@ -184,8 +184,8 @@ public class GunController : PlayerController3
         //}
 
         currentAmmo--;
-        //isShoot = true;
-        //animator.SetBool("isShoot",isShoot);
+        isShoot = true;
+        animator.SetBool("isShoot", isShoot);
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
     }
 
