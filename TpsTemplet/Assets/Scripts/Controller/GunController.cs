@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using System.Collections;
 
-public class GunController :  PlayerController3
+public class GunController : PlayerController3
 {
     public static event Action<int, int> onAmmoChanged;  //gamePlayUi에서 탄약을 표시 하기 위함
     public static event Action<bool> CrossHairSet;  //gamePlayUi에서 탄약을 표시 하기 위함
@@ -56,10 +56,10 @@ public class GunController :  PlayerController3
                 break;
             }
         }
-        hitLayers = LayerMask.GetMask("Wall", "Enemy" , "Player");
+        hitLayers = LayerMask.GetMask("Wall", "Enemy", "Player");
     }
 
-   
+
     void Update()
     {
         Vector3 dir = transform.position + muzzlePoint.transform.position;
@@ -80,7 +80,7 @@ public class GunController :  PlayerController3
         animator.SetBool("isAim", isAim);
         //animator.SetLayerWeight(1, 1);
 
-        if (Input.GetMouseButtonDown(0) && isAim && currentAmmo!=0 && fireCoroutine == null && !isReload) // fire  ... 나중에 캐릭터 컨트롤러에서 여기를 오도록?
+        if (Input.GetMouseButtonDown(0) && isAim && currentAmmo != 0 && fireCoroutine == null && !isReload) // fire  ... 나중에 캐릭터 컨트롤러에서 여기를 오도록?
         {
             fireCoroutine = StartCoroutine(AttackStart());
         }
@@ -93,7 +93,7 @@ public class GunController :  PlayerController3
             fireCoroutine = null;
         }
 
-        if (Input.GetKeyDown(KeyCode.R) || currentAmmo ==0)
+        if (Input.GetKeyDown(KeyCode.R) || currentAmmo == 0)
         {
             if (fireCoroutine != null)
             {
@@ -103,9 +103,11 @@ public class GunController :  PlayerController3
             StartCoroutine(Reload());
         }
     }
-    IEnumerator AttackStart() {
+    IEnumerator AttackStart()
+    {
 
-        while (Input.GetMouseButton(0)) {
+        while (Input.GetMouseButton(0))
+        {
             Shoot();
             yield return new WaitForSeconds(fireRate);
         }
@@ -177,10 +179,10 @@ public class GunController :  PlayerController3
         //    {
         //        RaycastHit hitt = hits[i];
         //        Debug.DrawLine(ray.origin, hit.point, Color.green, 3.0f);
-//    }
-//}
+        //    }
+        //}
 
-currentAmmo--;
+        currentAmmo--;
         //isShoot = true;
         //animator.SetBool("isShoot",isShoot);
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트

@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class GamePlayUI : MonoBehaviour
 {
-
     public TextMeshProUGUI ammoText;
     public TextMeshProUGUI hpText;
     public Image portraitImage;
@@ -12,12 +11,7 @@ public class GamePlayUI : MonoBehaviour
 
     public GameObject crossHair;
 
-
     private string selectedCharacterName;
-    
-
-
-
     void Start()
     {
         GameObject player = GameObject.Find("Player");
@@ -33,8 +27,7 @@ public class GamePlayUI : MonoBehaviour
     {
         GunController.onAmmoChanged += UpdateAmmoUI; // 이벤트 구독
         GunController.CrossHairSet += CrossHairSet;
-        PlayerManager.UpdateHPUI += UpdateHPUI; 
-
+        PlayerManager.UpdateHPUI += UpdateHPUI;
     }
 
     void OnDisable()
@@ -42,7 +35,6 @@ public class GamePlayUI : MonoBehaviour
         GunController.onAmmoChanged -= UpdateAmmoUI; // 이벤트 해제
         GunController.CrossHairSet -= CrossHairSet;
         PlayerManager.UpdateHPUI -= UpdateHPUI;
-
     }
 
     void UpdateAmmoUI(int currentAmmo, int maxAmmo)
@@ -55,13 +47,14 @@ public class GamePlayUI : MonoBehaviour
         hpText.text = $"{currentHP} / {maxHP}";
     }
 
-    public void CrossHairSet(bool isAim) {
-
+    public void CrossHairSet(bool isAim)
+    {
         if (isAim)
         {
             crossHair.SetActive(true);
         }
-        else { 
+        else
+        {
             crossHair.SetActive(false);
         }
     }
@@ -86,7 +79,6 @@ public class GamePlayUI : MonoBehaviour
             Debug.Log(portraitPath);
         }
 
-
         if (weaponPortraitPath != null)
         {
             weaponImage.sprite = weaponPortrait;
@@ -95,9 +87,5 @@ public class GamePlayUI : MonoBehaviour
         {
             Debug.LogWarning("무기 이미지가 없습니다: " + studentName);
         }
-
-
     }
-
-
 }
