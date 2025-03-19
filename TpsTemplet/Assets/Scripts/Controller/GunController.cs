@@ -16,7 +16,7 @@ public class GunController : PlayerController3
     public GameObject impactEffect; // 피격 이펙트
     public float bulletSpeed = 20f;  // 탄속
     public float fireRate = 0.2f;    //연사 속도
-    public float reloadTime = 5f;   // 재장전 시간
+    public float reloadTime = 2f;   // 재장전 시간
     public float hitScanRadius = 0.05f; // 크로스헤어 내 랜덤 범위
     public float range = 100f; // 사격 거리
     public int maxAmmo = 50;        //최대 탄약수
@@ -125,7 +125,6 @@ public class GunController : PlayerController3
 
         yield return new WaitForSeconds(reloadTime);
         isReload = false;
-        //animator.SetBool("isReload", isReload);
         currentAmmo = maxAmmo;
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo);
     }
