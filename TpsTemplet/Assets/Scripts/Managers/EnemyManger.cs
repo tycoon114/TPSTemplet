@@ -133,8 +133,12 @@ public class EnemyManger : MonoBehaviour
             float distance = Vector3.Distance(transform.position, target.position);
 
             Vector3 direction = (target.position - transform.position).normalized;
-            transform.position += direction * moveSpeed * Time.deltaTime;
-            transform.LookAt(target.position);
+            navAgent.speed = moveSpeed;
+            navAgent.isStopped = false;
+            navAgent.destination = target.position; 
+
+            //transform.position += direction * moveSpeed * Time.deltaTime;
+            //transform.LookAt(target.position);
             animator.SetBool("isMove", true);
 
             if (distance < attackRange)
@@ -165,8 +169,12 @@ public class EnemyManger : MonoBehaviour
                 Transform targetPoint = patrolPoints[currentPoint];
                 Vector3 direction = (targetPoint.position - transform.position).normalized;
 
-                transform.position += direction * moveSpeed * Time.deltaTime;
-                transform.LookAt(targetPoint.transform);
+                navAgent.speed = moveSpeed;
+                navAgent.isStopped = false;
+                navAgent.destination = target.position;
+
+                //transform.position += direction * moveSpeed * Time.deltaTime;
+                //transform.LookAt(targetPoint.transform);
 
                 if (Vector3.Distance(transform.position, targetPoint.position) < 0.3f)
                 {
@@ -191,7 +199,7 @@ public class EnemyManger : MonoBehaviour
     {
         Debug.Log(gameObject.name + "공격");
         animator.SetTrigger("attack");
-        transform.LookAt(target.position);
+        //transform.LookAt(target.position);
         //지연 시간은 몹에 따라 추가 제거
         yield return new WaitForSeconds(attackDelay);
 
@@ -220,12 +228,12 @@ public class EnemyManger : MonoBehaviour
         //바라볼 대상이 없기 때문에 LookAt 사용 안함
 
         //밑 두줄은 while 문안에 넣어서 돌려도 되긴함 - 상황에 따라 맞게 변경
-        Quaternion targetRotation = Quaternion.LookRotation(evadeDirection);
-        transform.rotation = targetRotation;
+        //Quaternion targetRotation = Quaternion.LookRotation(evadeDirection);
+        //transform.rotation = targetRotation;
 
         while (currentState == enemyState.evade && timer < evadeTime)
         {
-            transform.position += evadeDirection * moveSpeed * Time.deltaTime;
+            //transform.position += evadeDirection * moveSpeed * Time.deltaTime;
             timer += Time.deltaTime;
             yield return null;
         }

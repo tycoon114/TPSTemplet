@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 2161100}
   - component: {fileID: 2161099}
   - component: {fileID: 2161098}
+  - component: {fileID: 2161101}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -212,6 +213,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1694877651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2161101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2161097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: f036bdee37ae430428ba2d790e3c24c6, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!4 &220384670 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3615751212516692428, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
@@ -8947,6 +8980,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7520129079b8de445926e9ee3192dc26, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2001749757}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7520129079b8de445926e9ee3192dc26, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2001749762}
   m_SourcePrefab: {fileID: 100100000, guid: 7520129079b8de445926e9ee3192dc26, type: 3}
 --- !u!1 &2001749756 stripped
 GameObject:
@@ -9013,11 +9049,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9752057164b7e774da09aa88abfaa7ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 0
+  currentState: 5
   target: {fileID: 220384670}
   attackRange: 1
   attackDelay: 2
-  moveSpeed: 2
+  moveSpeed: 4
   patrolPoints:
   - {fileID: 1966340970}
   - {fileID: 1826731238}
@@ -9027,6 +9063,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7520129079b8de445926e9ee3192dc26, type: 3}
   m_PrefabInstance: {fileID: 2001749755}
   m_PrefabAsset: {fileID: 0}
+--- !u!195 &2001749762
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001749756}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 360
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &2049167153
 PrefabInstance:
   m_ObjectHideFlags: 0
