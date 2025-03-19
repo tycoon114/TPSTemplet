@@ -35,6 +35,7 @@ public class GunController :  PlayerController3
     private AudioSource audioSource;    //플리이에 오브젝트에 오디오소스 추가
     public AudioClip reload;            //지금은 직접 넣지만 이후에 DB나 서버에서 받도록? 혹은 이름 찾아서
     public AudioClip shoot;             // 마찬가지로 지금만 개발하기 편하게 퍼블릭 처리
+    public AudioClip wall;
 
     void Start()
     {
@@ -139,7 +140,10 @@ public class GunController :  PlayerController3
         Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * hitScanRadius;
         Vector3 screenPoint = new Vector3(Screen.width / 2 + randomOffset.x, Screen.height / 2 + randomOffset.y, 0);
         Ray ray = mainCamera.ScreenPointToRay(screenPoint);
-        //피격 판정이 있는 레이어
+
+        //RaycastHit[] hits = Physics.RaycastAll(ray, range, hitLayers);
+
+        //피격 판정이 있는 레이어 - hit.point : 충돌한 위치 : 파티클이 생길 위치
         if (Physics.Raycast(ray, out RaycastHit hit, range, hitLayers))
         {
             Debug.DrawLine(ray.origin, hit.point, Color.red, 3.0f);
@@ -147,12 +151,13 @@ public class GunController :  PlayerController3
             if (hit.collider.CompareTag("Wall"))
             {
                 Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                //audioSource.PlayOneShot(wall);
+                //ParticleSystem particle = Instanciate(preParticle, hits[i].point ,Quaternion.identity);  - 파티클 복사
             }
             else if (hit.collider.CompareTag("Enemy"))
             {
                 //미니게임용 - AI 한테 적용할 레이어다
                 hit.collider.GetComponent<EnemyManger>().TakeDamage(damage);
-
                 Debug.Log("적을 맞춤");
             }
             else if (hit.collider.CompareTag("Player"))
@@ -168,14 +173,14 @@ public class GunController :  PlayerController3
         //hits = Physics.RaycastAll(rays.origin, transform.forward, range, hitLayers);
         //if (hits.Length > 0)
         //{
-        //    for (int i = 0; i < hits.Length &; i++)
+        //    for (int i = 0; i < hits.Length &% i <2; i++)
         //    {
         //        RaycastHit hitt = hits[i];
         //        Debug.DrawLine(ray.origin, hit.point, Color.green, 3.0f);
-        //    }
-        //}
+//    }
+//}
 
-        currentAmmo--;
+currentAmmo--;
         //isShoot = true;
         //animator.SetBool("isShoot",isShoot);
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
