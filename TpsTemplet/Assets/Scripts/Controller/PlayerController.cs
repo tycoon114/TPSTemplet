@@ -17,8 +17,6 @@ public class PlayerController : MonoBehaviour
     public string currentAnimation;
 
     public Transform target; // 상체가 꺽일 곳
-
-
     public MultiAimConstraint multiAimciConstraint;         //상체 뒤틀림 방지?
     void Start()
     {
@@ -96,14 +94,9 @@ public class PlayerController : MonoBehaviour
 
         if (isAim)
         {
-            //AimController에서 처리 - 안되면 주석 풀것 2025- 02-26
-            //transform.rotation = Quaternion.LookRotation(cameraForward); // 정조준 방향 유지
-
             //조준시에는 이동할 때 보다는 빨리 회전 2025-03-10 23:16
             Quaternion targetRotation = Quaternion.LookRotation(cameraForward);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 7f);
-            //UpdateAimTarget();
-
         }
         else if (moveDirection != Vector3.zero)// 이동 중이면 이동 방향으로 캐릭터 회전
         {
