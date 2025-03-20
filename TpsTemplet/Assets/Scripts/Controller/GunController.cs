@@ -24,7 +24,6 @@ public class GunController : PlayerController
     public float damage = 30.0f;    //공격력 - 변수 이름 나중에 바꿀 예정
     public string gunType = "MG";   //이후 받아와서 처리
 
-
     private bool isReload = false;      // 재장전
     private bool isShoot = false;       //사격 애니메이션
     //private bool isAim = false;         //조준 여부 확인
@@ -60,7 +59,6 @@ public class GunController : PlayerController
     void Update()
     {
         Vector3 dir = transform.position + muzzlePoint.transform.position;
-
 
         if (Input.GetMouseButton(1))
         {
