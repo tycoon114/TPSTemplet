@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CameraController2 : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     public Vector3 CameraOffset = new Vector3(0, 0.5f, -4);   // 카메라 오프셋
     public float mouseSensitivity = 60.0f;             //감도 - 이후 옵션에서 조정 가능하게

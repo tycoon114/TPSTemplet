@@ -3,7 +3,7 @@ using UnityEngine;
 
 
 //카메라 컨트롤러 구버전
-public class CameraController : MonoBehaviour
+public class CameraControllerOld : MonoBehaviour
 {
     public Vector3 offset = new Vector3(0, 0.5f, -4);// 카메라 위치 조정
     public float cameraSpeed = 5f; // 카메라 이동 속도

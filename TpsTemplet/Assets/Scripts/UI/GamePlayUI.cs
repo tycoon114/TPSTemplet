@@ -43,15 +43,14 @@ public class GamePlayUI : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
-
     }
 
 
     public void OnRetrunGameClick()
     {
+        SoundManager.Instance.PlayButtonSfx("buttonTouch");
         isEscMenuActive = false;
         escMenu.SetActive(false);
-
     }
 
     public void OnReturnMainMenuClick()

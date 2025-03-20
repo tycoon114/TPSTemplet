@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Animations.Rigging;
 using UnityEngine.Audio;
 
-public class PlayerController3 : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;   // 이동 속도
     public float gravity = 9.8f;   // 중력
@@ -13,12 +13,8 @@ public class PlayerController3 : MonoBehaviour
     protected int atkType;          //공격타입
     protected int dfnType;          //방어 타입
 
-
-
-    public AudioClip walk;
     public float animationSpeed = 3.0f; //애니메이션 재생 속도
     public string currentAnimation;
-
 
     public Transform target; // 상체가 꺽일 곳
 
@@ -29,7 +25,6 @@ public class PlayerController3 : MonoBehaviour
         //자식 노드에서 가져오기, 캐릭터 선택을 고려하면 플레이어는 빈 오브젝트고 거기로 선택한 캐릭터를 자식으로 불러오는게 하기 25.03.06
         controller = GetComponentInChildren<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-
     }
 
     void Update()
@@ -112,7 +107,8 @@ public class PlayerController3 : MonoBehaviour
         }
         else if (moveDirection != Vector3.zero)// 이동 중이면 이동 방향으로 캐릭터 회전
         {
-
+            //소리가 겹침 - Update 밖에서 걸어줘야됨
+            //SoundManager.Instance.PlaySfx("walkNormal1");
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
             float rotationSpeed = 300f;
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);

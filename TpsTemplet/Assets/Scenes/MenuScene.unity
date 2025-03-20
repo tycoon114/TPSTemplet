@@ -1101,8 +1101,36 @@ MonoBehaviour:
   sfxClipList:
   - name: buttonTouch
     clip: {fileID: 8300000, guid: 7db3ff5ea19250f4796288bf16f71b25, type: 3}
-  - name: walk1
+  - name: walkNormal1
     clip: {fileID: 8300000, guid: 54e1a632e5afd10459f17c4b8326d51c, type: 3}
+  - name: walkNormal2
+    clip: {fileID: 8300000, guid: 0465971d7488ea546afd930eb7c27ea8, type: 3}
+  - name: walkWood
+    clip: {fileID: 8300000, guid: aaa1f881ac1a50041ad0c7c9565a27b7, type: 3}
+  - name: walkSand
+    clip: {fileID: 8300000, guid: a1abaef6f2dc2f644809bbe53810563b, type: 3}
+  - name: walkSnow1
+    clip: {fileID: 8300000, guid: 5df0aca9df1d86948b50891750b937c2, type: 3}
+  - name: walkSnow2
+    clip: {fileID: 8300000, guid: 369badc547cad924198d02444e03a0b6, type: 3}
+  - name: runSand1
+    clip: {fileID: 8300000, guid: 82768022587ff09438a6a6e657cbfbb6, type: 3}
+  - name: runSand2
+    clip: {fileID: 8300000, guid: 5b3c6ecf1642ca94bb2ee1ce039a9450, type: 3}
+  - name: runSnow
+    clip: {fileID: 8300000, guid: 488293e5eaf405c4ebb663e1a94657c2, type: 3}
+  - name: snowStorm1
+    clip: {fileID: 8300000, guid: afabf1292c96455498c1b93274584c0b, type: 3}
+  - name: snowStorm2
+    clip: {fileID: 8300000, guid: e513300c967f86a4f85ae083280bf433, type: 3}
+  - name: snowStorm3
+    clip: {fileID: 8300000, guid: 9f943f9462a6f8046b33bb399ea2db3d, type: 3}
+  - name: kazusaReload
+    clip: {fileID: 8300000, guid: d977cf7c9beeb2840a18960542f0976d, type: 3}
+  - name: MGShooting
+    clip: {fileID: 8300000, guid: 680e2768eaea47e47a6c279059009409, type: 3}
+  - name: ARShooting
+    clip: {fileID: 8300000, guid: 0d932648aa8100343b6bc6294329192e, type: 3}
 --- !u!4 &1306296700
 Transform:
   m_ObjectHideFlags: 0

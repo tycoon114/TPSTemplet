@@ -24,8 +24,7 @@ public class SceneController : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        //이후 캐릭터 선택에서 소리를 나눌수도 있음
-        SoundManager.Instance.PlaySfx("buttonTouch");
+        SoundManager.Instance.PlayButtonSfx("buttonTouch");
         SceneManager.LoadScene(sceneName);
         //해당 메뉴에 맞는 BGM 재생
         if (sceneName == "MenuScene")
@@ -38,16 +37,5 @@ public class SceneController : MonoBehaviour
     public void ExitScene()
     {
         Application.Quit();
-    }
-
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using System.Collections;
 
-public class GunController : PlayerController3
+public class GunController : PlayerController
 {
     public static event Action<int, int> onAmmoChanged;  //gamePlayUi에서 탄약을 표시 하기 위함
     public static event Action<bool> CrossHairSet;  //gamePlayUi에서 탄약을 표시 하기 위함
@@ -22,27 +22,24 @@ public class GunController : PlayerController3
     public int maxAmmo = 50;        //최대 탄약수
     public bool boltAction = false;  //볼트 액션이 아닌 경우 연사 가능하도록
     public float damage = 30.0f;    //공격력 - 변수 이름 나중에 바꿀 예정
+    public string gunType = "MG";   //이후 받아와서 처리
+
 
     private bool isReload = false;      // 재장전
     private bool isShoot = false;       //사격 애니메이션
-    private bool isAim = false;         //조준 여부 확인
+    //private bool isAim = false;         //조준 여부 확인
     private Coroutine fireCoroutine;    // 연사 제어를 위한 코루틴 - 코루틴을 중지 시키기 위함[중지 시키지 않으면 연사속도가 중첩될 수 있음]
 
     public LayerMask hitLayers;         // 맞출 수 있는 레이어
 
     private Camera mainCamera;          // 히트 스캔 레이캐스트를 위한 메인카메라 값
 
-    private AudioSource audioSource;    //플리이에 오브젝트에 오디오소스 추가
-    public AudioClip reload;            //지금은 직접 넣지만 이후에 DB나 서버에서 받도록? 혹은 이름 찾아서
-    public AudioClip shoot;             // 마찬가지로 지금만 개발하기 편하게 퍼블릭 처리
-    public AudioClip wall;
 
     void Start()
     {
         currentAmmo = maxAmmo;
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
         animator = GetComponentInChildren<Animator>();
-        audioSource = GetComponentInChildren<AudioSource>();
 
         mainCamera = Camera.main;
 
@@ -116,9 +113,10 @@ public class GunController : PlayerController3
     }
     IEnumerator Reload()
     {
-        //일단은 소리가 겹치는 현상은 거의 해결됬지만 위화감이 있음
-        audioSource.Stop();
-        audioSource.PlayOneShot(reload);
+        //소리 겹침 다시 발생
+        SoundManager.Instance.StopSfx();
+        SoundManager.Instance.PlaySfx("kazusaReload", target.transform.position);
+
         isReload = true;
         animator.SetTrigger("isReload");
 
@@ -130,7 +128,15 @@ public class GunController : PlayerController3
 
     void Shoot()
     {
-        audioSource.PlayOneShot(shoot);
+        if (gunType.Equals("AR"))
+        {
+            SoundManager.Instance.PlaySfx("ARShooting", target.transform.position);
+        }
+        else
+        {
+            SoundManager.Instance.PlaySfx("MGShooting", target.transform.position);
+        }
+
         //사격 이펙트
         if (gunFire != null)
         {
@@ -187,10 +193,4 @@ public class GunController : PlayerController3
         animator.SetBool("isShoot", isShoot);
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
     }
-
-    //    void UpdateAimTarget()
-    //{
-    //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    //    target.position = ray.GetPoint(10.0f);
-    //}
 }
