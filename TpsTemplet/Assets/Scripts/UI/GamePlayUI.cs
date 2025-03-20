@@ -56,8 +56,7 @@ public class GamePlayUI : MonoBehaviour
 
     public void OnReturnMainMenuClick()
     {
-        //메인 메뉴로 씬 변경
-
+        SceneController.Instance.LoadScene("MenuScene");
     }
 
 

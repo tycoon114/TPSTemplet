@@ -6,10 +6,34 @@ using UnityEngine;
 //palyer 빈 오브젝트가 아닌 캐릭터 자체에 달아줄것 -> 콜라이더 접근을 위함
 public class PlayerManager : MonoBehaviour
 {
+    //우선은 싱글톤을 썼지만 멀티플레이에세는 싱글톤을 쓰면 안됨
+    //이후에 게임 모드에 따라 발동하도록 설정하기
+    public static PlayerManager Instance
+    {
+        get;
+        private set;
+    }
+
     public static event Action<float, float> UpdateHPUI;  //gamePlayUi에서 탄약을 표시 하기 위함
 
     public float playerHP = 2500;     //플레이어 체력
     private float currentHP;           //현재 플레이어의 체력
+
+    private void Awake()
+    {
+
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            if (Instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 
     void Start()
     {

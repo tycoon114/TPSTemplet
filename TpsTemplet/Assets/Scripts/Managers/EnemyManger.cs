@@ -25,7 +25,6 @@ public enum enemyState
 public class EnemyManger : MonoBehaviour
 {
     public enemyState currentState = enemyState.idle;
-    public Transform target;        //타겟은 플레이어
     public float attackRange = 1.0f;    //공격 범위. 이후 적 종류에 따라 변경
     public float attackDelay = 2.0f;    //공격 딜레이
     public float moveSpeed = 2.0f;      //이동 속도
@@ -69,9 +68,9 @@ public class EnemyManger : MonoBehaviour
     }
     void Update()
     {
-        if (target != null)
+        if (PlayerManager.Instance != null)
         {
-            distanceToTarget = Vector3.Distance(transform.position, target.position);
+            distanceToTarget = Vector3.Distance(transform.position, PlayerManager.Instance.transform.position);
         }
     }
 
@@ -126,7 +125,7 @@ public class EnemyManger : MonoBehaviour
 
         while (currentState == enemyState.idle)
         {
-            float distance = Vector3.Distance(transform.position, target.position);
+            float distance = Vector3.Distance(transform.position, PlayerManager.Instance.transform.position);
 
             if (distance < trackingRange)
             {
@@ -148,12 +147,12 @@ public class EnemyManger : MonoBehaviour
         while (currentState == enemyState.chase)
         {
 
-            float distance = Vector3.Distance(transform.position, target.position);
+            float distance = Vector3.Distance(transform.position, PlayerManager.Instance.transform.position);
 
-            Vector3 direction = (target.position - transform.position).normalized;
+            Vector3 direction = (PlayerManager.Instance.transform.position - transform.position).normalized;
             navAgent.speed = moveSpeed;
             navAgent.isStopped = false;
-            navAgent.destination = target.position;
+            navAgent.destination = PlayerManager.Instance.transform.position;
 
             //transform.position += direction * moveSpeed * Time.deltaTime;
             //transform.LookAt(target.position);
@@ -189,7 +188,7 @@ public class EnemyManger : MonoBehaviour
 
                 navAgent.speed = moveSpeed;
                 navAgent.isStopped = false;
-                navAgent.destination = target.position;
+                navAgent.destination = PlayerManager.Instance.transform.position;
 
                 //transform.position += direction * moveSpeed * Time.deltaTime;
                 //transform.LookAt(targetPoint.transform);
@@ -205,7 +204,7 @@ public class EnemyManger : MonoBehaviour
                     currentPoint = (currentPoint + 1) % patrolPoints.Length;
                 }
 
-                float distance = Vector3.Distance(transform.position, target.position);
+                float distance = Vector3.Distance(transform.position, PlayerManager.Instance.transform.position);
                 if (distance < trackingRange)
                 {
                     ChangeState(enemyState.chase);
@@ -225,7 +224,7 @@ public class EnemyManger : MonoBehaviour
 
 
         navAgent.isStopped = true;
-        navAgent.destination = target.position;
+        navAgent.destination = PlayerManager.Instance.transform.position;
 
 
         animator.SetTrigger("attack");
@@ -233,7 +232,7 @@ public class EnemyManger : MonoBehaviour
         //지연 시간은 몹에 따라 추가 제거
         yield return new WaitForSeconds(attackDelay);
 
-        float distance = Vector3.Distance(transform.position, target.position);
+        float distance = Vector3.Distance(transform.position, PlayerManager.Instance.transform.position);
         if (distance > attackRange)
         {
             //공격 범위를 벗어 났을 경우
@@ -251,7 +250,7 @@ public class EnemyManger : MonoBehaviour
         Debug.Log(gameObject.name + "도망");
         animator.SetBool("isMove", true);
 
-        Vector3 evadeDirection = (transform.position - target.position).normalized;
+        Vector3 evadeDirection = (transform.position - PlayerManager.Instance.transform.position).normalized;
         float evadeTime = 3.0f;
         float timer = 0.0f;
 
