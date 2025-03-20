@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
+using Unity.AI.Navigation;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -46,13 +47,26 @@ public class EnemyManger : MonoBehaviour
 
     private NavMeshAgent navAgent;
 
+    private bool isJumping = false;     //onGround 로 바뀔수 있음
+    private Rigidbody rb;
+    public float jumpHeight = 2.0f;
+    public float jumpDuration = 1.0f;
+    private NavMeshLink[] navMeshLinks;
+
     void Start()
     {
         animator = GetComponent<Animator>();
         navAgent = GetComponent<NavMeshAgent>();
         ChangeState(currentState);
-    }
+        rb = GetComponent<Rigidbody>();
+        if (rb == null)
+        {
+            rb = gameObject.AddComponent<Rigidbody>();
+        }
+        rb.isKinematic = true;
 
+        navMeshLinks = FindObjectsOfType<NavMeshLink>();
+    }
     void Update()
     {
         if (target != null)
@@ -60,8 +74,12 @@ public class EnemyManger : MonoBehaviour
             distanceToTarget = Vector3.Distance(transform.position, target.position);
         }
     }
+
     public void ChangeState(enemyState newState)
     {
+        //점프 중일 경우 리턴
+        if (isJumping) return;
+
         if (stateRoutine != null)
         {
             Debug.Log("현재 상태   " + stateRoutine + "   " + newState);
@@ -135,7 +153,7 @@ public class EnemyManger : MonoBehaviour
             Vector3 direction = (target.position - transform.position).normalized;
             navAgent.speed = moveSpeed;
             navAgent.isStopped = false;
-            navAgent.destination = target.position; 
+            navAgent.destination = target.position;
 
             //transform.position += direction * moveSpeed * Time.deltaTime;
             //transform.LookAt(target.position);
@@ -175,6 +193,12 @@ public class EnemyManger : MonoBehaviour
 
                 //transform.position += direction * moveSpeed * Time.deltaTime;
                 //transform.LookAt(targetPoint.transform);
+
+                if (navAgent.isOnOffMeshLink)
+                {
+                    StartCoroutine(JumpAcrossLink());
+                }
+
 
                 if (Vector3.Distance(transform.position, targetPoint.position) < 0.3f)
                 {
@@ -254,23 +278,57 @@ public class EnemyManger : MonoBehaviour
     }
     private IEnumerator Death()
     {
-        Debug.Log(gameObject.name +  "  사망");
+        Debug.Log(gameObject.name + "  사망");
         animator.SetTrigger("isDeath");
 
         yield return new WaitForSeconds(2.0f);
-        gameObject.SetActive(false);    
+        gameObject.SetActive(false);
     }
 
 
 
 
-    public void TakeDamage(float damage) {
+    public void TakeDamage(float damage)
+    {
         Debug.Log(gameObject.name + "  데미지 받음");
 
         enemyHP -= damage;
-        if (enemyHP <= 0) {
+        if (enemyHP <= 0)
+        {
             ChangeState(enemyState.death);
         }
+    }
+
+    private IEnumerator JumpAcrossLink()
+    {
+        Debug.Log(gameObject.name + "  jumpppp");
+        isJumping = true;
+        //에이전트 중단
+        navAgent.isStopped = true;
+
+        OffMeshLinkData linkData = navAgent.currentOffMeshLinkData;
+        Vector3 startPos = linkData.startPos;
+        Vector3 endPos = linkData.endPos;
+
+        //점프 경로 계산 (포물선)
+        float elapsedTime = 0;
+        while (elapsedTime < jumpDuration)
+        {
+            float t = elapsedTime / jumpDuration;
+            Vector3 currentPosition = Vector3.Lerp(startPos, endPos, t);
+            currentPosition.y = Mathf.Sin(t * Mathf.PI) * jumpHeight;
+            transform.position = currentPosition;
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        //도착점의 위치
+        transform.position = endPos;
+        //네브메쉬 경로 재개
+        navAgent.CompleteOffMeshLink();
+        navAgent.isStopped = false;
+        isJumping = false;
     }
 
 }

@@ -17,8 +17,8 @@ public class CameraController2 : MonoBehaviour
     void Start()
     {
 
-        Cursor.lockState = CursorLockMode.Locked; // 마우스 잠금
-        Cursor.visible = false;                   //커서 안보이게
+        //Cursor.lockState = CursorLockMode.Locked; // 마우스 잠금
+        //Cursor.visible = false;                   //커서 안보이게
     }
 
     //현재 조준점 위치가 바뀌는 버그가 있음

@@ -11,9 +11,15 @@ public class GamePlayUI : MonoBehaviour
 
     public GameObject crossHair;
 
+    public GameObject escMenu;
+    public bool isEscMenuActive = false;
+
     private string selectedCharacterName;
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        escMenu.SetActive(false);
         GameObject player = GameObject.Find("Player");
         if (player != null)
         {
@@ -21,6 +27,39 @@ public class GamePlayUI : MonoBehaviour
             SetPlayerPortrait(selectedCharacterName);
         }
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+            isEscMenuActive = !isEscMenuActive;
+            escMenu.SetActive(isEscMenuActive);
+        }
+
+        if (isEscMenuActive == false)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
+    }
+
+
+    public void OnRetrunGameClick()
+    {
+        isEscMenuActive = false;
+        escMenu.SetActive(false);
+
+    }
+
+    public void OnReturnMainMenuClick()
+    {
+        //메인 메뉴로 씬 변경
+
+    }
+
 
 
     void OnEnable()
