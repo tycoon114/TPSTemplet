@@ -17,9 +17,17 @@ public class SoundManager : MonoBehaviour
     public AudioSource bgmSource;
     public AudioSource sfxSource;
 
+    //일단 오디오 소스 컴포넌트는 sfx와 같이 사용 - 필요하면 따로 만들고 거기서 값을 수정할 것
+    public AudioSource walkSource;
+    public AudioSource gunSource;
+    public AudioSource skillSource;
 
     private Dictionary<string, AudioClip> bgmClips = new Dictionary<string, AudioClip>();
     private Dictionary<string, AudioClip> sfxClips = new Dictionary<string, AudioClip>();
+
+    private Dictionary<string, AudioClip> walkClips = new Dictionary<string, AudioClip>();
+    private Dictionary<string, AudioClip> gunClips = new Dictionary<string, AudioClip>();
+    private Dictionary<string, AudioClip> skillClips = new Dictionary<string, AudioClip>();
 
     //구조체를 만들어서 임시로 딕셔너리를 관리 할 수 있도록 설정
     [System.Serializable]
@@ -30,7 +38,13 @@ public class SoundManager : MonoBehaviour
     }
 
     public NamedAudioClip[] bgmClipList;
-    public NamedAudioClip[] sfxClipList;
+    public NamedAudioClip[] sfxClipList;    //환경음이나 효과음은 여기에
+
+    //효과음이 종류가 많아서 따로 관리하기로함 2025-03-21
+    public NamedAudioClip[] walkClipList;   //걷는 소리는 여기에
+    public NamedAudioClip[] gunClipList;    //총소리는 여기에, 폭발도 여기에
+    public NamedAudioClip[] skilClipList;    //스킬 관련 효과음은 여기에
+
 
     private Coroutine currentBGMCoroutine;
 
@@ -67,6 +81,35 @@ public class SoundManager : MonoBehaviour
                 sfxClips.Add(sfx.name, sfx.clip);
             }
         }
+
+
+        //걷는 소리 할당
+        foreach (var walk in walkClipList)
+        {
+            if (!walkClips.ContainsKey(walk.name))
+            {
+                walkClips.Add(walk.name, walk.clip);
+            }
+        }
+        //총소리 할당
+        foreach (var gun in gunClipList)
+        {
+            if (!gunClips.ContainsKey(gun.name))
+            {
+                gunClips.Add(gun.name, gun.clip);
+            }
+        }
+        //스킬소리 할당
+        foreach (var skill in skilClipList)
+        {
+            if (!skillClips.ContainsKey(skill.name))
+            {
+                skillClips.Add(skill.name, skill.clip);
+            }
+        }
+
+
+
     }
 
     public void PlayBGM(string name, float fadeDuration = 1.0f)
@@ -88,19 +131,41 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    //거리별 효과음 소리 볼륨 조절.... 임시 방편으로 작성함
-    public void PlaySfx(string name, Vector3 position)
-    {
-        if (sfxClips.ContainsKey(name))
-        {
-            AudioSource.PlayClipAtPoint(sfxClips[name], position);
-        }
-    }
 
-    public void PlayButtonSfx(string name)
+
+    //효과음 재생으로 
+    public void PlaySfx(string name)
     {
         sfxSource.PlayOneShot(sfxClips[name]);
     }
+
+    // 걷는 소리
+    public void PlayWalkSfx(string name, Vector3 position)
+    {
+        if (walkClips.ContainsKey(name))
+        {
+            AudioSource.PlayClipAtPoint(walkClips[name], position);
+        }
+    }
+
+    //총 소리
+    public void PlayGunSfx(string name, Vector3 position)
+    {
+        if (gunClips.ContainsKey(name))
+        {
+            AudioSource.PlayClipAtPoint(gunClips[name], position);
+        }
+    }
+
+    // 스킬 소리
+    public void PlaySkillSfx(string name, Vector3 position)
+    {
+        if (skillClips.ContainsKey(name))
+        {
+            AudioSource.PlayClipAtPoint(skillClips[name], position);
+        }
+    }
+
 
     //bgm 중지
     public void StopBGM()
@@ -118,12 +183,46 @@ public class SoundManager : MonoBehaviour
     {
         sfxSource.Stop();
     }
-
     //볼륨 조절
     public void SetSfxVolume(float volume)
     {
         sfxSource.volume = Mathf.Clamp(volume, 0, 1);
     }
+
+    //발소리 중지
+    public void StopWalkSfx()
+    {
+        walkSource.Stop();
+    }
+    //볼륨 조절
+    public void SetWalkVolume(float volume)
+    {
+        walkSource.volume = Mathf.Clamp(volume, 0, 1);
+    }
+
+    //사격소리 중지
+    public void StopGunSfx()
+    {
+        gunSource.Stop();
+    }
+    //볼륨 조절
+    public void SetGunVolume(float volume)
+    {
+        gunSource.volume = Mathf.Clamp(volume, 0, 1);
+    }
+
+    //스킬 소리 중지
+    public void StopSkillSfx()
+    {
+        skillSource.Stop();
+    }
+    //볼륨 조절
+    public void SetSkillVolume(float volume)
+    {
+        skillSource.volume = Mathf.Clamp(volume, 0, 1);
+    }
+
+
 
     private IEnumerator FadeOutBGM(float duration, Action onFadeComplete)
     {

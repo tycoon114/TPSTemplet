@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
         else if (moveDirection != Vector3.zero)// 이동 중이면 이동 방향으로 캐릭터 회전
         {
             //소리가 겹침 - Update 밖에서 걸어줘야됨
-            //SoundManager.Instance.PlaySfx("walkNormal1");
+            //SoundManager.Instance.PlayWalkSfx("walkNormal1");
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
             float rotationSpeed = 300f;
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);

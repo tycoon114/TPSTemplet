@@ -26,7 +26,6 @@ public class GunController : PlayerController
 
     private bool isReload = false;      // 재장전
     private bool isShoot = false;       //사격 애니메이션
-    //private bool isAim = false;         //조준 여부 확인
     private Coroutine fireCoroutine;    // 연사 제어를 위한 코루틴 - 코루틴을 중지 시키기 위함[중지 시키지 않으면 연사속도가 중첩될 수 있음]
 
     public LayerMask hitLayers;         // 맞출 수 있는 레이어
@@ -112,8 +111,8 @@ public class GunController : PlayerController
     IEnumerator Reload()
     {
         //소리 겹침 다시 발생
-        SoundManager.Instance.StopSfx();
-        SoundManager.Instance.PlaySfx("kazusaReload", target.transform.position);
+        SoundManager.Instance.StopGunSfx();
+        SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
 
         isReload = true;
         animator.SetTrigger("isReload");
@@ -128,11 +127,11 @@ public class GunController : PlayerController
     {
         if (gunType.Equals("AR"))
         {
-            SoundManager.Instance.PlaySfx("ARShooting", target.transform.position);
+            SoundManager.Instance.PlayGunSfx("ARShooting", target.transform.position);
         }
         else
         {
-            SoundManager.Instance.PlaySfx("MGShooting", target.transform.position);
+            SoundManager.Instance.PlayGunSfx("MGShooting", target.transform.position);
         }
 
         //사격 이펙트
@@ -156,9 +155,7 @@ public class GunController : PlayerController
             // 벽(Wall)과 충돌한 경우 피격 이펙트 생성
             if (hit.collider.CompareTag("Wall"))
             {
-                Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                //audioSource.PlayOneShot(wall);
-                //ParticleSystem particle = Instanciate(preParticle, hits[i].point ,Quaternion.identity);  - 파티클 복사
+                ParticleManager.Instance.PariclePlay(ParticleType.GunHitWall, hit.point, Vector3.one, Quaternion.LookRotation(hit.normal));
             }
             else if (hit.collider.CompareTag("Enemy"))
             {

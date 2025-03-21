@@ -24,7 +24,7 @@ public class SceneController : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        SoundManager.Instance.PlayButtonSfx("buttonTouch");
+        SoundManager.Instance.PlaySfx("buttonTouch");
         SceneManager.LoadScene(sceneName);
         //해당 메뉴에 맞는 BGM 재생
         if (sceneName == "MenuScene")

@@ -1844,6 +1844,55 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &611853530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 611853532}
+  - component: {fileID: 611853531}
+  m_Layer: 0
+  m_Name: ParticleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &611853531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611853530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56581efc99a87a749b880af0c12614ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionParticle: {fileID: 0}
+  gunFireParticle: {fileID: 0}
+  gunsmokeParticle: {fileID: 0}
+  gunHitWallParticle: {fileID: 19800002, guid: 2f9348d6583cde14eb0d82bb9732647e, type: 3}
+  poolSize: 30
+--- !u!4 &611853532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611853530}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -45.47778, y: 113.51047, z: 227467.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &682366959
 GameObject:
   m_ObjectHideFlags: 0
@@ -3529,6 +3578,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8a98e7c1047e5dd4a837a34cfb8975b7, type: 3}
   m_PrefabInstance: {fileID: 743856474}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &757396887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 757396888}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &757396888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757396887}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -45.47778, y: 113.51047, z: 227467.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &765663597
 GameObject:
   m_ObjectHideFlags: 0
@@ -10100,6 +10180,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmSource: {fileID: 2035330207}
   sfxSource: {fileID: 2035330206}
+  walkSource: {fileID: 2035330206}
+  gunSource: {fileID: 2035330206}
+  skillSource: {fileID: 2035330206}
   bgmClipList:
   - name: bgmTemp1
     clip: {fileID: 8300000, guid: 34a25ed803489dd4598d3605decfca75, type: 3}
@@ -10110,36 +10193,39 @@ MonoBehaviour:
   sfxClipList:
   - name: buttonTouch
     clip: {fileID: 8300000, guid: 7db3ff5ea19250f4796288bf16f71b25, type: 3}
-  - name: walkNormal1
-    clip: {fileID: 8300000, guid: 54e1a632e5afd10459f17c4b8326d51c, type: 3}
-  - name: walkNormal2
-    clip: {fileID: 8300000, guid: 0465971d7488ea546afd930eb7c27ea8, type: 3}
-  - name: walkWood
-    clip: {fileID: 8300000, guid: aaa1f881ac1a50041ad0c7c9565a27b7, type: 3}
-  - name: walkSand
-    clip: {fileID: 8300000, guid: a1abaef6f2dc2f644809bbe53810563b, type: 3}
-  - name: walkSnow1
-    clip: {fileID: 8300000, guid: 5df0aca9df1d86948b50891750b937c2, type: 3}
-  - name: walkSnow2
-    clip: {fileID: 8300000, guid: 369badc547cad924198d02444e03a0b6, type: 3}
-  - name: runSand1
-    clip: {fileID: 8300000, guid: 82768022587ff09438a6a6e657cbfbb6, type: 3}
-  - name: runSand2
-    clip: {fileID: 8300000, guid: 5b3c6ecf1642ca94bb2ee1ce039a9450, type: 3}
-  - name: runSnow
-    clip: {fileID: 8300000, guid: 488293e5eaf405c4ebb663e1a94657c2, type: 3}
   - name: snowStorm1
     clip: {fileID: 8300000, guid: afabf1292c96455498c1b93274584c0b, type: 3}
   - name: snowStorm2
     clip: {fileID: 8300000, guid: e513300c967f86a4f85ae083280bf433, type: 3}
   - name: snowStorm3
     clip: {fileID: 8300000, guid: 9f943f9462a6f8046b33bb399ea2db3d, type: 3}
+  walkClipList:
+  - name: walkNormal1
+    clip: {fileID: 8300000, guid: 54e1a632e5afd10459f17c4b8326d51c, type: 3}
+  - name: walkNormal2
+    clip: {fileID: 8300000, guid: 0465971d7488ea546afd930eb7c27ea8, type: 3}
+  - name: walkSand
+    clip: {fileID: 8300000, guid: a1abaef6f2dc2f644809bbe53810563b, type: 3}
+  - name: walkSnow1
+    clip: {fileID: 8300000, guid: 5df0aca9df1d86948b50891750b937c2, type: 3}
+  - name: walkSnow2
+    clip: {fileID: 8300000, guid: 369badc547cad924198d02444e03a0b6, type: 3}
+  - name: walkWood
+    clip: {fileID: 8300000, guid: aaa1f881ac1a50041ad0c7c9565a27b7, type: 3}
+  - name: runSand1
+    clip: {fileID: 8300000, guid: 82768022587ff09438a6a6e657cbfbb6, type: 3}
+  - name: runSand2
+    clip: {fileID: 8300000, guid: 5b3c6ecf1642ca94bb2ee1ce039a9450, type: 3}
+  - name: runSnow
+    clip: {fileID: 8300000, guid: 488293e5eaf405c4ebb663e1a94657c2, type: 3}
+  gunClipList:
   - name: kazusaReload
     clip: {fileID: 8300000, guid: d977cf7c9beeb2840a18960542f0976d, type: 3}
   - name: MGShooting
     clip: {fileID: 8300000, guid: 680e2768eaea47e47a6c279059009409, type: 3}
   - name: ARShooting
     clip: {fileID: 8300000, guid: 0d932648aa8100343b6bc6294329192e, type: 3}
+  skilClipList: []
 --- !u!82 &2035330206
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10739,6 +10825,10 @@ SceneRoots:
   - {fileID: 1038229298}
   - {fileID: 1694877651}
   - {fileID: 1291739721}
+  - {fileID: 860835537}
+  - {fileID: 2035330204}
+  - {fileID: 757396888}
+  - {fileID: 611853532}
   - {fileID: 832575519}
   - {fileID: 1620214972}
   - {fileID: 959609647}
@@ -10746,5 +10836,3 @@ SceneRoots:
   - {fileID: 1629201707}
   - {fileID: 1035532412}
   - {fileID: 1259653347}
-  - {fileID: 860835537}
-  - {fileID: 2035330204}

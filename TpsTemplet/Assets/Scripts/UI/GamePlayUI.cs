@@ -48,7 +48,7 @@ public class GamePlayUI : MonoBehaviour
 
     public void OnRetrunGameClick()
     {
-        SoundManager.Instance.PlayButtonSfx("buttonTouch");
+        SoundManager.Instance.PlaySfx("buttonTouch");
         isEscMenuActive = false;
         escMenu.SetActive(false);
     }
