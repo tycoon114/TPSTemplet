@@ -125,11 +125,24 @@ public class GunController : PlayerController
 
     void Shoot()
     {
-        if (gunType.Equals("AR"))
+        //소리 재생 - 함수나 코루틴으로 뺄 예정
+        if (gunType.Equals("HG"))
+        {
+            //SoundManager.Instance.PlayGunSfx("HGShooting", target.transform.position);
+        }
+        else if (gunType.Equals("SMG"))
+        {
+            //SoundManager.Instance.PlayGunSfx("SMGShooting", target.transform.position);
+        }
+        else if (gunType.Equals("AR"))
         {
             SoundManager.Instance.PlayGunSfx("ARShooting", target.transform.position);
         }
-        else
+        else if (gunType.Equals("SR"))
+        {
+            //SoundManager.Instance.PlayGunSfx("SRhooting", target.transform.position);
+        }
+        else if (gunType.Equals("MG"))
         {
             SoundManager.Instance.PlayGunSfx("MGShooting", target.transform.position);
         }
@@ -138,6 +151,7 @@ public class GunController : PlayerController
         if (gunFire != null)
         {
             GameObject gunEffect = Instantiate(gunFire, muzzlePoint.position + muzzlePoint.forward * 0.1f, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
+            //ParticleManager.Instance.PariclePlay(ParticleType.GunFire, muzzlePoint.position + muzzlePoint.forward * 0.1f, Vector3.one, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
             Destroy(gunEffect, 0.5f);
         }
 
