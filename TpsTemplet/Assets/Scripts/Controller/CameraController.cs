@@ -9,6 +9,8 @@ public class CameraController : MonoBehaviour
     private float yaw = 0f;     // 좌우 회전
 
     public Transform Player;        //플레이어의 위치
+    private GameObject PlayerGo = GameObject.Find("Player");    
+
     private Vector3 lookPosition;   //보는 위치?
     public Transform PlayerLookObj;  // 플레이어 옆 카메라가 향할 오브젝트
 
@@ -16,7 +18,7 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-
+        //Player = PlayerGo.transform.GetChild(0);
         //Cursor.lockState = CursorLockMode.Locked; // 마우스 잠금
         //Cursor.visible = false;                   //커서 안보이게
     }
