@@ -32,6 +32,15 @@ public class GunController : PlayerController
 
     private Camera mainCamera;          // 히트 스캔 레이캐스트를 위한 메인카메라 값
 
+    public float shotGunSpreadAngle = 10.0f;
+    public float recoilStrength = 2.0f;
+    public float maxRecoilAngle = 10.0f;
+    public float currentRecoil = 0.0f;
+    public float shakeDuration = 0.1f;
+    public float shakeMagnitude = 0.1f;
+    public Vector3 originalCameraPosition;
+    public Coroutine cameraShakeCoroutine;
+
 
     void Start()
     {
@@ -103,7 +112,11 @@ public class GunController : PlayerController
     {
         while (Input.GetMouseButton(0))
         {
-            Shoot();
+            if (gunType.Equals("SG"))
+            {
+                ShootSG();
+            }else
+                Shoot();
             yield return new WaitForSeconds(fireRate);
         }
         yield return null;
@@ -169,6 +182,7 @@ public class GunController : PlayerController
             // 벽(Wall)과 충돌한 경우 피격 이펙트 생성
             if (hit.collider.CompareTag("Wall"))
             {
+                Debug.Log("wall 피격");
                 ParticleManager.Instance.PariclePlay(ParticleType.GunHitWall, hit.point, Vector3.one, Quaternion.LookRotation(hit.normal));
             }
             else if (hit.collider.CompareTag("Enemy"))
@@ -183,6 +197,9 @@ public class GunController : PlayerController
                 //추후 멀티 활성화 시 아군인지 적팀인지 구분 필요
             }
         }
+
+
+
 
         //여러개 - 관통 타입만 이 방식으로 사용할 예정 if(type == ....);
         //RaycastHit[] hits;
@@ -202,4 +219,38 @@ public class GunController : PlayerController
         animator.SetBool("isShoot", isShoot);
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
     }
+
+    void ShootSG()
+    {
+        Debug.Log("샷건");
+
+        //샷건의 산탄은 5발로
+        for (int i = 0; i < 5; i++)
+        {
+            Debug.Log("테스트");
+            RaycastHit hit;
+
+            Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * hitScanRadius;
+            Vector3 screenPoint = new Vector3(Screen.width / 2 + randomOffset.x, Screen.height / 2 + randomOffset.y, 0);
+
+            Vector3 origin = Camera.main.transform.position;
+            Vector3 spreadDirection = GetSpreadDirection(Camera.main.transform.forward, shotGunSpreadAngle);
+
+            //Ray ray = mainCamera.ScreenPointToRay(screenPoint);
+            Debug.DrawLine(origin, spreadDirection * 10, Color.green, 5.0f);
+            if (Physics.Raycast(origin, spreadDirection, out hit, 5, hitLayers))
+            {
+                Debug.Log("Shotgun Hit : " + hit.collider.name);
+            }
+        }
+    }
+
+    Vector3 GetSpreadDirection(Vector3 forwardDirection, float spreadAngle)
+    {
+        float spreadX = UnityEngine.Random.Range(-spreadAngle, spreadAngle);
+        float spreadY = UnityEngine.Random.Range(-spreadAngle, spreadAngle);
+        Vector3 spreadDirection = Quaternion.Euler(spreadX, spreadY, 0) * forwardDirection;
+        return spreadDirection;
+    }
+
 }

@@ -1149,6 +1149,13 @@ MonoBehaviour:
   hitLayers:
     serializedVersion: 2
     m_Bits: 128
+  shotGunSpreadAngle: 10
+  recoilStrength: 2
+  maxRecoilAngle: 10
+  currentRecoil: 0
+  shakeDuration: 0.1
+  shakeMagnitude: 0.1
+  originalCameraPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &395815294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,6 +2005,13 @@ MonoBehaviour:
   hitLayers:
     serializedVersion: 2
     m_Bits: 128
+  shotGunSpreadAngle: 10
+  recoilStrength: 2
+  maxRecoilAngle: 10
+  currentRecoil: 0
+  shakeDuration: 0.1
+  shakeMagnitude: 0.1
+  originalCameraPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &611549970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3812,6 +3826,13 @@ MonoBehaviour:
   hitLayers:
     serializedVersion: 2
     m_Bits: 0
+  shotGunSpreadAngle: 10
+  recoilStrength: 2
+  maxRecoilAngle: 10
+  currentRecoil: 0
+  shakeDuration: 0.1
+  shakeMagnitude: 0.1
+  originalCameraPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &743856483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11473,7 +11494,7 @@ PrefabInstance:
     - target: {fileID: 4878099676360793426, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 6bdcc74ed3ac404438c0e030b92a8bd6, type: 2}
+      objectReference: {fileID: 9100000, guid: 55c3ba6477643fd4296985c1adeca091, type: 2}
     - target: {fileID: 4878099676360793426, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
       propertyPath: m_AnimatePhysics
       value: 1
