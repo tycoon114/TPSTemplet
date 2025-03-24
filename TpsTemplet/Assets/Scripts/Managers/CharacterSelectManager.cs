@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,7 +19,6 @@ public class CharacterSelectManager : MonoBehaviour
 
     public void OnKazusaClicked()
     {
-        Debug.Log("Kazusa");
         selectedCharacter = "Kazusa";
         SetPortraitImage(selectedCharacter);
         characterName.text = "카즈사";
@@ -26,7 +26,6 @@ public class CharacterSelectManager : MonoBehaviour
 
     public void OnMariClicked()
     {
-        Debug.Log("Mari");
         selectedCharacter = "CH0186";
         SetPortraitImage(selectedCharacter);
         characterName.text = "마리";
@@ -35,7 +34,7 @@ public class CharacterSelectManager : MonoBehaviour
     public void OnNikoClicked()
     {
         Debug.Log("Niko");
-        selectedCharacter = "Niko";
+        selectedCharacter = "CH0172";
         characterName.text = "니코";
     }
 
@@ -50,6 +49,13 @@ public class CharacterSelectManager : MonoBehaviour
     public void OnCharacterConfirm()
     {
 
+    }
+
+    public void OnClickSelectButton()
+    {
+        //selectedCharacter = "CH0186";
+        //SetPortraitImage(selectedCharacter);
+        //characterName.text = "마리";
     }
 
     public void SetPortraitImage(string name)
