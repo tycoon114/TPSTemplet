@@ -22,7 +22,7 @@ public class GunController : PlayerController
     public int maxAmmo = 50;        //최대 탄약수
     public bool boltAction = false;  //볼트 액션이 아닌 경우 연사 가능하도록
     public float damage = 30.0f;    //공격력 - 변수 이름 나중에 바꿀 예정
-    public string gunType = "MG";   //이후 받아와서 처리
+    public string gunType = "SG";   //이후 받아와서 처리
 
     private bool isReload = false;      // 재장전
     private bool isShoot = false;       //사격 애니메이션
@@ -112,10 +112,12 @@ public class GunController : PlayerController
     {
         while (Input.GetMouseButton(0))
         {
+            Debug.Log(gunType);
             if (gunType.Equals("SG"))
             {
                 ShootSG();
-            }else
+            }
+            else
                 Shoot();
             yield return new WaitForSeconds(fireRate);
         }
@@ -236,10 +238,12 @@ public class GunController : PlayerController
             Vector3 origin = Camera.main.transform.position;
             Vector3 spreadDirection = GetSpreadDirection(Camera.main.transform.forward, shotGunSpreadAngle);
 
-            //Ray ray = mainCamera.ScreenPointToRay(screenPoint);
+            Ray ray = mainCamera.ScreenPointToRay(spreadDirection);
             Debug.DrawLine(origin, spreadDirection * 10, Color.green, 5.0f);
             if (Physics.Raycast(origin, spreadDirection, out hit, 5, hitLayers))
             {
+                Debug.DrawLine(ray.origin, hit.point, Color.green, 10.0f);
+
                 Debug.Log("Shotgun Hit : " + hit.collider.name);
             }
         }
