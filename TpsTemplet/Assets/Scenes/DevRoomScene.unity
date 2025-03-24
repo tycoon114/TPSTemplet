@@ -806,8 +806,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraOffset: {x: 0, y: 0.75, z: -4}
   mouseSensitivity: 50
-  Player: {fileID: 220384670}
-  PlayerLookObj: {fileID: 1906629369}
+  Player: {fileID: 0}
+  PlayerLookObj: {fileID: 0}
 --- !u!114 &330585550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9202,11 +9202,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1629201707}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1906629369 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1077635551244894547, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
-  m_PrefabInstance: {fileID: 5775744375786269949}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1911980615
 GameObject:
   m_ObjectHideFlags: 0

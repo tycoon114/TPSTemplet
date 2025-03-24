@@ -8,9 +8,8 @@ public class CameraController : MonoBehaviour
     private float pitch = 0f;   // 위아래 회전
     private float yaw = 0f;     // 좌우 회전
 
-    public Transform Player;        //플레이어의 위치
-    private GameObject PlayerGo;
-    private GameObject PlayerObj;
+    public Transform Player;        //플레이어의 위치, 캐릭터 프리펩
+    private GameObject PlayerGo;    //플레이어 빈 게임 오브젝트
 
     private Vector3 lookPosition;   //보는 위치?
     public Transform PlayerLookObj;  // 플레이어 옆 카메라가 향할 오브젝트
@@ -19,8 +18,10 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        //PlayerGo = GameObject.Find("Player");
-        //Player = PlayerGo.transform.GetChild(0);
+        PlayerGo = GameObject.Find("Player");
+        Player = PlayerGo.transform.GetChild(0);
+        PlayerLookObj = Player.transform.Find("PlayerObj");
+        
     }
 
     //현재 조준점 위치가 바뀌는 버그가 있음
