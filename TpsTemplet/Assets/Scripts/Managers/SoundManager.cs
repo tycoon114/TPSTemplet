@@ -133,7 +133,7 @@ public class SoundManager : MonoBehaviour
 
 
 
-    //효과음 재생으로 
+    //효과음 재생
     public void PlaySfx(string name)
     {
         sfxSource.PlayOneShot(sfxClips[name]);

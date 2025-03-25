@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using static SoundManager;
 
 
 public enum ParticleType
@@ -20,12 +21,27 @@ public class ParticleManager : MonoBehaviour
 
     private Dictionary<ParticleType, ParticleSystem> particleSystemDic = new Dictionary<ParticleType, ParticleSystem>();
 
+    public Dictionary<string, ParticleSystem> gunShootParticleDIc = new Dictionary<string, ParticleSystem>();
+
+
     public ParticleSystem explosionParticle;
     public ParticleSystem gunFireParticle;
     public ParticleSystem gunsmokeParticle;
     public ParticleSystem gunHitWallParticle;
 
     public int poolSize = 30;
+
+    [System.Serializable]
+    public struct NamedParticle
+    {
+        public string name;
+        public ParticleSystem particle;
+    }
+    
+
+    public NamedParticle[] gunShootParticleList;
+
+
 
     private void Awake()
     {

@@ -2076,7 +2076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionParticle: {fileID: 0}
-  gunFireParticle: {fileID: 0}
+  gunFireParticle: {fileID: 19800006, guid: f47cb9d88f4bc6c4bb7441e962c2c1a5, type: 3}
   gunsmokeParticle: {fileID: 0}
   gunHitWallParticle: {fileID: 19800002, guid: 2f9348d6583cde14eb0d82bb9732647e, type: 3}
   poolSize: 30
@@ -11494,7 +11494,7 @@ PrefabInstance:
     - target: {fileID: 4878099676360793426, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 6bdcc74ed3ac404438c0e030b92a8bd6, type: 2}
+      objectReference: {fileID: 9100000, guid: 55c3ba6477643fd4296985c1adeca091, type: 2}
     - target: {fileID: 4878099676360793426, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
       propertyPath: m_AnimatePhysics
       value: 1

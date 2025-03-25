@@ -33,7 +33,7 @@ public class GunController : PlayerController
     private Camera mainCamera;          // 히트 스캔 레이캐스트를 위한 메인카메라 값
 
     //샷건
-    public float shotGunSpreadAngle = 5.0f;
+    public float shotGunSpreadAngle = 0.1f;
     public float recoilStrength = 2.0f;
     public float maxRecoilAngle = 10.0f;
     public float currentRecoil = 0.0f;
@@ -162,6 +162,7 @@ public class GunController : PlayerController
         }
         else if (gunType.Equals("SG"))
         {
+            //ShootSG();
             SoundManager.Instance.PlayGunSfx("MGShooting", target.transform.position);
         }
 
@@ -170,8 +171,8 @@ public class GunController : PlayerController
         if (gunFire != null)
         {
             GameObject gunEffect = Instantiate(gunFire, muzzlePoint.position + muzzlePoint.forward * 0.1f, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
-            //ParticleManager.Instance.PariclePlay(ParticleType.GunFire, muzzlePoint.position + muzzlePoint.forward * 0.1f, Vector3.one, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
             Destroy(gunEffect, 0.5f);
+            //ParticleManager.Instance.PariclePlay(ParticleType.GunFire, muzzlePoint.position + muzzlePoint.forward * 0.1f, Vector3.one, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
         }
 
         // 크로스헤어 중심에서 랜덤한 위치 생성 (히트스캔 범위 내)
@@ -179,7 +180,6 @@ public class GunController : PlayerController
         Vector3 screenPoint = new Vector3(Screen.width / 2 + randomOffset.x, Screen.height / 2 + randomOffset.y, 0);
         Ray ray = mainCamera.ScreenPointToRay(screenPoint);
 
-        //RaycastHit[] hits = Physics.RaycastAll(ray, range, hitLayers);
 
         //피격 판정이 있는 레이어 - hit.point : 충돌한 위치 : 파티클이 생길 위치
         if (Physics.Raycast(ray, out RaycastHit hit, range, hitLayers))
@@ -217,16 +217,15 @@ public class GunController : PlayerController
         {
             RaycastHit hit;
 
-            Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * hitScanRadius;
-            Vector3 screenPoint = new Vector3(Screen.width / 2 + randomOffset.x, Screen.height / 2 + randomOffset.y, 0);
 
-            Vector3 origin = Camera.main.transform.position;
-            Vector3 spreadDirection = GetSpreadDirection(Camera.main.transform.forward, shotGunSpreadAngle);
+
+            Vector3 origin = muzzlePoint.position;
+            Vector3 spreadDirection = GetSpreadDirection(muzzlePoint.forward, shotGunSpreadAngle);
 
             Ray ray = mainCamera.ScreenPointToRay(spreadDirection);
             if (Physics.Raycast(origin, spreadDirection, out hit, range, hitLayers))
             {
-                Debug.DrawLine(ray.origin, hit.point, Color.green, 3.0f);
+                Debug.DrawLine(origin, hit.point, Color.green, 3.0f);
             }
         }
     }
