@@ -22,7 +22,7 @@ public class GunController : PlayerController
     public int maxAmmo = 50;        //최대 탄약수
     public bool boltAction = false;  //볼트 액션이 아닌 경우 연사 가능하도록
     public float damage = 30.0f;    //공격력 - 변수 이름 나중에 바꿀 예정
-    public string gunType = "SG";   //이후 받아와서 처리
+    public string gunType = "MG";   //이후 받아와서 처리
 
     private bool isReload = false;      // 재장전
     private bool isShoot = false;       //사격 애니메이션
@@ -32,7 +32,8 @@ public class GunController : PlayerController
 
     private Camera mainCamera;          // 히트 스캔 레이캐스트를 위한 메인카메라 값
 
-    public float shotGunSpreadAngle = 10.0f;
+    //샷건
+    public float shotGunSpreadAngle = 5.0f;
     public float recoilStrength = 2.0f;
     public float maxRecoilAngle = 10.0f;
     public float currentRecoil = 0.0f;
@@ -71,7 +72,6 @@ public class GunController : PlayerController
         if (Input.GetMouseButton(1))
         {
             isAim = true;
-            //UpdateAimTarget();
             CrossHairSet?.Invoke(isAim);
         }
         else
@@ -112,7 +112,6 @@ public class GunController : PlayerController
     {
         while (Input.GetMouseButton(0))
         {
-            Debug.Log(gunType);
             if (gunType.Equals("SG"))
             {
                 ShootSG();
@@ -161,6 +160,11 @@ public class GunController : PlayerController
         {
             SoundManager.Instance.PlayGunSfx("MGShooting", target.transform.position);
         }
+        else if (gunType.Equals("SG"))
+        {
+            SoundManager.Instance.PlayGunSfx("MGShooting", target.transform.position);
+        }
+
 
         //사격 이펙트
         if (gunFire != null)
@@ -195,26 +199,10 @@ public class GunController : PlayerController
             }
             else if (hit.collider.CompareTag("Player"))
             {
-                Debug.Log("플레이어 피격");
                 //추후 멀티 활성화 시 아군인지 적팀인지 구분 필요
+                Debug.Log("플레이어 피격");
             }
         }
-
-
-
-
-        //여러개 - 관통 타입만 이 방식으로 사용할 예정 if(type == ....);
-        //RaycastHit[] hits;
-        //Ray rays = new Ray();
-        //hits = Physics.RaycastAll(rays.origin, transform.forward, range, hitLayers);
-        //if (hits.Length > 0)
-        //{
-        //    for (int i = 0; i < hits.Length &% i <2; i++)
-        //    {
-        //        RaycastHit hitt = hits[i];
-        //        Debug.DrawLine(ray.origin, hit.point, Color.green, 3.0f);
-        //    }
-        //}
 
         currentAmmo--;
         isShoot = true;
@@ -224,12 +212,9 @@ public class GunController : PlayerController
 
     void ShootSG()
     {
-        Debug.Log("샷건");
-
-        //샷건의 산탄은 5발로
+        //샷건의 산탄은 5발로 - 변수로 빠질 수 있음
         for (int i = 0; i < 5; i++)
         {
-            Debug.Log("테스트");
             RaycastHit hit;
 
             Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * hitScanRadius;
@@ -239,12 +224,9 @@ public class GunController : PlayerController
             Vector3 spreadDirection = GetSpreadDirection(Camera.main.transform.forward, shotGunSpreadAngle);
 
             Ray ray = mainCamera.ScreenPointToRay(spreadDirection);
-            Debug.DrawLine(origin, spreadDirection * 10, Color.green, 5.0f);
-            if (Physics.Raycast(origin, spreadDirection, out hit, 5, hitLayers))
+            if (Physics.Raycast(origin, spreadDirection, out hit, range, hitLayers))
             {
-                Debug.DrawLine(ray.origin, hit.point, Color.green, 10.0f);
-
-                Debug.Log("Shotgun Hit : " + hit.collider.name);
+                Debug.DrawLine(ray.origin, hit.point, Color.green, 3.0f);
             }
         }
     }

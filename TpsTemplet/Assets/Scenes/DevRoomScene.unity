@@ -1145,7 +1145,7 @@ MonoBehaviour:
   maxAmmo: 10
   boltAction: 0
   damage: 30
-  gunType: SG
+  gunType: MG
   hitLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -11494,7 +11494,7 @@ PrefabInstance:
     - target: {fileID: 4878099676360793426, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 55c3ba6477643fd4296985c1adeca091, type: 2}
+      objectReference: {fileID: 9100000, guid: 6bdcc74ed3ac404438c0e030b92a8bd6, type: 2}
     - target: {fileID: 4878099676360793426, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
       propertyPath: m_AnimatePhysics
       value: 1
