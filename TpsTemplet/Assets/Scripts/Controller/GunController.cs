@@ -148,7 +148,7 @@ public class GunController : PlayerController
         }
         else if (gunType.Equals("SG"))
         {
-            SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
+            SoundManager.Instance.PlayGunSfx("SGReload", target.transform.position);
         }
 
 
@@ -256,7 +256,9 @@ public class GunController : PlayerController
         isShoot = true;
         animator.SetBool("isShoot", isShoot);
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo);
+        SoundManager.Instance.PlayGunSfx("SGDelay", target.transform.position);
         animator.SetTrigger("isDelay");
+        
     }
 
     Vector3 GetSpreadDirection(Vector3 forwardDirection, float spreadAngle)
