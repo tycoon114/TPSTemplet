@@ -99,7 +99,6 @@ public class GunController : PlayerController
             isShoot = false;
             animator.SetBool("isShoot", isShoot);
 
-            //탄창량이 0인것을 계속 확인해서 0일때 재장전 모션이 잘 안나옴
             if (fireCoroutine != null)
             {
                 StopCoroutine(fireCoroutine);
@@ -117,7 +116,9 @@ public class GunController : PlayerController
                 ShootSG();
             }
             else
+            {
                 Shoot();
+            }
             yield return new WaitForSeconds(fireRate);
         }
         yield return null;
@@ -125,8 +126,31 @@ public class GunController : PlayerController
     IEnumerator Reload()
     {
         currentAmmo = maxAmmo;
-        //SoundManager.Instance.StopGunSfx();
-        SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
+        if (gunType.Equals("HG"))
+        {
+            SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
+        }
+        else if (gunType.Equals("SMG"))
+        {
+            SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
+        }
+        else if (gunType.Equals("AR"))
+        {
+            SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
+        }
+        else if (gunType.Equals("SR"))
+        {
+            SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
+        }
+        else if (gunType.Equals("MG"))
+        {
+            SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
+        }
+        else if (gunType.Equals("SG"))
+        {
+            SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
+        }
+
 
         isReload = true;
         animator.SetTrigger("isReload");
@@ -159,18 +183,11 @@ public class GunController : PlayerController
         {
             SoundManager.Instance.PlayGunSfx("MGShooting", target.transform.position);
         }
-        else if (gunType.Equals("SG"))
-        {
-            //ShootSG();
-            SoundManager.Instance.PlayGunSfx("MGShooting", target.transform.position);
-        }
 
 
         //사격 이펙트
         if (gunFire != null)
         {
-            //GameObject gunEffect = Instantiate(gunFire, muzzlePoint.position + muzzlePoint.forward * 0.1f, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
-            //Destroy(gunEffect, 0.5f);
             ParticleManager.Instance.PlayGunFireParticle("gunFire", muzzlePoint.position + muzzlePoint.forward * 0.1f, Vector3.one, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
         }
 
@@ -188,7 +205,7 @@ public class GunController : PlayerController
             if (hit.collider.CompareTag("Wall"))
             {
                 Debug.Log("wall 피격");
-                ParticleManager.Instance.PariclePlay(ParticleType.GunHitWall, hit.point, Vector3.one, Quaternion.LookRotation(hit.normal));
+                ParticleManager.Instance.PlayGunHitParticle("hitWall", hit.point, Vector3.one, Quaternion.LookRotation(hit.normal));
             }
             else if (hit.collider.CompareTag("Enemy"))
             {
@@ -211,13 +228,15 @@ public class GunController : PlayerController
 
     void ShootSG()
     {
+        SoundManager.Instance.PlayGunSfx("SGShooting", target.transform.position);
         //샷건의 산탄은 5발로 - 변수로 빠질 수 있음
         for (int i = 0; i < 5; i++)
         {
+            if (gunFire != null)
+            {
+                ParticleManager.Instance.PlayGunFireParticle("gunFire", muzzlePoint.position + muzzlePoint.forward * 0.1f, Vector3.one, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
+            }
             RaycastHit hit;
-
-
-
             Vector3 origin = muzzlePoint.position;
             Vector3 spreadDirection = GetSpreadDirection(muzzlePoint.forward, shotGunSpreadAngle);
 
@@ -225,8 +244,19 @@ public class GunController : PlayerController
             if (Physics.Raycast(origin, spreadDirection, out hit, range, hitLayers))
             {
                 Debug.DrawLine(origin, hit.point, Color.green, 3.0f);
+                if (hit.collider.CompareTag("Wall"))
+                {
+                    ParticleManager.Instance.PlayGunHitParticle("hitWall", hit.point, Vector3.one, Quaternion.LookRotation(hit.normal));
+                }
+
+
             }
         }
+        currentAmmo--;
+        isShoot = true;
+        animator.SetBool("isShoot", isShoot);
+        onAmmoChanged?.Invoke(currentAmmo, maxAmmo);
+        animator.SetTrigger("isDelay");
     }
 
     Vector3 GetSpreadDirection(Vector3 forwardDirection, float spreadAngle)

@@ -24,12 +24,12 @@ public class ParticleManager : MonoBehaviour
     public Dictionary<string, ParticleSystem> explosionParticleDic = new Dictionary<string, ParticleSystem>();
     public Dictionary<string, ParticleSystem> gunFireParticleDic = new Dictionary<string, ParticleSystem>();
     public Dictionary<string, ParticleSystem> gunSmokeParticleDic = new Dictionary<string, ParticleSystem>();
-    public Dictionary<string, ParticleSystem> gunHitWallParticleDic = new Dictionary<string, ParticleSystem>();
+    public Dictionary<string, ParticleSystem> gunHitParticleDic = new Dictionary<string, ParticleSystem>();
 
     public ParticleSystem explosionParticle;
     public ParticleSystem gunFireParticle;
     public ParticleSystem gunsmokeParticle;
-    public ParticleSystem gunHitWallParticle;
+    public ParticleSystem gunHitParticle;
 
     public int poolSize = 30;
 
@@ -43,7 +43,7 @@ public class ParticleManager : MonoBehaviour
     public NamedParticle[] explosionParticleList;
     public NamedParticle[] gunFireParticleList;
     public NamedParticle[] gunSmokeParticleList;
-    public NamedParticle[] gunHitWallParticleList;
+    public NamedParticle[] gunHitParticleList;
 
     private void Awake()
     {
@@ -57,8 +57,6 @@ public class ParticleManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        //파티클 추가
-        AddParticle();
     }
 
     void InitializeParticle()
@@ -81,26 +79,24 @@ public class ParticleManager : MonoBehaviour
             }
         }
 
+        //총구 파티클(연기)
+        foreach (var gunSmokeParticle in gunSmokeParticleList)
+        {
+            if (!gunSmokeParticleDic.ContainsKey(gunSmokeParticle.name))
+            {
+                gunSmokeParticleDic.Add(gunSmokeParticle.name, gunSmokeParticle.particle);
+            }
+        }
+
+        //피격 파티클
+        foreach (var gunHitParticle in gunHitParticleList)
+        {
+            if (!gunHitParticleDic.ContainsKey(gunHitParticle.name))
+            {
+                gunHitParticleDic.Add(gunHitParticle.name, gunHitParticle.particle);
+            }
+        }
     }
-
-
-    protected void AddParticle()
-    {
-        particleSystemDic.Add(ParticleType.Explosion, explosionParticle);
-        particleSystemDic.Add(ParticleType.GunFire, gunFireParticle);
-        particleSystemDic.Add(ParticleType.GunSmoke, gunsmokeParticle);
-        particleSystemDic.Add(ParticleType.GunHitWall, gunHitWallParticle);
-    }
-
-    public void PariclePlay(ParticleType type, Vector3 position, Vector3 scale, Quaternion rotation)
-    {
-        ParticleSystem particle = Instantiate(particleSystemDic[type], position, rotation);
-        particle.gameObject.transform.localScale = scale;
-        particle.Play();
-        Destroy(particle.gameObject, particle.main.duration);
-    }
-
-
 
     public void PlayGunFireParticle(string name, Vector3 position, Vector3 scale, Quaternion rotation)
     {
@@ -113,6 +109,17 @@ public class ParticleManager : MonoBehaviour
         }
     }
 
+
+    public void PlayGunHitParticle(string name, Vector3 position, Vector3 scale, Quaternion rotation)
+    {
+        if (gunHitParticleDic.ContainsKey(name))
+        {
+            ParticleSystem particle = Instantiate(gunHitParticleDic[name], position, rotation);
+            particle.gameObject.transform.localScale = scale;
+            particle.Play();
+            Destroy(particle.gameObject, particle.main.duration);
+        }
+    }
 
     //파티클 중지
     public void StopParticle()
