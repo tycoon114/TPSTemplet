@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //플레이어의 체력, 사망, 부활, 피격 등 상태에 관한 매니저를 다룰 코드
 //Json 형태의 데이터를 불러오는 식으로 만들 예정
@@ -54,8 +55,11 @@ public class PlayerManager : MonoBehaviour
         //if (other.CompareTag("getHit")) {
         //    //animator.setTrigger("Damage");
         //    currentHP -= 30; // 임시로 30데미지
-
         //}
+
+        //문도 여기서 트리거 작동
+        //이때 DoorController를 참조한다.
+
     }
 
     public void TakeDamage(float damage)
@@ -68,6 +72,5 @@ public class PlayerManager : MonoBehaviour
             //죽는 애니메이션 재생
         }
     }
-
 
 }

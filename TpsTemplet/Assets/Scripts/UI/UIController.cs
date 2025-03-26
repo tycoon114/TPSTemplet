@@ -1,18 +1,18 @@
 using UnityEngine;
 using System.Collections;
 
+
+//로고 UI컨트롤러
 public class UIController : MonoBehaviour
 {
     public CanvasGroup Copyrights;
     public CanvasGroup Logo;
     public CanvasGroup Back;
-    public float fadeDuration = 4f;  // 페이드 지속 시간
+    public float fadeDuration = 4f;
 
     void Start()
     {
-        //Copyrights.alpha = 1; // 시작 시 메시지 표시
         StartCoroutine(FadeOutMessage());
-
     }
 
     IEnumerator FadeOutMessage()

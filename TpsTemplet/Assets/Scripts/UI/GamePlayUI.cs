@@ -10,9 +10,12 @@ public class GamePlayUI : MonoBehaviour
     public Image weaponImage;
 
     public GameObject crossHair;
-
     public GameObject escMenu;
+    public GameObject settingsObj;
+
     public bool isEscMenuActive = false;
+    public bool isSettingActive = false;
+
 
     private string selectedCharacterName;
     void Start()
@@ -20,6 +23,7 @@ public class GamePlayUI : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         escMenu.SetActive(false);
+        settingsObj.SetActive(false);   
         GameObject player = GameObject.Find("Player");
         if (player != null)
         {
@@ -51,6 +55,13 @@ public class GamePlayUI : MonoBehaviour
         SoundManager.Instance.PlaySfx("buttonTouch");
         isEscMenuActive = false;
         escMenu.SetActive(false);
+    }
+
+    public void OnSettingClick()
+    {
+        SoundManager.Instance.PlaySfx("buttonTouch");
+        isSettingActive = !isSettingActive;
+        settingsObj.SetActive(isSettingActive); 
     }
 
     public void OnReturnMainMenuClick()

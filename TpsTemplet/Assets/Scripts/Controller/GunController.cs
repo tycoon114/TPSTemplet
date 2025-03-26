@@ -124,8 +124,8 @@ public class GunController : PlayerController
     }
     IEnumerator Reload()
     {
-        //소리 겹침 다시 발생
-        SoundManager.Instance.StopGunSfx();
+        currentAmmo = maxAmmo;
+        //SoundManager.Instance.StopGunSfx();
         SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
 
         isReload = true;
@@ -133,7 +133,6 @@ public class GunController : PlayerController
 
         yield return new WaitForSeconds(reloadTime);
         isReload = false;
-        currentAmmo = maxAmmo;
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo);
     }
 
@@ -170,9 +169,9 @@ public class GunController : PlayerController
         //사격 이펙트
         if (gunFire != null)
         {
-            GameObject gunEffect = Instantiate(gunFire, muzzlePoint.position + muzzlePoint.forward * 0.1f, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
-            Destroy(gunEffect, 0.5f);
-            //ParticleManager.Instance.PariclePlay(ParticleType.GunFire, muzzlePoint.position + muzzlePoint.forward * 0.1f, Vector3.one, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
+            //GameObject gunEffect = Instantiate(gunFire, muzzlePoint.position + muzzlePoint.forward * 0.1f, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
+            //Destroy(gunEffect, 0.5f);
+            ParticleManager.Instance.PlayGunFireParticle("gunFire", muzzlePoint.position + muzzlePoint.forward * 0.1f, Vector3.one, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
         }
 
         // 크로스헤어 중심에서 랜덤한 위치 생성 (히트스캔 범위 내)

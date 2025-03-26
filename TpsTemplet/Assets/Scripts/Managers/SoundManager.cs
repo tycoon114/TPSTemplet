@@ -82,7 +82,6 @@ public class SoundManager : MonoBehaviour
             }
         }
 
-
         //°È´Â ¼Ò¸® ÇÒ´ç
         foreach (var walk in walkClipList)
         {
@@ -183,6 +182,7 @@ public class SoundManager : MonoBehaviour
     {
         sfxSource.Stop();
     }
+
     //º¼·ý Á¶Àý
     public void SetSfxVolume(float volume)
     {
