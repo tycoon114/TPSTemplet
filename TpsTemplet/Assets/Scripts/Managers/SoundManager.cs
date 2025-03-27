@@ -106,9 +106,6 @@ public class SoundManager : MonoBehaviour
                 skillClips.Add(skill.name, skill.clip);
             }
         }
-
-
-
     }
 
     public void PlayBGM(string name, float fadeDuration = 1.0f)
@@ -165,16 +162,27 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    //볼륨 조절
+    public void SetBGMVolume(float volume)
+    {
+        bgmSource.volume = Mathf.Clamp(volume, 0, 1);
+        Debug.Log("사운드 매니저 BGM :  " + volume);
+    }
+
+    //볼륨 조절
+    public void SetSfxVolume(float volume)
+    {
+        sfxSource.volume = Mathf.Clamp(volume, 0, 1);
+        gunSource.volume = Mathf.Clamp(volume, 0, 1);
+        walkSource.volume = Mathf.Clamp(volume, 0, 1);
+        skillSource.volume = Mathf.Clamp(volume, 0, 1);
+        Debug.Log("사운드 매니저 sfx :  " + volume);
+    }
 
     //bgm 중지
     public void StopBGM()
     {
         bgmSource.Stop();
-    }
-    //볼륨 조절
-    public void SetBGMVolueme(float volume)
-    {
-        bgmSource.volume = Mathf.Clamp(volume, 0, 1);
     }
 
     //sfx 중지
@@ -183,21 +191,12 @@ public class SoundManager : MonoBehaviour
         sfxSource.Stop();
     }
 
-    //볼륨 조절
-    public void SetSfxVolume(float volume)
-    {
-        sfxSource.volume = Mathf.Clamp(volume, 0, 1);
-    }
+
 
     //발소리 중지
     public void StopWalkSfx()
     {
         walkSource.Stop();
-    }
-    //볼륨 조절
-    public void SetWalkVolume(float volume)
-    {
-        walkSource.volume = Mathf.Clamp(volume, 0, 1);
     }
 
     //사격소리 중지
@@ -205,23 +204,12 @@ public class SoundManager : MonoBehaviour
     {
         gunSource.Stop();
     }
-    //볼륨 조절
-    public void SetGunVolume(float volume)
-    {
-        gunSource.volume = Mathf.Clamp(volume, 0, 1);
-    }
 
     //스킬 소리 중지
     public void StopSkillSfx()
     {
         skillSource.Stop();
     }
-    //볼륨 조절
-    public void SetSkillVolume(float volume)
-    {
-        skillSource.volume = Mathf.Clamp(volume, 0, 1);
-    }
-
 
 
     private IEnumerator FadeOutBGM(float duration, Action onFadeComplete)

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 using UnityEngine.Audio;
@@ -16,13 +17,16 @@ public class PlayerController : MonoBehaviour
     public float animationSpeed = 3.0f; //애니메이션 재생 속도
     public string currentAnimation;
 
-    public Transform target; // 상체가 꺽일 곳
+    public Transform target; // sfx 소리 재생 위치
     public MultiAimConstraint multiAimciConstraint;         //상체 뒤틀림 방지?
+
     void Start()
     {
         //자식 노드에서 가져오기, 캐릭터 선택을 고려하면 플레이어는 빈 오브젝트고 거기로 선택한 캐릭터를 자식으로 불러오는게 하기 25.03.06
         controller = GetComponentInChildren<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+        Debug.Log(CharacterSelectManager.Instance.selectedCharacter);
+        target = GameObject.Find("target").GetComponentInChildren<Transform>();
     }
 
     void Update()

@@ -17,6 +17,9 @@ public class GameSettingUI : MonoBehaviour
     private int qualityIndex = 0;
     private bool isFullScreen = true;
 
+    private string resolution = "fHd";
+
+
     [Header("Resolution")]
     public Toggle fullHDToggle;
     public Toggle qHDToggle;
@@ -31,13 +34,11 @@ public class GameSettingUI : MonoBehaviour
     public Toggle fullscreenToggle;
     public Toggle windowedToggle;
 
+    [Header("Sound")]
+    public Slider bgmSlider;
+    public Slider sfxSlider;
 
-    void Start()
-    {
-
-    }
-
-    void Update()
+    private void Start()
     {
 
     }
@@ -51,13 +52,20 @@ public class GameSettingUI : MonoBehaviour
     //해상도 변경
     public void OnToggleResolutionChanged(Toggle toggle)
     {
-
+        if (toggle.isOn)
+        {
+            Debug.Log(toggle.name);
+            resolution = toggle.name;   
+        }
     }
 
     //그래픽 변경
     public void OnToggleGraphicChanged(Toggle toggle)
     {
-
+        if (toggle.isOn)
+        {
+            Debug.Log(toggle.name);
+        }
     }
 
     //풀스크린
@@ -89,6 +97,8 @@ public class GameSettingUI : MonoBehaviour
     {
         SoundManager.Instance.PlaySfx("buttonTouch");
         //string[] res = resolutions[resolutionIndex].Split('X');   //각 토글 버튼 마다 해상도를 정해두고 , 이를 alpha X Beta 값으로 설정
+        Debug.Log(resolution);
+        Debug.Log(isFullScreen);
     }
 
     private void SaveSetting()
@@ -99,13 +109,22 @@ public class GameSettingUI : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-
     private void LoadSetting()
     {
 
     }
+    public void OnBgmVolumeChanged()
+    {
+        float value = bgmSlider.value;
+        Debug.Log(value);
+        SoundManager.Instance.SetBGMVolume(value);
+    }
 
-    //사운드는 사운드매니저 코드랑 연계해서 할것
-
+    public void OnSfxVolumeChanged()
+    {
+        float value = sfxSlider.value;
+        Debug.Log(value);
+        SoundManager.Instance.SetSfxVolume(value);
+    }
 
 }

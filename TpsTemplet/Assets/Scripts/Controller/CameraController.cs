@@ -21,7 +21,6 @@ public class CameraController : MonoBehaviour
         PlayerGo = GameObject.Find("Player");
         Player = PlayerGo.transform.GetChild(0);
         PlayerLookObj = Player.transform.Find("PlayerObj");
-        
     }
 
     //현재 조준점 위치가 바뀌는 버그가 있음

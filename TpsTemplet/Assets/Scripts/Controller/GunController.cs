@@ -61,9 +61,11 @@ public class GunController : PlayerController
                 break;
             }
         }
+        target = GameObject.Find("target").GetComponentInChildren<Transform>();
+
         hitLayers = LayerMask.GetMask("Wall", "Enemy", "Player");
     }
-
+     
 
     void Update()
     {
@@ -128,19 +130,19 @@ public class GunController : PlayerController
         currentAmmo = maxAmmo;
         if (gunType.Equals("HG"))
         {
-            SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
+            SoundManager.Instance.PlayGunSfx("HGReload", target.transform.position);
         }
         else if (gunType.Equals("SMG"))
         {
-            SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
+            SoundManager.Instance.PlayGunSfx("SMGReload", target.transform.position);
         }
         else if (gunType.Equals("AR"))
         {
-            SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
+            SoundManager.Instance.PlayGunSfx("ARReload", target.transform.position);
         }
         else if (gunType.Equals("SR"))
         {
-            SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
+            SoundManager.Instance.PlayGunSfx("SRReload", target.transform.position);
         }
         else if (gunType.Equals("MG"))
         {
@@ -150,7 +152,6 @@ public class GunController : PlayerController
         {
             SoundManager.Instance.PlayGunSfx("SGReload", target.transform.position);
         }
-
 
         isReload = true;
         animator.SetTrigger("isReload");
@@ -165,7 +166,7 @@ public class GunController : PlayerController
         //소리 재생 - 함수나 코루틴으로 뺄 예정
         if (gunType.Equals("HG"))
         {
-            //SoundManager.Instance.PlayGunSfx("HGShooting", target.transform.position);
+            SoundManager.Instance.PlayGunSfx("HGShooting", target.transform.position);
         }
         else if (gunType.Equals("SMG"))
         {
@@ -188,7 +189,7 @@ public class GunController : PlayerController
         //사격 이펙트
         if (gunFire != null)
         {
-            ParticleManager.Instance.PlayGunFireParticle("gunFire", muzzlePoint.position + muzzlePoint.forward * 0.1f, Vector3.one, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
+            //ParticleManager.Instance.PlayGunFireParticle("gunFire", muzzlePoint.position + muzzlePoint.forward * 0.1f, Vector3.one, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
         }
 
         // 크로스헤어 중심에서 랜덤한 위치 생성 (히트스캔 범위 내)
@@ -237,8 +238,12 @@ public class GunController : PlayerController
                 ParticleManager.Instance.PlayGunFireParticle("gunFire", muzzlePoint.position + muzzlePoint.forward * 0.1f, Vector3.one, muzzlePoint.rotation * Quaternion.Euler(90, -90, 0));
             }
             RaycastHit hit;
-            Vector3 origin = muzzlePoint.position;
-            Vector3 spreadDirection = GetSpreadDirection(muzzlePoint.forward, shotGunSpreadAngle);
+
+            Vector3 origin = Camera.main.transform.position;
+            Vector3 spreadDirection = GetSpreadDirection(Camera.main.transform.forward, shotGunSpreadAngle);
+
+            //Vector3 origin = muzzlePoint.position;
+            //Vector3 spreadDirection = GetSpreadDirection(muzzlePoint.forward, shotGunSpreadAngle);
 
             Ray ray = mainCamera.ScreenPointToRay(spreadDirection);
             if (Physics.Raycast(origin, spreadDirection, out hit, range, hitLayers))

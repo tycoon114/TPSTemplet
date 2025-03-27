@@ -29,7 +29,7 @@ public class SceneController : MonoBehaviour
         //해당 메뉴에 맞는 BGM 재생
         if (sceneName == "MenuScene")
         {
-            SoundManager.Instance.PlayBGM("bgmTemp1");
+            //SoundManager.Instance.PlayBGM("bgmTemp1");
         }
         Debug.Log(sceneName + "  불러옴");
     }

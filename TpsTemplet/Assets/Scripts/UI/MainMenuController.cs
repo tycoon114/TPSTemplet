@@ -10,22 +10,22 @@ public class MainMenuController : MonoBehaviour
 
     void Awake()
     {
-        
+
     }
 
-    public void OnDevRoomClick() {
-        Debug.Log("Å¬¸¯ÇÔ");
-        SceneController.Instance.LoadScene("DevRoomScene");
+    public void OnDevRoomClick()
+    {
+        SceneController.Instance.LoadScene("CharacterSelectScene");
     }
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
