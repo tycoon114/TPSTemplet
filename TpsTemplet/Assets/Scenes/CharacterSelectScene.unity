@@ -119,6 +119,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &291757742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 291757744}
+  - component: {fileID: 291757745}
+  m_Layer: 0
+  m_Name: CharacterSelectUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &291757744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291757742}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 73.699455, y: 0.9164814, z: 329.25058}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &291757745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291757742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdfa1ada7de93cc49b47b8834b498eca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedCharacter: temp
+  selectedCharacterIndex: 0
 --- !u!1 &324009282
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,8 +248,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1537470392}
-        m_TargetAssemblyTypeName: CharacterSelectManager, Assembly-CSharp
+      - m_Target: {fileID: 291757745}
+        m_TargetAssemblyTypeName: CharacterSelectUI, Assembly-CSharp
         m_MethodName: OnClickSelectButton
         m_Mode: 1
         m_Arguments:
@@ -966,11 +1012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedCharacter: 
-  characterPrefabs:
-  - {fileID: 4136110124463721334, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
-  - {fileID: 2510324694747993088, guid: 63395441e53f53647aff1a8d1ac4cda3, type: 3}
-  - {fileID: 7004362848274344831, guid: a7807660e59c99f4ea099e043c440533, type: 3}
-  selectedCharacterPrefab: {fileID: 0}
+  selectedCharacterIndex: 0
 --- !u!4 &1537470393
 Transform:
   m_ObjectHideFlags: 0
@@ -1140,8 +1182,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1537470392}
-        m_TargetAssemblyTypeName: CharacterSelectManager, Assembly-CSharp
+      - m_Target: {fileID: 291757745}
+        m_TargetAssemblyTypeName: CharacterSelectUI, Assembly-CSharp
         m_MethodName: OnMariClicked
         m_Mode: 1
         m_Arguments:
@@ -1152,8 +1194,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1537470392}
-        m_TargetAssemblyTypeName: CharacterSelectManager, Assembly-CSharp
+      - m_Target: {fileID: 291757745}
+        m_TargetAssemblyTypeName: CharacterSelectUI, Assembly-CSharp
         m_MethodName: SelectCharacter
         m_Mode: 3
         m_Arguments:
@@ -1284,8 +1326,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1537470392}
-        m_TargetAssemblyTypeName: CharacterSelectManager, Assembly-CSharp
+      - m_Target: {fileID: 291757745}
+        m_TargetAssemblyTypeName: CharacterSelectUI, Assembly-CSharp
         m_MethodName: OnNikoClicked
         m_Mode: 1
         m_Arguments:
@@ -1296,8 +1338,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1537470392}
-        m_TargetAssemblyTypeName: CharacterSelectManager, Assembly-CSharp
+      - m_Target: {fileID: 291757745}
+        m_TargetAssemblyTypeName: CharacterSelectUI, Assembly-CSharp
         m_MethodName: SelectCharacter
         m_Mode: 3
         m_Arguments:
@@ -1428,8 +1470,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1537470392}
-        m_TargetAssemblyTypeName: CharacterSelectManager, Assembly-CSharp
+      - m_Target: {fileID: 291757745}
+        m_TargetAssemblyTypeName: CharacterSelectUI, Assembly-CSharp
         m_MethodName: OnKazusaClicked
         m_Mode: 1
         m_Arguments:
@@ -1440,8 +1482,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1537470392}
-        m_TargetAssemblyTypeName: CharacterSelectManager, Assembly-CSharp
+      - m_Target: {fileID: 291757745}
+        m_TargetAssemblyTypeName: CharacterSelectUI, Assembly-CSharp
         m_MethodName: SelectCharacter
         m_Mode: 3
         m_Arguments:
@@ -1591,3 +1633,4 @@ SceneRoots:
   - {fileID: 577984569}
   - {fileID: 962264453}
   - {fileID: 1537470393}
+  - {fileID: 291757744}

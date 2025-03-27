@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
@@ -5,6 +6,9 @@ using UnityEngine.Audio;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public static event Action<bool> OnIsAim;
+
     public float moveSpeed = 5f;   // 이동 속도
     public float gravity = 9.8f;   // 중력
     private CharacterController controller;
@@ -19,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     public Transform target; // sfx 소리 재생 위치
     public MultiAimConstraint multiAimciConstraint;         //상체 뒤틀림 방지?
-
+    CameraController cameraController;
     void Start()
     {
         //자식 노드에서 가져오기, 캐릭터 선택을 고려하면 플레이어는 빈 오브젝트고 거기로 선택한 캐릭터를 자식으로 불러오는게 하기 25.03.06
@@ -27,6 +31,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         Debug.Log(CharacterSelectManager.Instance.selectedCharacter);
         target = GameObject.Find("target").GetComponentInChildren<Transform>();
+        
     }
 
     void Update()
@@ -71,12 +76,14 @@ public class PlayerController : MonoBehaviour
             //multiAimciConstraint.data.offset = new Vector3(-30, 0, 0);
             //animator.SetLayerWeight(1, 1);
             isAim = true;
+            OnIsAim?.Invoke(isAim);
         }
         else
         {
             //multiAimciConstraint.data.offset = new Vector3(0, 0, 0);
             //animator.SetLayerWeight(1, 0);
             isAim = false;
+            OnIsAim?.Invoke(isAim);
         }
         //animator.SetBool("isAim", isAim);
 

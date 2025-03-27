@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -15,6 +16,18 @@ public class CameraController : MonoBehaviour
     public Transform PlayerLookObj;  // 플레이어 옆 카메라가 향할 오브젝트
 
     private Vector3 targetCamPosition;    //카메라 위치값
+
+    public float zoomSpeed = 5.0f; // 확대축소가 되는 속도
+
+    private void OnEnable()
+    {
+        PlayerController.OnIsAim += UpdateCameraOffset;
+    }
+
+    private void OnDisable()
+    {
+        PlayerController.OnIsAim -= UpdateCameraOffset;
+    }
 
     void Start()
     {
@@ -38,7 +51,7 @@ public class CameraController : MonoBehaviour
         yaw += mouseX;
         pitch += mouseY;
         //위 아래 각도 제한
-        pitch = Mathf.Clamp(pitch, -30f, 45f);
+        pitch = Mathf.Clamp(pitch, -30f, 10f);
         Vector3 direction = PlayerLookObj.position + CameraOffset;
 
         //플레이어 위치에서 조금더 오른쪽 위로 자리잡게 만든다. - 카메라의 위치
@@ -50,7 +63,6 @@ public class CameraController : MonoBehaviour
         Quaternion targetRotation = Quaternion.Euler(pitch, yaw, 0);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
         transform.LookAt(lookPosition);
-
         //카메라 벽 충돌
         avoidObjects();
     }
@@ -75,6 +87,33 @@ public class CameraController : MonoBehaviour
 
     }
 
+
+    public void UpdateCameraOffset(bool isAim)
+    {
+        Debug.Log(isAim);
+        Vector3 targetOffset;
+
+        if (isAim)
+        {
+            targetOffset = GetZoomedOffset();
+        }
+        else
+        {
+            targetOffset = GetDefaultOffset();
+        }
+
+        CameraOffset = Vector3.Lerp(CameraOffset, targetOffset, Time.deltaTime * zoomSpeed);
+    }
+
+    private Vector3 GetDefaultOffset()
+    {
+        return new Vector3(0, 0.5f, -4);
+    }
+
+    private Vector3 GetZoomedOffset()
+    {
+        return new Vector3(-1.5f, 0.7f, -1f);
+    }
 
 
 }
