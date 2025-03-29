@@ -20,16 +20,22 @@ public class SceneController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        SoundManager.Instance.PlayBGM("Theme_22");
     }
 
     public void LoadScene(string sceneName)
     {
+        SoundManager.Instance.StopBGM();
         SoundManager.Instance.PlaySfx("buttonTouch");
         SceneManager.LoadScene(sceneName);
         //해당 메뉴에 맞는 BGM 재생
         if (sceneName == "MenuScene")
         {
-            //SoundManager.Instance.PlayBGM("bgmTemp1");
+            SoundManager.Instance.PlayBGM("Theme_22");
+        }
+        else if (sceneName == "CharacterSelectScene")
+        {
+            SoundManager.Instance.PlayBGM("Theme_16");
         }
         Debug.Log(sceneName + "  불러옴");
     }
