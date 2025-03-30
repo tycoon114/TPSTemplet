@@ -3,23 +3,23 @@
         {
             "name": "Kazusa",
             "health": 2500,
-            "speed": 5.0,
+            "speed": 5,
             "attack": 25,
-	        "gunType":  "MG"
+	"gunType":  "MG"
         },
         {
-            "name": "Mari",
+            "name": "CH0186",
             "health": 100,
             "speed": 6.0,
             "attack": 40,
-	        "gunType":  "HG"
+	"gunType":  "HG"
         },
         {
-            "name": "Niko",
+            "name": "CH0172",
             "health": 120,
             "speed": 7.0,
             "attack": 30,
-	        "gunType":  "SG"
+	"gunType":  "SG"
         }
     ]
 }
