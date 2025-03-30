@@ -1,0 +1,25 @@
+{
+    "characters": [
+        {
+            "name": "Kazusa",
+            "health": 2500,
+            "speed": 5.0,
+            "attack": 25,
+	        "gunType":  "MG"
+        },
+        {
+            "name": "Mari",
+            "health": 100,
+            "speed": 6.0,
+            "attack": 40,
+	        "gunType":  "HG"
+        },
+        {
+            "name": "Niko",
+            "health": 120,
+            "speed": 7.0,
+            "attack": 30,
+	        "gunType":  "SG"
+        }
+    ]
+}
