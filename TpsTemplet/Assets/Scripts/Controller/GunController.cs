@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Animations.Rigging;
 
 public class GunController : PlayerController
 {
@@ -63,7 +64,7 @@ public class GunController : PlayerController
         }
         target = GameObject.Find("target").GetComponentInChildren<Transform>();
 
-        hitLayers = LayerMask.GetMask("Wall", "Enemy", "Player");
+        hitLayers = LayerMask.GetMask("Wall", "Enemy", "Player" , "EnemyPlayer");
     }
      
 
@@ -202,6 +203,11 @@ public class GunController : PlayerController
         if (Physics.Raycast(ray, out RaycastHit hit, range, hitLayers))
         {
             Debug.DrawLine(ray.origin, hit.point, Color.red, 3.0f);
+
+            GameObject hitObject = hit.collider.gameObject;
+            int hitLayer = hitObject.layer;
+
+            Debug.Log($"감지된 오브젝트: {hitObject.name}, 레이어: {LayerMask.LayerToName(hitLayer)}");
             // 벽(Wall)과 충돌한 경우 피격 이펙트 생성
             if (hit.collider.CompareTag("Wall"))
             {
@@ -219,6 +225,13 @@ public class GunController : PlayerController
                 //추후 멀티 활성화 시 아군인지 적팀인지 구분 필요
                 Debug.Log("플레이어 피격");
             }
+            else if (hitLayer == LayerMask.NameToLayer("EnemyPlayer")) {
+                Debug.Log(" 레이어 피격 테스트");
+                //적 플레이어에 달아줄 레이어
+                //여기서 데미지를 주도록 한다.
+            }
+
+
         }
 
         currentAmmo--;
