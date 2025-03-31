@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     protected bool isAim = false;
     protected int atkType;          //공격타입
     protected int dfnType;          //방어 타입
-    protected string gunType;
 
     public float animationSpeed = 3.0f; //애니메이션 재생 속도
     public string currentAnimation;
@@ -42,8 +41,6 @@ public class PlayerController : MonoBehaviour
     private void SetCharacterData(CharacterInfo info)
     {
         this.characterInfo = info;
-        Debug.Log($"{characterInfo.gunType}");
-        gunType = info.gunType;
     }
 
     void Start()

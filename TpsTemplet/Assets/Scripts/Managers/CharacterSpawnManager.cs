@@ -73,6 +73,10 @@ public class CharacterInfo
     public float speed;
     public int attack;
     public string gunType;
+    public string atkType;
+    public string dfnType;
+    public float bulletSpeed;
+    public float fireRate;
 }
 
 [System.Serializable]

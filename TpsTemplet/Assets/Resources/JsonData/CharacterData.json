@@ -3,23 +3,35 @@
         {
             "name": "Kazusa",
             "health": 2500,
-            "speed": 5,
-            "attack": 25,
-	"gunType":  "MG"
+            "speed": 5.0,
+            "attack": 50,
+	        "gunType":  "MG",
+            "atkType":  "HG",
+            "dfnType":  "Heavy",
+	        "bulletSpeed":  20.0,
+	        "fireRate":  0.2
         },
         {
             "name": "CH0186",
-            "health": 100,
+            "health": 2000,
             "speed": 6.0,
-            "attack": 40,
-	"gunType":  "HG"
+            "attack": 100,
+	        "gunType":  "HG",
+            "atkType":  "HG",
+            "dfnType":  "Special",
+	        "bulletSpeed":  20.0,
+	        "fireRate":  0.2
         },
         {
             "name": "CH0172",
-            "health": 120,
-            "speed": 7.0,
-            "attack": 30,
-	"gunType":  "SG"
+            "health": 1500,
+            "speed": 4.0,
+            "attack": 15,
+	        "gunType":  "SG",
+            "atkType":  "Explosive",
+            "dfnType":  "Heavy",
+	        "bulletSpeed":  20.0,
+	        "fireRate":  0.2
         }
     ]
 }

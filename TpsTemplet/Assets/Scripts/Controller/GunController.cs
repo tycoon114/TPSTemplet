@@ -15,6 +15,8 @@ public class GunController : PlayerController
     //캐릭터마다 바뀔 수 있는값, 현재는 개발의 편의성을 위해 public 처리
     public GameObject gunFire;        //사격 이펙트
     public GameObject impactEffect; // 피격 이펙트
+
+    private string gunType;
     public float bulletSpeed = 20f;  // 탄속
     public float fireRate = 0.2f;    //연사 속도
     public float reloadTime = 2f;   // 재장전 시간
@@ -51,6 +53,13 @@ public class GunController : PlayerController
 
         mainCamera = Camera.main;
 
+        //
+        if (characterInfo != null)
+        {
+            SetCharacterData(characterInfo);
+        }
+
+
         //자식 오브젝트에서 총구인 fire_01찾기
         Transform[] allChildren = GetComponentsInChildren<Transform>();
         foreach (Transform child in allChildren)
@@ -63,9 +72,15 @@ public class GunController : PlayerController
         }
         target = GameObject.Find("target").GetComponentInChildren<Transform>();
 
-        hitLayers = LayerMask.GetMask("Wall", "Enemy", "Player" , "EnemyPlayer");
+        hitLayers = LayerMask.GetMask("Wall", "Enemy", "Player", "EnemyPlayer");
     }
-     
+
+    private void SetCharacterData(CharacterInfo info)
+    {
+        Debug.Log(info.dfnType);
+        gunType = info.gunType;
+    }
+
 
     void Update()
     {
@@ -224,7 +239,8 @@ public class GunController : PlayerController
                 //추후 멀티 활성화 시 아군인지 적팀인지 구분 필요
                 Debug.Log("플레이어 피격");
             }
-            else if (hitLayer == LayerMask.NameToLayer("EnemyPlayer")) {
+            else if (hitLayer == LayerMask.NameToLayer("EnemyPlayer"))
+            {
                 Debug.Log(" 레이어 피격 테스트");
                 //적 플레이어에 달아줄 레이어
                 //여기서 데미지를 주도록 한다.
@@ -275,7 +291,7 @@ public class GunController : PlayerController
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo);
         SoundManager.Instance.PlayGunSfx("SGDelay", target.transform.position);
         animator.SetTrigger("isDelay");
-        
+
     }
 
     Vector3 GetSpreadDirection(Vector3 forwardDirection, float spreadAngle)
