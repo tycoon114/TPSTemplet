@@ -79,6 +79,8 @@ public class GunController : PlayerController
     {
         Debug.Log(info.dfnType);
         gunType = info.gunType;
+        bulletSpeed = info.bulletSpeed;
+        fireRate = info.fireRate;
     }
 
 
