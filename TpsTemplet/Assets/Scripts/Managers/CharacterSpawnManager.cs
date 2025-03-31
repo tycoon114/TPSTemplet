@@ -51,26 +51,12 @@ public class CharacterSpawnManager : MonoBehaviour
             if (info.name == characterName)
             {
                 Debug.Log($"이름: {info.name}, 체력: {info.health}, 속도: {info.speed}, 공격력: {info.attack} , 총기: {info.gunType}");
+                //확인이 되면 이벤트 발생 -> playerController로 정보 보내 주기
                 OnLoadCharacterData?.Invoke(info);
-                //ApplyCharacterStats(character, info);
                 return;
             }
         }
         Debug.LogError($"캐릭터 '{characterName}' 정보 없음 -> 이름 확인.");
-    }
-
-    private void ApplyCharacterStats(GameObject character, CharacterInfo info)
-    {
-        CharacterController characterController = character.GetComponent<CharacterController>();
-
-        if (characterController != null)
-        {
-            Debug.Log("테스트");
-        }
-        else
-        {
-            Debug.LogError("캐릭터 컨트롤러를 찾을 수 없습니다.");
-        }
     }
 
 }
