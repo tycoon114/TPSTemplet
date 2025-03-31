@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class CharacterSpawnManager : MonoBehaviour
 {
+    public static event Action<CharacterInfo> OnLoadCharacterData;
+
     private Transform player;       
     private GameObject selectedCharacter;
     public GameObject[] characterPrefabs;
@@ -21,6 +24,8 @@ public class CharacterSpawnManager : MonoBehaviour
 
 
         LoadCharacterData(selectedCharacter.name, selectedCharacter);
+
+        
     }
 
 
@@ -46,11 +51,11 @@ public class CharacterSpawnManager : MonoBehaviour
             if (info.name == characterName)
             {
                 Debug.Log($"이름: {info.name}, 체력: {info.health}, 속도: {info.speed}, 공격력: {info.attack} , 총기: {info.gunType}");
+                OnLoadCharacterData?.Invoke(info);
                 //ApplyCharacterStats(character, info);
                 return;
             }
         }
-
         Debug.LogError($"캐릭터 '{characterName}' 정보 없음 -> 이름 확인.");
     }
 
@@ -60,7 +65,7 @@ public class CharacterSpawnManager : MonoBehaviour
 
         if (characterController != null)
         {
-    
+            Debug.Log("테스트");
         }
         else
         {

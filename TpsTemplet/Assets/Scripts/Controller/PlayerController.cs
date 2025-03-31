@@ -9,14 +9,17 @@ public class PlayerController : MonoBehaviour
 
     public static event Action<bool> OnIsAim;
 
-    public float moveSpeed = 5f;   // 이동 속도
-    public float gravity = 9.8f;   // 중력
     private CharacterController controller;
     private Animator animator;
     private Vector3 moveDirection;
+
+    public float moveSpeed = 5f;   // 이동 속도
+    public float gravity = 9.8f;   // 중력
+
     protected bool isAim = false;
     protected int atkType;          //공격타입
     protected int dfnType;          //방어 타입
+    protected string gunType;
 
     public float animationSpeed = 3.0f; //애니메이션 재생 속도
     public string currentAnimation;
@@ -24,14 +27,31 @@ public class PlayerController : MonoBehaviour
     public Transform target; // sfx 소리 재생 위치
     public MultiAimConstraint multiAimciConstraint;         //상체 뒤틀림 방지?
     CameraController cameraController;
+
+    protected CharacterInfo characterInfo;
+
+    private void OnEnable()
+    {
+        CharacterSpawnManager.OnLoadCharacterData += SetCharacterData;
+    }
+    private void OnDisable()
+    {
+        CharacterSpawnManager.OnLoadCharacterData -= SetCharacterData;
+    }
+
+    private void SetCharacterData(CharacterInfo info)
+    {
+        this.characterInfo = info;
+        Debug.Log($"{characterInfo.gunType}");
+        gunType = info.gunType;
+    }
+
     void Start()
     {
         //자식 노드에서 가져오기, 캐릭터 선택을 고려하면 플레이어는 빈 오브젝트고 거기로 선택한 캐릭터를 자식으로 불러오는게 하기 25.03.06
         controller = GetComponentInChildren<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-        Debug.Log(CharacterSelectManager.Instance.selectedCharacter);
         target = GameObject.Find("target").GetComponentInChildren<Transform>();
-        
     }
 
     void Update()
@@ -135,12 +155,6 @@ public class PlayerController : MonoBehaviour
 
         //}
     }
-
-    //public void FootStepSoundOn()
-    //{
-
-
-    //}
 
     //발소리 제어 임시 코드 - 레이캐스트
     //public void FootStepSoundOn()

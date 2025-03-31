@@ -11,7 +11,6 @@ public class CharacterSelectManager : MonoBehaviour
 
     public int selectedCharacterIndex;
 
-    //개발 테스트를 용이하게 하기 위해 싱글톤 사용, 멀티 플레이로 작업할 때는 유니티 넷코드 사용할 것
     public static CharacterSelectManager Instance
     {
         get;

@@ -23,7 +23,7 @@ public class GunController : PlayerController
     public int maxAmmo = 50;        //최대 탄약수
     public bool boltAction = false;  //볼트 액션이 아닌 경우 연사 가능하도록
     public float damage = 30.0f;    //공격력 - 변수 이름 나중에 바꿀 예정
-    public string gunType = "MG";   //이후 받아와서 처리
+    //public string gunType = "MG";   //이후 받아와서 처리
 
     private bool isReload = false;      // 재장전
     private bool isShoot = false;       //사격 애니메이션
