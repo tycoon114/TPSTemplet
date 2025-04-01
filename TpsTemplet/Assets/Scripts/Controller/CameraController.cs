@@ -112,7 +112,7 @@ public class CameraController : MonoBehaviour
 
     private Vector3 GetZoomedOffset()
     {
-        return new Vector3(-1.5f, 0.7f, -1f);
+        return new Vector3(-1.9f, 0.7f, -1f);
     }
 
 
