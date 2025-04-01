@@ -58,6 +58,7 @@ public class CharacterSelectUI : MonoBehaviour
     {
         Debug.Log("Shiroko");
         selectedCharacter = "Shiroko";
+        SetPortraitImage(selectedCharacter);
         characterName.text = "½Ã·ÎÄÚ";
     }
 

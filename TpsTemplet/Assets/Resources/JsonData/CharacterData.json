@@ -32,6 +32,17 @@
             "dfnType":  "Heavy",
 	        "bulletSpeed":  20.0,
 	        "fireRate":  1.0
+        },
+        {
+            "name": "Shiroko",
+            "health": 1500,
+            "speed": 4.0,
+            "attack": 15,
+	        "gunType":  "AR",
+            "atkType":  "Explosive",
+            "dfnType":  "Heavy",
+	        "bulletSpeed":  20.0,
+	        "fireRate":  1.0
         }
     ]
 }
