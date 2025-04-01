@@ -5,7 +5,7 @@ public class CharacterSpawnManager : MonoBehaviour
 {
     public static event Action<CharacterInfo> OnLoadCharacterData;
 
-    private Transform player;       
+    private Transform player;
     private GameObject selectedCharacter;
     public GameObject[] characterPrefabs;
     private void Awake()
@@ -22,10 +22,7 @@ public class CharacterSpawnManager : MonoBehaviour
         selectedCharacter.transform.SetParent(player);
         selectedCharacter.name = characterPrefabs[selectedID].name;
 
-
         LoadCharacterData(selectedCharacter.name, selectedCharacter);
-
-        
     }
 
 
