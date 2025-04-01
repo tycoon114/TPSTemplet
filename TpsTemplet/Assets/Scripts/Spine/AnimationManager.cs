@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Spine.Unity;
 
+//code by https://drive.google.com/drive/folders/1INs0qIhRiWztfCs06NcDXISV-Md2WvTf
 public class AnimationManager : MonoBehaviour
 {
     public AnimationReferenceAsset[] AnimClip = new AnimationReferenceAsset[9]; // 0: Idle, 1: Pet_A, 2: Pet_M, 3: PetEnd_A, 4: PetEnd_M, 5: Look_01_A/M, 6: Look_01_M, 7: LookEnd_01_A, 8: LookEnd_01_M
