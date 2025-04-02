@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
@@ -27,6 +28,10 @@ public class PlayerController : MonoBehaviour
     public MultiAimConstraint multiAimciConstraint;         //상체 뒤틀림 방지?
 
     protected CharacterInfo characterInfo;
+
+
+    private bool isMoving = false;
+    private bool isPlayingFootsteps = false; // 코루틴 중복 실행 방지
 
     private void OnEnable()
     {
@@ -75,7 +80,7 @@ public class PlayerController : MonoBehaviour
         // speed 값 즉각 반영 (키를 누르는 즉시 애니메이션 전환됨)
         float speed = move.magnitude;
 
-        bool isMoving = move.magnitude > 0;
+        isMoving = move.magnitude > 0;
         animator.SetBool("isMoving", isMoving);
 
         //animator.speed = animationSpeed;
@@ -132,6 +137,11 @@ public class PlayerController : MonoBehaviour
         // 이동 처리
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
+        if (isMoving && controller.isGrounded && !isPlayingFootsteps)
+        {
+            StartCoroutine(PlayFootsteps());
+        }
+
         if (isAim)
         {
             //조준시에는 이동할 때 보다는 빨리 회전 2025-03-10 23:16
@@ -147,6 +157,18 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
+
+    private IEnumerator PlayFootsteps()
+    {
+        isPlayingFootsteps = true;
+        while (controller.isGrounded)
+        {
+            //SoundManager.Instance.PlayWalkSfx("walkNormal1", controller.transform.position);
+            yield return new WaitForSeconds(0.5f);
+        }
+        isPlayingFootsteps = false;
+    }
+
 
     public void OnTriggerEnter(Collider other)
     {
