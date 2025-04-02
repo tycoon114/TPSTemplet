@@ -124,6 +124,11 @@ public class PlayerController : MonoBehaviour
         // 입력 값을 카메라 기준으로 변환
         moveDirection = (cameraForward * vertical + cameraRight * horizontal);
 
+        if (moveDirection.magnitude > 1f)
+        {
+            moveDirection.Normalize();
+        }
+
         // 이동 처리
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
