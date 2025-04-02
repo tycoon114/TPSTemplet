@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour
 
     public Transform target; // sfx 소리 재생 위치
     public MultiAimConstraint multiAimciConstraint;         //상체 뒤틀림 방지?
-    CameraController cameraController;
 
     protected CharacterInfo characterInfo;
 
@@ -38,6 +37,7 @@ public class PlayerController : MonoBehaviour
         CharacterSpawnManager.OnLoadCharacterData -= SetCharacterData;
     }
 
+    //spawnManager에서 가져온 캐릭터 데이터 받기
     private void SetCharacterData(CharacterInfo info)
     {
         this.characterInfo = info;
@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
         //자식 노드에서 가져오기, 캐릭터 선택을 고려하면 플레이어는 빈 오브젝트고 거기로 선택한 캐릭터를 자식으로 불러오는게 하기 25.03.06
         controller = GetComponentInChildren<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+        //소리가 나는 위치
         target = GameObject.Find("target").GetComponentInChildren<Transform>();
     }
 
@@ -91,32 +92,38 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
             //multiAimciConstraint.data.offset = new Vector3(-30, 0, 0);
-            //animator.SetLayerWeight(1, 1);
             isAim = true;
             OnIsAim?.Invoke(isAim);
         }
         else
         {
             //multiAimciConstraint.data.offset = new Vector3(0, 0, 0);
-            //animator.SetLayerWeight(1, 0);
             isAim = false;
             OnIsAim?.Invoke(isAim);
         }
-        //animator.SetBool("isAim", isAim);
 
+        //Vector3 moveXZ = (cameraForward * vertical + cameraRight * horizontal) * moveSpeed;
+
+        //// **이전 Y값 유지!**
+        //moveDirection.x = moveXZ.x;
+        //moveDirection.z = moveXZ.z;
 
         // 중력 적용
         if (!controller.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
+            Debug.Log(moveDirection.y); 
         }
         else
         {
-            moveDirection.y = 0; // 바닥에 닿으면 중력 초기화
+            moveDirection.y = 0f;
         }
+
+         //moveDirection = new Vector3(moveDirection.x, moveDirection.y, moveDirection.z);
 
         // 입력 값을 카메라 기준으로 변환
         moveDirection = (cameraForward * vertical + cameraRight * horizontal);
+
         // 이동 처리
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
@@ -135,7 +142,6 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
-
 
     public void OnTriggerEnter(Collider other)
     {

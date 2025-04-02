@@ -90,7 +90,6 @@ public class CameraController : MonoBehaviour
 
     public void UpdateCameraOffset(bool isAim)
     {
-        Debug.Log(isAim);
         Vector3 targetOffset;
 
         if (isAim)
