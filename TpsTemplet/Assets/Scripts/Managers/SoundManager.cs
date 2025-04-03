@@ -136,12 +136,13 @@ public class SoundManager : MonoBehaviour
     }
 
     // 叭绰 家府
-    public void PlayWalkSfx(string name, Vector3 position)
+    public void PlayWalkSfx(string name)
     {
-        if (walkClips.ContainsKey(name))
-        {
-            AudioSource.PlayClipAtPoint(walkClips[name], position);
-        }
+        //if (walkClips.ContainsKey(name))
+        //{
+        //    AudioSource.PlayClipAtPoint(walkClips[name], position);
+        //}
+        sfxSource.PlayOneShot(walkClips[name]);
     }
 
     //醚 家府

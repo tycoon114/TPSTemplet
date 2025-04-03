@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.SceneManagement;
 
 //플레이어의 체력, 사망, 부활, 피격 등 상태에 관한 매니저를 다룰 코드
@@ -71,5 +72,22 @@ public class PlayerManager : MonoBehaviour
             //죽는 애니메이션 재생
         }
     }
+
+    public void FootStepSoundOn()
+    {
+        //if (Physics.Raycast(transform.position, transform.forward, out hit, 10.0f, itemLayer))
+        //{
+        //    if (hit.ColliderHit.tag == "Snow")
+        //    {
+        //        audioSource.PlayOneShot(audioClipFire); //발소리재생
+        //    }
+        //    else if (hit.ColliderHit.tag == "Sand")
+        //    {
+        //        audioSource.PlayOneShot(audioClipFire); //발소리재생
+        //    }
+        //}
+        SoundManager.Instance.PlayWalkSfx("walk1");
+    }
+
 
 }

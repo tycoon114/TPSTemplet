@@ -1339,6 +1339,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 5b3c6ecf1642ca94bb2ee1ce039a9450, type: 3}
   - name: runSnow
     clip: {fileID: 8300000, guid: 488293e5eaf405c4ebb663e1a94657c2, type: 3}
+  - name: walk1
+    clip: {fileID: 8300000, guid: 1e50eec7975ca1940843f51964c53916, type: 3}
   gunClipList:
   - name: MGShooting
     clip: {fileID: 8300000, guid: 680e2768eaea47e47a6c279059009409, type: 3}

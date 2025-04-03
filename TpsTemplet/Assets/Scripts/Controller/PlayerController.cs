@@ -76,33 +76,20 @@ public class PlayerController : MonoBehaviour
         cameraForward.Normalize();
         cameraRight.Normalize();
 
-
         // speed 값 즉각 반영 (키를 누르는 즉시 애니메이션 전환됨)
         float speed = move.magnitude;
 
         isMoving = move.magnitude > 0;
         animator.SetBool("isMoving", isMoving);
 
-        //animator.speed = animationSpeed;
-
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);  // 1보다 크면 애니메이션이끝인 상태?
-        if (stateInfo.IsName(currentAnimation) && stateInfo.normalizedTime >= 1.0f)
-        {
-            currentAnimation = "isShoot";
-            animator.Play(currentAnimation);
-        }
-
-
         //조준시 이동 제어를 위해,우선 조준에 대한 코드는 GunController대신 여기서 처리
         if (Input.GetMouseButton(1))
         {
-            //multiAimciConstraint.data.offset = new Vector3(-30, 0, 0);
             isAim = true;
             OnIsAim?.Invoke(isAim);
         }
         else
         {
-            //multiAimciConstraint.data.offset = new Vector3(0, 0, 0);
             isAim = false;
             OnIsAim?.Invoke(isAim);
         }
@@ -137,10 +124,23 @@ public class PlayerController : MonoBehaviour
         // 이동 처리
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
-        if (isMoving && controller.isGrounded && !isPlayingFootsteps)
-        {
-            StartCoroutine(PlayFootsteps());
-        }
+
+        //controller.Move(moveDirection * Time.deltaTime);
+
+        // **Player 오브젝트의 회전값 강제 고정 (X=90 유지)**
+        //transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
+        //// **캐릭터의 실제 모델만 회전 (Y축만 회전)**
+        //if (move.magnitude > 0)
+        //{
+        //    Transform characterTransform = controller.transform; // CharacterController가 있는 오브젝트
+        //    Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0, moveDirection.z));
+        //    characterTransform.rotation = Quaternion.Slerp(characterTransform.rotation, newRotation, Time.deltaTime * 10f);
+        //}
+
+        //if (isMoving && controller.isGrounded && !isPlayingFootsteps)
+        //{
+        //    StartCoroutine(PlayFootsteps());
+        //}
 
         if (isAim)
         {
@@ -169,38 +169,23 @@ public class PlayerController : MonoBehaviour
         isPlayingFootsteps = false;
     }
 
-
-    public void OnTriggerEnter(Collider other)
+    //발소리 제어 임시 코드 - 레이캐스트
+    public void FootStepSoundOn()
     {
-        //if (other.gameObject.CompareTag("Enemy"))
+        //if (Physics.Raycast(transform.position, transform.forward, out hit, 10.0f, itemLayer))
         //{
-        //    //animator.SetTrigger("isDeath");
-        //    currentHP -= 250;
-
-        //    GetComponentInChildren<CharacterController>().enabled = false;
-        //    other.gameObject.transform.position = Vector3.zero;
-        //    GetComponentInChildren<CharacterController>().enabled = true;
-        //    Debug.Log(other.gameObject.transform.position);
-        //    Debug.Log(currentHP);
-
+        //    if (hit.ColliderHit.tag == "Snow")
+        //    {
+        //        audioSource.PlayOneShot(audioClipFire); //발소리재생
+        //    }
+        //    else if (hit.ColliderHit.tag == "Sand")
+        //    {
+        //        audioSource.PlayOneShot(audioClipFire); //발소리재생
+        //    }
         //}
+        //SoundManager.Instance.PlayWalkSfx("walkNormal1", controller.transform.position);
     }
 
-    //발소리 제어 임시 코드 - 레이캐스트
-    //public void FootStepSoundOn()
-    //{
-    //    if (Physics.Raycast(transform.position, transform.forward, out hit, 10.0f, itemLayer))
-    //    {
-    //        if (hit.ColliderHit.tag == "Snow")
-    //        {
-    //            audioSource.PlayOneShot(audioClipFire); //발소리재생
-    //        }
-    //        else if (hit.ColliderHit.tag == "Sand")
-    //        {
-    //            audioSource.PlayOneShot(audioClipFire); //발소리재생
-    //        }
-    //    }
-    //}
 
 
 }
