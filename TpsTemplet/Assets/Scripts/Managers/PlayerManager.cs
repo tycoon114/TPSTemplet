@@ -20,6 +20,8 @@ public class PlayerManager : MonoBehaviour
 
     public float playerHP = 2500;     //플레이어 체력
     private float currentHP;           //현재 플레이어의 체력
+    public LayerMask groundLayer;        //바닥 검사용
+
 
     private void Awake()
     {
@@ -39,7 +41,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         currentHP = playerHP;
-
+        groundLayer = LayerMask.GetMask("Ground", "Enemy", "Player", "EnemyPlayer");
     }
 
     // Update is called once per frame
@@ -75,17 +77,24 @@ public class PlayerManager : MonoBehaviour
 
     public void FootStepSoundOn()
     {
-        //if (Physics.Raycast(transform.position, transform.forward, out hit, 10.0f, itemLayer))
-        //{
-        //    if (hit.ColliderHit.tag == "Snow")
-        //    {
-        //        audioSource.PlayOneShot(audioClipFire); //발소리재생
-        //    }
-        //    else if (hit.ColliderHit.tag == "Sand")
-        //    {
-        //        audioSource.PlayOneShot(audioClipFire); //발소리재생
-        //    }
-        //}
+        RaycastHit hit;
+        Vector3 rayOrigin = transform.position + Vector3.up * 0.1f;
+        Vector3 rayDirection = Vector3.down;
+
+        Debug.DrawRay(transform.position, transform.forward * 1.5f, Color.yellow);
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 10.0f, groundLayer))
+        {
+            if (hit.collider.CompareTag("Sand"))
+            {
+                SoundManager.Instance.PlayWalkSfx("runSand1");//발소리재생
+
+            }
+            else if (hit.collider.CompareTag("Snow"))
+            {
+                SoundManager.Instance.PlayWalkSfx("runsSnow");//발소리재생
+            }
+        }
         SoundManager.Instance.PlayWalkSfx("walk1");
     }
 

@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Team
   - FxTemporaire
+  - Sand
+  - Snow
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - Wall
   - Enemy
   - EnemyPlayer
-  - 
+  - Ground
   - 
   - 
   - 

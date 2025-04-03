@@ -104,7 +104,6 @@ public class PlayerController : MonoBehaviour
         if (!controller.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
-            Debug.Log(moveDirection.y); 
         }
         else
         {
@@ -158,16 +157,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private IEnumerator PlayFootsteps()
-    {
-        isPlayingFootsteps = true;
-        while (controller.isGrounded)
-        {
-            //SoundManager.Instance.PlayWalkSfx("walkNormal1", controller.transform.position);
-            yield return new WaitForSeconds(0.5f);
-        }
-        isPlayingFootsteps = false;
-    }
+
 
     //발소리 제어 임시 코드 - 레이캐스트
     public void FootStepSoundOn()
