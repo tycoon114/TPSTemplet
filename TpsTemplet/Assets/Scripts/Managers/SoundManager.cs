@@ -138,10 +138,6 @@ public class SoundManager : MonoBehaviour
     // °È´Â ¼Ò¸®
     public void PlayWalkSfx(string name)
     {
-        //if (walkClips.ContainsKey(name))
-        //{
-        //    AudioSource.PlayClipAtPoint(walkClips[name], position);
-        //}
         sfxSource.PlayOneShot(walkClips[name]);
     }
 
