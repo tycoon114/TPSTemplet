@@ -19,10 +19,10 @@ public class GunController : PlayerController
     private string gunType;
     public float bulletSpeed = 20f;  // 탄속
     public float fireRate = 0.2f;    //연사 속도
-    public float reloadTime = 2f;   // 재장전 시간
+    public float reloadTime;   // 재장전 시간
     public float hitScanRadius = 0.05f; // 크로스헤어 내 랜덤 범위
     public float range = 100f; // 사격 거리
-    public int maxAmmo = 50;        //최대 탄약수
+    private int maxAmmo;        //최대 탄약수
     public bool boltAction = false;  //볼트 액션이 아닌 경우 연사 가능하도록
     public float damage = 30.0f;    //공격력 - 변수 이름 나중에 바꿀 예정
 
@@ -44,21 +44,18 @@ public class GunController : PlayerController
     public Vector3 originalCameraPosition;
     public Coroutine cameraShakeCoroutine;
 
-
     void Start()
     {
-        currentAmmo = maxAmmo;
-        onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
-        animator = GetComponentInChildren<Animator>();
-
-        mainCamera = Camera.main;
-
-        //
         if (characterInfo != null)
         {
             SetCharacterData(characterInfo);
         }
 
+        currentAmmo = maxAmmo;
+        onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
+        animator = GetComponentInChildren<Animator>();
+
+        mainCamera = Camera.main;
 
         //자식 오브젝트에서 총구인 fire_01찾기
         Transform[] allChildren = GetComponentsInChildren<Transform>();
@@ -81,6 +78,8 @@ public class GunController : PlayerController
         gunType = info.gunType;
         bulletSpeed = info.bulletSpeed;
         fireRate = info.fireRate;
+        reloadTime = info.reloadTime;
+        maxAmmo = info.maxAmmo;
     }
 
 
@@ -92,14 +91,13 @@ public class GunController : PlayerController
         {
             isAim = true;
             CrossHairSet?.Invoke(isAim);
-            animator.SetLayerWeight(1, 0.7f);
-
+            //animator.SetLayerWeight(1, 0.7f);
         }
         else
         {
             isAim = false;
             CrossHairSet?.Invoke(isAim);
-            animator.SetLayerWeight(1, 0f);
+            //animator.SetLayerWeight(1, 0f);
         }
         animator.SetBool("isAim", isAim);
         //animator.SetLayerWeight(1, 1);
@@ -305,6 +303,13 @@ public class GunController : PlayerController
         float spreadY = UnityEngine.Random.Range(-spreadAngle, spreadAngle);
         Vector3 spreadDirection = Quaternion.Euler(spreadX, spreadY, 0) * forwardDirection;
         return spreadDirection;
+    }
+
+
+    //화면 흔들림
+    private void gunShootShake()
+    {
+
     }
 
 }

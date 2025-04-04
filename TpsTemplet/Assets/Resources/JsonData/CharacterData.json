@@ -5,44 +5,52 @@
             "health": 2500,
             "speed": 5.0,
             "attack": 50,
-	        "gunType":  "MG",
-            "atkType":  "HG",
-            "dfnType":  "Heavy",
-	        "bulletSpeed":  20.0,
-	        "fireRate":  0.2
+            "gunType": "MG",
+            "atkType": "HG",
+            "dfnType": "Heavy",
+            "bulletSpeed": 20.0,
+            "fireRate": 0.2,
+            "reloadTime": 1.5,
+            "maxAmmo": 40
         },
         {
             "name": "CH0186",
             "health": 2000,
             "speed": 6.0,
             "attack": 100,
-	        "gunType":  "HG",
-            "atkType":  "HG",
-            "dfnType":  "Special",
-	        "bulletSpeed":  20.0,
-	        "fireRate":  0.5
+            "gunType": "HG",
+            "atkType": "HG",
+            "dfnType": "Special",
+            "bulletSpeed": 20.0,
+            "fireRate": 0.5,
+            "reloadTime": 1,
+            "maxAmmo": 10
         },
         {
             "name": "CH0172",
             "health": 1500,
             "speed": 4.0,
             "attack": 15,
-	        "gunType":  "SG",
-            "atkType":  "Explosive",
-            "dfnType":  "Heavy",
-	        "bulletSpeed":  20.0,
-	        "fireRate":  1.0
+            "gunType": "SG",
+            "atkType": "Explosive",
+            "dfnType": "Heavy",
+            "bulletSpeed": 20.0,
+            "fireRate": 1.0,
+            "reloadTime": 1,
+            "maxAmmo": 8
         },
         {
             "name": "Shiroko",
             "health": 1500,
             "speed": 4.0,
             "attack": 15,
-	        "gunType":  "AR",
-            "atkType":  "Explosive",
-            "dfnType":  "Heavy",
-	        "bulletSpeed":  20.0,
-	        "fireRate":  1.0
+            "gunType": "AR",
+            "atkType": "Explosive",
+            "dfnType": "Heavy",
+            "bulletSpeed": 20.0,
+            "fireRate": 1.0,
+            "reloadTime": 1,
+            "maxAmmo": 15
         }
     ]
 }

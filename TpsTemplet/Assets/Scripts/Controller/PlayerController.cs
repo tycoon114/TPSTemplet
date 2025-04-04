@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
 
     protected CharacterInfo characterInfo;
 
-
     private bool isMoving = false;
     private bool isPlayingFootsteps = false; // 코루틴 중복 실행 방지
 
@@ -53,7 +52,7 @@ public class PlayerController : MonoBehaviour
         //자식 노드에서 가져오기, 캐릭터 선택을 고려하면 플레이어는 빈 오브젝트고 거기로 선택한 캐릭터를 자식으로 불러오는게 하기 25.03.06
         controller = GetComponentInChildren<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-        //소리가 나는 위치
+        //소리가 나는 위치, 구분하기 쉽게 하기 위해 이름 변경이 필요해 보임(2025-04-04)
         target = GameObject.Find("target").GetComponentInChildren<Transform>();
     }
 
@@ -110,7 +109,7 @@ public class PlayerController : MonoBehaviour
             moveDirection.y = 0f;
         }
 
-         //moveDirection = new Vector3(moveDirection.x, moveDirection.y, moveDirection.z);
+        //moveDirection = new Vector3(moveDirection.x, moveDirection.y, moveDirection.z);
 
         // 입력 값을 카메라 기준으로 변환
         moveDirection = (cameraForward * vertical + cameraRight * horizontal);
@@ -125,7 +124,6 @@ public class PlayerController : MonoBehaviour
 
 
         //controller.Move(moveDirection * Time.deltaTime);
-
         // **Player 오브젝트의 회전값 강제 고정 (X=90 유지)**
         //transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
         //// **캐릭터의 실제 모델만 회전 (Y축만 회전)**
@@ -149,33 +147,12 @@ public class PlayerController : MonoBehaviour
         }
         else if (moveDirection != Vector3.zero)// 이동 중이면 이동 방향으로 캐릭터 회전
         {
-            //소리가 겹침 - Update 밖에서 걸어줘야됨
-            //SoundManager.Instance.PlayWalkSfx("walkNormal1");
+            ////W키로 앞으로 갈때만 화면을 따라 회전하게 해보기
+            //if (Input.GetKey(KeyCode.W))
+            //{}
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
             float rotationSpeed = 300f;
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
-
-
-
-    //발소리 제어 임시 코드 - 레이캐스트
-    public void FootStepSoundOn()
-    {
-        //if (Physics.Raycast(transform.position, transform.forward, out hit, 10.0f, itemLayer))
-        //{
-        //    if (hit.ColliderHit.tag == "Snow")
-        //    {
-        //        audioSource.PlayOneShot(audioClipFire); //발소리재생
-        //    }
-        //    else if (hit.ColliderHit.tag == "Sand")
-        //    {
-        //        audioSource.PlayOneShot(audioClipFire); //발소리재생
-        //    }
-        //}
-        //SoundManager.Instance.PlayWalkSfx("walkNormal1", controller.transform.position);
-    }
-
-
-
 }

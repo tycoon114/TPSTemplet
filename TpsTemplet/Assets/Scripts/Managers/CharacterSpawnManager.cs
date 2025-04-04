@@ -74,6 +74,8 @@ public class CharacterInfo
     public string dfnType;
     public float bulletSpeed;
     public float fireRate;
+    public float reloadTime;
+    public int maxAmmo;
 }
 
 [System.Serializable]

@@ -82,22 +82,21 @@ public class PlayerManager : MonoBehaviour
         Vector3 rayOrigin = transform.position + Vector3.up * 0.1f;
         Vector3 rayDirection = Vector3.down;
 
-        Debug.DrawRay(transform.position, transform.forward * 1.5f, Color.yellow);
-
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 10.0f, groundLayer))
+        //이때 바닥으로 쓸 콜라이더는 Ground보다 밑에 설치해야됨
+        if (Physics.Raycast(rayOrigin, rayDirection, out hit, 10.0f, groundLayer))
         {
             if (hit.collider.CompareTag("Sand"))
             {
-                SoundManager.Instance.PlayWalkSfx("runSand1");//발소리재생
-
+                SoundManager.Instance.PlayWalkSfx("runSand1");  //모래 발소리재생
+                return;
             }
             else if (hit.collider.CompareTag("Snow"))
             {
-                SoundManager.Instance.PlayWalkSfx("runsSnow");//발소리재생
+                SoundManager.Instance.PlayWalkSfx("runSnow");   //눈 발소리재생
+                return;
             }
         }
         SoundManager.Instance.PlayWalkSfx("walk1");
     }
-
 
 }
