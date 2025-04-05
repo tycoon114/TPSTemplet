@@ -1,27 +1,27 @@
-using System.Security.Claims;
+ï»¿using System.Security.Claims;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
     private Vector3 currentLookOffset = Vector3.zero;
-    public Vector3 CameraOffset = new Vector3(0, 0.5f, -4);   // Ä«¸Ş¶ó ¿ÀÇÁ¼Â
-    public float mouseSensitivity = 60.0f;             //°¨µµ - ÀÌÈÄ ¿É¼Ç¿¡¼­ Á¶Á¤ °¡´ÉÇÏ°Ô
+    public Vector3 CameraOffset = new Vector3(0, 0.5f, -4);   // ì¹´ë©”ë¼ ì˜¤í”„ì…‹
+    public float mouseSensitivity = 60.0f;             //ê°ë„ - ì´í›„ ì˜µì…˜ì—ì„œ ì¡°ì • ê°€ëŠ¥í•˜ê²Œ
 
-    private float pitch = 0f;   // À§¾Æ·¡ È¸Àü
-    private float yaw = 0f;     // ÁÂ¿ì È¸Àü
+    private float pitch = 0f;   // ìœ„ì•„ë˜ íšŒì „
+    private float yaw = 0f;     // ì¢Œìš° íšŒì „
 
-    public Transform Player;        //ÇÃ·¹ÀÌ¾îÀÇ À§Ä¡, Ä³¸¯ÅÍ ÇÁ¸®Æé
-    private GameObject PlayerGo;    //ÇÃ·¹ÀÌ¾î ºó °ÔÀÓ ¿ÀºêÁ§Æ®
+    public Transform Player;        //í”Œë ˆì´ì–´ì˜ ìœ„ì¹˜, ìºë¦­í„° í”„ë¦¬í©
+    private GameObject PlayerGo;    //í”Œë ˆì´ì–´ ë¹ˆ ê²Œì„ ì˜¤ë¸Œì íŠ¸
 
-    private Vector3 lookPosition;   //º¸´Â À§Ä¡?
-    public Transform PlayerLookObj;  // ÇÃ·¹ÀÌ¾î ¿· Ä«¸Ş¶ó°¡ ÇâÇÒ ¿ÀºêÁ§Æ®
+    private Vector3 lookPosition;   //ë³´ëŠ” ìœ„ì¹˜?
+    public Transform PlayerLookObj;  // í”Œë ˆì´ì–´ ì˜† ì¹´ë©”ë¼ê°€ í–¥í•  ì˜¤ë¸Œì íŠ¸
 
-    private Vector3 targetCamPosition;    //Ä«¸Ş¶ó À§Ä¡°ª
+    private Vector3 targetCamPosition;    //ì¹´ë©”ë¼ ìœ„ì¹˜ê°’
 
-    public float zoomSpeed = 5.0f; // È®´ëÃà¼Ò°¡ µÇ´Â ¼Óµµ
+    public float zoomSpeed = 5.0f; // í™•ëŒ€ì¶•ì†Œê°€ ë˜ëŠ” ì†ë„
 
-    private bool isFreeCameraMode = false;
+    private bool isAiming = false;
 
     private void OnEnable()
     {
@@ -40,11 +40,11 @@ public class CameraController : MonoBehaviour
         PlayerLookObj = Player.transform.Find("PlayerObj");
     }
 
-    //Ä«¸Ş¶ó¸¦ ÀÚÀ¯·Ó°Ô ¿òÁ÷ÀÌ´Â °ÍÀº isAimÀÌ false°¡ µÈ ÈÄ¿¡¸¸ °¡´ÉÇÏµµ·Ï ÄÚµå¸¦ ¼öÁ¤ÇØº¼ ¿¹Àå
-    //ÀÌ¶§ ÇÃ·¹ÀÌ¾î¿·¿¡ ÀÓÀÇÀÇ ¿ÀÇÁ¼ÂÀ» ÇÏ³ª µÎ°í ÀÌ°Íµµ °°ÀÌ È¸ÀüÇÏ¸ç °ÍÀ» ¹Ù¶óº¸µµ·Ï(´Ù¸¥ ÇÁ·ÎÁ§Æ® ÄÚµå Âü°í)
-    //¿òÁ÷ÀÌ´Â µ¿¾ÈÀº Ä«¸Ş¶ó¸¦ °íÁ¤ ½ÃÅ°´Â ¹æ¹ıµµ ÇØº¼°Í - ½ºÆ®¸®³ë¹Ù ¹æ½Ä?
+    //ì¹´ë©”ë¼ë¥¼ ììœ ë¡­ê²Œ ì›€ì§ì´ëŠ” ê²ƒì€ isAimì´ falseê°€ ëœ í›„ì—ë§Œ ê°€ëŠ¥í•˜ë„ë¡ ì½”ë“œë¥¼ ìˆ˜ì •í•´ë³¼ ì˜ˆì¥
+    //ì´ë•Œ í”Œë ˆì´ì–´ì˜†ì— ì„ì˜ì˜ ì˜¤í”„ì…‹ì„ í•˜ë‚˜ ë‘ê³  ì´ê²ƒë„ ê°™ì´ íšŒì „í•˜ë©° ê²ƒì„ ë°”ë¼ë³´ë„ë¡(ë‹¤ë¥¸ í”„ë¡œì íŠ¸ ì½”ë“œ ì°¸ê³ )
+    //ì›€ì§ì´ëŠ” ë™ì•ˆì€ ì¹´ë©”ë¼ë¥¼ ê³ ì • ì‹œí‚¤ëŠ” ë°©ë²•ë„ í•´ë³¼ê²ƒ - ìŠ¤íŠ¸ë¦¬ë…¸ë°” ë°©ì‹?
 
-    //Ä«¸Ş¶ó´Â LateUpdate¸¦ »ç¿ë - ÇÃ·¹ÀÌ¾îÀÇ ÀÌµ¿ÀÌ ¸ÕÀú ½ÇÇà µÇ¾ßµÇ±â ¶§¹®
+    //ì¹´ë©”ë¼ëŠ” LateUpdateë¥¼ ì‚¬ìš© - í”Œë ˆì´ì–´ì˜ ì´ë™ì´ ë¨¼ì € ì‹¤í–‰ ë˜ì•¼ë˜ê¸° ë•Œë¬¸
     void LateUpdate()
     {
 
@@ -54,24 +54,33 @@ public class CameraController : MonoBehaviour
 
         yaw += mouseX;
         pitch += mouseY;
-        //À§ ¾Æ·¡ °¢µµ Á¦ÇÑ
-        pitch = Mathf.Clamp(pitch, -30f, 10f);
-        //Vector3 direction = PlayerLookObj.position + CameraOffset;
+        //ìœ„ ì•„ë˜ ê°ë„ ì œí•œ
+        pitch = Mathf.Clamp(pitch, -45f, 10f);
 
-        //ÇÃ·¹ÀÌ¾î À§Ä¡¿¡¼­ Á¶±İ´õ ¿À¸¥ÂÊ À§·Î ÀÚ¸®Àâ°Ô ¸¸µç´Ù. - Ä«¸Ş¶óÀÇ À§Ä¡
-        //lookPosition = new Vector3(PlayerLookObj.position.x, PlayerLookObj.position.y + CameraOffset.y, PlayerLookObj.position.z);
-        //transform.position = PlayerLookObj.position + Quaternion.Euler(-pitch, yaw, 0) * CameraOffset;
 
-        //Quaternion targetRotation = Quaternion.Euler(pitch, yaw, 0);
-        //transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+        if (isAiming)
+        {
+            Vector3 direction = PlayerLookObj.position + CameraOffset;
 
-        lookPosition = Player.position + new Vector3(0.62f, CameraOffset.y, 0);
+            //í”Œë ˆì´ì–´ ìœ„ì¹˜ì—ì„œ ì¡°ê¸ˆë” ì˜¤ë¥¸ìª½ ìœ„ë¡œ ìë¦¬ì¡ê²Œ ë§Œë“ ë‹¤. - ì¹´ë©”ë¼ì˜ ìœ„ì¹˜
+            lookPosition = new Vector3(PlayerLookObj.position.x, PlayerLookObj.position.y + CameraOffset.y, PlayerLookObj.position.z);
+            transform.position = PlayerLookObj.position + Quaternion.Euler(-pitch, yaw, 0) * CameraOffset;
 
-        transform.position = Player.position + Quaternion.Euler(-pitch, yaw, 0) * CameraOffset;
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(pitch, yaw, 0), Time.deltaTime * 5f);
+            Quaternion targetRotation = Quaternion.Euler(pitch, yaw, 0);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+            transform.LookAt(lookPosition);
 
-        transform.LookAt(lookPosition);
-        //Ä«¸Ş¶ó º® Ãæµ¹
+        }
+        else
+        {
+            lookPosition = Player.position + new Vector3(0.62f, CameraOffset.y, 0);
+
+            transform.position = Player.position + Quaternion.Euler(-pitch, yaw, 0) * CameraOffset;
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(pitch, yaw, 0), Time.deltaTime * 5f);
+
+            transform.LookAt(lookPosition);
+        }
+        //ì¹´ë©”ë¼ ë²½ ì¶©ëŒ
         avoidObjects();
     }
 
@@ -79,13 +88,13 @@ public class CameraController : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 rayDirection = transform.position - PlayerLookObj.transform.position;
-        //±¤¼±À» ½Ã°¢È­ ÇÏ±â À§ÇÔ
+        //ê´‘ì„ ì„ ì‹œê°í™” í•˜ê¸° ìœ„í•¨
         Debug.DrawRay(PlayerLookObj.transform.position, rayDirection.normalized * rayDirection.magnitude, Color.red);
 
         if (Physics.Raycast(PlayerLookObj.transform.position, rayDirection.normalized * rayDirection.magnitude, out hit, rayDirection.magnitude, LayerMask.GetMask("Wall")))
         {
             Debug.Log("Hit");
-            //ÀÏ´Ü º®¿¡ ´êÀ¸¸é °¡±îÀÌ °¡´Â ÄÚµå.... Ãß°¡ÀûÀ¸·Î ´õ ´Ùµë¾î Áà¾ßµÊ
+            //ì¼ë‹¨ ë²½ì— ë‹¿ìœ¼ë©´ ê°€ê¹Œì´ ê°€ëŠ” ì½”ë“œ.... ì¶”ê°€ì ìœ¼ë¡œ ë” ë‹¤ë“¬ì–´ ì¤˜ì•¼ë¨
             transform.position = hit.point + hit.normal * 0.2f;
         }
         else
@@ -100,10 +109,12 @@ public class CameraController : MonoBehaviour
 
         if (isAim)
         {
+            isAiming = isAim;
             targetOffset = GetZoomedOffset();
         }
         else
         {
+            isAiming = isAim;
             targetOffset = GetDefaultOffset();
         }
         CameraOffset = Vector3.Lerp(CameraOffset, targetOffset, Time.deltaTime * zoomSpeed);
@@ -116,7 +127,7 @@ public class CameraController : MonoBehaviour
 
     private Vector3 GetZoomedOffset()
     {
-        return new Vector3(-1.9f, 0.7f, -1f);
+        return new Vector3(0, 0.5f, -4);
     }
 }
 
