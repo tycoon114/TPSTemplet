@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -14,23 +14,23 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private Vector3 moveDirection;
 
-    public float moveSpeed = 5f;   // ÀÌµ¿ ¼Óµµ
-    public float gravity = 9.8f;   // Áß·Â
+    public float moveSpeed = 5f;   // ì´ë™ ì†ë„
+    public float gravity = 9.8f;   // ì¤‘ë ¥
 
     protected bool isAim = false;
-    protected int atkType;          //°ø°İÅ¸ÀÔ
-    protected int dfnType;          //¹æ¾î Å¸ÀÔ
+    protected int atkType;          //ê³µê²©íƒ€ì…
+    protected int dfnType;          //ë°©ì–´ íƒ€ì…
 
-    public float animationSpeed = 3.0f; //¾Ö´Ï¸ŞÀÌ¼Ç Àç»ı ¼Óµµ
+    public float animationSpeed = 3.0f; //ì• ë‹ˆë©”ì´ì…˜ ì¬ìƒ ì†ë„
     public string currentAnimation;
 
-    public Transform target; // sfx ¼Ò¸® Àç»ı À§Ä¡
-    public MultiAimConstraint multiAimciConstraint;         //»óÃ¼ µÚÆ²¸² ¹æÁö?
+    public Transform target; // sfx ì†Œë¦¬ ì¬ìƒ ìœ„ì¹˜
+    public MultiAimConstraint multiAimciConstraint;         //ìƒì²´ ë’¤í‹€ë¦¼ ë°©ì§€?
 
     protected CharacterInfo characterInfo;
 
     private bool isMoving = false;
-    private bool isPlayingFootsteps = false; // ÄÚ·çÆ¾ Áßº¹ ½ÇÇà ¹æÁö
+    private bool isPlayingFootsteps = false; // ì½”ë£¨í‹´ ì¤‘ë³µ ì‹¤í–‰ ë°©ì§€
 
     private void OnEnable()
     {
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         CharacterSpawnManager.OnLoadCharacterData -= SetCharacterData;
     }
 
-    //spawnManager¿¡¼­ °¡Á®¿Â Ä³¸¯ÅÍ µ¥ÀÌÅÍ ¹Ş±â
+    //spawnManagerì—ì„œ ê°€ì ¸ì˜¨ ìºë¦­í„° ë°ì´í„° ë°›ê¸°
     private void SetCharacterData(CharacterInfo info)
     {
         this.characterInfo = info;
@@ -49,39 +49,39 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        //ÀÚ½Ä ³ëµå¿¡¼­ °¡Á®¿À±â, Ä³¸¯ÅÍ ¼±ÅÃÀ» °í·ÁÇÏ¸é ÇÃ·¹ÀÌ¾î´Â ºó ¿ÀºêÁ§Æ®°í °Å±â·Î ¼±ÅÃÇÑ Ä³¸¯ÅÍ¸¦ ÀÚ½ÄÀ¸·Î ºÒ·¯¿À´Â°Ô ÇÏ±â 25.03.06
+        //ìì‹ ë…¸ë“œì—ì„œ ê°€ì ¸ì˜¤ê¸°, ìºë¦­í„° ì„ íƒì„ ê³ ë ¤í•˜ë©´ í”Œë ˆì´ì–´ëŠ” ë¹ˆ ì˜¤ë¸Œì íŠ¸ê³  ê±°ê¸°ë¡œ ì„ íƒí•œ ìºë¦­í„°ë¥¼ ìì‹ìœ¼ë¡œ ë¶ˆëŸ¬ì˜¤ëŠ”ê²Œ í•˜ê¸° 25.03.06
         controller = GetComponentInChildren<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-        //¼Ò¸®°¡ ³ª´Â À§Ä¡, ±¸ºĞÇÏ±â ½±°Ô ÇÏ±â À§ÇØ ÀÌ¸§ º¯°æÀÌ ÇÊ¿äÇØ º¸ÀÓ(2025-04-04)
+        //ì†Œë¦¬ê°€ ë‚˜ëŠ” ìœ„ì¹˜, êµ¬ë¶„í•˜ê¸° ì‰½ê²Œ í•˜ê¸° ìœ„í•´ ì´ë¦„ ë³€ê²½ì´ í•„ìš”í•´ ë³´ì„(2025-04-04)
         target = GameObject.Find("target").GetComponentInChildren<Transform>();
     }
 
     void Update()
     {
-        // ÀÔ·Â ¹Ş±â
+        // ì…ë ¥ ë°›ê¸°
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        // ÀÌµ¿ º¤ÅÍ ¼³Á¤
+        // ì´ë™ ë²¡í„° ì„¤ì •
         Vector3 move = new Vector3(horizontal, 0, vertical).normalized;
 
-        // ÇöÀç Ä«¸Ş¶óÀÇ È¸Àü °ª °¡Á®¿À±â
+        // í˜„ì¬ ì¹´ë©”ë¼ì˜ íšŒì „ ê°’ ê°€ì ¸ì˜¤ê¸°
         Vector3 cameraForward = Camera.main.transform.forward;
         Vector3 cameraRight = Camera.main.transform.right;
-        // YÃà ¹æÇâ Á¦°Å (¼öÁ÷ ÀÌµ¿ ¹æÁö)
+        // Yì¶• ë°©í–¥ ì œê±° (ìˆ˜ì§ ì´ë™ ë°©ì§€)
         cameraForward.y = 0f;
         cameraRight.y = 0f;
-        // Á¤±ÔÈ­ (±æÀÌ¸¦ 1·Î Á¶Á¤)
+        // ì •ê·œí™” (ê¸¸ì´ë¥¼ 1ë¡œ ì¡°ì •)
         cameraForward.Normalize();
         cameraRight.Normalize();
 
-        // speed °ª Áï°¢ ¹İ¿µ (Å°¸¦ ´©¸£´Â Áï½Ã ¾Ö´Ï¸ŞÀÌ¼Ç ÀüÈ¯µÊ)
+        // speed ê°’ ì¦‰ê° ë°˜ì˜ (í‚¤ë¥¼ ëˆ„ë¥´ëŠ” ì¦‰ì‹œ ì• ë‹ˆë©”ì´ì…˜ ì „í™˜ë¨)
         float speed = move.magnitude;
 
         isMoving = move.magnitude > 0;
         animator.SetBool("isMoving", isMoving);
 
-        //Á¶ÁØ½Ã ÀÌµ¿ Á¦¾î¸¦ À§ÇØ,¿ì¼± Á¶ÁØ¿¡ ´ëÇÑ ÄÚµå´Â GunController´ë½Å ¿©±â¼­ Ã³¸®
+        //ì¡°ì¤€ì‹œ ì´ë™ ì œì–´ë¥¼ ìœ„í•´,ìš°ì„  ì¡°ì¤€ì— ëŒ€í•œ ì½”ë“œëŠ” GunControllerëŒ€ì‹  ì—¬ê¸°ì„œ ì²˜ë¦¬
         if (Input.GetMouseButton(1))
         {
             isAim = true;
@@ -95,11 +95,11 @@ public class PlayerController : MonoBehaviour
 
         //Vector3 moveXZ = (cameraForward * vertical + cameraRight * horizontal) * moveSpeed;
 
-        //// **ÀÌÀü Y°ª À¯Áö!**
+        //// **ì´ì „ Yê°’ ìœ ì§€!**
         //moveDirection.x = moveXZ.x;
         //moveDirection.z = moveXZ.z;
 
-        // Áß·Â Àû¿ë
+        // ì¤‘ë ¥ ì ìš©
         if (!controller.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
 
         //moveDirection = new Vector3(moveDirection.x, moveDirection.y, moveDirection.z);
 
-        // ÀÔ·Â °ªÀ» Ä«¸Ş¶ó ±âÁØÀ¸·Î º¯È¯
+        // ì…ë ¥ ê°’ì„ ì¹´ë©”ë¼ ê¸°ì¤€ìœ¼ë¡œ ë³€í™˜
         moveDirection = (cameraForward * vertical + cameraRight * horizontal);
 
         if (moveDirection.magnitude > 1f)
@@ -119,17 +119,17 @@ public class PlayerController : MonoBehaviour
             moveDirection.Normalize();
         }
 
-        // ÀÌµ¿ Ã³¸®
+        // ì´ë™ ì²˜ë¦¬
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
 
         //controller.Move(moveDirection * Time.deltaTime);
-        // **Player ¿ÀºêÁ§Æ®ÀÇ È¸Àü°ª °­Á¦ °íÁ¤ (X=90 À¯Áö)**
+        // **Player ì˜¤ë¸Œì íŠ¸ì˜ íšŒì „ê°’ ê°•ì œ ê³ ì • (X=90 ìœ ì§€)**
         //transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
-        //// **Ä³¸¯ÅÍÀÇ ½ÇÁ¦ ¸ğµ¨¸¸ È¸Àü (YÃà¸¸ È¸Àü)**
+        //// **ìºë¦­í„°ì˜ ì‹¤ì œ ëª¨ë¸ë§Œ íšŒì „ (Yì¶•ë§Œ íšŒì „)**
         //if (move.magnitude > 0)
         //{
-        //    Transform characterTransform = controller.transform; // CharacterController°¡ ÀÖ´Â ¿ÀºêÁ§Æ®
+        //    Transform characterTransform = controller.transform; // CharacterControllerê°€ ìˆëŠ” ì˜¤ë¸Œì íŠ¸
         //    Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0, moveDirection.z));
         //    characterTransform.rotation = Quaternion.Slerp(characterTransform.rotation, newRotation, Time.deltaTime * 10f);
         //}
@@ -141,13 +141,13 @@ public class PlayerController : MonoBehaviour
 
         if (isAim)
         {
-            //Á¶ÁØ½Ã¿¡´Â ÀÌµ¿ÇÒ ¶§ º¸´Ù´Â »¡¸® È¸Àü 2025-03-10 23:16
+            //ì¡°ì¤€ì‹œì—ëŠ” ì´ë™í•  ë•Œ ë³´ë‹¤ëŠ” ë¹¨ë¦¬ íšŒì „ 2025-03-10 23:16
             Quaternion targetRotation = Quaternion.LookRotation(cameraForward);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 7f);
         }
-        else if (moveDirection != Vector3.zero)// ÀÌµ¿ ÁßÀÌ¸é ÀÌµ¿ ¹æÇâÀ¸·Î Ä³¸¯ÅÍ È¸Àü
+        else if (moveDirection != Vector3.zero)// ì´ë™ ì¤‘ì´ë©´ ì´ë™ ë°©í–¥ìœ¼ë¡œ ìºë¦­í„° íšŒì „
         {
-            ////WÅ°·Î ¾ÕÀ¸·Î °¥¶§¸¸ È­¸éÀ» µû¶ó È¸ÀüÇÏ°Ô ÇØº¸±â
+            ////Wí‚¤ë¡œ ì•ìœ¼ë¡œ ê°ˆë•Œë§Œ í™”ë©´ì„ ë”°ë¼ íšŒì „í•˜ê²Œ í•´ë³´ê¸°
             //if (Input.GetKey(KeyCode.W))
             //{}
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
