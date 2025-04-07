@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour
     public Transform Player;        //플레이어의 위치, 캐릭터 프리펩
     private GameObject PlayerGo;    //플레이어 빈 게임 오브젝트
 
-    private Vector3 lookPosition;   //보는 위치?
+    private Vector3 lookPosition;   //보는 위치
     public Transform PlayerLookObj;  // 플레이어 옆 카메라가 향할 오브젝트
 
     private Vector3 targetCamPosition;    //카메라 위치값
@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
     public float zoomSpeed = 5.0f; // 확대축소가 되는 속도
 
     private bool isAiming = false;
-
+    private bool isFreeCamera = false;
     private void OnEnable()
     {
         PlayerController.OnIsAim += UpdateCameraOffset;
@@ -47,8 +47,6 @@ public class CameraController : MonoBehaviour
     //카메라는 LateUpdate를 사용 - 플레이어의 이동이 먼저 실행 되야되기 때문
     void LateUpdate()
     {
-
-
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
@@ -57,26 +55,27 @@ public class CameraController : MonoBehaviour
         //위 아래 각도 제한
         pitch = Mathf.Clamp(pitch, -45f, 10f);
 
-
+        //시네머신의 screen Position처럼 화면을 돌림
         if (isAiming)
         {
-            Vector3 direction = PlayerLookObj.position + CameraOffset;
+            Quaternion cameraRotation = Quaternion.Euler(-pitch, yaw, 0);
 
-            //플레이어 위치에서 조금더 오른쪽 위로 자리잡게 만든다. - 카메라의 위치
-            lookPosition = new Vector3(PlayerLookObj.position.x, PlayerLookObj.position.y + CameraOffset.y, PlayerLookObj.position.z);
-            transform.position = PlayerLookObj.position + Quaternion.Euler(-pitch, yaw, 0) * CameraOffset;
+            transform.position = Player.position + cameraRotation * CameraOffset;
 
-            Quaternion targetRotation = Quaternion.Euler(pitch, yaw, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+            Vector3 offset = cameraRotation * new Vector3(0.6f, 0f, 0f);
+            lookPosition = Player.position + new Vector3(0, CameraOffset.y, 0) + offset;
+
             transform.LookAt(lookPosition);
 
         }
         else
         {
-            lookPosition = Player.position + new Vector3(0.62f, CameraOffset.y, 0);
+            Quaternion cameraRotation = Quaternion.Euler(-pitch, yaw, 0);
 
-            transform.position = Player.position + Quaternion.Euler(-pitch, yaw, 0) * CameraOffset;
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(pitch, yaw, 0), Time.deltaTime * 5f);
+            transform.position = Player.position + cameraRotation * CameraOffset;
+
+            Vector3 offset = cameraRotation * new Vector3(0.6f, 0f, 0f);
+            lookPosition = Player.position + new Vector3(0, CameraOffset.y, 0) + offset;
 
             transform.LookAt(lookPosition);
         }
