@@ -19,6 +19,8 @@ public class CameraController : MonoBehaviour
 
     private Vector3 targetCamPosition;    //카메라 위치값
 
+    private float defaultFov = 40f;
+    private float zoomFov = 20f;
     public float zoomSpeed = 5.0f; // 확대축소가 되는 속도
 
     private bool isAiming = false;
@@ -56,29 +58,15 @@ public class CameraController : MonoBehaviour
         pitch = Mathf.Clamp(pitch, -45f, 10f);
 
         //시네머신의 screen Position처럼 화면을 돌림
-        if (isAiming)
-        {
-            Quaternion cameraRotation = Quaternion.Euler(-pitch, yaw, 0);
+        Quaternion cameraRotation = Quaternion.Euler(-pitch, yaw, 0);
 
-            transform.position = Player.position + cameraRotation * CameraOffset;
+        transform.position = Player.position + cameraRotation * CameraOffset;
 
-            Vector3 offset = cameraRotation * new Vector3(0.6f, 0f, 0f);
-            lookPosition = Player.position + new Vector3(0, CameraOffset.y, 0) + offset;
+        Vector3 offset = cameraRotation * new Vector3(0.6f, 0f, 0f);
+        lookPosition = Player.position + new Vector3(0, CameraOffset.y, 0) + offset;
 
-            transform.LookAt(lookPosition);
+        transform.LookAt(lookPosition);
 
-        }
-        else
-        {
-            Quaternion cameraRotation = Quaternion.Euler(-pitch, yaw, 0);
-
-            transform.position = Player.position + cameraRotation * CameraOffset;
-
-            Vector3 offset = cameraRotation * new Vector3(0.6f, 0f, 0f);
-            lookPosition = Player.position + new Vector3(0, CameraOffset.y, 0) + offset;
-
-            transform.LookAt(lookPosition);
-        }
         //카메라 벽 충돌
         avoidObjects();
     }
@@ -104,29 +92,17 @@ public class CameraController : MonoBehaviour
 
     public void UpdateCameraOffset(bool isAim)
     {
-        Vector3 targetOffset;
-
+        //조준 시 줌
         if (isAim)
         {
             isAiming = isAim;
-            targetOffset = GetZoomedOffset();
+            Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, zoomFov, Time.deltaTime * zoomSpeed);
         }
         else
         {
             isAiming = isAim;
-            targetOffset = GetDefaultOffset();
+            Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, defaultFov, Time.deltaTime * zoomSpeed);
         }
-        CameraOffset = Vector3.Lerp(CameraOffset, targetOffset, Time.deltaTime * zoomSpeed);
-    }
-
-    private Vector3 GetDefaultOffset()
-    {
-        return new Vector3(0, 0.5f, -4);
-    }
-
-    private Vector3 GetZoomedOffset()
-    {
-        return new Vector3(0, 0.5f, -4);
     }
 }
 
