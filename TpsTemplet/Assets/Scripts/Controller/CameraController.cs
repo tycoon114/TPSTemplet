@@ -4,8 +4,7 @@ using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
-    private Vector3 currentLookOffset = Vector3.zero;
-    public Vector3 CameraOffset = new Vector3(0, 0.5f, -4);   // 카메라 오프셋
+    public Vector3 CameraOffset = new Vector3(0f, 0.5f, -4.0f);   // 카메라 오프셋
     public float mouseSensitivity = 60.0f;             //감도 - 이후 옵션에서 조정 가능하게
 
     private float pitch = 0f;   // 위아래 회전
@@ -15,9 +14,6 @@ public class CameraController : MonoBehaviour
     private GameObject PlayerGo;    //플레이어 빈 게임 오브젝트
 
     private Vector3 lookPosition;   //보는 위치
-    public Transform PlayerLookObj;  // 플레이어 옆 카메라가 향할 오브젝트
-
-    private Vector3 targetCamPosition;    //카메라 위치값
 
     private float defaultFov = 40f;
     private float zoomFov = 20f;
@@ -39,12 +35,7 @@ public class CameraController : MonoBehaviour
     {
         PlayerGo = GameObject.Find("Player");
         Player = PlayerGo.transform.GetChild(0);
-        PlayerLookObj = Player.transform.Find("PlayerObj");
     }
-
-    //카메라를 자유롭게 움직이는 것은 isAim이 false가 된 후에만 가능하도록 코드를 수정해볼 예장
-    //이때 플레이어옆에 임의의 오프셋을 하나 두고 이것도 같이 회전하며 것을 바라보도록(다른 프로젝트 코드 참고)
-    //움직이는 동안은 카메라를 고정 시키는 방법도 해볼것 - 스트리노바 방식?
 
     //카메라는 LateUpdate를 사용 - 플레이어의 이동이 먼저 실행 되야되기 때문
     void LateUpdate()
@@ -67,20 +58,22 @@ public class CameraController : MonoBehaviour
 
         transform.LookAt(lookPosition);
 
-        //카메라 벽 충돌
+        //카메라 벽 충돌 체크
         avoidObjects();
     }
 
     void avoidObjects()
     {
         RaycastHit hit;
-        Vector3 rayDirection = transform.position - PlayerLookObj.transform.position;
-        //광선을 시각화 하기 위함
-        Debug.DrawRay(PlayerLookObj.transform.position, rayDirection.normalized * rayDirection.magnitude, Color.red);
+        Vector3 rayDirection = transform.position - Player.transform.position;
 
-        if (Physics.Raycast(PlayerLookObj.transform.position, rayDirection.normalized * rayDirection.magnitude, out hit, rayDirection.magnitude, LayerMask.GetMask("Wall")))
+        float cameraDistance = rayDirection.magnitude;
+
+        //광선을 시각화 하기 위함
+        Debug.DrawRay(Player.transform.position, rayDirection.normalized * rayDirection.magnitude, Color.red);
+
+        if (Physics.Raycast(Player.transform.position, rayDirection.normalized * rayDirection.magnitude, out hit, rayDirection.magnitude, LayerMask.GetMask("Wall")))
         {
-            Debug.Log("Hit");
             //일단 벽에 닿으면 가까이 가는 코드.... 추가적으로 더 다듬어 줘야됨
             transform.position = hit.point + hit.normal * 0.2f;
         }
@@ -105,6 +98,3 @@ public class CameraController : MonoBehaviour
         }
     }
 }
-
-
-

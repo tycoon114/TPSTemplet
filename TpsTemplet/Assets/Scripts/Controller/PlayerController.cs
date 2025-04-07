@@ -109,6 +109,12 @@ public class PlayerController : MonoBehaviour
             moveDirection.y = 0f;
         }
 
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //점프는 여기에 구현
+        }
+
         //moveDirection = new Vector3(moveDirection.x, moveDirection.y, moveDirection.z);
 
         // 입력 값을 카메라 기준으로 변환
@@ -147,12 +153,26 @@ public class PlayerController : MonoBehaviour
         }
         else if (moveDirection != Vector3.zero)// 이동 중이면 이동 방향으로 캐릭터 회전
         {
-            ////W키로 앞으로 갈때만 화면을 따라 회전하게 해보기
-            //if (Input.GetKey(KeyCode.W))
-            //{}
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
             float rotationSpeed = 300f;
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
+
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            //if 조건에 추가로 쿨타임이 완료됬는지 확인 필요
+            //스킬 버튼 비활성화
+            //스킬 버튼 알파값 낮추기 -? 이벤트를 걸어서 플레이어 매니저에서 구현...
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            //if 조건에 추가로 궁극기가 찾는지 확인 필요
+
+        }
+
+
     }
 }
