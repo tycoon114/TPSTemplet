@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed = 5f;   // 이동 속도
     public float gravity = 9.8f;   // 중력
+    private float jumpForce = 2.0f;
+
 
     protected bool isAim = false;
     protected int atkType;          //공격타입
@@ -30,7 +32,9 @@ public class PlayerController : MonoBehaviour
     protected CharacterInfo characterInfo;
 
     private bool isMoving = false;
-    private bool isPlayingFootsteps = false; // 코루틴 중복 실행 방지
+    private bool isJump = false;    //현재 점프 상태인지
+
+    private float verticalVelocity = 0f;
 
     private void OnEnable()
     {
@@ -103,17 +107,22 @@ public class PlayerController : MonoBehaviour
         if (!controller.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
+            isJump = false;
         }
         else
         {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                //점프는 여기에 구현
+                Debug.Log("check");
+                verticalVelocity = jumpForce;
+                isJump = true;
+            }
+
             moveDirection.y = 0f;
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //점프는 여기에 구현
-        }
 
         //moveDirection = new Vector3(moveDirection.x, moveDirection.y, moveDirection.z);
 
@@ -126,6 +135,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // 이동 처리
+
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
 

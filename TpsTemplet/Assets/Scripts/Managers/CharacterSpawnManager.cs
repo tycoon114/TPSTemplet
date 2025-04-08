@@ -47,7 +47,7 @@ public class CharacterSpawnManager : MonoBehaviour
         {
             if (info.name == characterName)
             {
-                Debug.Log($"이름: {info.name}, 체력: {info.health}, 속도: {info.speed}, 공격력: {info.attack} , 총기: {info.gunType}");
+                Debug.Log($"이름: {info.name}, 체력: {info.health}, 속도: {info.speed}, 공격력: {info.damage} , 총기: {info.gunType}");
                 //확인이 되면 이벤트 발생 -> playerController로 정보 보내 주기
                 OnLoadCharacterData?.Invoke(info);
                 return;
@@ -68,7 +68,7 @@ public class CharacterInfo
     public string name;
     public int health;
     public float speed;
-    public int attack;
+    public float damage;
     public string gunType;
     public string atkType;
     public string dfnType;
