@@ -1358,6 +1358,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 66e24f97b311d3a45a0d7bffcb98051e, type: 3}
   - name: HGReload
     clip: {fileID: 8300000, guid: 0c5904a75da570c42ad53f9da32aa34d, type: 3}
+  - name: SRReload
+    clip: {fileID: 8300000, guid: 0c5904a75da570c42ad53f9da32aa34d, type: 3}
+  - name: SRShoot
+    clip: {fileID: 8300000, guid: 66e24f97b311d3a45a0d7bffcb98051e, type: 3}
   skilClipList: []
 --- !u!4 &1306296700
 Transform:

@@ -62,6 +62,13 @@ public class CharacterSelectUI : MonoBehaviour
         characterName.text = "시로코";
     }
 
+    public void OnWakamoClicked()
+    {
+        selectedCharacter = "Wakamo";
+        SetPortraitImage(selectedCharacter);
+        characterName.text = "와카모";
+    }
+
 
     public void OnCharacterConfirm()
     {

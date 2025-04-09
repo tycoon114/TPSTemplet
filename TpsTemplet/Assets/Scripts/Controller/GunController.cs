@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Animations.Rigging;
+using System.Security.Cryptography.X509Certificates;
 
 public class GunController : PlayerController
 {
@@ -102,7 +103,7 @@ public class GunController : PlayerController
         animator.SetBool("isAim", isAim);
         //animator.SetLayerWeight(1, 1);
 
-        if (Input.GetMouseButtonDown(0) && isAim && currentAmmo != 0 && fireCoroutine == null && !isReload) // fire  ... 나중에 캐릭터 컨트롤러에서 여기를 오도록?
+        if (Input.GetMouseButtonDown(0) && isAim && currentAmmo != 0 && fireCoroutine == null && !isReload && !IsInAnimationState("Shoot")) // && !IsInAnimationState("Shoot") -> 사격 애니메이션 중이면 사격 불가능..약간 수정 필요
         {
             fireCoroutine = StartCoroutine(AttackStart());
         }
@@ -196,7 +197,7 @@ public class GunController : PlayerController
         }
         else if (gunType.Equals("SR"))
         {
-            //SoundManager.Instance.PlayGunSfx("SRhooting", target.transform.position);
+            SoundManager.Instance.PlayGunSfx("SRShooting", target.transform.position);
         }
         else if (gunType.Equals("MG"))
         {
@@ -303,6 +304,13 @@ public class GunController : PlayerController
         float spreadY = UnityEngine.Random.Range(-spreadAngle, spreadAngle);
         Vector3 spreadDirection = Quaternion.Euler(spreadX, spreadY, 0) * forwardDirection;
         return spreadDirection;
+    }
+
+    //사격 애니메이션 중에는 사격 불가능
+    private bool IsInAnimationState(string animState)
+    {
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        return stateInfo.IsName(animState);
     }
 
 

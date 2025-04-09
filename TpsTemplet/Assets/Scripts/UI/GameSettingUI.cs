@@ -54,7 +54,7 @@ public class GameSettingUI : MonoBehaviour
     {
         if (toggle.isOn)
         {
-            Debug.Log(toggle.name);
+            //Debug.Log(toggle.name);
             resolution = toggle.name;   
         }
     }
@@ -64,7 +64,7 @@ public class GameSettingUI : MonoBehaviour
     {
         if (toggle.isOn)
         {
-            Debug.Log(toggle.name);
+            //Debug.Log(toggle.name);
         }
     }
 
@@ -76,12 +76,12 @@ public class GameSettingUI : MonoBehaviour
             if (toggle.name.Equals("graphicToggleFullScreen"))
             {
                 isFullScreen = true;
-                Debug.Log(isFullScreen);
+                //Debug.Log(isFullScreen);
             }
             else
             {
                 isFullScreen = false;
-                Debug.Log(isFullScreen);
+                //Debug.Log(isFullScreen);
             }
         }
     }
@@ -97,8 +97,8 @@ public class GameSettingUI : MonoBehaviour
     {
         SoundManager.Instance.PlaySfx("buttonTouch");
         //string[] res = resolutions[resolutionIndex].Split('X');   //각 토글 버튼 마다 해상도를 정해두고 , 이를 alpha X Beta 값으로 설정
-        Debug.Log(resolution);
-        Debug.Log(isFullScreen);
+        //Debug.Log(resolution);
+        //Debug.Log(isFullScreen);
     }
 
     private void SaveSetting()

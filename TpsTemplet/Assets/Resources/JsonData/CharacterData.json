@@ -51,6 +51,19 @@
             "fireRate": 1.0,
             "reloadTime": 1,
             "maxAmmo": 15
+        },
+        {
+            "name": "Wakamo",
+            "health": 1500,
+            "speed": 4.0,
+            "damage": 15,
+            "gunType": "SR",
+            "atkType": "Myth",
+            "dfnType": "Heavy",
+            "bulletSpeed": 20.0,
+            "fireRate": 1.0,
+            "reloadTime": 1,
+            "maxAmmo": 15
         }
     ]
 }

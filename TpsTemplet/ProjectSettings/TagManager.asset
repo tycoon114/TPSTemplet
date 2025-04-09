@@ -11,6 +11,7 @@ TagManager:
   - FxTemporaire
   - Sand
   - Snow
+  - DamageZone
   layers:
   - Default
   - TransparentFX

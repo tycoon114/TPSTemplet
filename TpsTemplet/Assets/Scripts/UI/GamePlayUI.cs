@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,10 @@ public class GamePlayUI : MonoBehaviour
     public TextMeshProUGUI hpText;
     public Image portraitImage;
     public Image weaponImage;
+    public Image skillImage;
+    //public Image ultImage;
+
+
 
     public GameObject crossHair;
     public GameObject escMenu;
@@ -18,18 +23,23 @@ public class GamePlayUI : MonoBehaviour
 
 
     private string selectedCharacterName;
+
+        
+    private float originalAlpha;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         escMenu.SetActive(false);
-        settingsObj.SetActive(false);   
+        settingsObj.SetActive(false);
         GameObject player = GameObject.Find("Player");
         if (player != null)
         {
             selectedCharacterName = player.transform.GetChild(0).name; // 캐릭터의 이름 가져오기
             SetPlayerPortrait(selectedCharacterName);
         }
+        originalAlpha = skillImage.color.a;
     }
 
     void Update()
@@ -61,7 +71,7 @@ public class GamePlayUI : MonoBehaviour
     {
         SoundManager.Instance.PlaySfx("buttonTouch");
         isSettingActive = !isSettingActive;
-        settingsObj.SetActive(isSettingActive); 
+        settingsObj.SetActive(isSettingActive);
     }
 
     public void OnReturnMainMenuClick()
@@ -73,9 +83,12 @@ public class GamePlayUI : MonoBehaviour
 
     void OnEnable()
     {
-        GunController.onAmmoChanged += UpdateAmmoUI; // 이벤트 구독
-        GunController.CrossHairSet += CrossHairSet;
-        PlayerManager.UpdateHPUI += UpdateHPUI;
+        GunController.onAmmoChanged += UpdateAmmoUI; //탄약 수
+        GunController.CrossHairSet += CrossHairSet;     //조준 시 크로스헤어 활성화
+        PlayerManager.UpdateHPUI += UpdateHPUI;         //플레이어 체력
+
+        PlayerController.SetSkillUI += SetSkillUI;     //스킬 아이콘 알파값
+
     }
 
     void OnDisable()
@@ -83,6 +96,9 @@ public class GamePlayUI : MonoBehaviour
         GunController.onAmmoChanged -= UpdateAmmoUI; // 이벤트 해제
         GunController.CrossHairSet -= CrossHairSet;
         PlayerManager.UpdateHPUI -= UpdateHPUI;
+
+        PlayerController.SetSkillUI -= SetSkillUI;
+
     }
 
     void UpdateAmmoUI(int currentAmmo, int maxAmmo)
@@ -113,9 +129,12 @@ public class GamePlayUI : MonoBehaviour
         string portraitPath = "Image/portrait/Texture2D/Student_Portrait_" + studentName;
         //string portraitPath = "Image/portraitSkillsize/Texture2D/Skill_Portrait_" + studentName;
         string weaponPortraitPath = "Image/weapon/Texture2D/Weapon_Icon_" + studentName;
+
         Debug.Log(studentName);
         Sprite characterPortrait = Resources.Load<Sprite>(portraitPath);
         Sprite weaponPortrait = Resources.Load<Sprite>(weaponPortraitPath);
+        Sprite playerSkillIcon;
+
 
         if (characterPortrait != null)
         {
@@ -136,4 +155,41 @@ public class GamePlayUI : MonoBehaviour
             Debug.LogWarning("무기 이미지가 없습니다: " + studentName);
         }
     }
+
+    void SetSkillUI(bool isSkillUsed)
+    {
+        Debug.Log("스킬 테스트");
+
+        StartCoroutine(UpdateSkillUIAlpha());  
+
+    }
+
+
+    private IEnumerator UpdateSkillUIAlpha()
+    {
+        //임시 스킬 쿨 타임
+        float tempSkillCool = 10.0f;
+
+        //기본 알파값
+        Color skillImageColor = skillImage.color;
+
+        
+
+        skillImageColor.a = 0.3f;
+        skillImage.color = skillImageColor;
+
+        float elapsed = 0f;
+        while (elapsed < tempSkillCool)
+        {
+            elapsed += Time.deltaTime;
+            float alpha = Mathf.Lerp(0.3f, originalAlpha, elapsed / tempSkillCool);
+            skillImageColor.a = alpha;
+            yield return null;
+        }
+        skillImageColor.a = originalAlpha;
+        skillImage.color = skillImageColor;
+
+    }
+
+
 }

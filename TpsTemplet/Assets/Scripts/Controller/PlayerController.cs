@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
 {
 
     public static event Action<bool> OnIsAim;
+    public static event Action<bool> SetSkillUI;
+
 
     private CharacterController controller;
     private Animator animator;
@@ -35,6 +37,8 @@ public class PlayerController : MonoBehaviour
     private bool isJump = false;    //현재 점프 상태인지
 
     private float verticalVelocity = 0f;
+
+    private bool isSkillCool = false;   //스킬 쿨타임인지 -> true일 경우 쿨타임 상태
 
     private void OnEnable()
     {
@@ -86,6 +90,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isMoving", isMoving);
 
         //조준시 이동 제어를 위해,우선 조준에 대한 코드는 GunController대신 여기서 처리
+        
         if (Input.GetMouseButton(1))
         {
             isAim = true;
@@ -150,10 +155,6 @@ public class PlayerController : MonoBehaviour
         //    characterTransform.rotation = Quaternion.Slerp(characterTransform.rotation, newRotation, Time.deltaTime * 10f);
         //}
 
-        //if (isMoving && controller.isGrounded && !isPlayingFootsteps)
-        //{
-        //    StartCoroutine(PlayFootsteps());
-        //}
 
         if (isAim)
         {
@@ -173,8 +174,11 @@ public class PlayerController : MonoBehaviour
         {
             //if 조건에 추가로 쿨타임이 완료됬는지 확인 필요
             //스킬 버튼 비활성화
-            //스킬 버튼 알파값 낮추기 -? 이벤트를 걸어서 플레이어 매니저에서 구현...
-
+            //스킬 버튼 알파값 낮추기 -? 이벤트를 걸어서 gameplayUi에서 구현...
+            if (!isSkillCool)
+            {
+                StartCoroutine(UseSkill());
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -185,4 +189,21 @@ public class PlayerController : MonoBehaviour
 
 
     }
+
+    private IEnumerator UseSkill()
+    {
+        isSkillCool = true;
+        SetSkillUI?.Invoke(true);
+        animator.SetTrigger("isSkill");
+
+        float tempSkillCool = 10.0f;
+        float elapsed = 0f;
+        while (elapsed < tempSkillCool)
+        {
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        isSkillCool = false;
+    }
+
 }

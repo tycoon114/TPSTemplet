@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
 using UnityEngine.SceneManagement;
@@ -19,10 +20,13 @@ public class PlayerManager : MonoBehaviour
 
     public static event Action<float, float> UpdateHPUI;  //gamePlayUi에서 탄약을 표시 하기 위함
 
+
     public float playerHP = 2500;     //플레이어 체력
     private float currentHP;           //현재 플레이어의 체력
     public LayerMask groundLayer;        //바닥 검사용
 
+
+    private bool isInvincibility;       //무적 상태인지?
 
     private void Awake()
     {
@@ -95,8 +99,20 @@ public class PlayerManager : MonoBehaviour
                 SoundManager.Instance.PlayWalkSfx("runSnow");   //눈 발소리재생
                 return;
             }
+            else if (hit.collider.CompareTag("DamageZone"))
+            {
+                SoundManager.Instance.PlayWalkSfx("runSnow");   //데미지 받는 UI 확인용 
+                return;
+            }
         }
         SoundManager.Instance.PlayWalkSfx("walk1");
     }
+
+    //게임 시작 직후, 부활 후, 스폰장소에서 무적
+    // IEnumerator Invincibility() {
+
+        
+    //}
+
 
 }
