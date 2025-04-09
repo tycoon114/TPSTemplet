@@ -306,7 +306,7 @@ public class GunController : PlayerController
         return spreadDirection;
     }
 
-    //사격 애니메이션 중에는 사격 불가능
+    //사격 애니메이션 중에는 사격 불가능, 현재 ShootDelay 상태가 없는 경우에만 제대로 작동함
     private bool IsInAnimationState(string animState)
     {
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
