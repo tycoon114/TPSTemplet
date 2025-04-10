@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Resources;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
@@ -40,6 +41,9 @@ public class PlayerController : MonoBehaviour
 
     private bool isSkillCool = false;   //스킬 쿨타임인지 -> true일 경우 쿨타임 상태
 
+    private Vector3 cameraForward;
+    private Vector3 cameraRight;
+
     private void OnEnable()
     {
         CharacterSpawnManager.OnLoadCharacterData += SetCharacterData;
@@ -66,6 +70,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        MoveMent();
+        Aim();
+        Skill();
+        Ult();
+    }
+
+    public void MoveMent()
+    {
         // 입력 받기
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -74,8 +86,8 @@ public class PlayerController : MonoBehaviour
         Vector3 move = new Vector3(horizontal, 0, vertical).normalized;
 
         // 현재 카메라의 회전 값 가져오기
-        Vector3 cameraForward = Camera.main.transform.forward;
-        Vector3 cameraRight = Camera.main.transform.right;
+        cameraForward = Camera.main.transform.forward;
+        cameraRight = Camera.main.transform.right;
         // Y축 방향 제거 (수직 이동 방지)
         cameraForward.y = 0f;
         cameraRight.y = 0f;
@@ -89,18 +101,7 @@ public class PlayerController : MonoBehaviour
         isMoving = move.magnitude > 0;
         animator.SetBool("isMoving", isMoving);
 
-        //조준시 이동 제어를 위해,우선 조준에 대한 코드는 GunController대신 여기서 처리
-        
-        if (Input.GetMouseButton(1))
-        {
-            isAim = true;
-            OnIsAim?.Invoke(isAim);
-        }
-        else
-        {
-            isAim = false;
-            OnIsAim?.Invoke(isAim);
-        }
+
 
         //Vector3 moveXZ = (cameraForward * vertical + cameraRight * horizontal) * moveSpeed;
 
@@ -140,7 +141,6 @@ public class PlayerController : MonoBehaviour
         }
 
         // 이동 처리
-
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
 
@@ -156,6 +156,27 @@ public class PlayerController : MonoBehaviour
         //}
 
 
+
+    }
+
+
+
+    public void Aim()
+    {
+        //조준시 이동 제어를 위해,우선 조준에 대한 코드는 GunController대신 여기서 처리
+
+        if (Input.GetMouseButton(1))
+        {
+            isAim = true;
+            OnIsAim?.Invoke(isAim);
+        }
+        else
+        {
+            isAim = false;
+            OnIsAim?.Invoke(isAim);
+        }
+
+
         if (isAim)
         {
             //조준시에는 이동할 때 보다는 빨리 회전 2025-03-10 23:16
@@ -168,8 +189,10 @@ public class PlayerController : MonoBehaviour
             float rotationSpeed = 300f;
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
+    }
 
-
+    public void Skill()
+    {
         if (Input.GetKeyDown(KeyCode.E))
         {
             //if 조건에 추가로 쿨타임이 완료됬는지 확인 필요
@@ -180,15 +203,18 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(UseSkill());
             }
         }
+    }
 
+
+    public void Ult()
+    {
         if (Input.GetKeyDown(KeyCode.Q))
         {
             //if 조건에 추가로 궁극기가 찾는지 확인 필요
 
         }
-
-
     }
+
 
     private IEnumerator UseSkill()
     {
