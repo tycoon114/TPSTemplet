@@ -6,44 +6,49 @@ using System.Security.Cryptography.X509Certificates;
 
 public class GunController : PlayerController
 {
-    public static event Action<int, int> onAmmoChanged;  //gamePlayUi에서 탄약을 표시 하기 위함
-    public static event Action<bool> CrossHairSet;  //gamePlayUi에서 탄약을 표시 하기 위함
+    public static event Action<int, int> onAmmoChanged;         //gamePlayUi에서 탄약을 표시 하기 위함
+    public static event Action<bool> CrossHairSet;              //gamePlayUi에서 탄약을 표시 하기 위함
 
     private Animator animator;
-    private Transform muzzlePoint;      //총구위치
-    protected int currentAmmo;          //현재 잔탄 수
+    private Transform muzzlePoint;                              //총구위치
+    private Camera mainCamera;                                  //히트 스캔 레이캐스트를 위한 메인카메라 값
 
-    //캐릭터마다 바뀔 수 있는값, 현재는 개발의 편의성을 위해 public 처리
-    public GameObject gunFire;        //사격 이펙트
-    public GameObject impactEffect; // 피격 이펙트
+    public GameObject gunFire;                                  //사격 이펙트
+    public GameObject impactEffect;                             //피격 이펙트
 
-    private string gunType;
-    public float bulletSpeed = 20f;  // 탄속
-    public float fireRate = 0.2f;    //연사 속도
-    public float reloadTime;   // 재장전 시간
-    public float hitScanRadius = 0.05f; // 크로스헤어 내 랜덤 범위
-    public float range = 100f; // 사격 거리
-    private int maxAmmo;        //최대 탄약수
-    public bool boltAction = false;  //볼트 액션이 아닌 경우 연사 가능하도록
-    public float damage = 30.0f;    //공격력 - 변수 이름 나중에 바꿀 예정
+    public LayerMask hitLayers;                                 //맞출 수 있는 레이어
 
-    private bool isReload = false;      // 재장전
-    private bool isShoot = false;       //사격 애니메이션
-    private Coroutine fireCoroutine;    // 연사 제어를 위한 코루틴 - 코루틴을 중지 시키기 위함[중지 시키지 않으면 연사속도가 중첩될 수 있음]
+    private string gunType;                                     //총기 종류
 
-    public LayerMask hitLayers;         // 맞출 수 있는 레이어
+    private int maxAmmo;                                        //최대 탄약수
+    protected int currentAmmo;                                  //현재 잔탄 수
 
-    private Camera mainCamera;          // 히트 스캔 레이캐스트를 위한 메인카메라 값
+    public float bulletSpeed = 20f;                             //탄속
+    public float fireRate = 0.2f;                               //연사 속도
+    public float reloadTime;                                    //재장전 시간
+    public float hitScanRadius = 0.05f;                         //크로스헤어 내 랜덤 범위
+    public float range = 100f;                                  //사격 거리
+    private float damage;                                       //공격력 - 변수 이름 나중에 바꿀 예정
+
+    private bool isReload = false;                              //재장전
+    private bool isShoot = false;                               //사격 애니메이션
+    public bool boltAction = false;                             //볼트 액션이 아닌 경우 연사 가능하도록
+
+    private Coroutine fireCoroutine;                            //연사 제어를 위한 코루틴 - 코루틴을 중지 시키기 위함[중지 시키지 않으면 연사속도가 중첩될 수 있음]
+    public Coroutine cameraShakeCoroutine;                      //카메라 흔들림 코루틴
 
     //샷건
-    public float shotGunSpreadAngle = 0.1f;
-    public float recoilStrength = 2.0f;
-    public float maxRecoilAngle = 10.0f;
-    public float currentRecoil = 0.0f;
-    public float shakeDuration = 0.1f;
-    public float shakeMagnitude = 0.1f;
-    public Vector3 originalCameraPosition;
-    public Coroutine cameraShakeCoroutine;
+    public float shotGunSpreadAngle = 0.1f;                     //샷건 탄퍼짐 각도
+    public float recoilStrength = 2.0f;                         //
+    public float maxRecoilAngle = 10.0f;                        //
+    public float currentRecoil = 0.0f;                          //
+    public float shakeDuration = 0.1f;                          //
+    public float shakeMagnitude = 0.1f;                         //
+    public Vector3 originalCameraPosition;                      //원래 카메라 위치
+
+
+    private PlayerController playerController;
+
 
     void Start()
     {
@@ -55,7 +60,7 @@ public class GunController : PlayerController
         currentAmmo = maxAmmo;
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
         animator = GetComponentInChildren<Animator>();
-
+        playerController = GetComponent<PlayerController>();
         mainCamera = Camera.main;
 
         //자식 오브젝트에서 총구인 fire_01찾기
@@ -75,18 +80,24 @@ public class GunController : PlayerController
 
     private void SetCharacterData(CharacterInfo info)
     {
-        Debug.Log(info.dfnType);
         gunType = info.gunType;
         bulletSpeed = info.bulletSpeed;
         fireRate = info.fireRate;
         reloadTime = info.reloadTime;
         maxAmmo = info.maxAmmo;
+        damage = info.damage;
     }
 
 
     void Update()
     {
+        if (playerController != null && playerController.isSkillPlaying)
+        {
+            return;
+        }
+
         Vector3 dir = transform.position + muzzlePoint.transform.position;
+
 
         if (Input.GetMouseButton(1))
         {
@@ -103,7 +114,7 @@ public class GunController : PlayerController
         animator.SetBool("isAim", isAim);
         //animator.SetLayerWeight(1, 1);
 
-        if (Input.GetMouseButtonDown(0) && isAim && currentAmmo != 0 && fireCoroutine == null && !isReload && !IsInAnimationState("Shoot")) // && !IsInAnimationState("Shoot") -> 사격 애니메이션 중이면 사격 불가능..약간 수정 필요
+        if (Input.GetMouseButtonDown(0) && isAim && currentAmmo != 0 && fireCoroutine == null && !isReload && !IsInAnimationState("Shoot") && !IsInAnimationState("ShootDelay")) // && !IsInAnimationState("Shoot") -> 사격 애니메이션 중이면 사격 불가능..약간 수정 필요
         {
             fireCoroutine = StartCoroutine(AttackStart());
         }
@@ -235,7 +246,7 @@ public class GunController : PlayerController
             else if (hit.collider.CompareTag("Enemy"))
             {
                 //미니게임용 - AI 한테 적용할 레이어다
-                hit.collider.GetComponent<EnemyManger>().TakeDamage(damage);
+                //hit.collider.GetComponent<EnemyManger>().TakeDamage(damage);
                 Debug.Log("적을 맞춤");
             }
             else if (hit.collider.CompareTag("Player"))
@@ -246,8 +257,7 @@ public class GunController : PlayerController
             else if (hitLayer == LayerMask.NameToLayer("EnemyPlayer"))
             {
                 Debug.Log(" 레이어 피격 테스트");
-                //적 플레이어에 달아줄 레이어
-                //여기서 데미지를 주도록 한다.
+                hit.collider.GetComponentInChildren<PlayerManager>().TakeDamage(damage);
             }
 
 

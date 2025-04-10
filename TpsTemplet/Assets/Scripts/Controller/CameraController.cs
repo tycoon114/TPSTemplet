@@ -4,23 +4,22 @@ using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
-    public Vector3 CameraOffset = new Vector3(0f, 0.5f, -4.0f);   // 카메라 오프셋
-    public float mouseSensitivity = 60.0f;             //감도 - 이후 옵션에서 조정 가능하게
+    private GameObject PlayerGo;                                    //플레이어 빈 게임 오브젝트
+    public Transform Player;                                        //플레이어의 위치, 캐릭터 프리펩
 
-    private float pitch = 0f;   // 위아래 회전
-    private float yaw = 0f;     // 좌우 회전
+    private Vector3 lookPosition;                                   //보는 위치
+    public Vector3 CameraOffset = new Vector3(0f, 0.5f, -4.0f);     //카메라 오프셋
 
-    public Transform Player;        //플레이어의 위치, 캐릭터 프리펩
-    private GameObject PlayerGo;    //플레이어 빈 게임 오브젝트
-
-    private Vector3 lookPosition;   //보는 위치
-
-    private float defaultFov = 40f;
-    private float zoomFov = 20f;
-    public float zoomSpeed = 5.0f; // 확대축소가 되는 속도
+    private float pitch = 0f;                                       //위아래 회전
+    private float yaw = 0f;                                         //좌우 회전
+    private float defaultFov = 40f;                                 //기본 시야각
+    private float zoomFov = 20f;                                    //줌 시야각
+    public float zoomSpeed = 5.0f;                                  //확대축소가 되는 속도
+    public float mouseSensitivity = 60.0f;                          //감도 - 이후 옵션에서 조정 가능하게
 
     private bool isAiming = false;
     private bool isFreeCamera = false;
+
     private void OnEnable()
     {
         PlayerController.OnIsAim += UpdateCameraOffset;

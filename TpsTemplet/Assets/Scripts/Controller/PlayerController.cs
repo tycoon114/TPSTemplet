@@ -2,47 +2,41 @@
 using System.Collections;
 using System.Resources;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 using UnityEngine.Audio;
 
 public class PlayerController : MonoBehaviour
 {
-
     public static event Action<bool> OnIsAim;
     public static event Action<bool> SetSkillUI;
 
+    protected CharacterInfo characterInfo;              //캐릭터 정보
+    private CharacterController controller;             //캐릭터 컨트롤러 ->씬 내에서 플레이어 오브젝트의 자식 프리팹으로 올 캐릭터에 달려있다.
+    protected Animator animator;                          //애니메이터 역시   씬 내에서 플레이어 오브젝트의 자식 프리팹으로 올 캐릭터에 달려있다.
+    public Transform target;                            //sfx 소리 재생 위치
+    public MultiAimConstraint multiAimciConstraint;     //상체 뒤틀림 방지?
 
-    private CharacterController controller;
-    private Animator animator;
-    private Vector3 moveDirection;
+    private Vector3 moveDirection;                      //이동 방향
+    private Vector3 cameraForward;                      //
+    private Vector3 cameraRight;                        //
 
-    public float moveSpeed = 5f;   // 이동 속도
-    public float gravity = 9.8f;   // 중력
-    private float jumpForce = 2.0f;
+    protected string atkType;                           //공격타입
+    protected string dfnType;                           //방어 타입
+    public string currentAnimation;                     //현재 애니메이션 상태
 
+    private float jumpForce = 2.0f;                     //점프 강도
+    private float verticalVelocity = 0f;                //
+    public float moveSpeed = 5f;                        //이동 속도
+    public float gravity = 9.8f;                        //중력
+    public float animationSpeed = 3.0f;                 //애니메이션 재생 속도
 
-    protected bool isAim = false;
-    protected int atkType;          //공격타입
-    protected int dfnType;          //방어 타입
-
-    public float animationSpeed = 3.0f; //애니메이션 재생 속도
-    public string currentAnimation;
-
-    public Transform target; // sfx 소리 재생 위치
-    public MultiAimConstraint multiAimciConstraint;         //상체 뒤틀림 방지?
-
-    protected CharacterInfo characterInfo;
-
-    private bool isMoving = false;
-    private bool isJump = false;    //현재 점프 상태인지
-
-    private float verticalVelocity = 0f;
-
-    private bool isSkillCool = false;   //스킬 쿨타임인지 -> true일 경우 쿨타임 상태
-
-    private Vector3 cameraForward;
-    private Vector3 cameraRight;
+    protected bool isAim = false;                       //aim 상태인가? -> GunController에서도 사용
+    public bool isSkillPlaying = false;              //스킬 애니메이션이 재생중인가? -> 스킬 애니메이션 동안은 공격 불가능
+    private bool isMoving = false;                      //움직이고 있는가?
+    private bool isJump = false;                        //현재 점프 상태인가?
+    private bool isSkillCool = false;                   //스킬 쿨타임인가? -> true일 경우 쿨타임 상태
 
     private void OnEnable()
     {
@@ -70,10 +64,17 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        MoveMent();
-        Aim();
-        Skill();
-        Ult();
+
+        if (isSkillPlaying)
+        {
+            MoveMent();
+            return;
+        }
+
+        MoveMent();     //이동
+        Aim();          //조준
+        Skill();        //스킬
+        Ult();          //궁극기
     }
 
     public void MoveMent()
@@ -193,15 +194,9 @@ public class PlayerController : MonoBehaviour
 
     public void Skill()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !isSkillCool)
         {
-            //if 조건에 추가로 쿨타임이 완료됬는지 확인 필요
-            //스킬 버튼 비활성화
-            //스킬 버튼 알파값 낮추기 -? 이벤트를 걸어서 gameplayUi에서 구현...
-            if (!isSkillCool)
-            {
-                StartCoroutine(UseSkill());
-            }
+            StartCoroutine(UseSkill());
         }
     }
 
@@ -216,19 +211,37 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private IEnumerator UseSkill()
+    public IEnumerator UseSkill()
     {
         isSkillCool = true;
+        isSkillPlaying = true;
         SetSkillUI?.Invoke(true);
         animator.SetTrigger("isSkill");
 
-        float tempSkillCool = 10.0f;
-        float elapsed = 0f;
-        while (elapsed < tempSkillCool)
+        //yield return null;
+
+        bool isSkillState = false;
+
+        while (!isSkillState)
         {
-            elapsed += Time.deltaTime;
-            yield return null;
+            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            if (stateInfo.IsName("Skill")) // 애니메이션 이름에 맞게 바꿔야 함
+            {
+                isSkillState = true;
+                break;
+            }
+            yield return null; // 다음 프레임까지 대기
         }
+
+        // 애니메이션 길이만큼 대기
+        float animTime = animator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSeconds(animTime);
+
+        isSkillPlaying = false;
+
+        float tempSkillCool = 10.0f;
+
+        yield return new WaitForSeconds(tempSkillCool);
         isSkillCool = false;
     }
 

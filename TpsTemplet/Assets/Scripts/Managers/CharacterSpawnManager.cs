@@ -58,9 +58,6 @@ public class CharacterSpawnManager : MonoBehaviour
 
 }
 
-
-
-
 //캐릭터 데이터를 담을 곳
 [System.Serializable]
 public class CharacterInfo

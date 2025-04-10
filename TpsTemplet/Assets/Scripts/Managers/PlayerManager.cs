@@ -10,13 +10,7 @@ using UnityEngine.SceneManagement;
 //palyer 빈 오브젝트가 아닌 캐릭터 자체에 달아줄것 -> 콜라이더 접근을 위함
 public class PlayerManager : MonoBehaviour
 {
-    //우선은 싱글톤을 썼지만 멀티플레이에세는 싱글톤을 쓰면 안됨
-    //이후에 게임 모드에 따라 발동하도록 설정하기
-    public static PlayerManager Instance
-    {
-        get;
-        private set;
-    }
+
 
     public static event Action<float, float> UpdateHPUI;  //gamePlayUi에서 탄약을 표시 하기 위함
 
@@ -24,29 +18,20 @@ public class PlayerManager : MonoBehaviour
     public float playerHP = 2500;     //플레이어 체력
     private float currentHP;           //현재 플레이어의 체력
     public LayerMask groundLayer;        //바닥 검사용
-
+    private Animator animator;
 
     private bool isInvincibility;       //무적 상태인지?
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            if (Instance != this)
-            {
-                Destroy(gameObject);
-            }
-        }
+
     }
 
     void Start()
     {
         currentHP = playerHP;
         groundLayer = LayerMask.GetMask("Ground", "Enemy", "Player", "EnemyPlayer");
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -76,8 +61,9 @@ public class PlayerManager : MonoBehaviour
         currentHP -= damage;
         if (currentHP <= 0)
         {
-            //죽는 애니메이션 재생
+            animator.SetTrigger("isDeath");
         }
+        Debug.Log(currentHP);
     }
 
     public void FootStepSoundOn()

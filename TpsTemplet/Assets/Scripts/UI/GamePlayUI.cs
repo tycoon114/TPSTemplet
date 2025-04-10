@@ -12,8 +12,6 @@ public class GamePlayUI : MonoBehaviour
     public Image skillImage;
     //public Image ultImage;
 
-
-
     public GameObject crossHair;
     public GameObject escMenu;
     public GameObject settingsObj;
@@ -21,10 +19,8 @@ public class GamePlayUI : MonoBehaviour
     public bool isEscMenuActive = false;
     public bool isSettingActive = false;
 
-
     private string selectedCharacterName;
 
-        
     private float originalAlpha;
 
     void Start()
@@ -163,8 +159,6 @@ public class GamePlayUI : MonoBehaviour
         StartCoroutine(UpdateSkillUIAlpha());  
 
     }
-
-
     private IEnumerator UpdateSkillUIAlpha()
     {
         //임시 스킬 쿨 타임
@@ -188,8 +182,5 @@ public class GamePlayUI : MonoBehaviour
         }
         skillImageColor.a = originalAlpha;
         skillImage.color = skillImageColor;
-
     }
-
-
 }
