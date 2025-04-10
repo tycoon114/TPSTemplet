@@ -102,8 +102,6 @@ public class PlayerController : MonoBehaviour
         isMoving = move.magnitude > 0;
         animator.SetBool("isMoving", isMoving);
 
-
-
         //Vector3 moveXZ = (cameraForward * vertical + cameraRight * horizontal) * moveSpeed;
 
         //// **이전 Y값 유지!**
@@ -129,8 +127,6 @@ public class PlayerController : MonoBehaviour
             moveDirection.y = 0f;
         }
 
-
-
         //moveDirection = new Vector3(moveDirection.x, moveDirection.y, moveDirection.z);
 
         // 입력 값을 카메라 기준으로 변환
@@ -144,7 +140,6 @@ public class PlayerController : MonoBehaviour
         // 이동 처리
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
-
         //controller.Move(moveDirection * Time.deltaTime);
         // **Player 오브젝트의 회전값 강제 고정 (X=90 유지)**
         //transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
@@ -155,12 +150,7 @@ public class PlayerController : MonoBehaviour
         //    Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0, moveDirection.z));
         //    characterTransform.rotation = Quaternion.Slerp(characterTransform.rotation, newRotation, Time.deltaTime * 10f);
         //}
-
-
-
     }
-
-
 
     public void Aim()
     {
@@ -176,7 +166,6 @@ public class PlayerController : MonoBehaviour
             isAim = false;
             OnIsAim?.Invoke(isAim);
         }
-
 
         if (isAim)
         {
@@ -200,16 +189,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     public void Ult()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
             //if 조건에 추가로 궁극기가 찾는지 확인 필요
-
         }
     }
-
 
     public IEnumerator UseSkill()
     {
@@ -217,8 +203,6 @@ public class PlayerController : MonoBehaviour
         isSkillPlaying = true;
         SetSkillUI?.Invoke(true);
         animator.SetTrigger("isSkill");
-
-        //yield return null;
 
         bool isSkillState = false;
 
@@ -244,5 +228,4 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(tempSkillCool);
         isSkillCool = false;
     }
-
 }

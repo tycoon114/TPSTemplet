@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using static SoundManager;
-
-
 public enum ParticleType
 {
     Explosion,
@@ -10,7 +8,6 @@ public enum ParticleType
     GunSmoke,
     GunHitWall,
 }
-
 public class ParticleManager : MonoBehaviour
 {
     public static ParticleManager Instance
@@ -44,7 +41,6 @@ public class ParticleManager : MonoBehaviour
     public NamedParticle[] gunFireParticleList;
     public NamedParticle[] gunSmokeParticleList;
     public NamedParticle[] gunHitParticleList;
-
     private void Awake()
     {
         if (Instance == null)
@@ -58,7 +54,6 @@ public class ParticleManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     void InitializeParticle()
     {
         //ÆøÆÄ ÆÄÆ¼Å¬
@@ -97,7 +92,6 @@ public class ParticleManager : MonoBehaviour
             }
         }
     }
-
     public void PlayGunFireParticle(string name, Vector3 position, Vector3 scale, Quaternion rotation)
     {
         if (gunFireParticleDic.ContainsKey(name))
@@ -108,7 +102,6 @@ public class ParticleManager : MonoBehaviour
             Destroy(particle.gameObject, particle.main.duration);
         }
     }
-
 
     public void PlayGunHitParticle(string name, Vector3 position, Vector3 scale, Quaternion rotation)
     {
@@ -126,7 +119,4 @@ public class ParticleManager : MonoBehaviour
     {
         
     }
-
-
-
 }

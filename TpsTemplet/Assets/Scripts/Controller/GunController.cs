@@ -46,9 +46,7 @@ public class GunController : PlayerController
     public float shakeMagnitude = 0.1f;                         //
     public Vector3 originalCameraPosition;                      //원래 카메라 위치
 
-
     private PlayerController playerController;
-
 
     void Start()
     {
@@ -74,7 +72,6 @@ public class GunController : PlayerController
             }
         }
         target = GameObject.Find("target").GetComponentInChildren<Transform>();
-
         hitLayers = LayerMask.GetMask("Wall", "Enemy", "Player", "EnemyPlayer");
     }
 
@@ -88,16 +85,14 @@ public class GunController : PlayerController
         damage = info.damage;
     }
 
-
     void Update()
     {
+        //스킬 애니메이션이 재생 중이면 return
         if (playerController != null && playerController.isSkillPlaying)
         {
             return;
         }
-
         Vector3 dir = transform.position + muzzlePoint.transform.position;
-
 
         if (Input.GetMouseButton(1))
         {
@@ -215,7 +210,6 @@ public class GunController : PlayerController
             SoundManager.Instance.PlayGunSfx("MGShooting", target.transform.position);
         }
 
-
         //사격 이펙트
         if (gunFire != null)
         {
@@ -226,7 +220,6 @@ public class GunController : PlayerController
         Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * hitScanRadius;
         Vector3 screenPoint = new Vector3(Screen.width / 2 + randomOffset.x, Screen.height / 2 + randomOffset.y, 0);
         Ray ray = mainCamera.ScreenPointToRay(screenPoint);
-
 
         //피격 판정이 있는 레이어 - hit.point : 충돌한 위치 : 파티클이 생길 위치
         if (Physics.Raycast(ray, out RaycastHit hit, range, hitLayers))
@@ -259,8 +252,6 @@ public class GunController : PlayerController
                 Debug.Log(" 레이어 피격 테스트");
                 hit.collider.GetComponentInChildren<PlayerManager>().TakeDamage(damage);
             }
-
-
         }
 
         currentAmmo--;
@@ -295,8 +286,6 @@ public class GunController : PlayerController
                 {
                     ParticleManager.Instance.PlayGunHitParticle("hitWall", hit.point, Vector3.one, Quaternion.LookRotation(hit.normal));
                 }
-
-
             }
         }
         currentAmmo--;
@@ -305,7 +294,6 @@ public class GunController : PlayerController
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo);
         SoundManager.Instance.PlayGunSfx("SGDelay", target.transform.position);
         animator.SetTrigger("isDelay");
-
     }
 
     Vector3 GetSpreadDirection(Vector3 forwardDirection, float spreadAngle)
@@ -323,11 +311,9 @@ public class GunController : PlayerController
         return stateInfo.IsName(animState);
     }
 
-
     //화면 흔들림
     private void gunShootShake()
     {
 
     }
-
 }

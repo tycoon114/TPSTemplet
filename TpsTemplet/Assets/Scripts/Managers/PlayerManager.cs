@@ -10,10 +10,7 @@ using UnityEngine.SceneManagement;
 //palyer 빈 오브젝트가 아닌 캐릭터 자체에 달아줄것 -> 콜라이더 접근을 위함
 public class PlayerManager : MonoBehaviour
 {
-
-
     public static event Action<float, float> UpdateHPUI;  //gamePlayUi에서 탄약을 표시 하기 위함
-
 
     public float playerHP = 2500;     //플레이어 체력
     private float currentHP;           //현재 플레이어의 체력
@@ -21,11 +18,6 @@ public class PlayerManager : MonoBehaviour
     private Animator animator;
 
     private bool isInvincibility;       //무적 상태인지?
-
-    private void Awake()
-    {
-
-    }
 
     void Start()
     {
@@ -38,7 +30,6 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         UpdateHPUI?.Invoke(currentHP, playerHP);
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -51,7 +42,6 @@ public class PlayerManager : MonoBehaviour
 
         //문도 여기서 트리거 작동
         //이때 DoorController를 참조한다.
-
     }
 
     public void TakeDamage(float damage)
@@ -99,6 +89,5 @@ public class PlayerManager : MonoBehaviour
 
         
     //}
-
 
 }

@@ -25,7 +25,6 @@ public class CharacterSpawnManager : MonoBehaviour
         LoadCharacterData(selectedCharacter.name, selectedCharacter);
     }
 
-
     private void LoadCharacterData(string characterName, GameObject character)
     {
         TextAsset jsonFile = Resources.Load<TextAsset>("JsonData/characterData");

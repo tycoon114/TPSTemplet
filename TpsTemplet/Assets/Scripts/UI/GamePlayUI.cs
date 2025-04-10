@@ -55,7 +55,6 @@ public class GamePlayUI : MonoBehaviour
         }
     }
 
-
     public void OnRetrunGameClick()
     {
         SoundManager.Instance.PlaySfx("buttonTouch");
@@ -75,16 +74,12 @@ public class GamePlayUI : MonoBehaviour
         SceneController.Instance.LoadScene("MenuScene");
     }
 
-
-
     void OnEnable()
     {
         GunController.onAmmoChanged += UpdateAmmoUI; //탄약 수
         GunController.CrossHairSet += CrossHairSet;     //조준 시 크로스헤어 활성화
         PlayerManager.UpdateHPUI += UpdateHPUI;         //플레이어 체력
-
         PlayerController.SetSkillUI += SetSkillUI;     //스킬 아이콘 알파값
-
     }
 
     void OnDisable()
@@ -92,16 +87,13 @@ public class GamePlayUI : MonoBehaviour
         GunController.onAmmoChanged -= UpdateAmmoUI; // 이벤트 해제
         GunController.CrossHairSet -= CrossHairSet;
         PlayerManager.UpdateHPUI -= UpdateHPUI;
-
         PlayerController.SetSkillUI -= SetSkillUI;
-
     }
 
     void UpdateAmmoUI(int currentAmmo, int maxAmmo)
     {
         ammoText.text = $"{currentAmmo} / {maxAmmo}";
     }
-
     void UpdateHPUI(float currentHP, float maxHP)
     {
         hpText.text = $"{currentHP} / {maxHP}";
@@ -131,7 +123,6 @@ public class GamePlayUI : MonoBehaviour
         Sprite weaponPortrait = Resources.Load<Sprite>(weaponPortraitPath);
         Sprite playerSkillIcon;
 
-
         if (characterPortrait != null)
         {
             portraitImage.sprite = characterPortrait;
@@ -155,10 +146,9 @@ public class GamePlayUI : MonoBehaviour
     void SetSkillUI(bool isSkillUsed)
     {
         Debug.Log("스킬 테스트");
-
         StartCoroutine(UpdateSkillUIAlpha());  
-
     }
+
     private IEnumerator UpdateSkillUIAlpha()
     {
         //임시 스킬 쿨 타임
@@ -166,8 +156,6 @@ public class GamePlayUI : MonoBehaviour
 
         //기본 알파값
         Color skillImageColor = skillImage.color;
-
-        
 
         skillImageColor.a = 0.3f;
         skillImage.color = skillImageColor;
