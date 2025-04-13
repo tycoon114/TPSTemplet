@@ -195,7 +195,7 @@ public class GunController : PlayerController
         }
         else if (gunType.Equals("SMG"))
         {
-            //SoundManager.Instance.PlayGunSfx("SMGShooting", target.transform.position);
+            SoundManager.Instance.PlayGunSfx("SMGShooting", target.transform.position);
         }
         else if (gunType.Equals("AR"))
         {
