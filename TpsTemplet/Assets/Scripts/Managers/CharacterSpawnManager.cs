@@ -1,7 +1,8 @@
 using System;
+using Unity.Netcode;
 using UnityEngine;
 
-public class CharacterSpawnManager : MonoBehaviour
+public class CharacterSpawnManager : NetworkBehaviour
 {
     public static event Action<CharacterInfo> OnLoadCharacterData;
 
