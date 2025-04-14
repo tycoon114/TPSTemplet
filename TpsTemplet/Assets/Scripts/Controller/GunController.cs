@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.Animations.Rigging;
 using System.Security.Cryptography.X509Certificates;
-
+using Unity.Netcode;
 public class GunController : PlayerController
 {
     public static event Action<int, int> onAmmoChanged;         //gamePlayUi에서 탄약을 표시 하기 위함
@@ -251,6 +251,13 @@ public class GunController : PlayerController
             {
                 Debug.Log(" 레이어 피격 테스트");
                 hit.collider.GetComponentInChildren<PlayerManager>().TakeDamage(damage);
+                //var playerManager = hit.collider.GetComponentInChildren<PlayerManager>();
+
+                //if (playerManager != null && !playerManager.GetComponent<NetworkObject>().IsOwner)
+                //{
+                //    playerManager.TakeDamage(damage);
+                //}
+
             }
         }
 

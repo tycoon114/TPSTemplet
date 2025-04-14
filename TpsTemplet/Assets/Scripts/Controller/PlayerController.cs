@@ -2,12 +2,13 @@
 using System.Collections;
 using System.Resources;
 using TMPro;
+using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 using UnityEngine.Audio;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {
     public static event Action<bool> OnIsAim;
     public static event Action<bool> SetSkillUI;
