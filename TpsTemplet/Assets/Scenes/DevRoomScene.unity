@@ -1945,7 +1945,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33e362a058eeb2e4b99012e05d95eccd, type: 3}
   m_Name: 
@@ -3965,7 +3965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &389961056
 Transform:
   m_ObjectHideFlags: 0
@@ -3993,6 +3993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4ac6cb696cdcb49bd57703c3bb5de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   target: {fileID: 0}
   multiAimciConstraint: {fileID: 0}
   currentAnimation: 
@@ -4012,6 +4013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1343f444c925ab94bba4215cb2b0d06a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   target: {fileID: 0}
   multiAimciConstraint: {fileID: 0}
   currentAnimation: 
@@ -4501,6 +4503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4ac6cb696cdcb49bd57703c3bb5de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   target: {fileID: 1210519711}
   multiAimciConstraint: {fileID: 590280861}
   currentAnimation: 
@@ -5266,6 +5269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1343f444c925ab94bba4215cb2b0d06a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   target: {fileID: 2083390506}
   multiAimciConstraint: {fileID: 0}
   currentAnimation: 
@@ -5303,6 +5307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4ac6cb696cdcb49bd57703c3bb5de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   target: {fileID: 2083390506}
   multiAimciConstraint: {fileID: 0}
   currentAnimation: 
@@ -5428,6 +5433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4ac6cb696cdcb49bd57703c3bb5de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   target: {fileID: 0}
   multiAimciConstraint: {fileID: 0}
   currentAnimation: 
@@ -7436,6 +7442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1343f444c925ab94bba4215cb2b0d06a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   target: {fileID: 0}
   multiAimciConstraint: {fileID: 0}
   currentAnimation: 
@@ -7473,6 +7480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4ac6cb696cdcb49bd57703c3bb5de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   target: {fileID: 0}
   multiAimciConstraint: {fileID: 0}
   currentAnimation: 
@@ -16212,6 +16220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d5ff8bf163fd542a80d4a6d0b305c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   characterPrefabs:
   - {fileID: 4136110124463721334, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
   - {fileID: 2510324694747993088, guid: 63395441e53f53647aff1a8d1ac4cda3, type: 3}
@@ -17451,6 +17460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b0feef8b92fb1f429f2a7df6336228d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   playerHP: 500
   groundLayer:
     serializedVersion: 2

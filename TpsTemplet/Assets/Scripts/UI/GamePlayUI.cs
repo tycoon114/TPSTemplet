@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -71,6 +72,11 @@ public class GamePlayUI : MonoBehaviour
 
     public void OnReturnMainMenuClick()
     {
+        //if (NetworkManager.Singleton.IsHost || NetworkManager.Singleton.IsClient)
+        //{
+        //    NetworkManager.Singleton.Shutdown();
+        //}
+
         SceneController.Instance.LoadScene("MenuScene");
     }
 

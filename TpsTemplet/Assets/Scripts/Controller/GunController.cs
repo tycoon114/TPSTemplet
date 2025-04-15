@@ -71,7 +71,7 @@ public class GunController : PlayerController
                 break;
             }
         }
-        target = GameObject.Find("target").GetComponentInChildren<Transform>();
+        //target = GameObject.Find("target").GetComponentInChildren<Transform>();
         hitLayers = LayerMask.GetMask("Wall", "Enemy", "Player", "EnemyPlayer");
     }
 
@@ -153,33 +153,33 @@ public class GunController : PlayerController
     IEnumerator Reload()
     {
         currentAmmo = maxAmmo;
-        if (gunType.Equals("HG"))
-        {
-            SoundManager.Instance.PlayGunSfx("HGReload", target.transform.position);
-        }
-        else if (gunType.Equals("SMG"))
-        {
-            SoundManager.Instance.PlayGunSfx("SMGReload", target.transform.position);
-        }
-        else if (gunType.Equals("AR"))
-        {
-            SoundManager.Instance.PlayGunSfx("ARReload", target.transform.position);
-        }
-        else if (gunType.Equals("SR"))
-        {
-            SoundManager.Instance.PlayGunSfx("SRReload", target.transform.position);
-        }
-        else if (gunType.Equals("MG"))
-        {
-            SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
-        }
-        else if (gunType.Equals("SG"))
-        {
-            SoundManager.Instance.PlayGunSfx("SGReload", target.transform.position);
-        }
+        //if (gunType.Equals("HG"))
+        //{
+        //    SoundManager.Instance.PlayGunSfx("HGReload", target.transform.position);
+        //}
+        //else if (gunType.Equals("SMG"))
+        //{
+        //    SoundManager.Instance.PlayGunSfx("SMGReload", target.transform.position);
+        //}
+        //else if (gunType.Equals("AR"))
+        //{
+        //    SoundManager.Instance.PlayGunSfx("ARReload", target.transform.position);
+        //}
+        //else if (gunType.Equals("SR"))
+        //{
+        //    SoundManager.Instance.PlayGunSfx("SRReload", target.transform.position);
+        //}
+        //else if (gunType.Equals("MG"))
+        //{
+        //    SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
+        //}
+        //else if (gunType.Equals("SG"))
+        //{
+        //    SoundManager.Instance.PlayGunSfx("SGReload", target.transform.position);
+        //}
 
         isReload = true;
-        animator.SetTrigger("isReload");
+        //animator.SetTrigger("isReload");
 
         yield return new WaitForSeconds(reloadTime);
         isReload = false;
@@ -189,26 +189,26 @@ public class GunController : PlayerController
     void Shoot()
     {
         //소리 재생 - 함수나 코루틴으로 뺄 예정
-        if (gunType.Equals("HG"))
-        {
-            SoundManager.Instance.PlayGunSfx("HGShooting", target.transform.position);
-        }
-        else if (gunType.Equals("SMG"))
-        {
-            SoundManager.Instance.PlayGunSfx("SMGShooting", target.transform.position);
-        }
-        else if (gunType.Equals("AR"))
-        {
-            SoundManager.Instance.PlayGunSfx("ARShooting", target.transform.position);
-        }
-        else if (gunType.Equals("SR"))
-        {
-            SoundManager.Instance.PlayGunSfx("SRShooting", target.transform.position);
-        }
-        else if (gunType.Equals("MG"))
-        {
-            SoundManager.Instance.PlayGunSfx("MGShooting", target.transform.position);
-        }
+        //if (gunType.Equals("HG"))
+        //{
+        //    SoundManager.Instance.PlayGunSfx("HGShooting", target.transform.position);
+        //}
+        //else if (gunType.Equals("SMG"))
+        //{
+        //    SoundManager.Instance.PlayGunSfx("SMGShooting", target.transform.position);
+        //}
+        //else if (gunType.Equals("AR"))
+        //{
+        //    SoundManager.Instance.PlayGunSfx("ARShooting", target.transform.position);
+        //}
+        //else if (gunType.Equals("SR"))
+        //{
+        //    SoundManager.Instance.PlayGunSfx("SRShooting", target.transform.position);
+        //}
+        //else if (gunType.Equals("MG"))
+        //{
+        //    SoundManager.Instance.PlayGunSfx("MGShooting", target.transform.position);
+        //}
 
         //사격 이펙트
         if (gunFire != null)

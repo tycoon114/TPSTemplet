@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
 using System.Security.Claims;
+using Unity.Netcode;
 
 
 public class CharacterSelectUI : MonoBehaviour
@@ -77,6 +78,11 @@ public class CharacterSelectUI : MonoBehaviour
 
     public void OnClickSelectButton()
     {
+        int selectedIndex = selectedCharacterIndex;
+        string payload = selectedIndex.ToString();
+        NetworkManager.Singleton.NetworkConfig.ConnectionData = System.Text.Encoding.ASCII.GetBytes(payload);
+
+        NetworkManager.Singleton.StartHost();
         SelectedCharacterIndex?.Invoke(selectedCharacterIndex);
         SceneController.Instance.LoadScene("DevRoomScene");
     }
