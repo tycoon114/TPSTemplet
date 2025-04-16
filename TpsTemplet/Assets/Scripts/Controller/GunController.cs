@@ -13,8 +13,8 @@ public class GunController : PlayerController
     private Transform muzzlePoint;                              //총구위치
     private Camera mainCamera;                                  //히트 스캔 레이캐스트를 위한 메인카메라 값
 
-    public GameObject gunFire;                                  //사격 이펙트
-    public GameObject impactEffect;                             //피격 이펙트
+    private GameObject gunFire;                                  //사격 이펙트
+    private GameObject impactEffect;                             //피격 이펙트
 
     public LayerMask hitLayers;                                 //맞출 수 있는 레이어
 
@@ -23,11 +23,11 @@ public class GunController : PlayerController
     private int maxAmmo;                                        //최대 탄약수
     protected int currentAmmo;                                  //현재 잔탄 수
 
-    public float bulletSpeed = 20f;                             //탄속
-    public float fireRate = 0.2f;                               //연사 속도
-    public float reloadTime;                                    //재장전 시간
-    public float hitScanRadius = 0.05f;                         //크로스헤어 내 랜덤 범위
-    public float range = 100f;                                  //사격 거리
+    private float bulletSpeed = 20f;                             //탄속
+    private float fireRate = 0.2f;                               //연사 속도
+    private float reloadTime;                                    //재장전 시간
+    private float hitScanRadius = 0.05f;                         //크로스헤어 내 랜덤 범위
+    private float range = 100f;                                  //사격 거리
     private float damage;                                       //공격력 - 변수 이름 나중에 바꿀 예정
 
     private bool isReload = false;                              //재장전
