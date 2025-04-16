@@ -1,5 +1,6 @@
-using System;
+ï»¿using System;
 using Unity.Netcode;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class CharacterSpawnManager : NetworkBehaviour
@@ -15,7 +16,7 @@ public class CharacterSpawnManager : NetworkBehaviour
     //    int selectedID = CharacterSelectManager.Instance.selectedCharacterIndex;
     //    if (selectedID < 0 || selectedID >= characterPrefabs.Length)
     //    {
-    //        Debug.LogError("Àß¸øµÈ Ä³¸¯ÅÍ IDÀÔ´Ï´Ù.");
+    //        Debug.LogError("ì˜ëª»ëœ ìºë¦­í„° IDì…ë‹ˆë‹¤.");
     //        return;
     //    }
     //    Debug.Log(selectedID);
@@ -25,75 +26,99 @@ public class CharacterSpawnManager : NetworkBehaviour
 
     //    LoadCharacterData(selectedCharacter.name, selectedCharacter);
     //}
-
-    public override void OnNetworkSpawn()
+    void Awake()
     {
-        if (!IsOwner) return;
+        Debug.Log("ìºë¦­í„° ìŠ¤í° ë§¤ë‹ˆì € ì‹œì‘");
+        if (NetworkManager.Singleton == null)
+        {
+            Debug.LogError("NetworkManager.Singleton ì´ null ì…ë‹ˆë‹¤. í™•ì¸ í•„ìš”.");
+            return;
+        }
 
-        int selectedID = CharacterSelectManager.Instance.selectedCharacterIndex;
-        Debug.Log("Net   " + selectedID);
-        GameObject characterPrefab = characterPrefabs[selectedID];
-        GameObject character = Instantiate(characterPrefab, transform.position, Quaternion.identity);
-        character.transform.SetParent(transform); // ³» NetworkObject ¾Æ·¡·Î ºÙÀÌ±â
+        // ConnectionApprovalCallbackì€ 1ê°œë§Œ ë“±ë¡ ê°€ëŠ¥í•˜ë¯€ë¡œ ë®ì–´ì“°ê¸° ë°©ì‹
+        if (NetworkManager.Singleton.ConnectionApprovalCallback == null)
+        {
+            NetworkManager.Singleton.ConnectionApprovalCallback += ApprovalCheck;
+        }
+        else
+        {
+            Debug.LogWarning("ConnectionApprovalCallback ì´ ì´ë¯¸ ë“±ë¡ë˜ì–´ ìˆìŒ");
+        }
 
-        character.name = characterPrefab.name;
+        // OnClientConnectedCallbackì€ ì´ë²¤íŠ¸ì´ë¯€ë¡œ -= í›„ +=
+        NetworkManager.Singleton.OnClientConnectedCallback -= OnClientConnected;
+        NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
 
-        LoadCharacterData(character.name, character);
+        // ì•„ì§ í˜¸ìŠ¤íŠ¸ê°€ ì•„ë‹ˆë¼ë©´ ì—¬ê¸°ì„œ ì‹œì‘
+        if (!NetworkManager.Singleton.IsServer && !NetworkManager.Singleton.IsClient)
+        {
+            int selectedIndex = CharacterSelectManager.Instance.selectedCharacterIndex;
+            Debug.Log(selectedIndex);
+            NetworkManager.Singleton.NetworkConfig.ConnectionData =
+                System.Text.Encoding.ASCII.GetBytes(selectedIndex.ToString());
+
+            NetworkManager.Singleton.StartHost();
+        }
     }
 
+    private void ApprovalCheck(NetworkManager.ConnectionApprovalRequest request, NetworkManager.ConnectionApprovalResponse response)
+    {
+        string payloadStr = System.Text.Encoding.ASCII.GetString(request.Payload);
+        int selectedIndex = int.Parse(payloadStr);
+        Debug.Log("ApprovalCheck TT   "  + selectedIndex);
 
+        PlayerPrefs.SetInt("ApprovedCharacterIndex", selectedIndex); // ì„ì‹œ ì €ì¥
+        response.Approved = true;
+        response.CreatePlayerObject = false;
+    }
+
+    private void OnClientConnected(ulong clientId)
+    {
+        int selectedIndex = PlayerPrefs.GetInt("ApprovedCharacterIndex", 0);
+        Debug.Log("OnClientConnected TT   " + selectedIndex);
+
+        //GameObject prefab = characterPrefabs[selectedIndex];
+        //Vector3 spawnPos = new Vector3(UnityEngine.Random.Range(63, 73), 1, UnityEngine.Random.Range(320, 330));
+
+        //GameObject character = Instantiate(prefab, spawnPos, Quaternion.identity);
+        //character.name = prefab.name;
+        //character.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
+
+        //Debug.Log("OnClientConnected TT   " + character.name);
+
+        //// JSON ë°ì´í„° ë¡œë”©
+        //LoadCharacterData(character.name, character);
+    }
 
     private void LoadCharacterData(string characterName, GameObject character)
     {
         TextAsset jsonFile = Resources.Load<TextAsset>("JsonData/characterData");
         if (jsonFile == null)
         {
-            Debug.LogError("ÆÄÀÏ ¾øÀ½.");
+            Debug.LogError("íŒŒì¼ ì—†ìŒ.");
             return;
         }
 
         CharacterData characterData = JsonUtility.FromJson<CharacterData>(jsonFile.text);
         if (characterData == null || characterData.characters == null)
         {
-            Debug.LogError("Àß¸øµÈ µ¥ÀÌÅÍ");
+            Debug.LogError("ì˜ëª»ëœ ë°ì´í„°");
             return;
         }
 
-        // ¼±ÅÃÇÑ Ä³¸¯ÅÍÀÇ Á¤º¸¸¦ Ã£¾Æ Àû¿ë
+        // ì„ íƒí•œ ìºë¦­í„°ì˜ ì •ë³´ë¥¼ ì°¾ì•„ ì ìš©
         foreach (CharacterInfo info in characterData.characters)
         {
             if (info.name == characterName)
             {
-                Debug.Log($"ÀÌ¸§: {info.name}, Ã¼·Â: {info.health}, ¼Óµµ: {info.speed}, °ø°İ·Â: {info.damage} , ÃÑ±â: {info.gunType}");
-                //È®ÀÎÀÌ µÇ¸é ÀÌº¥Æ® ¹ß»ı -> playerController·Î Á¤º¸ º¸³» ÁÖ±â
+                Debug.Log($"ì´ë¦„: {info.name}, ì²´ë ¥: {info.health}, ì†ë„: {info.speed}, ê³µê²©ë ¥: {info.damage} , ì´ê¸°: {info.gunType}");
+                //í™•ì¸ì´ ë˜ë©´ ì´ë²¤íŠ¸ ë°œìƒ -> playerControllerë¡œ ì •ë³´ ë³´ë‚´ ì£¼ê¸°
                 OnLoadCharacterData?.Invoke(info);
                 return;
             }
         }
-        Debug.LogError($"Ä³¸¯ÅÍ '{characterName}' Á¤º¸ ¾øÀ½ -> ÀÌ¸§ È®ÀÎ.");
+        Debug.LogError($"ìºë¦­í„° '{characterName}' ì •ë³´ ì—†ìŒ -> ì´ë¦„ í™•ì¸.");
     }
 
 }
 
-//Ä³¸¯ÅÍ µ¥ÀÌÅÍ¸¦ ´ãÀ» °÷
-[System.Serializable]
-public class CharacterInfo
-{
-    public string name;
-    public int health;
-    public float speed;
-    public float damage;
-    public string gunType;
-    public string atkType;
-    public string dfnType;
-    public float bulletSpeed;
-    public float fireRate;
-    public float reloadTime;
-    public int maxAmmo;
-}
-
-[System.Serializable]
-public class CharacterData
-{
-    public CharacterInfo[] characters;
-}

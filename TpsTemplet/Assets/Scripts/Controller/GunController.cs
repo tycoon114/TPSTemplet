@@ -9,7 +9,7 @@ public class GunController : PlayerController
     public static event Action<int, int> onAmmoChanged;         //gamePlayUi에서 탄약을 표시 하기 위함
     public static event Action<bool> CrossHairSet;              //gamePlayUi에서 탄약을 표시 하기 위함
 
-    private Animator animator;
+    //private Animator animator;
     private Transform muzzlePoint;                              //총구위치
     private Camera mainCamera;                                  //히트 스캔 레이캐스트를 위한 메인카메라 값
 
@@ -38,7 +38,7 @@ public class GunController : PlayerController
     public Coroutine cameraShakeCoroutine;                      //카메라 흔들림 코루틴
 
     //샷건
-    public float shotGunSpreadAngle = 0.1f;                     //샷건 탄퍼짐 각도
+    private float shotGunSpreadAngle = 3.0f;                     //샷건 탄퍼짐 각도
     public float recoilStrength = 2.0f;                         //
     public float maxRecoilAngle = 10.0f;                        //
     public float currentRecoil = 0.0f;                          //
@@ -54,7 +54,7 @@ public class GunController : PlayerController
         {
             SetCharacterData(characterInfo);
         }
-
+        Debug.Log(characterInfo);
         currentAmmo = maxAmmo;
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
         animator = GetComponentInChildren<Animator>();
@@ -71,12 +71,14 @@ public class GunController : PlayerController
                 break;
             }
         }
-        //target = GameObject.Find("target").GetComponentInChildren<Transform>();
+        target = GameObject.Find("target").GetComponentInChildren<Transform>();
         hitLayers = LayerMask.GetMask("Wall", "Enemy", "Player", "EnemyPlayer");
     }
 
     private void SetCharacterData(CharacterInfo info)
     {
+        Debug.Log(info.gunType);
+
         gunType = info.gunType;
         bulletSpeed = info.bulletSpeed;
         fireRate = info.fireRate;
@@ -153,33 +155,33 @@ public class GunController : PlayerController
     IEnumerator Reload()
     {
         currentAmmo = maxAmmo;
-        //if (gunType.Equals("HG"))
-        //{
-        //    SoundManager.Instance.PlayGunSfx("HGReload", target.transform.position);
-        //}
-        //else if (gunType.Equals("SMG"))
-        //{
-        //    SoundManager.Instance.PlayGunSfx("SMGReload", target.transform.position);
-        //}
-        //else if (gunType.Equals("AR"))
-        //{
-        //    SoundManager.Instance.PlayGunSfx("ARReload", target.transform.position);
-        //}
-        //else if (gunType.Equals("SR"))
-        //{
-        //    SoundManager.Instance.PlayGunSfx("SRReload", target.transform.position);
-        //}
-        //else if (gunType.Equals("MG"))
-        //{
-        //    SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
-        //}
-        //else if (gunType.Equals("SG"))
-        //{
-        //    SoundManager.Instance.PlayGunSfx("SGReload", target.transform.position);
-        //}
+        if (gunType.Equals("HG"))
+        {
+            SoundManager.Instance.PlayGunSfx("HGReload", target.transform.position);
+        }
+        else if (gunType.Equals("SMG"))
+        {
+            SoundManager.Instance.PlayGunSfx("SMGReload", target.transform.position);
+        }
+        else if (gunType.Equals("AR"))
+        {
+            SoundManager.Instance.PlayGunSfx("ARReload", target.transform.position);
+        }
+        else if (gunType.Equals("SR"))
+        {
+            SoundManager.Instance.PlayGunSfx("SRReload", target.transform.position);
+        }
+        else if (gunType.Equals("MG"))
+        {
+            SoundManager.Instance.PlayGunSfx("kazusaReload", target.transform.position);
+        }
+        else if (gunType.Equals("SG"))
+        {
+            SoundManager.Instance.PlayGunSfx("SGReload", target.transform.position);
+        }
 
         isReload = true;
-        //animator.SetTrigger("isReload");
+        animator.SetTrigger("isReload");
 
         yield return new WaitForSeconds(reloadTime);
         isReload = false;
@@ -189,26 +191,26 @@ public class GunController : PlayerController
     void Shoot()
     {
         //소리 재생 - 함수나 코루틴으로 뺄 예정
-        //if (gunType.Equals("HG"))
-        //{
-        //    SoundManager.Instance.PlayGunSfx("HGShooting", target.transform.position);
-        //}
-        //else if (gunType.Equals("SMG"))
-        //{
-        //    SoundManager.Instance.PlayGunSfx("SMGShooting", target.transform.position);
-        //}
-        //else if (gunType.Equals("AR"))
-        //{
-        //    SoundManager.Instance.PlayGunSfx("ARShooting", target.transform.position);
-        //}
-        //else if (gunType.Equals("SR"))
-        //{
-        //    SoundManager.Instance.PlayGunSfx("SRShooting", target.transform.position);
-        //}
-        //else if (gunType.Equals("MG"))
-        //{
-        //    SoundManager.Instance.PlayGunSfx("MGShooting", target.transform.position);
-        //}
+        if (gunType.Equals("HG"))
+        {
+            SoundManager.Instance.PlayGunSfx("HGShooting", target.transform.position);
+        }
+        else if (gunType.Equals("SMG"))
+        {
+            SoundManager.Instance.PlayGunSfx("SMGShooting", target.transform.position);
+        }
+        else if (gunType.Equals("AR"))
+        {
+            SoundManager.Instance.PlayGunSfx("ARShooting", target.transform.position);
+        }
+        else if (gunType.Equals("SR"))
+        {
+            SoundManager.Instance.PlayGunSfx("SRShooting", target.transform.position);
+        }
+        else if (gunType.Equals("MG"))
+        {
+            SoundManager.Instance.PlayGunSfx("MGShooting", target.transform.position);
+        }
 
         //사격 이펙트
         if (gunFire != null)

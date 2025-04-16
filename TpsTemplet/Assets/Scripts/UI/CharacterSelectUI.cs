@@ -78,12 +78,9 @@ public class CharacterSelectUI : MonoBehaviour
 
     public void OnClickSelectButton()
     {
-        int selectedIndex = selectedCharacterIndex;
-        string payload = selectedIndex.ToString();
-        NetworkManager.Singleton.NetworkConfig.ConnectionData = System.Text.Encoding.ASCII.GetBytes(payload);
 
-        NetworkManager.Singleton.StartHost();
         SelectedCharacterIndex?.Invoke(selectedCharacterIndex);
+        Debug.Log("선택씭 UI 코드상 인ㄷ덱ㄱ스  " + selectedCharacterIndex);
         SceneController.Instance.LoadScene("DevRoomScene");
     }
 

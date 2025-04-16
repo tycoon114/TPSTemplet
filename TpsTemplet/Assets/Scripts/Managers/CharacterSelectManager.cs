@@ -47,6 +47,7 @@ public class CharacterSelectManager : MonoBehaviour
 
     public void SetSelectCharacter(int index)
     {
+        Debug.Log("ºø∑∫∆Æ æ¿ ¿Œµ¶Ω∫  " +index);
         selectedCharacterIndex = index;
     }
 }

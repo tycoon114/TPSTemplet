@@ -17,6 +17,8 @@ public class GamePlayUI : MonoBehaviour
     public GameObject escMenu;
     public GameObject settingsObj;
 
+    public Transform Player;
+
     public bool isEscMenuActive = false;
     public bool isSettingActive = false;
 
@@ -30,10 +32,23 @@ public class GamePlayUI : MonoBehaviour
         Cursor.visible = false;
         escMenu.SetActive(false);
         settingsObj.SetActive(false);
-        GameObject player = GameObject.Find("Player");
-        if (player != null)
+
+        var players = GameObject.FindGameObjectsWithTag("Player");
+
+        foreach (var p in players)
         {
-            selectedCharacterName = player.transform.GetChild(0).name; // 캐릭터의 이름 가져오기
+            var netObj = p.GetComponent<NetworkObject>();
+            if (netObj != null && netObj.IsOwner)
+            {
+                Player = p.transform;
+                break;
+            }
+        }
+
+
+        if (Player != null)
+        {
+            selectedCharacterName = Player.name; // 캐릭터의 이름 가져오기
             SetPlayerPortrait(selectedCharacterName);
         }
         originalAlpha = skillImage.color.a;
@@ -76,7 +91,7 @@ public class GamePlayUI : MonoBehaviour
         //{
         //    NetworkManager.Singleton.Shutdown();
         //}
-
+        NetworkManager.Singleton.Shutdown();
         SceneController.Instance.LoadScene("MenuScene");
     }
 
@@ -121,8 +136,9 @@ public class GamePlayUI : MonoBehaviour
     void SetPlayerPortrait(string studentName)
     {
         string portraitPath = "Image/portrait/Texture2D/Student_Portrait_" + studentName;
-        //string portraitPath = "Image/portraitSkillsize/Texture2D/Skill_Portrait_" + studentName;
         string weaponPortraitPath = "Image/weapon/Texture2D/Weapon_Icon_" + studentName;
+        //stringplayerSkillIconPath = "Image/portraitSkillsize/Texture2D/Skill_Portrait_" + studentName;
+
 
         Debug.Log(studentName);
         Sprite characterPortrait = Resources.Load<Sprite>(portraitPath);

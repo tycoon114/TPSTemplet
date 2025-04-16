@@ -49,9 +49,10 @@ public class PlayerController : NetworkBehaviour
     }
 
     //spawnManager에서 가져온 캐릭터 데이터 받기
-    private void SetCharacterData(CharacterInfo info)
+    public void SetCharacterData(CharacterInfo info)
     {
         this.characterInfo = info;
+        Debug.Log("playerController  " + info.name);
     }
 
     void Start()

@@ -30,7 +30,8 @@ public class PlayerManager :  NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateHPUI?.Invoke(currentHP, playerHP);
+        if(IsOwner)
+            UpdateHPUI?.Invoke(currentHP, playerHP);
     }
 
     private void OnTriggerEnter(Collider other)

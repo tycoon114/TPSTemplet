@@ -1945,7 +1945,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33e362a058eeb2e4b99012e05d95eccd, type: 3}
   m_Name: 
@@ -3948,6 +3948,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
+--- !u!1 &382144275 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4136110124463721334, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
+  m_PrefabInstance: {fileID: 382144274}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &389961055
 GameObject:
   m_ObjectHideFlags: 0
@@ -8166,7 +8171,6 @@ Transform:
   m_Children:
   - {fileID: 706942190}
   - {fileID: 1009014427}
-  - {fileID: 1832225624}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &877923326
@@ -16186,6 +16190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1832225624}
   - component: {fileID: 1832225625}
+  - component: {fileID: 1832225626}
   m_Layer: 0
   m_Name: CharacterSpawnManager
   m_TagString: Untagged
@@ -16202,13 +16207,38 @@ Transform:
   m_GameObject: {fileID: 1832225623}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -916.33997, y: -735.17, z: 330.504}
+  m_LocalPosition: {x: 72.660034, y: 0.8300171, z: 330.504}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 860835537}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1832225625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832225623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 3925706581
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 0
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
+--- !u!114 &1832225626
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16222,7 +16252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   characterPrefabs:
-  - {fileID: 4136110124463721334, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
+  - {fileID: 382144275}
   - {fileID: 2510324694747993088, guid: 63395441e53f53647aff1a8d1ac4cda3, type: 3}
   - {fileID: 7004362848274344831, guid: a7807660e59c99f4ea099e043c440533, type: 3}
   - {fileID: 264891992669386496, guid: 5218788e42013f74ca16e7ec43b8c966, type: 3}
@@ -20744,6 +20774,7 @@ SceneRoots:
   - {fileID: 1694877651}
   - {fileID: 1291739721}
   - {fileID: 860835537}
+  - {fileID: 1832225624}
   - {fileID: 2035330204}
   - {fileID: 757396888}
   - {fileID: 611853532}

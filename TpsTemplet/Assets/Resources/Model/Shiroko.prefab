@@ -105,13 +105,15 @@ GameObject:
   m_Component:
   - component: {fileID: 641417089228680634}
   - component: {fileID: 6775359585263482816}
-  - component: {fileID: -7399386767556194956}
-  - component: {fileID: 5967137034600032230}
   - component: {fileID: 2990247908258361997}
   - component: {fileID: 307762020191023636}
+  - component: {fileID: -7399386767556194956}
+  - component: {fileID: 5967137034600032230}
+  - component: {fileID: -1954928165278142380}
+  - component: {fileID: 7116000675660037370}
   m_Layer: 0
   m_Name: Shiroko
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,48 +163,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-7399386767556194956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264891992669386496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3669644597
-  InScenePlacedSourceGlobalObjectIdHash: 0
-  DeferredDespawnTick: 0
-  Ownership: 1
-  AlwaysReplicateAsRoot: 0
-  SynchronizeTransform: 1
-  ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
-  SpawnWithObservers: 1
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
-  SyncOwnerTransformWhenParented: 1
-  AllowOwnerToParent: 0
---- !u!114 &5967137034600032230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264891992669386496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b0feef8b92fb1f429f2a7df6336228d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  playerHP: 2000
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!143 &2990247908258361997
 CharacterController:
   m_ObjectHideFlags: 0
@@ -251,6 +211,106 @@ CapsuleCollider:
   m_Height: 0.01
   m_Direction: 1
   m_Center: {x: 0, y: 0.0058, z: 0}
+--- !u!114 &-7399386767556194956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264891992669386496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 3669644597
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
+--- !u!114 &5967137034600032230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264891992669386496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0feef8b92fb1f429f2a7df6336228d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  playerHP: 2000
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &-1954928165278142380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264891992669386496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1343f444c925ab94bba4215cb2b0d06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  target: {fileID: 0}
+  multiAimciConstraint: {fileID: 0}
+  currentAnimation: 
+  moveSpeed: 5
+  gravity: 9.8
+  animationSpeed: 3
+  isSkillPlaying: 0
+  gunFire: {fileID: 0}
+  impactEffect: {fileID: 0}
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  bulletSpeed: 20
+  fireRate: 0.2
+  reloadTime: 0
+  hitScanRadius: 0.05
+  range: 100
+  boltAction: 0
+  shotGunSpreadAngle: 0.1
+  recoilStrength: 2
+  maxRecoilAngle: 10
+  currentRecoil: 0
+  shakeDuration: 0.1
+  shakeMagnitude: 0.1
+  originalCameraPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &7116000675660037370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264891992669386496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a4ac6cb696cdcb49bd57703c3bb5de1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  target: {fileID: 0}
+  multiAimciConstraint: {fileID: 0}
+  currentAnimation: 
+  moveSpeed: 5
+  gravity: 9.8
+  animationSpeed: 3
+  isSkillPlaying: 0
 --- !u!1 &282094019384906538
 GameObject:
   m_ObjectHideFlags: 0

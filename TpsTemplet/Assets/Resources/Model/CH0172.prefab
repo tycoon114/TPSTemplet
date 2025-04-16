@@ -3577,9 +3577,11 @@ GameObject:
   - component: {fileID: 7107420549858067827}
   - component: {fileID: 1119758208093399860}
   - component: {fileID: 8186478864397269963}
+  - component: {fileID: 3762059174319445480}
+  - component: {fileID: -6432471206566996984}
   m_Layer: 0
   m_Name: CH0172
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3719,6 +3721,64 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &3762059174319445480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7004362848274344831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1343f444c925ab94bba4215cb2b0d06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  target: {fileID: 0}
+  multiAimciConstraint: {fileID: 0}
+  currentAnimation: 
+  moveSpeed: 5
+  gravity: 9.8
+  animationSpeed: 3
+  isSkillPlaying: 0
+  gunFire: {fileID: 0}
+  impactEffect: {fileID: 0}
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  bulletSpeed: 20
+  fireRate: 0.2
+  reloadTime: 0
+  hitScanRadius: 0.05
+  range: 100
+  boltAction: 0
+  shotGunSpreadAngle: 12
+  recoilStrength: 2
+  maxRecoilAngle: 10
+  currentRecoil: 0
+  shakeDuration: 0.1
+  shakeMagnitude: 0.1
+  originalCameraPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &-6432471206566996984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7004362848274344831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a4ac6cb696cdcb49bd57703c3bb5de1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  target: {fileID: 0}
+  multiAimciConstraint: {fileID: 0}
+  currentAnimation: 
+  moveSpeed: 5
+  gravity: 9.8
+  animationSpeed: 3
+  isSkillPlaying: 0
 --- !u!1 &7022053273301520213
 GameObject:
   m_ObjectHideFlags: 0

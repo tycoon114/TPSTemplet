@@ -1,4 +1,5 @@
 ﻿using System.Security.Claims;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -32,13 +33,23 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        PlayerGo = GameObject.Find("Player");
-        Player = PlayerGo.transform.GetChild(0);
+        var players = GameObject.FindGameObjectsWithTag("Player");
+
+        foreach (var p in players)
+        {
+            var netObj = p.GetComponent<NetworkObject>();
+            if (netObj != null && netObj.IsOwner)
+            {
+                Player = p.transform;
+                break;
+            }
+        }
     }
 
     //카메라는 LateUpdate를 사용 - 플레이어의 이동이 먼저 실행 되야되기 때문
     void LateUpdate()
     {
+        if (Player == null) return;
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
