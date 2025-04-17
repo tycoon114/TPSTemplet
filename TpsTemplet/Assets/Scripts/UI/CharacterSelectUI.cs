@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using System;
 using System.Security.Claims;
 using Unity.Netcode;
+using System.Runtime.CompilerServices;
 
 
 public class CharacterSelectUI : MonoBehaviour
@@ -78,9 +79,24 @@ public class CharacterSelectUI : MonoBehaviour
 
     public void OnClickSelectButton()
     {
+        Debug.Log("선택Scene UI 코드상 인덱스  " + selectedCharacterIndex);
 
         SelectedCharacterIndex?.Invoke(selectedCharacterIndex);
-        Debug.Log("선택씭 UI 코드상 인ㄷ덱ㄱ스  " + selectedCharacterIndex);
+        CharacterSelectManager.Instance.SetSelectCharacter(selectedCharacterIndex);
+
+        var bytes = System.Text.Encoding.ASCII.GetBytes(selectedCharacterIndex.ToString());
+        NetworkManager.Singleton.NetworkConfig.ConnectionData = bytes;
+
+        // Host 또는 Client 구분해서 시작
+        if (MainMenuController.isHost)
+        {
+            NetworkManager.Singleton.StartHost();
+        }
+        else
+        {
+            NetworkManager.Singleton.StartClient();
+        }
+
         SceneController.Instance.LoadScene("DevRoomScene");
     }
 

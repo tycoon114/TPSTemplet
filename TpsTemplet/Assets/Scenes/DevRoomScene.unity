@@ -2319,6 +2319,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7592602336365267263, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 468077095
+      objectReference: {fileID: 0}
+    - target: {fileID: -7592602336365267263, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
+      propertyPath: SceneMigrationSynchronization
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7592602336365267263, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
+      value: 261986443
+      objectReference: {fileID: 0}
     - target: {fileID: 8250212982187934, guid: 342c3fec531ee6f418e7792a0a388c99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0.00015892721
@@ -4026,18 +4038,10 @@ MonoBehaviour:
   gravity: 9.8
   animationSpeed: 3
   isSkillPlaying: 0
-  gunFire: {fileID: 100006, guid: f47cb9d88f4bc6c4bb7441e962c2c1a5, type: 3}
-  impactEffect: {fileID: 100002, guid: 2f9348d6583cde14eb0d82bb9732647e, type: 3}
   hitLayers:
     serializedVersion: 2
     m_Bits: 128
-  bulletSpeed: 20
-  fireRate: 0.2
-  reloadTime: 2
-  hitScanRadius: 0.05
-  range: 100
   boltAction: 0
-  shotGunSpreadAngle: 10
   recoilStrength: 2
   maxRecoilAngle: 10
   currentRecoil: 0
@@ -5282,18 +5286,10 @@ MonoBehaviour:
   gravity: 9.8
   animationSpeed: 3
   isSkillPlaying: 0
-  gunFire: {fileID: 100006, guid: f47cb9d88f4bc6c4bb7441e962c2c1a5, type: 3}
-  impactEffect: {fileID: 100002, guid: 2f9348d6583cde14eb0d82bb9732647e, type: 3}
   hitLayers:
     serializedVersion: 2
     m_Bits: 128
-  bulletSpeed: 20
-  fireRate: 0.2
-  reloadTime: 2
-  hitScanRadius: 0.05
-  range: 100
   boltAction: 0
-  shotGunSpreadAngle: 10
   recoilStrength: 2
   maxRecoilAngle: 10
   currentRecoil: 0
@@ -5758,6 +5754,7 @@ MonoBehaviour:
   crossHair: {fileID: 1337601382}
   escMenu: {fileID: 1790784198}
   settingsObj: {fileID: 1638687885}
+  Player: {fileID: 0}
   isEscMenuActive: 0
   isSettingActive: 0
 --- !u!1001 &709612003
@@ -7455,18 +7452,10 @@ MonoBehaviour:
   gravity: 9.8
   animationSpeed: 3
   isSkillPlaying: 0
-  gunFire: {fileID: 0}
-  impactEffect: {fileID: 0}
   hitLayers:
     serializedVersion: 2
     m_Bits: 0
-  bulletSpeed: 20
-  fireRate: 0.2
-  reloadTime: 2
-  hitScanRadius: 0.05
-  range: 100
   boltAction: 0
-  shotGunSpreadAngle: 10
   recoilStrength: 2
   maxRecoilAngle: 10
   currentRecoil: 0
@@ -14518,6 +14507,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1194215000124491603, guid: 63395441e53f53647aff1a8d1ac4cda3, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 686350670
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194215000124491603, guid: 63395441e53f53647aff1a8d1ac4cda3, type: 3}
+      propertyPath: SceneMigrationSynchronization
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194215000124491603, guid: 63395441e53f53647aff1a8d1ac4cda3, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
+      value: 1137564089
+      objectReference: {fileID: 0}
     - target: {fileID: 1245777379526509173, guid: 63395441e53f53647aff1a8d1ac4cda3, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -19154,6 +19155,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 611549971}
     m_Modifications:
+    - target: {fileID: 1194215000124491603, guid: 63395441e53f53647aff1a8d1ac4cda3, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 3181155321
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194215000124491603, guid: 63395441e53f53647aff1a8d1ac4cda3, type: 3}
+      propertyPath: SceneMigrationSynchronization
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194215000124491603, guid: 63395441e53f53647aff1a8d1ac4cda3, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
+      value: 1137564089
+      objectReference: {fileID: 0}
     - target: {fileID: 2510324694747993088, guid: 63395441e53f53647aff1a8d1ac4cda3, type: 3}
       propertyPath: m_Name
       value: CH0186
@@ -19220,6 +19233,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7399386767556194956, guid: 5218788e42013f74ca16e7ec43b8c966, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 2928526467
+      objectReference: {fileID: 0}
+    - target: {fileID: -7399386767556194956, guid: 5218788e42013f74ca16e7ec43b8c966, type: 3}
+      propertyPath: SceneMigrationSynchronization
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7399386767556194956, guid: 5218788e42013f74ca16e7ec43b8c966, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
+      value: 3669644597
+      objectReference: {fileID: 0}
     - target: {fileID: 264891992669386496, guid: 5218788e42013f74ca16e7ec43b8c966, type: 3}
       propertyPath: m_Name
       value: Shiroko
@@ -19476,6 +19501,18 @@ PrefabInstance:
     - target: {fileID: 1020831000101756582, guid: a7807660e59c99f4ea099e043c440533, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -2.3891199
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119758208093399860, guid: a7807660e59c99f4ea099e043c440533, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 3948274422
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119758208093399860, guid: a7807660e59c99f4ea099e043c440533, type: 3}
+      propertyPath: SceneMigrationSynchronization
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119758208093399860, guid: a7807660e59c99f4ea099e043c440533, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
+      value: 1316386299
       objectReference: {fileID: 0}
     - target: {fileID: 1240228408871829812, guid: a7807660e59c99f4ea099e043c440533, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

@@ -89,6 +89,7 @@ public class GunController : PlayerController
 
     void Update()
     {
+        if (!IsOwner) return;
         //스킬 애니메이션이 재생 중이면 return
         if (playerController != null && playerController.isSkillPlaying)
         {

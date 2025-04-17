@@ -97,6 +97,7 @@ public class GamePlayUI : MonoBehaviour
 
     void OnEnable()
     {
+        PlayerController.OnLocalPlayerSpawned += InitUIWithPlayer;
         GunController.onAmmoChanged += UpdateAmmoUI; //탄약 수
         GunController.CrossHairSet += CrossHairSet;     //조준 시 크로스헤어 활성화
         PlayerManager.UpdateHPUI += UpdateHPUI;         //플레이어 체력
@@ -105,11 +106,20 @@ public class GamePlayUI : MonoBehaviour
 
     void OnDisable()
     {
+        PlayerController.OnLocalPlayerSpawned -= InitUIWithPlayer;
         GunController.onAmmoChanged -= UpdateAmmoUI; // 이벤트 해제
         GunController.CrossHairSet -= CrossHairSet;
         PlayerManager.UpdateHPUI -= UpdateHPUI;
         PlayerController.SetSkillUI -= SetSkillUI;
     }
+
+    private void InitUIWithPlayer(Transform playerTransform)
+    {
+        Player = playerTransform;
+        selectedCharacterName = Player.name;
+        SetPlayerPortrait(selectedCharacterName);
+    }
+
 
     void UpdateAmmoUI(int currentAmmo, int maxAmmo)
     {

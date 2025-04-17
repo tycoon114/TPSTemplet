@@ -24,14 +24,26 @@ public class CameraController : MonoBehaviour
     private void OnEnable()
     {
         PlayerController.OnIsAim += UpdateCameraOffset;
+        PlayerController.OnLocalPlayerSpawned += SetPlayer;
     }
 
     private void OnDisable()
     {
         PlayerController.OnIsAim -= UpdateCameraOffset;
+        PlayerController.OnLocalPlayerSpawned -= SetPlayer;
     }
 
     void Start()
+    {
+
+    }
+
+    private void SetPlayer(Transform playerTransform)
+    {
+        Player = playerTransform;
+    }
+
+    private void Update()
     {
         var players = GameObject.FindGameObjectsWithTag("Player");
 

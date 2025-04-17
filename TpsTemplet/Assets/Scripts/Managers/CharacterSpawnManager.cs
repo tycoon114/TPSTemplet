@@ -1,7 +1,7 @@
 ﻿using System;
 using Unity.Netcode;
-using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterSpawnManager : NetworkBehaviour
 {
@@ -10,56 +10,93 @@ public class CharacterSpawnManager : NetworkBehaviour
     private Transform player;
     private GameObject selectedCharacter;
     public GameObject[] characterPrefabs;
-    //private void Awake()
+
+    void Start()
+    {
+        if (SceneManager.GetActiveScene().name != "DevRoomScene") return;
+
+        if (!NetworkManager.Singleton.IsServer) return;
+        Debug.Log("스폰 매니저 시작");
+
+        NetworkManager.Singleton.OnClientConnectedCallback += HandleClientConnected;
+
+        // 호스트 자신도 여기서 처리
+        HandleClientConnected(NetworkManager.Singleton.LocalClientId);
+
+
+    }
+
+    private void HandleClientConnected(ulong clientId)
+    {
+        string payload = System.Text.Encoding.ASCII.GetString(NetworkManager.Singleton.NetworkConfig.ConnectionData);
+        int selectedIndex = CustomNetWorkManager.Instance.GetCharacterIndex(clientId);
+
+        Debug.Log($"클라이언트 {clientId} 캐릭터 인덱스 {selectedIndex}");
+
+        var prefab = characterPrefabs[selectedIndex];
+        var spawnPos = new Vector3(UnityEngine.Random.Range(63, 73), 1, UnityEngine.Random.Range(320, 330));
+        var character = Instantiate(prefab, spawnPos, Quaternion.identity);
+        character.name = prefab.name;
+        character.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
+
+        LoadCharacterData(prefab.name, character);
+    }
+
+
+    private void SpawnCharacter(ulong clientId)
+    {
+        Debug.Log("들어왔나?");
+
+        string data = System.Text.Encoding.ASCII.GetString(NetworkManager.Singleton.NetworkConfig.ConnectionData);
+        int index = int.TryParse(data, out var i) ? i : 0;
+        Debug.Log("ㅁㅁㅁㅁ   " + index);
+
+        var prefab = characterPrefabs[index];
+        var spawnPos = new Vector3(UnityEngine.Random.Range(63, 73), 1, UnityEngine.Random.Range(320, 330));
+        var character = Instantiate(prefab, spawnPos, Quaternion.identity);
+
+        character.name = prefab.name;
+        character.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
+
+        // JSON 데이터 로딩
+        LoadCharacterData(prefab.name, character);
+    }
+
+
+    //void Awake()
     //{
-    //    player = GameObject.Find("Player").GetComponent<Transform>();
-    //    int selectedID = CharacterSelectManager.Instance.selectedCharacterIndex;
-    //    if (selectedID < 0 || selectedID >= characterPrefabs.Length)
+    //    Debug.Log("캐릭터 스폰 매니저 시작");
+    //    if (NetworkManager.Singleton == null)
     //    {
-    //        Debug.LogError("잘못된 캐릭터 ID입니다.");
+    //        Debug.LogError("NetworkManager.Singleton 이 null 입니다. 확인 필요.");
     //        return;
     //    }
-    //    Debug.Log(selectedID);
-    //    selectedCharacter = Instantiate(characterPrefabs[selectedID], player.position, Quaternion.identity);
-    //    selectedCharacter.transform.SetParent(player);
-    //    selectedCharacter.name = characterPrefabs[selectedID].name;
 
-    //    LoadCharacterData(selectedCharacter.name, selectedCharacter);
+    //    // ConnectionApprovalCallback은 1개만 등록 가능하므로 덮어쓰기 방식
+    //    if (NetworkManager.Singleton.ConnectionApprovalCallback == null)
+    //    {
+    //        NetworkManager.Singleton.ConnectionApprovalCallback += ApprovalCheck;
+    //    }
+    //    else
+    //    {
+    //        Debug.LogWarning("ConnectionApprovalCallback 이 이미 등록되어 있음");
+    //    }
+
+    //    // OnClientConnectedCallback은 이벤트이므로 -= 후 +=
+    //    NetworkManager.Singleton.OnClientConnectedCallback -= OnClientConnected;
+    //    NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
+
+    //    // 아직 호스트가 아니라면 여기서 시작
+    //    //if (!NetworkManager.Singleton.IsServer && !NetworkManager.Singleton.IsClient)
+    //    //{
+    //    //    int selectedIndex = CharacterSelectManager.Instance.selectedCharacterIndex;
+    //    //    Debug.Log(selectedIndex);
+    //    //    NetworkManager.Singleton.NetworkConfig.ConnectionData =
+    //    //        System.Text.Encoding.ASCII.GetBytes(selectedIndex.ToString());
+
+    //    //    NetworkManager.Singleton.StartHost();
+    //    //}
     //}
-    void Awake()
-    {
-        Debug.Log("캐릭터 스폰 매니저 시작");
-        if (NetworkManager.Singleton == null)
-        {
-            Debug.LogError("NetworkManager.Singleton 이 null 입니다. 확인 필요.");
-            return;
-        }
-
-        // ConnectionApprovalCallback은 1개만 등록 가능하므로 덮어쓰기 방식
-        if (NetworkManager.Singleton.ConnectionApprovalCallback == null)
-        {
-            NetworkManager.Singleton.ConnectionApprovalCallback += ApprovalCheck;
-        }
-        else
-        {
-            Debug.LogWarning("ConnectionApprovalCallback 이 이미 등록되어 있음");
-        }
-
-        // OnClientConnectedCallback은 이벤트이므로 -= 후 +=
-        NetworkManager.Singleton.OnClientConnectedCallback -= OnClientConnected;
-        NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
-
-        // 아직 호스트가 아니라면 여기서 시작
-        if (!NetworkManager.Singleton.IsServer && !NetworkManager.Singleton.IsClient)
-        {
-            int selectedIndex = CharacterSelectManager.Instance.selectedCharacterIndex;
-            Debug.Log(selectedIndex);
-            NetworkManager.Singleton.NetworkConfig.ConnectionData =
-                System.Text.Encoding.ASCII.GetBytes(selectedIndex.ToString());
-
-            NetworkManager.Singleton.StartHost();
-        }
-    }
 
     private void ApprovalCheck(NetworkManager.ConnectionApprovalRequest request, NetworkManager.ConnectionApprovalResponse response)
     {
@@ -70,24 +107,6 @@ public class CharacterSpawnManager : NetworkBehaviour
         PlayerPrefs.SetInt("ApprovedCharacterIndex", selectedIndex); // 임시 저장
         response.Approved = true;
         response.CreatePlayerObject = false;
-    }
-
-    private void OnClientConnected(ulong clientId)
-    {
-        int selectedIndex = PlayerPrefs.GetInt("ApprovedCharacterIndex", 0);
-        Debug.Log("OnClientConnected TT   " + selectedIndex);
-
-        //GameObject prefab = characterPrefabs[selectedIndex];
-        //Vector3 spawnPos = new Vector3(UnityEngine.Random.Range(63, 73), 1, UnityEngine.Random.Range(320, 330));
-
-        //GameObject character = Instantiate(prefab, spawnPos, Quaternion.identity);
-        //character.name = prefab.name;
-        //character.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
-
-        //Debug.Log("OnClientConnected TT   " + character.name);
-
-        //// JSON 데이터 로딩
-        //LoadCharacterData(character.name, character);
     }
 
     private void LoadCharacterData(string characterName, GameObject character)

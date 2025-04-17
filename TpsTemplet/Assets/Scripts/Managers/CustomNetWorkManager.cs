@@ -46,7 +46,7 @@ public class CustomNetWorkManager : MonoBehaviour
         Debug.Log("ApprovalCheck");
 
         string payloadStr = System.Text.Encoding.ASCII.GetString(request.Payload);
-        int selectedIndex = int.Parse(payloadStr);
+        int selectedIndex = int.TryParse(payloadStr, out var idx) ? idx : 0;
 
         clientSelections[request.ClientNetworkId] = selectedIndex;
 
@@ -56,20 +56,30 @@ public class CustomNetWorkManager : MonoBehaviour
 
     private void OnClientConnected(ulong clientId)
     {
-        if (!clientSelections.TryGetValue(clientId, out int selectedIndex))
-        {
-            selectedIndex = 0;
-            Debug.Log("테스트" + clientId);
-        }
-        Debug.Log("clientConected   " + selectedIndex);
+        //if (!NetworkManager.Singleton.IsServer) return;
 
-        GameObject prefab = characterPrefabs[selectedIndex];
-        Vector3 spawnPos = new Vector3(UnityEngine.Random.Range(73, 63), 1, UnityEngine.Random.Range(330, 320));
-        GameObject playerObj = Instantiate(prefab, spawnPos, Quaternion.identity);
-        playerObj.name = prefab.name;
-        playerObj.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
+        //if (!clientSelections.TryGetValue(clientId, out int selectedIndex))
+        //{
+        //    selectedIndex = 0;
+        //    Debug.Log("테스트" + clientId);
+        //}
+        //Debug.Log("clientConected   " + selectedIndex);
 
-        LoadCharacterData(prefab.name, playerObj);
+        //GameObject prefab = characterPrefabs[selectedIndex];
+        //Vector3 spawnPos = new Vector3(UnityEngine.Random.Range(73, 63), 1, UnityEngine.Random.Range(330, 320));
+        //GameObject playerObj = Instantiate(prefab, spawnPos, Quaternion.identity);
+        //playerObj.name = prefab.name;
+        //playerObj.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
+
+        //LoadCharacterData(prefab.name, playerObj);
+    }
+
+    public int GetCharacterIndex(ulong clientId)
+    {
+        if (clientSelections.TryGetValue(clientId, out int index))
+            return index;
+
+        return 0;
     }
 
     private void LoadCharacterData(string characterName, GameObject character)

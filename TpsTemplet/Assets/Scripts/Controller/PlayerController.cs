@@ -12,6 +12,8 @@ public class PlayerController : NetworkBehaviour
 {
     public static event Action<bool> OnIsAim;
     public static event Action<bool> SetSkillUI;
+    public static event Action<Transform> OnLocalPlayerSpawned;         //플레이어 생성 이벤트
+
 
     protected CharacterInfo characterInfo;              //캐릭터 정보
     private CharacterController controller;             //캐릭터 컨트롤러 ->씬 내에서 플레이어 오브젝트의 자식 프리팹으로 올 캐릭터에 달려있다.
@@ -55,6 +57,18 @@ public class PlayerController : NetworkBehaviour
         Debug.Log("playerController  " + info.name);
     }
 
+    //네트워크 매니저를 통해 플레이어 생성 확인
+    public override void OnNetworkSpawn()
+    {
+        if (!IsOwner) return;
+
+        if (IsOwner)
+        {
+            OnLocalPlayerSpawned?.Invoke(transform);
+        }
+    }
+
+
     void Start()
     {
         //자식 노드에서 가져오기, 캐릭터 선택을 고려하면 플레이어는 빈 오브젝트고 거기로 선택한 캐릭터를 자식으로 불러오는게 하기 25.03.06
@@ -66,6 +80,7 @@ public class PlayerController : NetworkBehaviour
 
     void Update()
     {
+        if (!IsOwner) return;
 
         if (isSkillPlaying)
         {
