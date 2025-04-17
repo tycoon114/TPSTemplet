@@ -145,12 +145,15 @@ public class GamePlayUI : MonoBehaviour
     //플레이어 초상화
     void SetPlayerPortrait(string studentName)
     {
-        string portraitPath = "Image/portrait/Texture2D/Student_Portrait_" + studentName;
-        string weaponPortraitPath = "Image/weapon/Texture2D/Weapon_Icon_" + studentName;
+        string cleanedName = studentName.Replace("(Clone)", "");
+
+
+        string portraitPath = "Image/portrait/Texture2D/Student_Portrait_" + cleanedName;
+        string weaponPortraitPath = "Image/weapon/Texture2D/Weapon_Icon_" + cleanedName;
         //stringplayerSkillIconPath = "Image/portraitSkillsize/Texture2D/Skill_Portrait_" + studentName;
 
 
-        Debug.Log(studentName);
+        Debug.Log(cleanedName);
         Sprite characterPortrait = Resources.Load<Sprite>(portraitPath);
         Sprite weaponPortrait = Resources.Load<Sprite>(weaponPortraitPath);
         Sprite playerSkillIcon;
@@ -161,7 +164,7 @@ public class GamePlayUI : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("초상화 이미지가 없습니다: " + studentName);
+            Debug.LogWarning("초상화 이미지가 없습니다: " + cleanedName);
             Debug.Log(portraitPath);
         }
 
@@ -171,7 +174,7 @@ public class GamePlayUI : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("무기 이미지가 없습니다: " + studentName);
+            Debug.LogWarning("무기 이미지가 없습니다: " + cleanedName);
         }
     }
 
