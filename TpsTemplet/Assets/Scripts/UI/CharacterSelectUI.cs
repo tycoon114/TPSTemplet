@@ -82,7 +82,6 @@ public class CharacterSelectUI : MonoBehaviour
         Debug.Log("선택Scene UI 코드상 인덱스  " + selectedCharacterIndex);
 
         SelectedCharacterIndex?.Invoke(selectedCharacterIndex);
-        CharacterSelectManager.Instance.SetSelectCharacter(selectedCharacterIndex);
 
         var bytes = System.Text.Encoding.ASCII.GetBytes(selectedCharacterIndex.ToString());
         NetworkManager.Singleton.NetworkConfig.ConnectionData = bytes;

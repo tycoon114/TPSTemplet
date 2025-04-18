@@ -34,18 +34,6 @@ public class PlayerManager :  NetworkBehaviour
             UpdateHPUI?.Invoke(currentHP, playerHP);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        //우선 임시로 태그로 달아두고, 이후에 총에 맞는거로 수정
-        //if (other.CompareTag("getHit")) {
-        //    //animator.setTrigger("Damage");
-        //    currentHP -= 30; // 임시로 30데미지
-        //}
-
-        //문도 여기서 트리거 작동
-        //이때 DoorController를 참조한다.
-    }
-
     public void TakeDamage(float damage)
     {
         Debug.Log(gameObject.name + "  데미지 받음");

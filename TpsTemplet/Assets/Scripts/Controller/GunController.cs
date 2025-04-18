@@ -75,9 +75,20 @@ public class GunController : PlayerController
         hitLayers = LayerMask.GetMask("Wall", "Enemy", "Player", "EnemyPlayer");
     }
 
+    public override void OnNetworkSpawn()
+    {
+        if (!IsOwner) return;
+        if (characterInfo != null)
+        {
+            SetCharacterData(characterInfo);
+        }
+    }
+
+
     private void SetCharacterData(CharacterInfo info)
     {
-        Debug.Log(info.gunType);
+        if (!IsOwner) return;
+        Debug.Log(info.maxAmmo);
 
         gunType = info.gunType;
         bulletSpeed = info.bulletSpeed;
@@ -100,6 +111,7 @@ public class GunController : PlayerController
         if (Input.GetMouseButton(1))
         {
             isAim = true;
+            Debug.Log(isAim);
             CrossHairSet?.Invoke(isAim);
             //animator.SetLayerWeight(1, 0.7f);
         }
@@ -249,19 +261,19 @@ public class GunController : PlayerController
             {
                 //추후 멀티 활성화 시 아군인지 적팀인지 구분 필요
                 Debug.Log("플레이어 피격");
-            }
-            else if (hitLayer == LayerMask.NameToLayer("EnemyPlayer"))
-            {
-                Debug.Log(" 레이어 피격 테스트");
-                hit.collider.GetComponentInChildren<PlayerManager>().TakeDamage(damage);
-                //var playerManager = hit.collider.GetComponentInChildren<PlayerManager>();
+                if (hitLayer == LayerMask.NameToLayer("EnemyPlayer"))
+                {
+                    Debug.Log(" 적 플레이어 피격 테스트");
+                    hit.collider.GetComponentInChildren<PlayerManager>().TakeDamage(damage);
+                    //var playerManager = hit.collider.GetComponentInChildren<PlayerManager>();
 
-                //if (playerManager != null && !playerManager.GetComponent<NetworkObject>().IsOwner)
-                //{
-                //    playerManager.TakeDamage(damage);
-                //}
-
+                    //if (playerManager != null && !playerManager.GetComponent<NetworkObject>().IsOwner)
+                    //{
+                    //    playerManager.TakeDamage(damage);
+                    //}
+                }
             }
+
         }
 
         currentAmmo--;

@@ -22,8 +22,6 @@ public class CharacterSpawnManager : NetworkBehaviour
 
         // 호스트 자신도 여기서 처리
         HandleClientConnected(NetworkManager.Singleton.LocalClientId);
-
-
     }
 
     private void HandleClientConnected(ulong clientId)
@@ -39,26 +37,6 @@ public class CharacterSpawnManager : NetworkBehaviour
         character.name = prefab.name;
         character.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
 
-        LoadCharacterData(prefab.name, character);
-    }
-
-
-    private void SpawnCharacter(ulong clientId)
-    {
-        Debug.Log("들어왔나?");
-
-        string data = System.Text.Encoding.ASCII.GetString(NetworkManager.Singleton.NetworkConfig.ConnectionData);
-        int index = int.TryParse(data, out var i) ? i : 0;
-        Debug.Log("ㅁㅁㅁㅁ   " + index);
-
-        var prefab = characterPrefabs[index];
-        var spawnPos = new Vector3(UnityEngine.Random.Range(63, 73), 1, UnityEngine.Random.Range(320, 330));
-        var character = Instantiate(prefab, spawnPos, Quaternion.identity);
-
-        character.name = prefab.name;
-        character.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
-
-        // JSON 데이터 로딩
         LoadCharacterData(prefab.name, character);
     }
 
@@ -135,6 +113,7 @@ public class CharacterSpawnManager : NetworkBehaviour
                 OnLoadCharacterData?.Invoke(info);
                 return;
             }
+            
         }
         Debug.LogError($"캐릭터 '{characterName}' 정보 없음 -> 이름 확인.");
     }

@@ -1653,9 +1653,9 @@ GameObject:
   - component: {fileID: 6829059255858186322}
   - component: {fileID: 468338951686303264}
   - component: {fileID: 1194215000124491603}
+  - component: {fileID: 2794193511613116202}
   - component: {fileID: 6830205310552009283}
   - component: {fileID: -3198515082816853064}
-  - component: {fileID: 2794193511613116202}
   - component: {fileID: 393462868769348340}
   m_Layer: 0
   m_Name: CH0186
@@ -1785,6 +1785,26 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
+--- !u!114 &2794193511613116202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510324694747993088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a4ac6cb696cdcb49bd57703c3bb5de1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  target: {fileID: 0}
+  multiAimciConstraint: {fileID: 0}
+  currentAnimation: 
+  moveSpeed: 5
+  gravity: 9.8
+  animationSpeed: 3
+  isSkillPlaying: 0
 --- !u!114 &6830205310552009283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1832,26 +1852,6 @@ MonoBehaviour:
   shakeDuration: 0.1
   shakeMagnitude: 0.1
   originalCameraPosition: {x: 0, y: 0, z: 0}
---- !u!114 &2794193511613116202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2510324694747993088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a4ac6cb696cdcb49bd57703c3bb5de1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  target: {fileID: 0}
-  multiAimciConstraint: {fileID: 0}
-  currentAnimation: 
-  moveSpeed: 5
-  gravity: 9.8
-  animationSpeed: 3
-  isSkillPlaying: 0
 --- !u!114 &393462868769348340
 MonoBehaviour:
   m_ObjectHideFlags: 0

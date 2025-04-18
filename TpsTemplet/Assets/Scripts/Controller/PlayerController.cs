@@ -71,6 +71,7 @@ public class PlayerController : NetworkBehaviour
 
     void Start()
     {
+        Debug.Log("아아아아아아아아아아아아");
         //자식 노드에서 가져오기, 캐릭터 선택을 고려하면 플레이어는 빈 오브젝트고 거기로 선택한 캐릭터를 자식으로 불러오는게 하기 25.03.06
         controller = GetComponentInChildren<CharacterController>();
         animator = GetComponentInChildren<Animator>();

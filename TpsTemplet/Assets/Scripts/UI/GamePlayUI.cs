@@ -123,6 +123,7 @@ public class GamePlayUI : MonoBehaviour
 
     void UpdateAmmoUI(int currentAmmo, int maxAmmo)
     {
+        Debug.Log("Åº¾à Å×½ºÆ®");
         ammoText.text = $"{currentAmmo} / {maxAmmo}";
     }
     void UpdateHPUI(float currentHP, float maxHP)

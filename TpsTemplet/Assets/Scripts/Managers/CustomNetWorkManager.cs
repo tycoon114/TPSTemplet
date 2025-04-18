@@ -5,10 +5,16 @@ using UnityEngine;
 
 public class CustomNetWorkManager : MonoBehaviour
 {
+
+    //호스트의 서버에 대한 코드?
+    //
+
+
     public static event Action<CharacterInfo> OnLoadCharacterData;
 
     public GameObject[] characterPrefabs;
     private Dictionary<ulong, int> clientSelections = new();
+    private HashSet<ulong> spawnedClients = new();
 
     public static CustomNetWorkManager Instance
     {
@@ -72,6 +78,10 @@ public class CustomNetWorkManager : MonoBehaviour
         //playerObj.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
 
         //LoadCharacterData(prefab.name, playerObj);
+
+        if (spawnedClients.Contains(clientId)) return;
+        spawnedClients.Add(clientId);
+
     }
 
     public int GetCharacterIndex(ulong clientId)
