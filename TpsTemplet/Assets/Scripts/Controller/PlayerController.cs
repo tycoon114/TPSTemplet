@@ -41,6 +41,9 @@ public class PlayerController : NetworkBehaviour
     private bool isJump = false;                        //현재 점프 상태인가?
     private bool isSkillCool = false;                   //스킬 쿨타임인가? -> true일 경우 쿨타임 상태
 
+
+    private string characterName;
+
     private void OnEnable()
     {
         CharacterSpawnManager.OnLoadCharacterData += SetCharacterData;
@@ -48,13 +51,6 @@ public class PlayerController : NetworkBehaviour
     private void OnDisable()
     {
         CharacterSpawnManager.OnLoadCharacterData -= SetCharacterData;
-    }
-
-    //spawnManager에서 가져온 캐릭터 데이터 받기
-    public void SetCharacterData(CharacterInfo info)
-    {
-        this.characterInfo = info;
-        Debug.Log("playerController  " + info.name);
     }
 
     //네트워크 매니저를 통해 플레이어 생성 확인
@@ -65,6 +61,59 @@ public class PlayerController : NetworkBehaviour
         if (IsOwner)
         {
             OnLocalPlayerSpawned?.Invoke(transform);
+            RequestCharacterDataServerRpc(gameObject.name);
+        }
+    }
+
+    [ServerRpc]
+    private void RequestCharacterDataServerRpc(string characterName, ServerRpcParams rpcParams = default)
+    {
+        TextAsset jsonFile = Resources.Load<TextAsset>("JsonData/characterData");
+        if (jsonFile == null)
+        {
+            Debug.LogError("캐릭터 데이터 파일 없음.");
+            return;
+        }
+
+        CharacterData characterData = JsonUtility.FromJson<CharacterData>(jsonFile.text);
+        if (characterData == null || characterData.characters == null)
+        {
+            Debug.LogError("캐릭터 데이터 로딩 실패.");
+            return;
+        }
+
+        foreach (CharacterInfo info in characterData.characters)
+        {
+            if (info.name == characterName.Replace("(Clone)", ""))
+            {
+                string json = JsonUtility.ToJson(info);
+                ReceiveCharacterDataClientRpc(json, rpcParams.Receive.SenderClientId);
+                return;
+            }
+        }
+
+        Debug.LogError($"캐릭터 {characterName} 정보 없음.");
+    }
+
+    [ClientRpc]
+    private void ReceiveCharacterDataClientRpc(string json, ulong targetClientId)
+    {
+        if (NetworkManager.Singleton.LocalClientId != targetClientId) return;
+
+        CharacterInfo info = JsonUtility.FromJson<CharacterInfo>(json);
+        SetCharacterData(info);
+    }
+
+    public void SetCharacterData(CharacterInfo info)
+    {
+        this.characterInfo = info;
+        characterName = info.name;
+        Debug.Log("playerController  " + info.maxAmmo);
+
+        GunController gunController = GetComponent<GunController>();
+        if (gunController != null)
+        {
+            gunController.ReceiveCharacterData(info);
         }
     }
 
@@ -220,14 +269,22 @@ public class PlayerController : NetworkBehaviour
         isSkillCool = true;
         isSkillPlaying = true;
         SetSkillUI?.Invoke(true);
+
+
         animator.SetTrigger("isSkill");
+
+        characterName.Replace("(Clone)", "");
+
+        string skillName = characterName + "Skill";
+
+        SoundManager.Instance.PlaySkillSfx(skillName, transform.position);
 
         bool isSkillState = false;
 
         while (!isSkillState)
         {
             AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-            if (stateInfo.IsName("Skill")) // 애니메이션 이름에 맞게 바꿔야 함
+            if (stateInfo.IsName("Skill"))
             {
                 isSkillState = true;
                 break;

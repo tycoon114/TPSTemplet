@@ -62,22 +62,6 @@ public class CustomNetWorkManager : MonoBehaviour
 
     private void OnClientConnected(ulong clientId)
     {
-        //if (!NetworkManager.Singleton.IsServer) return;
-
-        //if (!clientSelections.TryGetValue(clientId, out int selectedIndex))
-        //{
-        //    selectedIndex = 0;
-        //    Debug.Log("Å×½ºÆ®" + clientId);
-        //}
-        //Debug.Log("clientConected   " + selectedIndex);
-
-        //GameObject prefab = characterPrefabs[selectedIndex];
-        //Vector3 spawnPos = new Vector3(UnityEngine.Random.Range(73, 63), 1, UnityEngine.Random.Range(330, 320));
-        //GameObject playerObj = Instantiate(prefab, spawnPos, Quaternion.identity);
-        //playerObj.name = prefab.name;
-        //playerObj.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
-
-        //LoadCharacterData(prefab.name, playerObj);
 
         if (spawnedClients.Contains(clientId)) return;
         spawnedClients.Add(clientId);
@@ -142,6 +126,7 @@ public class CharacterInfo
     public float fireRate;
     public float reloadTime;
     public int maxAmmo;
+    public bool isAutoFire;
 }
 
 [System.Serializable]

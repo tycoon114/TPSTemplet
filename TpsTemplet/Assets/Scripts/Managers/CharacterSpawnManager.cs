@@ -18,6 +18,7 @@ public class CharacterSpawnManager : NetworkBehaviour
         if (!NetworkManager.Singleton.IsServer) return;
         Debug.Log("스폰 매니저 시작");
 
+        NetworkManager.Singleton.OnClientConnectedCallback -= HandleClientConnected;
         NetworkManager.Singleton.OnClientConnectedCallback += HandleClientConnected;
 
         // 호스트 자신도 여기서 처리
@@ -27,9 +28,21 @@ public class CharacterSpawnManager : NetworkBehaviour
     private void HandleClientConnected(ulong clientId)
     {
         string payload = System.Text.Encoding.ASCII.GetString(NetworkManager.Singleton.NetworkConfig.ConnectionData);
+        //호스트가 방을 다시 만들었을 때 접속한 클라이언트의 캐릭터가 여러개 스폰 되는 것을 해결하는 코드
+        if (NetworkManager.Singleton.ConnectedClients.ContainsKey(clientId))
+        {
+            var oldPlayerObject = NetworkManager.Singleton.ConnectedClients[clientId].PlayerObject;
+            if (oldPlayerObject != null && oldPlayerObject.IsSpawned)
+            {
+                Debug.Log($"[SpawnManager] 기존 오브젝트 제거: {oldPlayerObject.name}");
+                oldPlayerObject.Despawn(true);
+            }
+        }
+
+
         int selectedIndex = CustomNetWorkManager.Instance.GetCharacterIndex(clientId);
 
-        Debug.Log($"클라이언트 {clientId} 캐릭터 인덱스 {selectedIndex}");
+        Debug.Log($"플레이어 번호 {clientId} 캐릭터 인덱스 {selectedIndex}");
 
         var prefab = characterPrefabs[selectedIndex];
         var spawnPos = new Vector3(UnityEngine.Random.Range(63, 73), 1, UnityEngine.Random.Range(320, 330));
@@ -38,53 +51,6 @@ public class CharacterSpawnManager : NetworkBehaviour
         character.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
 
         LoadCharacterData(prefab.name, character);
-    }
-
-
-    //void Awake()
-    //{
-    //    Debug.Log("캐릭터 스폰 매니저 시작");
-    //    if (NetworkManager.Singleton == null)
-    //    {
-    //        Debug.LogError("NetworkManager.Singleton 이 null 입니다. 확인 필요.");
-    //        return;
-    //    }
-
-    //    // ConnectionApprovalCallback은 1개만 등록 가능하므로 덮어쓰기 방식
-    //    if (NetworkManager.Singleton.ConnectionApprovalCallback == null)
-    //    {
-    //        NetworkManager.Singleton.ConnectionApprovalCallback += ApprovalCheck;
-    //    }
-    //    else
-    //    {
-    //        Debug.LogWarning("ConnectionApprovalCallback 이 이미 등록되어 있음");
-    //    }
-
-    //    // OnClientConnectedCallback은 이벤트이므로 -= 후 +=
-    //    NetworkManager.Singleton.OnClientConnectedCallback -= OnClientConnected;
-    //    NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
-
-    //    // 아직 호스트가 아니라면 여기서 시작
-    //    //if (!NetworkManager.Singleton.IsServer && !NetworkManager.Singleton.IsClient)
-    //    //{
-    //    //    int selectedIndex = CharacterSelectManager.Instance.selectedCharacterIndex;
-    //    //    Debug.Log(selectedIndex);
-    //    //    NetworkManager.Singleton.NetworkConfig.ConnectionData =
-    //    //        System.Text.Encoding.ASCII.GetBytes(selectedIndex.ToString());
-
-    //    //    NetworkManager.Singleton.StartHost();
-    //    //}
-    //}
-
-    private void ApprovalCheck(NetworkManager.ConnectionApprovalRequest request, NetworkManager.ConnectionApprovalResponse response)
-    {
-        string payloadStr = System.Text.Encoding.ASCII.GetString(request.Payload);
-        int selectedIndex = int.Parse(payloadStr);
-        Debug.Log("ApprovalCheck TT   "  + selectedIndex);
-
-        PlayerPrefs.SetInt("ApprovedCharacterIndex", selectedIndex); // 임시 저장
-        response.Approved = true;
-        response.CreatePlayerObject = false;
     }
 
     private void LoadCharacterData(string characterName, GameObject character)
@@ -109,11 +75,8 @@ public class CharacterSpawnManager : NetworkBehaviour
             if (info.name == characterName)
             {
                 Debug.Log($"이름: {info.name}, 체력: {info.health}, 속도: {info.speed}, 공격력: {info.damage} , 총기: {info.gunType}");
-                //확인이 되면 이벤트 발생 -> playerController로 정보 보내 주기
-                OnLoadCharacterData?.Invoke(info);
                 return;
             }
-            
         }
         Debug.LogError($"캐릭터 '{characterName}' 정보 없음 -> 이름 확인.");
     }

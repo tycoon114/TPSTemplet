@@ -1220,7 +1220,11 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 0c5904a75da570c42ad53f9da32aa34d, type: 3}
   - name: SRShooting
     clip: {fileID: 8300000, guid: 66e24f97b311d3a45a0d7bffcb98051e, type: 3}
-  skilClipList: []
+  skilClipList:
+  - name: KazusaSkill
+    clip: {fileID: 8300000, guid: 86bd940920a8f2344933eeb2142c354b, type: 3}
+  - name: CH0186Skill
+    clip: {fileID: 8300000, guid: 48131dce36e8bdf4d866f188bc76cb3f, type: 3}
 --- !u!4 &1306296700
 Transform:
   m_ObjectHideFlags: 0

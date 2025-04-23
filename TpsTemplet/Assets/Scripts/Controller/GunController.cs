@@ -6,6 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 using Unity.Netcode;
 public class GunController : PlayerController
 {
+
     public static event Action<int, int> onAmmoChanged;         //gamePlayUi에서 탄약을 표시 하기 위함
     public static event Action<bool> CrossHairSet;              //gamePlayUi에서 탄약을 표시 하기 위함
 
@@ -29,10 +30,13 @@ public class GunController : PlayerController
     private float hitScanRadius = 0.05f;                         //크로스헤어 내 랜덤 범위
     private float range = 100f;                                  //사격 거리
     private float damage;                                       //공격력 - 변수 이름 나중에 바꿀 예정
+    public float shakeMagnitude = 2.0f;                         //화면 흔들림 정도
+    public float shakeDuration = 0.1f;                          //화면 흔들릴 시간
+
+    private bool isAutoFire;                                    //연사 가능 여부
 
     private bool isReload = false;                              //재장전
     private bool isShoot = false;                               //사격 애니메이션
-    public bool boltAction = false;                             //볼트 액션이 아닌 경우 연사 가능하도록
 
     private Coroutine fireCoroutine;                            //연사 제어를 위한 코루틴 - 코루틴을 중지 시키기 위함[중지 시키지 않으면 연사속도가 중첩될 수 있음]
     public Coroutine cameraShakeCoroutine;                      //카메라 흔들림 코루틴
@@ -42,26 +46,56 @@ public class GunController : PlayerController
     public float recoilStrength = 2.0f;                         //
     public float maxRecoilAngle = 10.0f;                        //
     public float currentRecoil = 0.0f;                          //
-    public float shakeDuration = 0.1f;                          //
-    public float shakeMagnitude = 0.1f;                         //
     public Vector3 originalCameraPosition;                      //원래 카메라 위치
 
     private PlayerController playerController;
 
-    void Start()
-    {
-        if (characterInfo != null)
-        {
-            SetCharacterData(characterInfo);
-        }
-        Debug.Log(characterInfo);
-        currentAmmo = maxAmmo;
-        onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
-        animator = GetComponentInChildren<Animator>();
-        playerController = GetComponent<PlayerController>();
-        mainCamera = Camera.main;
+    private bool isCharacterDataReady = false;              //캐릭터의 데이터가 들어왔는지 확인하기 위한 값
 
-        //자식 오브젝트에서 총구인 fire_01찾기
+    private void OnEnable()
+    {
+        CharacterSpawnManager.OnLoadCharacterData += OnCharacterDataLoaded;
+    }
+
+    private void OnDisable()
+    {
+        CharacterSpawnManager.OnLoadCharacterData -= OnCharacterDataLoaded;
+    }
+
+    private void OnCharacterDataLoaded(CharacterInfo info)
+    {
+        if (!IsOwner) return;
+        Debug.Log("aassdd");
+        characterInfo = info;
+        SetCharacterData(info);
+        isCharacterDataReady = true;
+
+        // 탄약 정보 초기화
+        currentAmmo = maxAmmo;
+        onAmmoChanged?.Invoke(currentAmmo, maxAmmo);
+
+        CharacterSpawnManager.OnLoadCharacterData -= OnCharacterDataLoaded;
+    }
+
+    //클라이언트로 접속할 경우 캐릭터 데이터는 이곳을 통해접근
+    public void ReceiveCharacterData(CharacterInfo info)
+    {
+        if (!IsOwner) return;
+        characterInfo = info;
+        SetCharacterData(info);
+        isCharacterDataReady = true;
+
+        currentAmmo = maxAmmo;
+        onAmmoChanged?.Invoke(currentAmmo, maxAmmo);
+    }
+
+
+    public override void OnNetworkSpawn()
+    {
+        if (!IsOwner) return;
+        mainCamera = Camera.main;
+        Debug.Log("1212112");
+        // 총구 찾기
         Transform[] allChildren = GetComponentsInChildren<Transform>();
         foreach (Transform child in allChildren)
         {
@@ -71,24 +105,14 @@ public class GunController : PlayerController
                 break;
             }
         }
-        target = GameObject.Find("target").GetComponentInChildren<Transform>();
+        target = GameObject.Find("target")?.transform;
         hitLayers = LayerMask.GetMask("Wall", "Enemy", "Player", "EnemyPlayer");
     }
-
-    public override void OnNetworkSpawn()
-    {
-        if (!IsOwner) return;
-        if (characterInfo != null)
-        {
-            SetCharacterData(characterInfo);
-        }
-    }
-
 
     private void SetCharacterData(CharacterInfo info)
     {
         if (!IsOwner) return;
-        Debug.Log(info.maxAmmo);
+        Debug.Log(info.isAutoFire);
 
         gunType = info.gunType;
         bulletSpeed = info.bulletSpeed;
@@ -96,11 +120,16 @@ public class GunController : PlayerController
         reloadTime = info.reloadTime;
         maxAmmo = info.maxAmmo;
         damage = info.damage;
+        isAutoFire = info.isAutoFire;
     }
+
+
+
+
 
     void Update()
     {
-        if (!IsOwner) return;
+         if (!IsOwner || !isCharacterDataReady) return;
         //스킬 애니메이션이 재생 중이면 return
         if (playerController != null && playerController.isSkillPlaying)
         {
@@ -111,7 +140,7 @@ public class GunController : PlayerController
         if (Input.GetMouseButton(1))
         {
             isAim = true;
-            Debug.Log(isAim);
+            //Debug.Log(isAim);
             CrossHairSet?.Invoke(isAim);
             //animator.SetLayerWeight(1, 0.7f);
         }
@@ -124,7 +153,7 @@ public class GunController : PlayerController
         animator.SetBool("isAim", isAim);
         //animator.SetLayerWeight(1, 1);
 
-        if (Input.GetMouseButtonDown(0) && isAim && currentAmmo != 0 && fireCoroutine == null && !isReload && !IsInAnimationState("Shoot") && !IsInAnimationState("ShootDelay")) // && !IsInAnimationState("Shoot") -> 사격 애니메이션 중이면 사격 불가능..약간 수정 필요
+        if (Input.GetMouseButtonDown(0) && isAim && currentAmmo != 0 && fireCoroutine == null && !isReload && !IsInAnimationState("Skill") && !IsInAnimationState("ShootDelay")) // && !IsInAnimationState("Shoot") -> 사격 애니메이션 중이면 사격 불가능..약간 수정 필요
         {
             fireCoroutine = StartCoroutine(AttackStart());
         }
@@ -151,6 +180,17 @@ public class GunController : PlayerController
     }
     IEnumerator AttackStart()
     {
+        if (isAutoFire == false)
+        {
+            Debug.Log("여기");
+            if (IsInAnimationState("Shoot"))
+            {
+                Debug.Log("여기2");
+
+                yield return new WaitUntil(() => !IsInAnimationState("Shoot"));
+            }
+        }
+
         while (Input.GetMouseButton(0))
         {
             if (gunType.Equals("SG"))
@@ -203,7 +243,6 @@ public class GunController : PlayerController
 
     void Shoot()
     {
-        //소리 재생 - 함수나 코루틴으로 뺄 예정
         if (gunType.Equals("HG"))
         {
             SoundManager.Instance.PlayGunSfx("HGShooting", target.transform.position);
@@ -278,7 +317,24 @@ public class GunController : PlayerController
 
         currentAmmo--;
         isShoot = true;
-        animator.SetBool("isShoot", isShoot);
+
+        if (isAutoFire)
+        {
+            animator.SetBool("isShoot", isShoot);
+        }
+        else
+        {
+            animator.SetBool("isShoot", isShoot);
+            //animator.SetTrigger("ShootTrigger");
+        }
+
+        if (cameraShakeCoroutine != null)
+            StopCoroutine(cameraShakeCoroutine);
+        gunShootShake();
+
+
+
+
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
     }
 
@@ -334,8 +390,15 @@ public class GunController : PlayerController
     }
 
     //화면 흔들림
-    private void gunShootShake()
+    void gunShootShake()
     {
+        Debug.Log("cameraShake");
+        CameraController cameraController = Camera.main.GetComponent<CameraController>();
+        if (cameraController != null)
+        {
+            cameraController.StartShake(shakeMagnitude, shakeDuration);
+            cameraController.ApplyRecoil(1.5f);
+        }
 
     }
 }

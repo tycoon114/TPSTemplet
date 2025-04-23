@@ -19,7 +19,11 @@ public class CameraController : MonoBehaviour
     public float mouseSensitivity = 60.0f;                          //감도 - 이후 옵션에서 조정 가능하게
 
     private bool isAiming = false;
-    private bool isFreeCamera = false;
+
+    private Vector3 shakeOffset = Vector3.zero;
+    private float shakeTime = 0f;
+    private float shakeMagnitude = 0f;
+
 
     private void OnEnable()
     {
@@ -37,6 +41,13 @@ public class CameraController : MonoBehaviour
     {
 
     }
+
+    public void StartShake(float magnitude, float duration)
+    {
+        shakeMagnitude = magnitude;
+        shakeTime = duration;
+    }
+
 
     private void SetPlayer(Transform playerTransform)
     {
@@ -72,8 +83,21 @@ public class CameraController : MonoBehaviour
 
         //시네머신의 screen Position처럼 화면을 돌림
         Quaternion cameraRotation = Quaternion.Euler(-pitch, yaw, 0);
+        Vector3 basePosition = Player.position + cameraRotation * CameraOffset;
 
-        transform.position = Player.position + cameraRotation * CameraOffset;
+        if (shakeTime > 0)
+        {
+            Vector3 shake = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0f);
+            shakeOffset = Vector3.Lerp(shakeOffset, shake * shakeMagnitude, Time.deltaTime * 10f);
+            shakeTime -= Time.deltaTime;
+        }
+        else
+        {
+            shakeOffset = Vector3.Lerp(shakeOffset, Vector3.zero, Time.deltaTime * 5f);
+        }
+
+        transform.position = basePosition + shakeOffset;
+        //transform.position = Player.position + cameraRotation * CameraOffset;
 
         Vector3 offset = cameraRotation * new Vector3(0.6f, 0f, 0f);
         lookPosition = Player.position + new Vector3(0, CameraOffset.y, 0) + offset;
@@ -119,4 +143,12 @@ public class CameraController : MonoBehaviour
             Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, defaultFov, Time.deltaTime * zoomSpeed);
         }
     }
+
+    //사격 시 카메라 반동
+    public void ApplyRecoil(float recoilAmount)
+    {
+        pitch += recoilAmount;
+        pitch = Mathf.Clamp(pitch, -45f, 10f);
+    }
+
 }
