@@ -19,6 +19,9 @@ public class CharacterSelectUI : MonoBehaviour
     public string selectedCharacter = "temp";       //제이슨 값을 가져오기 위해 선택한 캐릭터 명을 담을 변수
     private string path = "Image/portrait/Texture2D/Student_Portrait_";
 
+    private int voiceNum;
+    private string selectedVoice = "Select";
+
     public int selectedCharacterIndex;
 
     private void Awake()
@@ -26,6 +29,8 @@ public class CharacterSelectUI : MonoBehaviour
         characterName = GameObject.Find("CharacterName").GetComponent<TextMeshProUGUI>();
         characterImage = GameObject.Find("CharacterImage").GetComponent<RawImage>();
 
+        voiceNum = UnityEngine.Random.Range(1, 3);
+        selectedVoice = selectedVoice + voiceNum;
     }
 
     public void SelectCharacter(int index)
@@ -38,6 +43,8 @@ public class CharacterSelectUI : MonoBehaviour
     {
         selectedCharacter = "Kazusa";
         SetPortraitImage(selectedCharacter);
+        selectedVoice = selectedCharacter + selectedVoice;
+        SoundManager.Instance.PlaySelectVoiceSfx(selectedVoice);
         characterName.text = "카즈사";
     }
 
@@ -45,6 +52,8 @@ public class CharacterSelectUI : MonoBehaviour
     {
         selectedCharacter = "CH0186";
         SetPortraitImage(selectedCharacter);
+        selectedVoice = selectedCharacter + selectedVoice;
+        SoundManager.Instance.PlaySelectVoiceSfx(selectedVoice);
         characterName.text = "마리";
     }
 
@@ -53,7 +62,7 @@ public class CharacterSelectUI : MonoBehaviour
         Debug.Log("Niko");
         selectedCharacter = "CH0172";
         SetPortraitImage(selectedCharacter);
-        characterName.text = "니코";
+        characterName.text = "니코(음성X)";
     }
 
     public void OnShirokoClicked()
@@ -61,6 +70,8 @@ public class CharacterSelectUI : MonoBehaviour
         Debug.Log("Shiroko");
         selectedCharacter = "Shiroko";
         SetPortraitImage(selectedCharacter);
+        selectedVoice = selectedCharacter + selectedVoice;
+        SoundManager.Instance.PlaySelectVoiceSfx(selectedVoice);
         characterName.text = "시로코";
     }
 
@@ -68,6 +79,8 @@ public class CharacterSelectUI : MonoBehaviour
     {
         selectedCharacter = "Wakamo";
         SetPortraitImage(selectedCharacter);
+        selectedVoice = selectedCharacter + selectedVoice;
+        SoundManager.Instance.PlaySelectVoiceSfx(selectedVoice);
         characterName.text = "와카모";
     }
 

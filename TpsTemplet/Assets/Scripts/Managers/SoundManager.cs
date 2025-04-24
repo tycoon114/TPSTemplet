@@ -20,6 +20,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource walkSource;
     public AudioSource gunSource;
     public AudioSource skillSource;
+    public AudioSource voiceSource;
 
     private Dictionary<string, AudioClip> bgmClips = new Dictionary<string, AudioClip>();
     private Dictionary<string, AudioClip> sfxClips = new Dictionary<string, AudioClip>();
@@ -27,6 +28,8 @@ public class SoundManager : MonoBehaviour
     private Dictionary<string, AudioClip> walkClips = new Dictionary<string, AudioClip>();
     private Dictionary<string, AudioClip> gunClips = new Dictionary<string, AudioClip>();
     private Dictionary<string, AudioClip> skillClips = new Dictionary<string, AudioClip>();
+    private Dictionary<string, AudioClip> voiceClips = new Dictionary<string, AudioClip>();
+
 
     //구조체를 만들어서 임시로 딕셔너리를 관리 할 수 있도록 설정
     [System.Serializable]
@@ -42,8 +45,8 @@ public class SoundManager : MonoBehaviour
     //효과음이 종류가 많아서 따로 관리하기로함 2025-03-21
     public NamedAudioClip[] walkClipList;   //걷는 소리는 여기에
     public NamedAudioClip[] gunClipList;    //총소리는 여기에, 폭발도 여기에
-    public NamedAudioClip[] skilClipList;    //스킬 관련 효과음은 여기에
-
+    public NamedAudioClip[] skilClipList;    //스킬시전 및 스킬 관련 효과음은 여기에
+    public NamedAudioClip[] voiceClipList;    //음성에 관한것은 여기에
 
     private Coroutine currentBGMCoroutine;
 
@@ -105,6 +108,16 @@ public class SoundManager : MonoBehaviour
                 skillClips.Add(skill.name, skill.clip);
             }
         }
+
+        //스킬소리 할당
+        foreach (var voice in voiceClipList)
+        {
+            if (!voiceClips.ContainsKey(voice.name))
+            {
+                voiceClips.Add(voice.name, voice.clip);
+            }
+        }
+
     }
 
     public void PlayBGM(string name, float fadeDuration = 1.0f)
@@ -158,6 +171,23 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    public void PlaySelectVoiceSfx(string name)
+    {
+        if (voiceClips.ContainsKey(name))
+        {
+            sfxSource.PlayOneShot(voiceClips[name]);
+        }
+    }
+
+    public void PlayVoiceSfx(string name, Vector3 position)
+    {
+        if (voiceClips.ContainsKey(name))
+        {
+            AudioSource.PlayClipAtPoint(voiceClips[name], position);
+        }
+    }
+
+
     //볼륨 조절
     public void SetBGMVolume(float volume)
     {
@@ -172,6 +202,7 @@ public class SoundManager : MonoBehaviour
         gunSource.volume = Mathf.Clamp(volume, 0, 1);
         walkSource.volume = Mathf.Clamp(volume, 0, 1);
         skillSource.volume = Mathf.Clamp(volume, 0, 1);
+        voiceSource.volume = Mathf.Clamp(volume, 0, 1);
         Debug.Log("사운드 매니저 sfx :  " + volume);
     }
 
@@ -206,6 +237,12 @@ public class SoundManager : MonoBehaviour
     {
         skillSource.Stop();
     }
+
+    public void StopVoiceSfx()
+    {
+        voiceSource.Stop();
+    }
+
 
 
     private IEnumerator FadeOutBGM(float duration, Action onFadeComplete)

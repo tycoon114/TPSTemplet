@@ -89,7 +89,6 @@ public class GunController : PlayerController
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo);
     }
 
-
     public override void OnNetworkSpawn()
     {
         if (!IsOwner) return;

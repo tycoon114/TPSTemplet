@@ -1653,10 +1653,11 @@ GameObject:
   - component: {fileID: 6829059255858186322}
   - component: {fileID: 468338951686303264}
   - component: {fileID: 1194215000124491603}
-  - component: {fileID: 2794193511613116202}
   - component: {fileID: 6830205310552009283}
   - component: {fileID: -3198515082816853064}
+  - component: {fileID: 2794193511613116202}
   - component: {fileID: 393462868769348340}
+  - component: {fileID: -1485328273240040918}
   m_Layer: 0
   m_Name: CH0186
   m_TagString: Player
@@ -1673,7 +1674,7 @@ Transform:
   m_GameObject: {fileID: 2510324694747993088}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.5130005, y: -0.6979625, z: 0.14849854}
+  m_LocalPosition: {x: 74, y: 1, z: 330}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1785,26 +1786,6 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
---- !u!114 &2794193511613116202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2510324694747993088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a4ac6cb696cdcb49bd57703c3bb5de1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  target: {fileID: 0}
-  multiAimciConstraint: {fileID: 0}
-  currentAnimation: 
-  moveSpeed: 5
-  gravity: 9.8
-  animationSpeed: 3
-  isSkillPlaying: 0
 --- !u!114 &6830205310552009283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1818,7 +1799,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  playerHP: 2000
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -1845,13 +1825,32 @@ MonoBehaviour:
   hitLayers:
     serializedVersion: 2
     m_Bits: 0
-  boltAction: 0
+  shakeMagnitude: 0.1
+  shakeDuration: 0.1
   recoilStrength: 2
   maxRecoilAngle: 10
   currentRecoil: 0
-  shakeDuration: 0.1
-  shakeMagnitude: 0.1
   originalCameraPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &2794193511613116202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510324694747993088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a4ac6cb696cdcb49bd57703c3bb5de1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  target: {fileID: 0}
+  multiAimciConstraint: {fileID: 0}
+  currentAnimation: 
+  moveSpeed: 5
+  gravity: 9.8
+  animationSpeed: 3
+  isSkillPlaying: 0
 --- !u!114 &393462868769348340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1876,7 +1875,7 @@ MonoBehaviour:
   RotationMaxInterpolationTime: 0.1
   ScaleLerpSmoothing: 1
   ScaleMaxInterpolationTime: 0.1
-  AuthorityMode: 0
+  AuthorityMode: 1
   TickSyncChildren: 0
   UseUnreliableDeltas: 0
   SyncPositionX: 1
@@ -1898,6 +1897,23 @@ MonoBehaviour:
   SwitchTransformSpaceWhenParented: 0
   Interpolate: 1
   SlerpPosition: 0
+--- !u!114 &-1485328273240040918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510324694747993088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc53119c3323614aafe877a065890ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  syncedPosition:
+    m_InternalValue: {x: 0, y: 0, z: 0}
+  isMoving:
+    m_InternalValue: 0
 --- !u!1 &2594571706050546795
 GameObject:
   m_ObjectHideFlags: 0

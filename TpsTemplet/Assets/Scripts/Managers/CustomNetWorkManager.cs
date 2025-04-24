@@ -6,7 +6,7 @@ using UnityEngine;
 public class CustomNetWorkManager : MonoBehaviour
 {
 
-    //호스트의 서버에 대한 코드?
+    //호스트의 서버에 대한 코드
     //
 
 
@@ -74,40 +74,6 @@ public class CustomNetWorkManager : MonoBehaviour
             return index;
 
         return 0;
-    }
-
-    private void LoadCharacterData(string characterName, GameObject character)
-    {
-        TextAsset jsonFile = Resources.Load<TextAsset>("JsonData/characterData");
-        if (jsonFile == null)
-        {
-            Debug.LogError("파일 없음.");
-            return;
-        }
-
-        CharacterData characterData = JsonUtility.FromJson<CharacterData>(jsonFile.text);
-        if (characterData == null || characterData.characters == null)
-        {
-            Debug.LogError("잘못된 데이터");
-            return;
-        }
-
-        // 선택한 캐릭터의 정보를 찾아 적용
-        foreach (CharacterInfo info in characterData.characters)
-        {
-            if (info.name == characterName)
-            {
-                Debug.Log($"이름: {info.name}, 체력: {info.health}, 속도: {info.speed}, 공격력: {info.damage} , 총기: {info.gunType}");
-                //확인이 되면 이벤트 발생 -> playerController로 정보 보내 주기
-                var controller = character.GetComponent<PlayerController>();
-                if (controller != null)
-                {
-                    controller.SetCharacterData(info); // 커스텀 메서드로 바로 넘기기
-                }
-                return;
-            }
-        }
-        Debug.LogError($"캐릭터 '{characterName}' 정보 없음 -> 이름 확인.");
     }
 }
 

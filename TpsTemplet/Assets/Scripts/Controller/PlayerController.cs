@@ -44,6 +44,8 @@ public class PlayerController : NetworkBehaviour
 
     private string characterName;
 
+    private GamePlayNetworkSyncManager networkSync;
+
     private void OnEnable()
     {
         CharacterSpawnManager.OnLoadCharacterData += SetCharacterData;
@@ -95,6 +97,8 @@ public class PlayerController : NetworkBehaviour
         Debug.LogError($"캐릭터 {characterName} 정보 없음.");
     }
 
+
+
     [ClientRpc]
     private void ReceiveCharacterDataClientRpc(string json, ulong targetClientId)
     {
@@ -126,6 +130,8 @@ public class PlayerController : NetworkBehaviour
         animator = GetComponentInChildren<Animator>();
         //소리가 나는 위치, 구분하기 쉽게 하기 위해 이름 변경이 필요해 보임(2025-04-04)
         target = GameObject.Find("target").GetComponentInChildren<Transform>();
+
+        networkSync = GetComponent <GamePlayNetworkSyncManager>();
     }
 
     void Update()
@@ -206,7 +212,7 @@ public class PlayerController : NetworkBehaviour
 
         // 이동 처리
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
-
+        //SendPositionServerRpc(transform.position);
         //controller.Move(moveDirection * Time.deltaTime);
         // **Player 오브젝트의 회전값 강제 고정 (X=90 유지)**
         //transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
@@ -234,7 +240,7 @@ public class PlayerController : NetworkBehaviour
             OnIsAim?.Invoke(isAim);
         }
 
-        if (isAim)
+        if (isAim) 
         {
             //조준시에는 이동할 때 보다는 빨리 회전 2025-03-10 23:16
             Quaternion targetRotation = Quaternion.LookRotation(cameraForward);
@@ -270,14 +276,17 @@ public class PlayerController : NetworkBehaviour
         isSkillPlaying = true;
         SetSkillUI?.Invoke(true);
 
-
-        animator.SetTrigger("isSkill");
-
         characterName.Replace("(Clone)", "");
-
         string skillName = characterName + "Skill";
 
-        SoundManager.Instance.PlaySkillSfx(skillName, transform.position);
+
+        //애니메이션은 Rpc에서 제어
+        if (IsOwner)
+        {
+            networkSync.TriggerSkillRpc(skillName);
+        }
+
+
 
         bool isSkillState = false;
 

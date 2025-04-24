@@ -51,7 +51,7 @@
       "atkType": "Explosive",
       "dfnType": "Heavy",
       "bulletSpeed": 20.0,
-      "fireRate": 1.0,
+      "fireRate": 0.3,
       "reloadTime": 1,
       "maxAmmo": 15,
       "isAutoFire": true

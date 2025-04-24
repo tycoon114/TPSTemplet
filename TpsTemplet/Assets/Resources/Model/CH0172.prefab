@@ -3580,6 +3580,7 @@ GameObject:
   - component: {fileID: 3762059174319445480}
   - component: {fileID: -6432471206566996984}
   - component: {fileID: 6713251985681263589}
+  - component: {fileID: 7623569360712799301}
   m_Layer: 0
   m_Name: CH0172
   m_TagString: Player
@@ -3718,7 +3719,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  playerHP: 2200
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -3745,12 +3745,11 @@ MonoBehaviour:
   hitLayers:
     serializedVersion: 2
     m_Bits: 0
-  boltAction: 0
+  shakeMagnitude: 0.1
+  shakeDuration: 0.1
   recoilStrength: 2
   maxRecoilAngle: 10
   currentRecoil: 0
-  shakeDuration: 0.1
-  shakeMagnitude: 0.1
   originalCameraPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &-6432471206566996984
 MonoBehaviour:
@@ -3796,7 +3795,7 @@ MonoBehaviour:
   RotationMaxInterpolationTime: 0.1
   ScaleLerpSmoothing: 1
   ScaleMaxInterpolationTime: 0.1
-  AuthorityMode: 0
+  AuthorityMode: 1
   TickSyncChildren: 0
   UseUnreliableDeltas: 0
   SyncPositionX: 1
@@ -3818,6 +3817,23 @@ MonoBehaviour:
   SwitchTransformSpaceWhenParented: 0
   Interpolate: 1
   SlerpPosition: 0
+--- !u!114 &7623569360712799301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7004362848274344831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc53119c3323614aafe877a065890ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  syncedPosition:
+    m_InternalValue: {x: 0, y: 0, z: 0}
+  isMoving:
+    m_InternalValue: 0
 --- !u!1 &7022053273301520213
 GameObject:
   m_ObjectHideFlags: 0

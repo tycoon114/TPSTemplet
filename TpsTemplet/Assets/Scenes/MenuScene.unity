@@ -1158,6 +1158,7 @@ MonoBehaviour:
   walkSource: {fileID: 1306296701}
   gunSource: {fileID: 1306296701}
   skillSource: {fileID: 1306296701}
+  voiceSource: {fileID: 1306296701}
   bgmClipList:
   - name: bgmTemp1
     clip: {fileID: 8300000, guid: 34a25ed803489dd4598d3605decfca75, type: 3}
@@ -1225,6 +1226,27 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 86bd940920a8f2344933eeb2142c354b, type: 3}
   - name: CH0186Skill
     clip: {fileID: 8300000, guid: 48131dce36e8bdf4d866f188bc76cb3f, type: 3}
+  - name: ShirokoSkill
+    clip: {fileID: 8300000, guid: 9b4e2220e93118c46af08a84e605d547, type: 3}
+  - name: WakamoSkill
+    clip: {fileID: 8300000, guid: 65fbb4182f46ab844ba763655ee3d86d, type: 3}
+  voiceClipList:
+  - name: KazusaSelect1
+    clip: {fileID: 8300000, guid: 52de17f17ccfc074aa7dfd76be151d63, type: 3}
+  - name: KazusaSelect2
+    clip: {fileID: 8300000, guid: 669dd7b5dde77da42b0a1d466f55dc4c, type: 3}
+  - name: CH0186Select1
+    clip: {fileID: 8300000, guid: 6e2a813d815c8614aa1038d228a1e0da, type: 3}
+  - name: CH0186Select2
+    clip: {fileID: 8300000, guid: 1fac2e8a7cd92b64e96893d0d253d936, type: 3}
+  - name: ShirokoSelect1
+    clip: {fileID: 8300000, guid: 4feb85dedfa42964eb016f9e94dd23da, type: 3}
+  - name: ShirokoSelect2
+    clip: {fileID: 8300000, guid: c440e2d3101476343b0c0058c6fd2768, type: 3}
+  - name: WakamoSelect1
+    clip: {fileID: 8300000, guid: 4a36a79ba62e6b24f98a58ef0b76a27f, type: 3}
+  - name: WakamoSelect2
+    clip: {fileID: 8300000, guid: 6803294c78703bc4fa550b81282312cd, type: 3}
 --- !u!4 &1306296700
 Transform:
   m_ObjectHideFlags: 0
