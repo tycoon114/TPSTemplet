@@ -6,7 +6,7 @@ using UnityEngine;
 public class CustomNetWorkManager : MonoBehaviour
 {
 
-    //호스트의 서버에 대한 코드
+    //호스트의 서버에 대한 코드 
     //
 
 
