@@ -5,10 +5,8 @@ using UnityEngine;
 
 public class CustomNetWorkManager : MonoBehaviour
 {
-
     //호스트의 서버에 대한 코드 
     //
-
 
     public static event Action<CharacterInfo> OnLoadCharacterData;
 
@@ -62,17 +60,19 @@ public class CustomNetWorkManager : MonoBehaviour
 
     private void OnClientConnected(ulong clientId)
     {
-
-        if (spawnedClients.Contains(clientId)) return;
+        if (spawnedClients.Contains(clientId))
+        {
+            return;
+        }
         spawnedClients.Add(clientId);
-
     }
 
     public int GetCharacterIndex(ulong clientId)
     {
         if (clientSelections.TryGetValue(clientId, out int index))
+        {
             return index;
-
+        }
         return 0;
     }
 }

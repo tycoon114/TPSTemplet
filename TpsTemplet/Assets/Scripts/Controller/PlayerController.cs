@@ -1,19 +1,14 @@
 ﻿using System;
 using System.Collections;
-using System.Resources;
-using TMPro;
 using Unity.Netcode;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
-using UnityEngine.Audio;
 
 public class PlayerController : NetworkBehaviour
 {
     public static event Action<bool> OnIsAim;
     public static event Action<bool> SetSkillUI;
     public static event Action<Transform> OnLocalPlayerSpawned;         //플레이어 생성 이벤트
-
 
     protected CharacterInfo characterInfo;              //캐릭터 정보
     private CharacterController controller;             //캐릭터 컨트롤러 ->씬 내에서 플레이어 오브젝트의 자식 프리팹으로 올 캐릭터에 달려있다.
@@ -40,7 +35,6 @@ public class PlayerController : NetworkBehaviour
     private bool isMoving = false;                      //움직이고 있는가?
     private bool isJump = false;                        //현재 점프 상태인가?
     private bool isSkillCool = false;                   //스킬 쿨타임인가? -> true일 경우 쿨타임 상태
-
 
     private string characterName;
 
@@ -96,8 +90,6 @@ public class PlayerController : NetworkBehaviour
 
         Debug.LogError($"캐릭터 {characterName} 정보 없음.");
     }
-
-
 
     [ClientRpc]
     private void ReceiveCharacterDataClientRpc(string json, ulong targetClientId)
@@ -279,14 +271,11 @@ public class PlayerController : NetworkBehaviour
         characterName.Replace("(Clone)", "");
         string skillName = characterName + "Skill";
 
-
         //애니메이션은 Rpc에서 제어
         if (IsOwner)
         {
             networkSync.TriggerSkillRpc(skillName);
         }
-
-
 
         bool isSkillState = false;
 

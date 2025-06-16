@@ -362,10 +362,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  syncedPosition:
-    m_InternalValue: {x: 0, y: 0, z: 0}
-  isMoving:
-    m_InternalValue: 0
 --- !u!1 &282094019384906538
 GameObject:
   m_ObjectHideFlags: 0

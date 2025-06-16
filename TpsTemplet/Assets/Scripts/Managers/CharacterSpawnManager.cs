@@ -39,7 +39,6 @@ public class CharacterSpawnManager : NetworkBehaviour
             }
         }
 
-
         int selectedIndex = CustomNetWorkManager.Instance.GetCharacterIndex(clientId);
 
         Debug.Log($"플레이어 번호 {clientId} 캐릭터 인덱스 {selectedIndex}");
@@ -80,6 +79,4 @@ public class CharacterSpawnManager : NetworkBehaviour
         }
         Debug.LogError($"캐릭터 '{characterName}' 정보 없음 -> 이름 확인.");
     }
-
 }
-

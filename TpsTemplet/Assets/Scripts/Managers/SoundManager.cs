@@ -2,8 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
@@ -83,7 +81,6 @@ public class SoundManager : MonoBehaviour
                 sfxClips.Add(sfx.name, sfx.clip);
             }
         }
-
         //걷는 소리 할당
         foreach (var walk in walkClipList)
         {
@@ -117,7 +114,6 @@ public class SoundManager : MonoBehaviour
                 voiceClips.Add(voice.name, voice.clip);
             }
         }
-
     }
 
     public void PlayBGM(string name, float fadeDuration = 1.0f)
@@ -138,8 +134,6 @@ public class SoundManager : MonoBehaviour
             }));
         }
     }
-
-
 
     //효과음 재생
     public void PlaySfx(string name)
@@ -187,7 +181,6 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-
     //볼륨 조절
     public void SetBGMVolume(float volume)
     {
@@ -218,8 +211,6 @@ public class SoundManager : MonoBehaviour
         sfxSource.Stop();
     }
 
-
-
     //발소리 중지
     public void StopWalkSfx()
     {
@@ -242,8 +233,6 @@ public class SoundManager : MonoBehaviour
     {
         voiceSource.Stop();
     }
-
-
 
     private IEnumerator FadeOutBGM(float duration, Action onFadeComplete)
     {
@@ -269,7 +258,5 @@ public class SoundManager : MonoBehaviour
             yield return null;
         }
         bgmSource.volume = 1.0f;
-
     }
-
 }

@@ -1,12 +1,9 @@
 using System;
 using UnityEngine;
 using System.Collections;
-using UnityEngine.Animations.Rigging;
-using System.Security.Cryptography.X509Certificates;
-using Unity.Netcode;
+
 public class GunController : PlayerController
 {
-
     public static event Action<int, int> onAmmoChanged;         //gamePlayUi에서 탄약을 표시 하기 위함
     public static event Action<bool> CrossHairSet;              //gamePlayUi에서 탄약을 표시 하기 위함
 
@@ -49,7 +46,6 @@ public class GunController : PlayerController
     public Vector3 originalCameraPosition;                      //원래 카메라 위치
 
     private PlayerController playerController;
-
     private bool isCharacterDataReady = false;              //캐릭터의 데이터가 들어왔는지 확인하기 위한 값
 
     private void OnEnable()
@@ -93,7 +89,6 @@ public class GunController : PlayerController
     {
         if (!IsOwner) return;
         mainCamera = Camera.main;
-        Debug.Log("1212112");
         // 총구 찾기
         Transform[] allChildren = GetComponentsInChildren<Transform>();
         foreach (Transform child in allChildren)
@@ -121,10 +116,6 @@ public class GunController : PlayerController
         damage = info.damage;
         isAutoFire = info.isAutoFire;
     }
-
-
-
-
 
     void Update()
     {
@@ -231,7 +222,6 @@ public class GunController : PlayerController
         {
             SoundManager.Instance.PlayGunSfx("SGReload", target.transform.position);
         }
-
         isReload = true;
         animator.SetTrigger("isReload");
 
@@ -311,7 +301,6 @@ public class GunController : PlayerController
                     //}
                 }
             }
-
         }
 
         currentAmmo--;
@@ -328,11 +317,10 @@ public class GunController : PlayerController
         }
 
         if (cameraShakeCoroutine != null)
+        {
             StopCoroutine(cameraShakeCoroutine);
+        }
         gunShootShake();
-
-
-
 
         onAmmoChanged?.Invoke(currentAmmo, maxAmmo); // 탄약 UI 업데이트
     }
@@ -398,6 +386,5 @@ public class GunController : PlayerController
             cameraController.StartShake(shakeMagnitude, shakeDuration);
             cameraController.ApplyRecoil(1.5f);
         }
-
     }
 }

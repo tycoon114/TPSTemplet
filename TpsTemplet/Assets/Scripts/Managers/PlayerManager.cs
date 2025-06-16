@@ -1,9 +1,6 @@
 using System;
-using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
-using UnityEngine.SceneManagement;
 
 //플레이어의 체력, 사망, 부활, 피격 등 상태에 관한 매니저를 다룰 코드
 //발소리에 관한 것도 이곳에서 처리함
@@ -32,6 +29,7 @@ public class PlayerManager :  NetworkBehaviour
             UpdateHPUI?.Invoke(currentHP, playerHP);
     }
 
+    //이 데미지를 계산 하는것은 네트워크가 처리해줘야됨
     public void TakeDamage(float damage)
     {
         Debug.Log(gameObject.name + "  데미지 받음");
@@ -77,5 +75,4 @@ public class PlayerManager :  NetworkBehaviour
 
         
     //}
-
 }

@@ -24,7 +24,6 @@ public class CameraController : MonoBehaviour
     private float shakeTime = 0f;
     private float shakeMagnitude = 0f;
 
-
     private void OnEnable()
     {
         PlayerController.OnIsAim += UpdateCameraOffset;
@@ -47,7 +46,6 @@ public class CameraController : MonoBehaviour
         shakeMagnitude = magnitude;
         shakeTime = duration;
     }
-
 
     private void SetPlayer(Transform playerTransform)
     {
@@ -150,5 +148,4 @@ public class CameraController : MonoBehaviour
         pitch += recoilAmount;
         pitch = Mathf.Clamp(pitch, -45f, 10f);
     }
-
 }

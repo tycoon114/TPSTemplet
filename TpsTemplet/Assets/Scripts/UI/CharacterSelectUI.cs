@@ -1,13 +1,8 @@
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using System;
-using System.Security.Claims;
 using Unity.Netcode;
-using System.Runtime.CompilerServices;
-
 
 public class CharacterSelectUI : MonoBehaviour
 {
@@ -84,7 +79,6 @@ public class CharacterSelectUI : MonoBehaviour
         characterName.text = "¿ÍÄ«¸ð";
     }
 
-
     public void OnCharacterConfirm()
     {
 
@@ -118,5 +112,4 @@ public class CharacterSelectUI : MonoBehaviour
         Texture2D characterPortrait = Resources.Load<Texture2D>(portraitPath);
         characterImage.texture = characterPortrait;
     }
-
 }

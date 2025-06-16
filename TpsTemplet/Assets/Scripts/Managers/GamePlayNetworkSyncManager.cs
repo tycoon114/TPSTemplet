@@ -31,7 +31,6 @@ public class GamePlayNetworkSyncManager : NetworkBehaviour
         animator.SetTrigger("isSkill");
     }
 
-
     private void Update()
     {
         if (IsOwner)
@@ -45,6 +44,4 @@ public class GamePlayNetworkSyncManager : NetworkBehaviour
             //animator.SetBool("isAim",);
         }
     }
-
-
 }
